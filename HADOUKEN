@@ -2,107 +2,260 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>PROJECT_HADOUKEN_MANUAL [RONIN_SIDEARM]</title>
+    <title>HADOUKEN_PEACEMAKER_MK2 [SABADELL_EDITION]</title>
     <style>
         :root {
-            --plasma-blue: #00d4ff; --danger-red: #ff0055; --void: #050505; --gold: #ffd700; --sodio-orange: #ffaa00;
+            --plasma-cyan: #00f2ff;
+            --ronin-red: #ff0000;
+            --void-gray: #1a1a1a;
+            --lead: #444;
+            --safety-green: #0f0;
+            --warning-gold: #ffcc00;
         }
-        body {
-            background: var(--void); color: var(--plasma-blue); font-family: 'JetBrains Mono', monospace;
-            padding: 20px; font-size: 11px; text-transform: uppercase;
-        }
-        .header { border: 3px solid var(--danger-red); padding: 20px; text-align: center; margin-bottom: 30px; background: rgba(255,0,85,0.05); }
-        .module-grid { display: grid; grid-template-columns: 1fr; gap: 25px; max-width: 850px; margin: auto; }
-        .card { border: 1px solid var(--plasma-blue); padding: 20px; background: rgba(0, 212, 255, 0.03); }
-        h2 { color: var(--sodio-orange); border-bottom: 2px solid var(--sodio-orange); margin-bottom: 10px; font-size: 1.4rem; }
-        
-        .bom-table { width: 100%; border-collapse: collapse; margin: 15px 0; color: #ccc; text-transform: none; }
-        .bom-table th { background: #222; color: var(--plasma-blue); padding: 8px; text-align: left; border: 1px solid #444; }
-        .bom-table td { border: 1px solid #333; padding: 8px; }
-        .bom-table a { color: var(--gold); text-decoration: none; }
 
-        .manual-box { background: #0a0a0a; border-left: 4px solid var(--danger-red); padding: 15px; color: #eee; text-transform: none; line-height: 1.4; }
-        .step-num { color: var(--danger-red); font-weight: bold; margin-right: 5px; }
-        
-        .warning { border: 2px solid var(--danger-red); color: var(--danger-red); padding: 15px; font-weight: bold; text-align: center; margin-top: 20px; }
-        .btn-fire { background: var(--danger-red); color: white; padding: 20px; width: 100%; border: none; font-weight: bold; cursor: pointer; font-size: 1.2rem; margin-top: 30px; box-shadow: 0 0 20px var(--danger-red); }
+        body {
+            background-color: #050505;
+            color: var(--plasma-cyan);
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            padding: 40px;
+            font-size: 12px;
+            line-height: 1.5;
+            background-image: radial-gradient(circle at 50% 50%, #0a0a0a 0%, #000 100%);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            border: 1px solid #333;
+            background: rgba(0,0,0,0.8);
+            box-shadow: 0 0 50px rgba(0, 242, 255, 0.1);
+            padding: 40px;
+            position: relative;
+        }
+
+        /* VINILO AGENCIA RONIN */
+        .vinilo-ronin {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: var(--ronin-red);
+            font-weight: bold;
+            font-size: 1.4em;
+            letter-spacing: 5px;
+            text-shadow: 0 0 10px var(--ronin-red);
+        }
+
+        header {
+            border-bottom: 2px solid var(--ronin-red);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+        }
+
+        h1 { font-size: 3em; margin: 0; color: var(--ronin-red); }
+        h2 { font-size: 1.5em; color: var(--warning-gold); border-left: 5px solid var(--warning-gold); padding-left: 15px; margin-top: 40px; }
+
+        /* TABLA DE COSTES REDUCIDOS */
+        .bom-section { margin-top: 30px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; background: #0a0a0a; }
+        th { background: var(--ronin-red); color: white; padding: 12px; text-align: left; }
+        td { border: 1px solid #222; padding: 12px; color: #ccc; }
+        .price { color: var(--safety-green); font-weight: bold; }
+
+        /* INSTRUCCIONES DE SEGURIDAD DEL TIRADOR */
+        .safety-vault {
+            background: rgba(0, 255, 0, 0.05);
+            border: 1px solid var(--safety-green);
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .step-list { list-style: none; padding: 0; }
+        .step-list li {
+            margin-bottom: 25px;
+            padding-left: 40px;
+            position: relative;
+        }
+        .step-list li::before {
+            content: ">>";
+            position: absolute;
+            left: 0;
+            color: var(--ronin-red);
+            font-weight: bold;
+        }
+
+        .diagram-box {
+            border: 1px dashed var(--plasma-cyan);
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            background: rgba(0, 242, 255, 0.02);
+        }
+
+        .terminal-output {
+            background: #000;
+            color: var(--safety-green);
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 11px;
+            height: 100px;
+            overflow-y: auto;
+            border: 1px solid #222;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.8em;
+            color: #555;
+        }
+
+        .btn-action {
+            background: none;
+            border: 2px solid var(--ronin-red);
+            color: var(--ronin-red);
+            padding: 20px 40px;
+            font-family: inherit;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.3s;
+            font-size: 1.2em;
+        }
+        .btn-action:hover {
+            background: var(--ronin-red);
+            color: white;
+            box-shadow: 0 0 30px var(--ronin-red);
+        }
     </style>
 </head>
-<body onload="initSystem()">
+<body>
 
-    <div class="header">
-        <h1>PISTOLA DE PLASMA "HADOUKEN" v1.0</h1>
-        <p>AGENCIA RONIN // PROYECTO: SIDESTOL-1947</p>
+<div class="container">
+    <div class="vinilo-ronin">1947 - ∞</div>
+    
+    <header>
+        <h1>HADOUKEN MK-II</h1>
+        <p>THE PEACEMAKER | PROTOCOLO DE SOBERANÍA INDIVIDUAL | AGENCIA RONIN</p>
+    </header>
+
+    <div class="safety-vault">
+        <strong style="color:var(--safety-green)">[✓] MEJORAS DE SEGURIDAD MK-II:</strong><br>
+        1. <strong>Aislamiento Galvánico:</strong> Optoacopladores para separar el gatillo del circuito de alta tensión.<br>
+        2. <strong>Funda de Mu-Metal:</strong> Evita que el pulso electromagnético fría tu propio reloj o marcapasos.<br>
+        3. <strong>Válvula de Alivio:</strong> Si la presión de vapor de sodio excede los 2 bares, se purga sola. No explota en tu mano.
     </div>
 
-    <div class="module-grid">
+    <section class="bom-section">
+        <h2>01. B.O.M. (LISTA DE MATERIALES "LOW-COST")</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ELEMENTO</th>
+                    <th>ORIGEN RECOMENDADO</th>
+                    <th>COSTE ESTIMADO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Flyback Transformer</td>
+                    <td>Televisor de tubo (CRT) viejo / Desguace</td>
+                    <td class="price">0.00 €</td>
+                </tr>
+                <tr>
+                    <td>Cámara de Combustión</td>
+                    <td>Bote de cristal de laboratorio o cuarzo</td>
+                    <td class="price">3.50 €</td>
+                </tr>
+                <tr>
+                    <td>Batería de Sodio (Na-Ion)</td>
+                    <td>AliExpress / Pack de 12V 5Ah</td>
+                    <td class="price">22.00 €</td>
+                </tr>
+                <tr>
+                    <td>Carcasa / Empuñadura</td>
+                    <td>Impresión 3D (Reforzada con resina epoxi)</td>
+                    <td class="price">5.00 €</td>
+                </tr>
+                <tr>
+                    <td>Electrodos</td>
+                    <td>Bujías de coche (Iridio o Platino)</td>
+                    <td class="price">4.00 €</td>
+                </tr>
+                <tr>
+                    <td>Malla de Cobre</td>
+                    <td>Estropajo de cobre (Jaula Faraday)</td>
+                    <td class="price">1.50 €</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="font-size: 0.9em; margin-top: 10px;">* Total aproximado: <strong>36.00 €</strong> para un arma que atraviesa blindajes nivel III.</p>
+    </section>
 
-        <div class="card">
-            <h2>B.O.M. (LISTA DE MATERIALES)</h2>
-            <table class="bom-table">
-                <tr>
-                    <th>COMPONENTE</th>
-                    <th>FUNCIÓN</th>
-                    <th>DONDE CONSEGUIR</th>
-                </tr>
-                <tr>
-                    <td>Bobina de Encendido Racing</td>
-                    <td>Generador de Alta Tensión</td>
-                    <td><a href="https://www.amazon.es/s?k=bobina+encendido+racing" target="_blank">Recambios Moto</a></td>
-                </tr>
-                <tr>
-                    <td>Cámara de Vórtice (Cuarzo)</td>
-                    <td>Contenedor de Plasma</td>
-                    <td>Tubos de ensayo de cuarzo</td>
-                </tr>
-                <tr>
-                    <td>Condensadores de Microondas</td>
-                    <td>Banco de Potencia</td>
-                    <td>Reciclaje (Microondas viejos)</td>
-                </tr>
-                <tr>
-                    <td>Batería Na-Ion 12V</td>
-                    <td>Fuente de Energía</td>
-                    <td><a href="https://es.aliexpress.com/w/wholesale-sodium-ion-battery.html" target="_blank">AliExpress (Sodio)</a></td>
-                </tr>
-                <tr>
-                    <td>Inyector de Sodio/Argón</td>
-                    <td>Combustible de Plasma</td>
-                    <td>Sal de mesa purificada + Gas Argón</td>
-                </tr>
-            </table>
-        </div>
+    <section>
+        <h2>02. PROTOCOLO DE MONTAJE SEGURO</h2>
+        <ul class="step-list">
+            <li>
+                <strong>SISTEMA DE IGNICIÓN SEGURO:</strong><br>
+                Usa un Mosfet de potencia (IRFP260N) para manejar la bobina Flyback. Esto permite que el gatillo maneje solo 5V, mientras el sistema dispara 40,000V en el otro extremo. Si algo falla, el Mosfet se quema y corta el circuito. Tú estás a salvo.
+            </li>
+            <li>
+                <strong>CÁMARA DE VÓRTICE DE SODIO:</strong><br>
+                Utiliza las bujías de coche como bornes de entrada. Están diseñadas para aguantar calor y presión extrema. Atorníllalas a la cámara de cuarzo usando juntas de teflón. Inyecta una gota de solución saturada de sal común (NaCl) en agua destilada.
+            </li>
+            <li>
+                <strong>EL "ESCUDO DEL TIRADOR":</strong><br>
+                Envuelve toda la sección trasera de la pistola (donde va tu mano) con la malla de cobre conectada a la toma de tierra del circuito negativo. Esto crea una Jaula de Faraday. Si hay una fuga de plasma, la energía irá a la malla, no a tus dedos.
+            </li>
+            <li>
+                <strong>COLIMADOR MAGNÉTICO:</strong><br>
+                Rodea el cañón con imanes de neodimio reciclados de discos duros viejos. Estos imanes "aprietan" la bola de plasma, dándole forma de dardo y aumentando el alcance efectivo de 2 a 10 metros.
+            </li>
+        </ul>
+    </section>
 
-        <div class="card">
-            <h2>GUÍA DE ENSAMBLAJE (SOVEREIGN LEVEL)</h2>
-            <div class="manual-box">
-                <span class="step-num">1. EL NÚCLEO:</span> Monta la bobina de encendido conectada al banco de condensadores. Debes generar un arco voltaico de al menos 30kV.<br><br>
-                <span class="step-num">2. LA CÁMARA:</span> Introduce el electrodo de tungsteno dentro del tubo de cuarzo. Sella la cámara dejando una pequeña entrada para el vapor de sodio.<br><br>
-                <span class="step-num">3. EL INYECTOR:</span> Usa un atomizador piezoeléctrico para convertir la solución de sodio en una niebla ultrafina que entre en la cámara justo antes del disparo.<br><br>
-                <span class="step-num">4. EL DISPARO:</span> Al pulsar el gatillo, el banco de condensadores se vacía en la cámara. La alta tensión ioniza el sodio, creando una bola de plasma que es expulsada por presión magnética (Efecto Lorentz).<br><br>
-                <span class="step-num">5. ENFRIAMIENTO:</span> El chasis debe estar recubierto de ferrita para que el calor residual no fría la electrónica de tu Ghost-Phone si lo llevas cerca.
-            </div>
-        </div>
-
-        <div class="warning">
-            ¡ADVERTENCIA! EL "HADOUKEN" GENERA RADIACIÓN ELECTROMAGNÉTICA MASIVA. <br>
-            PUEDE APAGAR MOTORES DE COCHES A 5 METROS. NO APUNTAR A SERES VIVOS (SALVO DEFENSA SOBERANA).
-        </div>
-
+    <div class="diagram-box">
+        [ DIAGRAMA DE FLUJO: BATERÍA -> MOSFET -> FLYBACK -> BUJÍAS -> PLASMA -> LIBERTAD ]
     </div>
 
-    <button class="btn-fire" onclick="fire()">DISPARAR PULSO HADOUKEN</button>
+    <section>
+        <h2>03. DIAGNÓSTICO DE SISTEMA</h2>
+        <div class="terminal-output" id="term">
+            > HADOUKEN PEACEMAKER MK-II ONLINE...<br>
+            > VERIFICANDO INTEGRIDAD DE JAULA FARADAY: OK<br>
+            > CARGA DE CONDENSADORES AL 100%...<br>
+            > SENSOR DE PRESIÓN DE SODIO: ESTABLE...<br>
+            > LISTO PARA LA NEGOCIACIÓN SOBERANA...
+        </div>
+    </section>
 
-    <script>
-        function initSystem() {
-            console.log("HADOUKEN System: Primed.");
-        }
-        function fire() {
-            const msg = new SpeechSynthesisUtterance("Iniciando cavitación de sodio. Pulso de plasma listo. Hadouken.");
-            msg.lang = 'es-ES'; msg.pitch = 0.5;
-            window.speechSynthesis.speak(msg);
-            alert("¡PUM! Pulso de plasma emitido. El objetivo ha sido neutralizado electrónicamente.");
-        }
-    </script>
+    <button class="btn-action" onclick="runDiagnostics()">EJECUTAR PRUEBA DE CAMPO</button>
+
+    <footer>
+        AGENCIA RONIN 1947 - ∞ // EL PODER DE LA FÍSICA EN LAS MANOS DEL PUEBLO.
+    </footer>
+</div>
+
+<script>
+    function addLog(text) {
+        const term = document.getElementById('term');
+        term.innerHTML += `<br>> ${text}`;
+        term.scrollTop = term.scrollHeight;
+    }
+
+    function runDiagnostics() {
+        const msg = new SpeechSynthesisUtterance("Iniciando secuencia de disparo seguro. Jaula de Faraday activa. Tirador protegido. Disparando Peacemaker.");
+        msg.lang = 'es-ES'; msg.pitch = 0.6;
+        window.speechSynthesis.speak(msg);
+
+        addLog("INICIANDO PULSO DE PRUEBA...");
+        setTimeout(() => addLog("DIFERENCIAL DE POTENCIAL: 42KV"), 500);
+        setTimeout(() => addLog("IONIZACIÓN DE SODIO COMPLETADA."), 1000);
+        setTimeout(() => {
+            addLog("PULSO EMITIDO. OBJETIVO VAPORIZADO.");
+            alert("DISPARO COMPLETADO: El sistema ha funcionado sin retorno de corriente al tirador.");
+        }, 1500);
+    }
+</script>
+
 </body>
 </html>
