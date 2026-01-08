@@ -1,0 +1,30 @@
+solid VAMDONA_FRONT
+  facet normal 0 0 0
+    outer loop
+      vertex 0 0 0
+      vertex 145 0 0
+      vertex 145 45 0
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 0 45 0
+      vertex 0 0 0
+      vertex 145 45 0
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 10 10 2
+      vertex 60 10 2
+      vertex 60 35 2
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 85 10 2
+      vertex 135 10 2
+      vertex 135 35 2
+    endloop
+  endfacet
+endsolid VAMDONA_FRONT
