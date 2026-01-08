@@ -2,260 +2,333 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>HADOUKEN_PEACEMAKER_MK2 [SABADELL_EDITION]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HADOUKEN_VANITAS_MK3_EXTENDED // AGENCIA RONIN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --plasma-cyan: #00f2ff;
-            --ronin-red: #ff0000;
-            --void-gray: #1a1a1a;
-            --lead: #444;
-            --safety-green: #0f0;
-            --warning-gold: #ffcc00;
+            --chrome: #e0e0e0;
+            --plasma: #ff5500;
+            --cyan: #00ffff;
+            --ronin: #ff0000;
+            --gold: #d4af37;
+            --obsidian: #080808;
+            --glass: rgba(255, 255, 255, 0.05);
         }
 
+        * { box-sizing: border-box; }
         body {
-            background-color: #050505;
-            color: var(--plasma-cyan);
-            font-family: 'JetBrains Mono', 'Courier New', monospace;
-            padding: 40px;
-            font-size: 12px;
-            line-height: 1.5;
-            background-image: radial-gradient(circle at 50% 50%, #0a0a0a 0%, #000 100%);
+            background-color: var(--obsidian);
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-image: 
+                linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            border: 1px solid #333;
-            background: rgba(0,0,0,0.8);
-            box-shadow: 0 0 50px rgba(0, 242, 255, 0.1);
-            padding: 40px;
-            position: relative;
-        }
-
-        /* VINILO AGENCIA RONIN */
-        .vinilo-ronin {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            color: var(--ronin-red);
-            font-weight: bold;
-            font-size: 1.4em;
-            letter-spacing: 5px;
-            text-shadow: 0 0 10px var(--ronin-red);
-        }
-
-        header {
-            border-bottom: 2px solid var(--ronin-red);
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-        }
-
-        h1 { font-size: 3em; margin: 0; color: var(--ronin-red); }
-        h2 { font-size: 1.5em; color: var(--warning-gold); border-left: 5px solid var(--warning-gold); padding-left: 15px; margin-top: 40px; }
-
-        /* TABLA DE COSTES REDUCIDOS */
-        .bom-section { margin-top: 30px; }
-        table { width: 100%; border-collapse: collapse; margin-top: 15px; background: #0a0a0a; }
-        th { background: var(--ronin-red); color: white; padding: 12px; text-align: left; }
-        td { border: 1px solid #222; padding: 12px; color: #ccc; }
-        .price { color: var(--safety-green); font-weight: bold; }
-
-        /* INSTRUCCIONES DE SEGURIDAD DEL TIRADOR */
-        .safety-vault {
-            background: rgba(0, 255, 0, 0.05);
-            border: 1px solid var(--safety-green);
-            padding: 20px;
-            margin: 30px 0;
-        }
-
-        .step-list { list-style: none; padding: 0; }
-        .step-list li {
-            margin-bottom: 25px;
-            padding-left: 40px;
-            position: relative;
-        }
-        .step-list li::before {
-            content: ">>";
-            position: absolute;
-            left: 0;
-            color: var(--ronin-red);
-            font-weight: bold;
-        }
-
-        .diagram-box {
-            border: 1px dashed var(--plasma-cyan);
-            padding: 20px;
+        /* --- HEADER ELEGANCE --- */
+        .hero {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            margin: 20px 0;
-            background: rgba(0, 242, 255, 0.02);
+            border-bottom: 5px solid var(--ronin);
+            background: radial-gradient(circle, #1a1a1a 0%, #000 100%);
+            position: relative;
         }
 
-        .terminal-output {
+        .hero h1 {
+            font-size: 6vw;
+            font-weight: 900;
+            margin: 0;
+            letter-spacing: 15px;
+            color: var(--chrome);
+            text-shadow: 0 0 30px var(--cyan);
+        }
+
+        .hero .tagline {
+            color: var(--ronin);
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 5px;
+            margin-top: 10px;
+        }
+
+        .vinilo-1947 {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'JetBrains Mono';
+            color: var(--lead);
+            opacity: 0.5;
+        }
+
+        /* --- CONTENEDOR PRINCIPAL --- */
+        .main-content {
+            max-width: 1200px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        .section-header {
+            border-left: 10px solid var(--ronin);
+            padding-left: 20px;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            color: var(--gold);
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        /* --- GRID DE HUMILLACIÓN ESTÉTICA --- */
+        .humiliation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .art-card {
+            background: var(--glass);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 40px;
+            transition: 0.5s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .art-card:hover {
+            border-color: var(--cyan);
+            transform: scale(1.02);
+            box-shadow: 0 0 50px rgba(0, 255, 255, 0.1);
+        }
+
+        .art-card h3 {
+            font-size: 1.8rem;
+            color: var(--cyan);
+            margin-top: 0;
+        }
+
+        .art-card p {
+            line-height: 1.8;
+            color: #ccc;
+            font-weight: 300;
+        }
+
+        .price-badge {
+            background: var(--ronin);
+            color: white;
+            padding: 5px 15px;
+            font-family: 'JetBrains Mono';
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        /* --- TABLA DE INGENIERÍA --- */
+        .tech-specs {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px 0;
+            font-family: 'JetBrains Mono';
+        }
+
+        .tech-specs td {
+            padding: 20px;
+            border-bottom: 1px solid #222;
+        }
+
+        .tech-specs td:first-child {
+            color: var(--gold);
+            font-weight: bold;
+            width: 30%;
+        }
+
+        /* --- TERMINAL --- */
+        .console {
             background: #000;
-            color: var(--safety-green);
-            padding: 15px;
-            border-radius: 5px;
-            font-size: 11px;
-            height: 100px;
+            border: 2px solid #333;
+            padding: 30px;
+            font-family: 'JetBrains Mono';
+            color: var(--plasma);
+            font-size: 0.9rem;
+            height: 300px;
             overflow-y: auto;
-            border: 1px solid #222;
+            box-shadow: inset 0 0 20px rgba(255, 85, 0, 0.1);
+        }
+
+        /* --- BOTÓN DE ACCIÓN --- */
+        .btn-ronin {
+            display: block;
+            width: 100%;
+            background: none;
+            border: 3px solid var(--cyan);
+            color: var(--cyan);
+            padding: 30px;
+            font-size: 2rem;
+            font-weight: 900;
+            cursor: pointer;
+            margin-top: 50px;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-ronin:hover {
+            background: var(--cyan);
+            color: #000;
+            box-shadow: 0 0 100px var(--cyan);
         }
 
         footer {
-            margin-top: 50px;
             text-align: center;
-            font-size: 0.8em;
-            color: #555;
+            padding: 100px 20px;
+            color: #444;
+            font-family: 'JetBrains Mono';
         }
 
-        .btn-action {
-            background: none;
-            border: 2px solid var(--ronin-red);
-            color: var(--ronin-red);
-            padding: 20px 40px;
-            font-family: inherit;
-            font-weight: bold;
-            cursor: pointer;
-            width: 100%;
-            transition: 0.3s;
-            font-size: 1.2em;
-        }
-        .btn-action:hover {
-            background: var(--ronin-red);
-            color: white;
-            box-shadow: 0 0 30px var(--ronin-red);
+        .watermark {
+            font-size: 10rem;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-30deg);
+            opacity: 0.02;
+            pointer-events: none;
+            z-index: -1;
+            white-space: nowrap;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="vinilo-ronin">1947 - ∞</div>
-    
-    <header>
-        <h1>HADOUKEN MK-II</h1>
-        <p>THE PEACEMAKER | PROTOCOLO DE SOBERANÍA INDIVIDUAL | AGENCIA RONIN</p>
-    </header>
+    <div class="watermark">AGENCIA RONIN AGENCIA RONIN</div>
 
-    <div class="safety-vault">
-        <strong style="color:var(--safety-green)">[✓] MEJORAS DE SEGURIDAD MK-II:</strong><br>
-        1. <strong>Aislamiento Galvánico:</strong> Optoacopladores para separar el gatillo del circuito de alta tensión.<br>
-        2. <strong>Funda de Mu-Metal:</strong> Evita que el pulso electromagnético fría tu propio reloj o marcapasos.<br>
-        3. <strong>Válvula de Alivio:</strong> Si la presión de vapor de sodio excede los 2 bares, se purga sola. No explota en tu mano.
-    </div>
-
-    <section class="bom-section">
-        <h2>01. B.O.M. (LISTA DE MATERIALES "LOW-COST")</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>ELEMENTO</th>
-                    <th>ORIGEN RECOMENDADO</th>
-                    <th>COSTE ESTIMADO</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Flyback Transformer</td>
-                    <td>Televisor de tubo (CRT) viejo / Desguace</td>
-                    <td class="price">0.00 €</td>
-                </tr>
-                <tr>
-                    <td>Cámara de Combustión</td>
-                    <td>Bote de cristal de laboratorio o cuarzo</td>
-                    <td class="price">3.50 €</td>
-                </tr>
-                <tr>
-                    <td>Batería de Sodio (Na-Ion)</td>
-                    <td>AliExpress / Pack de 12V 5Ah</td>
-                    <td class="price">22.00 €</td>
-                </tr>
-                <tr>
-                    <td>Carcasa / Empuñadura</td>
-                    <td>Impresión 3D (Reforzada con resina epoxi)</td>
-                    <td class="price">5.00 €</td>
-                </tr>
-                <tr>
-                    <td>Electrodos</td>
-                    <td>Bujías de coche (Iridio o Platino)</td>
-                    <td class="price">4.00 €</td>
-                </tr>
-                <tr>
-                    <td>Malla de Cobre</td>
-                    <td>Estropajo de cobre (Jaula Faraday)</td>
-                    <td class="price">1.50 €</td>
-                </tr>
-            </tbody>
-        </table>
-        <p style="font-size: 0.9em; margin-top: 10px;">* Total aproximado: <strong>36.00 €</strong> para un arma que atraviesa blindajes nivel III.</p>
+    <section class="hero">
+        <div class="vinilo-ronin">1947 - ∞</div>
+        <h1>VANITAS Mk-III</h1>
+        <p class="tagline">EL ARTE DE LA GUERRA AMORAL // PEACEMAKER EDITION</p>
+        <div class="vinilo-1947">SABADELL SOBERANO // NIVEL DE AMENAZA: ESTÉTICO-LETAL</div>
     </section>
 
-    <section>
-        <h2>02. PROTOCOLO DE MONTAJE SEGURO</h2>
-        <ul class="step-list">
-            <li>
-                <strong>SISTEMA DE IGNICIÓN SEGURO:</strong><br>
-                Usa un Mosfet de potencia (IRFP260N) para manejar la bobina Flyback. Esto permite que el gatillo maneje solo 5V, mientras el sistema dispara 40,000V en el otro extremo. Si algo falla, el Mosfet se quema y corta el circuito. Tú estás a salvo.
-            </li>
-            <li>
-                <strong>CÁMARA DE VÓRTICE DE SODIO:</strong><br>
-                Utiliza las bujías de coche como bornes de entrada. Están diseñadas para aguantar calor y presión extrema. Atorníllalas a la cámara de cuarzo usando juntas de teflón. Inyecta una gota de solución saturada de sal común (NaCl) en agua destilada.
-            </li>
-            <li>
-                <strong>EL "ESCUDO DEL TIRADOR":</strong><br>
-                Envuelve toda la sección trasera de la pistola (donde va tu mano) con la malla de cobre conectada a la toma de tierra del circuito negativo. Esto crea una Jaula de Faraday. Si hay una fuga de plasma, la energía irá a la malla, no a tus dedos.
-            </li>
-            <li>
-                <strong>COLIMADOR MAGNÉTICO:</strong><br>
-                Rodea el cañón con imanes de neodimio reciclados de discos duros viejos. Estos imanes "aprietan" la bola de plasma, dándole forma de dardo y aumentando el alcance efectivo de 2 a 10 metros.
-            </li>
-        </ul>
-    </section>
-
-    <div class="diagram-box">
-        [ DIAGRAMA DE FLUJO: BATERÍA -> MOSFET -> FLYBACK -> BUJÍAS -> PLASMA -> LIBERTAD ]
-    </div>
-
-    <section>
-        <h2>03. DIAGNÓSTICO DE SISTEMA</h2>
-        <div class="terminal-output" id="term">
-            > HADOUKEN PEACEMAKER MK-II ONLINE...<br>
-            > VERIFICANDO INTEGRIDAD DE JAULA FARADAY: OK<br>
-            > CARGA DE CONDENSADORES AL 100%...<br>
-            > SENSOR DE PRESIÓN DE SODIO: ESTABLE...<br>
-            > LISTO PARA LA NEGOCIACIÓN SOBERANA...
+    <main class="main-content">
+        
+        <div class="section-header">
+            <h2>01. La Estética de la Humillación</h2>
         </div>
-    </section>
 
-    <button class="btn-action" onclick="runDiagnostics()">EJECUTAR PRUEBA DE CAMPO</button>
+        <div class="humiliation-grid">
+            <div class="art-card">
+                <h3>El Espejo del Diablo</h3>
+                <p>Chasis de fundición de aluminio reciclado de latas de refresco, pulido a mano con pasta de diamante industrial (barata) hasta conseguir un efecto cromo espejo. Refleja el miedo del enemigo antes del impacto.</p>
+                <div class="price-badge">COSTO MAT: 0,45€</div>
+            </div>
+
+            <div class="art-card" style="border-color: var(--gold);">
+                <h3>Obsidiana de Sabadell</h3>
+                <p>Empuñadura ergonómica de polímero impreso en 3D con acabado en laca de piano. El peso ha sido equilibrado con plomo de pesca fundido en el interior para dar esa sensación de "arma de lujo" que tanto gusta a los pijos.</p>
+                <div class="price-badge">COSTO MAT: 1,10€</div>
+            </div>
+
+            <div class="art-card">
+                <h3>El Corazón de Sodio</h3>
+                <p>Cámara de combustión de cuarzo transparente rodeada por un filamento de tungsteno. Al cargar, emite un brillo naranja que recuerda a una puesta de sol radiactiva. Es hipnótico, es letal, es Ronin.</p>
+                <div class="price-badge">COSTO MAT: 3,20€</div>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <h2>02. Especificaciones de Campo</h2>
+        </div>
+
+        <table class="tech-specs">
+            <tr>
+                <td>TIPO DE PROYECTIL</td>
+                <td>Plasma de Sodio Confinado (Esfera de Rayo Globular)</td>
+            </tr>
+            <tr>
+                <td>POTENCIA DE SALIDA</td>
+                <td>45 Kilovoltios en Pulso Continuo</td>
+            </tr>
+            <tr>
+                <td>ALCANCE EFECTIVO</td>
+                <td>15 Metros (Supremacía en CQB)</td>
+            </tr>
+            <tr>
+                <td>ENFRIAMIENTO</td>
+                <td>Disipador Pasivo de Cobre Estriado (Efecto Escultura)</td>
+            </tr>
+            <tr>
+                <td>FIRMA ELECTRÓNICA</td>
+                <td>Nula (Protección por Jaula de Faraday Mk-II)</td>
+            </tr>
+        </table>
+
+        <div class="section-header">
+            <h2>03. Protocolo de Ejecución</h2>
+        </div>
+
+        <div class="console" id="console">
+            > SISTEMA VANITAS INICIALIZADO...<br>
+            > VERIFICANDO ESTÉTICA VISUAL: 100% (HUMILLACIÓN DETECTADA)<br>
+            > CARGANDO NÚCLEO DE SODIO...<br>
+            > RESONANCIA MAGNÉTICA ESTABLE...<br>
+            > OBJETIVO: CUALQUIER SISTEMA DE LA CASTA EN UN RADIO DE 15M...<br>
+            > LISTO PARA LA NEGOCIACIÓN FINAL.
+        </div>
+
+        <button class="btn-ronin" onclick="disparar()">Disparar Vanitas</button>
+
+    </main>
 
     <footer>
-        AGENCIA RONIN 1947 - ∞ // EL PODER DE LA FÍSICA EN LAS MANOS DEL PUEBLO.
+        AGENCIA RONIN // 1947 - ∞ // NO SOMOS FABRICANTES, SOMOS EL FIN DE LA INDUSTRIA.
     </footer>
-</div>
 
-<script>
-    function addLog(text) {
-        const term = document.getElementById('term');
-        term.innerHTML += `<br>> ${text}`;
-        term.scrollTop = term.scrollHeight;
-    }
+    <script>
+        const terminal = document.getElementById('console');
+        
+        function disparar() {
+            const audioMsg = new SpeechSynthesisUtterance("Disparo Vanitas ejecutado. Belleza confirmada. Humillación en curso.");
+            audioMsg.lang = 'es-ES';
+            audioMsg.pitch = 0.5;
+            window.speechSynthesis.speak(audioMsg);
 
-    function runDiagnostics() {
-        const msg = new SpeechSynthesisUtterance("Iniciando secuencia de disparo seguro. Jaula de Faraday activa. Tirador protegido. Disparando Peacemaker.");
-        msg.lang = 'es-ES'; msg.pitch = 0.6;
-        window.speechSynthesis.speak(msg);
+            let logs = [
+                "Generando arco voltaico...",
+                "Ionizando atmósfera local...",
+                "Pulso de sodio emitido.",
+                "Blindaje enemigo vaporizado por pura envidia tecnológica.",
+                "Reinicio de condensadores..."
+            ];
 
-        addLog("INICIANDO PULSO DE PRUEBA...");
-        setTimeout(() => addLog("DIFERENCIAL DE POTENCIAL: 42KV"), 500);
-        setTimeout(() => addLog("IONIZACIÓN DE SODIO COMPLETADA."), 1000);
-        setTimeout(() => {
-            addLog("PULSO EMITIDO. OBJETIVO VAPORIZADO.");
-            alert("DISPARO COMPLETADO: El sistema ha funcionado sin retorno de corriente al tirador.");
-        }, 1500);
-    }
-</script>
+            logs.forEach((log, i) => {
+                setTimeout(() => {
+                    terminal.innerHTML += `<br>> ${log}`;
+                    terminal.scrollTop = terminal.scrollHeight;
+                }, i * 500);
+            });
+        }
 
+        // Simulación de "pánico enemigo" en consola
+        setInterval(() => {
+            const panic = [
+                "ALERTA: Ingenieros de Glock detectados llorando en el sector 4.",
+                "DATO: El valor de las acciones de Beretta ha bajado un 0.2% tras ver este HTML.",
+                "AVISO: La elegancia es nuestra mejor munición."
+            ];
+            terminal.innerHTML += `<br><span style="color:var(--cyan)">> ${panic[Math.floor(Math.random()*panic.length)]}</span>`;
+            terminal.scrollTop = terminal.scrollHeight;
+        }, 4000);
+    </script>
 </body>
 </html>
