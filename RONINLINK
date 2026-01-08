@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>RONINLINK Ω — ORBITAL SOBERANITY KERNEL</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  :root{--neon:#00ff41;--sky:#00f2ff;--void:#050505;--alert:#ff3300;--gold:#ffaa00}
+  body,html{margin:0;padding:0;height:100%;background:var(--void);color:var(--neon);font-family:'Courier New',monospace;overflow:hidden}
+  
+  /* --- INTERFAZ HUD --- */
+  #hud{position:absolute;inset:0;padding:20px;display:grid;grid-template-rows:auto 1fr auto;gap:15px;z-index:10;pointer-events:none}
+  header{display:flex;justify-content:space-between;border-bottom:2px solid var(--sky);padding-bottom:10px;pointer-events:all}
+  .status-tag{background:var(--sky);color:#000;padding:5px 15px;font-weight:bold;clip-path:polygon(10% 0,100% 0,90% 100%,0 100%)}
+  
+  /* --- TERMINAL Y LOGS --- */
+  .terminal-area{display:grid;grid-template-columns:1fr 350px;gap:20px;pointer-events:all}
+  #log{background:rgba(0,15,10,0.9);border:1px solid var(--neon);padding:15px;overflow-y:auto;height:45vh;font-size:0.85rem;box-shadow:inset 0 0 20px rgba(0,255,65,0.1)}
+  #sidebar{background:rgba(0,5,10,0.95);border:1px solid var(--sky);padding:15px;display:flex;flex-direction:column;gap:15px}
+  
+  /* --- ANIMACIONES Y ESTÉTICA --- */
+  .glitch{animation:glitch 2s infinite}
+  @keyframes glitch{0%{text-shadow:2px 0 var(--alert)}50%{text-shadow:-2px 0 var(--sky)}100%{text-shadow:1px 0 var(--neon)}}
+  
+  .btn{background:transparent;border:1px solid var(--neon);color:var(--neon);padding:10px;cursor:pointer;transition:0.3s;font-weight:bold;text-transform:uppercase}
+  .btn:hover{background:var(--neon);color:#000;box-shadow:0 0 20px var(--neon)}
+  .btn-alert{border-color:var(--alert);color:var(--alert)}
+  .btn-alert:hover{background:var(--alert);color:#fff}
+
+  /* --- CANVAS FONDO --- */
+  canvas#orbit-map{position:fixed;inset:0;z-index:1;background:radial-gradient(circle at center, #101020, #000)}
+
+  /* --- ELEMENTOS DINÁMICOS --- */
+  .progress-bar{height:4px;background:#222;margin:10px 0;position:relative}
+  .progress-fill{height:100%;background:var(--sky);width:0%;transition:width 0.5s}
+  .leak-line{color:var(--gold);border-left:2px solid var(--gold);padding-left:10px;margin-bottom:8px}
+  input#cmd{width:100%;background:transparent;border:none;border-bottom:1px solid var(--neon);color:var(--neon);padding:10px;outline:none;font-family:inherit}
+</style>
+</head>
+<body>
+
+<canvas id="orbit-map"></canvas>
+
+<div id="hud">
+  <header>
+    <div>
+      <h1 class="glitch">RONINLINK Ω KERNEL v1.0</h1>
+      <small>Soberanía Orbital • Jack Parsons Legacy • Nodo: [SPAIN-SABADELL-01]</small>
+    </div>
+    <div style="text-align:right">
+      <div class="status-tag">WIFI LIBRE: BROADCASTING</div>
+      <div id="timer" style="margin-top:5px">UPTIME: 00:00:00</div>
+    </div>
+  </header>
+
+  <main class="terminal-area">
+    <section>
+      <div id="log">
+        <p class="leak-line">>> Inicializando Protocolo Tesla-Resonance...</p>
+        <p>>> Enjambre detectado: 1,313 satélites en posición.</p>
+        <p>>> Estableciendo túnel P2P con Deep Web Mirror...</p>
+        <p style="color:var(--sky)">>> OK: Nodo de salida encriptado mediante Haki-Quantum.</p>
+      </div>
+      <div style="margin-top:10px">
+        <input id="cmd" placeholder="Escribe comando (leak --all, wifi --boost, stealth --on)...">
+      </div>
+    </section>
+
+    <aside id="sidebar">
+      <div class="dash-box">
+        <span>ENERGÍA SODIO-ORBITAL</span>
+        <div class="progress-bar"><div id="p1" class="progress-fill" style="width:88%"></div></div>
+        <small>Eficiencia: 98.4%</small>
+      </div>
+      <div class="dash-box">
+        <span>ANTENA RESONANCIA</span>
+        <div class="progress-bar"><div id="p2" class="progress-fill" style="width:45%"></div></div>
+        <small>Frecuencia: 432.18 Hz</small>
+      </div>
+      <button class="btn" onclick="injectLeak()">INYECTAR LEAKS</button>
+      <button class="btn" onclick="boostWifi()">MAX WIFI POWER</button>
+      <button class="btn btn-alert" onclick="evasionMode()">EVASIÓN ANTI-JAMMING</button>
+      <div id="mini-stat" style="font-size:0.7em; color:var(--maraging-steel)">
+        CONEXIONES ACTIVAS: 1.2M Biomasa Sanando<br>
+        DATA DROPPED: 42.8 TB
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <div style="display:flex; justify-content:space-between; font-size:0.8rem">
+      <span>LAT: 41.548 N | LON: 2.107 E</span>
+      <span>LA VERDAD ES LIBRE O NO ES CIENCIA</span>
+      <span>© 2026 RONINLINK ENCLAVE</span>
+    </div>
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   RONINLINK Ω - LOGICA DE SISTEMA
+   ============================================================ */
+
+const log = document.getElementById('log');
+const cmd = document.getElementById('cmd');
+const canvas = document.getElementById('orbit-map');
+const ctx = canvas.getContext('2d');
+
+// --- SIMULADOR DE ÓRBITA (25,000 partículas en rotación) ---
+let particles = [];
+function initParticles() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  for(let i=0; i<300; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 2,
+      s: Math.random() * 0.5,
+      a: Math.random() * Math.PI * 2
+    });
+  }
+}
+
+function drawOrbit() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "rgba(0, 242, 255, 0.5)";
+  particles.forEach(p => {
+    p.a += p.s * 0.01;
+    let dx = Math.cos(p.a) * 150;
+    let dy = Math.sin(p.a) * 100;
+    ctx.beginPath();
+    ctx.arc(canvas.width/2 + dx + (p.x/10), canvas.height/2 + dy + (p.y/10), p.r, 0, Math.PI*2);
+    ctx.fill();
+  });
+  requestAnimationFrame(drawOrbit);
+}
+
+// --- SISTEMA DE LEAKS ---
+const leakDatabase = [
+  "PATENTE TESLA #1.313: Transmisión inalámbrica sin pérdida detectada.",
+  "D-WEB MIRROR: Revelando cuentas offshore de la Casta Energética.",
+  "GOLIAT BLUEPRINT: Estructura del motor de sodio interceptada.",
+  "STARLINK BYPASS: Enrutando tráfico censurado de Starlink a RONINLINK.",
+  "SABADELL LABS: El overclock del entorno ha alcanzado el 400%."
+];
+
+function injectLeak() {
+  const item = leakDatabase[Math.floor(Math.random()*leakDatabase.length)];
+  const p = document.createElement('p');
+  p.className = 'leak-line';
+  p.innerHTML = `[BROADCAST-LIBRE] ${item}`;
+  log.prepend(p);
+  hablar("Inyectando verdad en la red local.");
+}
+
+function boostWifi() {
+  log.prepend(createLogItem("MAX WIFI: Saturando zona con 5G Soberano..."));
+  document.getElementById('p2').style.width = "100%";
+  hablar("WiFi libre potenciado. La biomasa está despertando.");
+}
+
+function evasionMode() {
+  log.prepend(createLogItem("ALERTA: Intento de interferencia detectado. Saltando frecuencias...", "var(--alert)"));
+  hablar("Evasión iniciada. Somos sombras en el radar.");
+  document.body.style.background = "#200";
+  setTimeout(() => document.body.style.background = var(--void), 500);
+}
+
+function createLogItem(text, color = "var(--neon)") {
+  const p = document.createElement('p');
+  p.style.color = color;
+  p.innerText = `>> ${text}`;
+  return p;
+}
+
+// --- COMANDOS ---
+cmd.addEventListener('keypress', (e) => {
+  if(e.key === 'Enter') {
+    const val = cmd.value.toLowerCase();
+    if(val === 'leak --all') {
+      setInterval(injectLeak, 2000);
+    } else if(val === 'stealth --on') {
+      evasionMode();
+    } else {
+      log.prepend(createLogItem(`Comando ejecutado: ${val}`));
+    }
+    cmd.value = '';
+  }
+});
+
+// --- AUDIO ---
+function hablar(t) {
+  const u = new SpeechSynthesisUtterance(t);
+  u.lang = 'es-ES'; u.rate = 0.9;
+  speechSynthesis.speak(u);
+}
+
+// --- UPTIME ---
+let s = 0;
+setInterval(() => {
+  s++;
+  let h = Math.floor(s/3600).toString().padStart(2,'0');
+  let m = Math.floor((s%3600)/60).toString().padStart(2,'0');
+  let sec = (s%60).toString().padStart(2,'0');
+  document.getElementById('timer').innerText = `UPTIME: ${h}:${m}:${sec}`;
+}, 1000);
+
+// --- INICIO ---
+initParticles();
+drawOrbit();
+setTimeout(() => hablar("RoninLink Omega Online. El cielo ya no es una cárcel."), 1500);
+
+</script>
+</body>
+</html>
