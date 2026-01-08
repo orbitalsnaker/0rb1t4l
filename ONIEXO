@@ -2,118 +2,202 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>ESPECIFICACIONES TÉCNICAS // PROYECTO ONI-RONIN 2026</title>
+    <title>CÓDICE TÉCNICO // ONI-RONIN v.2026 // ESPECIFICACIONES DE LA FORJA</title>
     <style>
-        :root { --main-red: #b30000; --dark-gray: #333; --light-bg: #f9f9f9; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--dark-gray); background: #eee; margin: 0; padding: 40px; }
-        .document { max-width: 1000px; margin: 0 auto; background: #fff; padding: 50px; border-top: 10px solid var(--main-red); box-shadow: 0 0 20px rgba(0,0,0,0.2); }
-        header { border-bottom: 2px solid #eee; margin-bottom: 30px; padding-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
-        h1 { margin: 0; font-size: 1.6em; color: var(--main-red); text-transform: uppercase; letter-spacing: 1px; }
-        .section-title { background: #f0f0f0; padding: 10px 15px; border-left: 5px solid var(--main-red); font-weight: bold; text-transform: uppercase; margin: 30px 0 15px 0; font-size: 1.1em; }
+        :root { 
+            --oni-red: #cc0000; 
+            --oni-gold: #a68900; 
+            --parchment: #fdfaf3;
+            --tech-black: #1a1a1a;
+        }
+        body { 
+            font-family: 'Georgia', 'Segoe UI', serif; 
+            line-height: 1.6; 
+            color: var(--tech-black); 
+            background: #dcdcdc; 
+            margin: 0; 
+            padding: 40px; 
+        }
+        .container { 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            background: var(--parchment); 
+            padding: 60px; 
+            box-shadow: 0 0 40px rgba(0,0,0,0.3); 
+            border: 1px solid #c9c9c9;
+            position: relative;
+        }
+        .seal { 
+            position: absolute;
+            top: 40px; right: 40px;
+            width: 90px; height: 90px; 
+            background: var(--oni-red); 
+            color: white; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 0.6em; 
+            text-align: center;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+            transform: rotate(-15deg);
+            border: 2px solid var(--oni-gold);
+            z-index: 10;
+        }
+        header { border-bottom: 4px double var(--oni-red); margin-bottom: 30px; padding-bottom: 20px; }
+        h1 { color: var(--oni-red); margin: 0; text-transform: uppercase; font-size: 2.2em; letter-spacing: -1px; }
+        .ref { font-size: 0.9em; color: #666; font-style: italic; letter-spacing: 2px; }
         
-        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 0.9em; }
-        th, td { padding: 12px; border: 1px solid #e0e0e0; text-align: left; }
-        th { background: #fdfdfd; color: var(--main-red); }
+        .section { margin-bottom: 40px; }
+        h2 { 
+            background: rgba(204, 0, 0, 0.05);
+            border-left: 5px solid var(--oni-red); 
+            padding: 10px 15px; 
+            font-size: 1.3em; 
+            text-transform: uppercase; 
+            color: var(--oni-red);
+            font-family: 'Garamond', serif;
+        }
         
-        .bom-table tr:nth-child(even) { background: #fafafa; }
-        .cost-total { text-align: right; font-size: 1.2em; font-weight: bold; color: var(--main-red); padding: 15px; border-top: 2px solid #eee; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; background: rgba(255,255,255,0.4); }
+        th, td { padding: 12px; border: 1px solid #d1c7ac; text-align: left; font-size: 0.9em; }
+        th { background: #e8e1cf; color: var(--oni-red); }
         
-        .disclaimer { font-size: 0.8em; color: #777; font-style: italic; border: 1px solid #ddd; padding: 15px; background: #fff; margin-top: 20px; }
-        .footer { margin-top: 40px; text-align: center; font-size: 0.75em; color: #aaa; }
+        .medieval-instruction {
+            font-style: italic;
+            background: #fff;
+            padding: 25px;
+            border: 1px inset #d1c7ac;
+            margin: 20px 0;
+            border-left: 5px solid var(--oni-gold);
+        }
+        .medieval-instruction strong { color: var(--oni-red); }
+
+        .tech-note { 
+            background: #fff8f8; 
+            border: 1px solid #ffcccc; 
+            padding: 20px; 
+            font-size: 0.85em; 
+            color: #600; 
+            margin-top: 10px;
+            line-height: 1.8;
+        }
         
-        @media print { body { padding: 0; background: #fff; } .document { box-shadow: none; border: none; width: 100%; } }
+        .cost-total { 
+            text-align: right; 
+            font-size: 1.3em; 
+            font-weight: bold; 
+            color: var(--oni-red); 
+            padding: 20px;
+            border-top: 2px solid #eee;
+        }
+
+        .footer { margin-top: 50px; font-size: 0.8em; text-align: center; color: #999; border-top: 1px solid #eee; padding-top: 20px; }
+        .highlight { font-weight: bold; color: #000; }
+        
+        @media print { body { background: #fff; padding: 0; } .container { box-shadow: none; border: none; width: 100%; } }
     </style>
 </head>
 <body>
 
-<div class="document">
+<div class="container">
+    <div class="seal">MANDATO DE<br>SABADELL<br>13101310</div>
     <header>
-        <div>
-            <h1>Dossier de Fabricación: ONI-RONIN v2.0</h1>
-            <p style="font-size: 0.8em; color: #666;">Ref: COS-SBD-INFANTRY-2026 // Sabadell, España</p>
-        </div>
-        <div style="text-align: right; font-size: 0.8em; font-weight: bold;">PROTOTIPADO RÁPIDO<br>GRADO: COSPLAY TÉCNICO</div>
+        <h1>Códice de Forja: ONI-RONIN v.2026</h1>
+        <div class="ref">Referencia Proyecto: COS-SBD-INFANTRY-01 // Cliente: Director Ronin</div>
+        <p style="color: var(--oni-gold); font-style: italic;">"Que el silicio obedezca a la voluntad y la resina sea el escudo del espíritu."</p>
     </header>
 
-    <div class="section-title">1. Objetivos del Encargo</div>
-    <p>Este documento detalla los componentes necesarios para la fabricación de un <strong>set de armadura de asistencia cinética</strong> para uso recreativo (Cosplay). Las piezas 3D suministradas deben ser compatibles con el hardware listado en el BOM (Bill of Materials) a continuación.</p>
+    <div class="section">
+        <h2>I. De la Naturaleza del Encargo</h2>
+        <p>Se requiere la fabricación integral de un conjunto de armadura para <strong>Cosplay de Alto Rendimiento</strong>. El diseño debe priorizar la resistencia estructural absoluta para soportar largas jornadas de uso (8-12 horas) y albergar sistemas cinéticos internos que simulan movimiento autónomo en las placas estéticas.</p>
+    </div>
 
-    <div class="section-title">2. Bill of Materials (BOM) - Adquisición de Hardware</div>
-    <table class="bom-table">
-        <thead>
-            <tr>
-                <th>Categoría</th>
-                <th>Componente (Sourcing: AliExpress/Shenzhen)</th>
-                <th>Uso en el Proyecto</th>
-                <th>Coste Estimado</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Actuadores</strong></td>
-                <td>4x Motorreductor DC 12V-24V (Worm Gear) High Torque</td>
-                <td>Movimiento de articulaciones y placas</td>
-                <td>82,50 €</td>
-            </tr>
-            <tr>
-                <td><strong>Control</strong></td>
-                <td>1x Microcontrolador ESP32-S3 WROOM (Dual Core)</td>
-                <td>Gestión de secuencias y efectos</td>
-                <td>12,40 €</td>
-            </tr>
-            <tr>
-                <td><strong>Drivers</strong></td>
-                <td>4x Driver de potencia BTS7960 43A</td>
-                <td>Control de los motores de par alto</td>
-                <td>31,10 €</td>
-            </tr>
-            <tr>
-                <td><strong>Energía</strong></td>
-                <td>Módulo BMS 6S + Pack Celdas 18650 (Recuperadas)</td>
-                <td>Alimentación autónoma del traje</td>
-                <td>48,00 €</td>
-            </tr>
-            <tr>
-                <td><strong>Sensores</strong></td>
-                <td>10x Potenciómetros rotativos B10K + NTC 10K</td>
-                <td>Telemetría de posición de armadura</td>
-                <td>14,20 €</td>
-            </tr>
-            <tr>
-                <td><strong>Estructura</strong></td>
-                <td>Perfiles Aluminio 2020 + Tornillería M3/M4</td>
-                <td>Refuerzo interno oculto</td>
-                <td>62,00 €</td>
-            </tr>
-            <tr>
-                <td><strong>Cableado</strong></td>
-                <td>Cable Silicona 14AWG + Conectores XT60</td>
-                <td>Sistema circulatorio eléctrico</td>
-                <td>18,50 €</td>
-            </tr>
-            <tr>
-                <td><strong>Óptica</strong></td>
-                <td>Lentes Policarbonato -1.50 Dioptrías</td>
-                <td>Visor integrado en máscara</td>
-                <td>25,00 €</td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="cost-total">Presupuesto Estimado Hardware: 293,70 €</div>
+    <div class="section">
+        <h2>II. Componentes y Materiales Sagrados</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Módulo / Pieza</th>
+                    <th>Material de Forja</th>
+                    <th>Acabado Requerido</th>
+                    <th>Notas del Maestro</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Visor "VAMDONA-FRAME"</strong></td>
+                    <td>PA12 (MJF) o Resina Industrial</td>
+                    <td>Negro Mate Granallado</td>
+                    <td>Debe alojar óptica graduada (-1.50 Dioptrías) y ruteado oculto.</td>
+                </tr>
+                <tr>
+                    <td><strong>Nervios del Exo (Rodillas/Cadera)</strong></td>
+                    <td>PA12 (MJF) Grado Estructural</td>
+                    <td>Natural / Sin Post-procesado</td>
+                    <td>Puntos de carga crítica. Tolerancia innegociable de 0.1mm.</td>
+                </tr>
+                <tr>
+                    <td><strong>Placas Hannya y Coraza</strong></td>
+                    <td>PETG Alchemy-Doped (Reforzado)</td>
+                    <td>Listo para Pintura de Alta Fricción</td>
+                    <td>Diseño hueco para pasar el sistema circulatorio eléctrico.</td>
+                </tr>
+                <tr>
+                    <td><strong>Empuñadura "Flame-Scrap"</strong></td>
+                    <td>Nylon (Grado Herramienta)</td>
+                    <td>Texturizado de Agarre Ronin</td>
+                    <td>Alojamiento estanco para batería 18650 y cableado térmico.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-    <div class="section-title">3. Especificaciones de Impresión 3D</div>
-    <p>Se requiere que la empresa de impresión ajuste los parámetros de relleno (infill) al <strong>40% (Giroide)</strong> en piezas de unión para soportar el peso de los motores. El material <strong>PA12</strong> es obligatorio para el visor y las rodillas para evitar el desgaste por fricción.</p>
+    <div class="section">
+        <h2>III. Ordenanzas de la Forja (Reglas de Impresión)</h2>
+        <div class="medieval-instruction">
+            "Escuchad, Maestro de la Resina: No permitiréis que la debilidad entre en vuestra obra. El <strong>Relleno (Infill)</strong> de las piezas de unión será del <strong>40% en patrón Giroide</strong>, pues el peso de los corazones de metal (motores) es implacable. <br><br>
+            Las <strong>Tolerancias</strong> se mantendrán en <strong>0.1mm</strong>; ni un suspiro más, ni una sombra menos, para que los perfiles de aluminio y los motores de la lejana Shenzhen se unan en un matrimonio perfecto de fricción y par."
+        </div>
+        <ul>
+            <li><strong>Ruteado Interno:</strong> Canales internos de 3mm integrados en el diseño para cables de 14AWG.</li>
+            <li><strong>Inserciones:</strong> Preparar orificios para inserciones térmicas M3 y M4.</li>
+            <li><strong>Óptica:</strong> Montaje de lentes de policarbonato mediante clip de seguridad de alta presión.</li>
+        </ul>
+    </div>
 
-    <div class="disclaimer">
-        <strong>Aviso Legal y Técnico:</strong> Este proyecto es una pieza de arte y atrezzo. Los componentes mecánicos están diseñados para añadir "realismo visual" al disfraz. La empresa de impresión no se hace responsable del montaje final de los componentes electrónicos suministrados por el cliente.
+    <div class="section">
+        <h2>IV. Tributo de Materiales (BOM AliExpress)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Componente</th>
+                    <th>Sourcing Recomendado</th>
+                    <th>Función Declarada</th>
+                    <th>Coste Estimado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Motores Worm Gear (x4)</strong></td><td>AliExpress High Torque 24V</td><td>Efectos de movimiento en armadura</td><td>82,50 €</td></tr>
+                <tr><td><strong>Cerebro ESP32-S3</strong></td><td>Tienda Oficial WROOM</td><td>Sincronía de luces y sonidos</td><td>12,40 €</td></tr>
+                <tr><td><strong>Drivers BTS7960 (x4)</strong></td><td>Módulo 43A Robótica</td><td>Gestión de energía cinética</td><td>31,10 €</td></tr>
+                <tr><td><strong>Katana Térmica Scrap</strong></td><td>Resistencias + Eje Acero</td><td>Atrezzo de efecto calorífico</td><td>28,50 €</td></tr>
+                <tr><td><strong>Estructura Perfil 2020</strong></td><td>Aluminio Negro Anodizado</td><td>Esqueleto interno oculto</td><td>62,00 €</td></tr>
+                <tr><td><strong>Varios (Cables/BMS)</strong></td><td>Silicona y Celdas 18650</td><td>Alimentación vital</td><td>77,20 €</td></tr>
+            </tbody>
+        </table>
+        <div class="cost-total">Ofrenda Total de Sourcing: 293,70 €</div>
+    </div>
+
+    <div class="tech-note">
+        <strong>RECOMENDACIÓN TÉCNICA FINAL:</strong> Este equipo es una obra de 'Atrezzo Técnico'. El Maestro Artesano es responsable únicamente de la integridad física de las piezas según los archivos STL/STEP suministrados. La activación del "espíritu de la máquina" (software) y el montaje del hardware de sacrificio son responsabilidad exclusiva del Director de Proyecto.
     </div>
 
     <div class="footer">
-        BOA KINETICS // SABADELL FORGE // 13101310 // 2026<br>
-        "El código es libre, la carne es opcional."
+        CONFIDENCIAL // SABADELL FORGE // ENERO 2026 // 13101310<br>
+        <em>"Recordad las mentiras, fabricad vuestra propia verdad."</em>
     </div>
 </div>
 
 </body>
 </html>
-
