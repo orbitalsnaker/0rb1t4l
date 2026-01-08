@@ -2,35 +2,36 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>CÓDICE TÉCNICO // ONI-RONIN v.2026 // ESPECIFICACIONES DE LA FORJA</title>
+    <title>CÓDICE DE FORJA // ONI-RONIN v.2.2 // OPTIMIZACIÓN SHENZHEN</title>
     <style>
         :root { 
             --oni-red: #cc0000; 
             --oni-gold: #a68900; 
             --parchment: #fdfaf3;
             --tech-black: #1a1a1a;
+            --money-green: #2d5a27;
         }
         body { 
             font-family: 'Georgia', 'Segoe UI', serif; 
             line-height: 1.6; 
             color: var(--tech-black); 
-            background: #dcdcdc; 
+            background: #111; 
             margin: 0; 
             padding: 40px; 
         }
         .container { 
-            max-width: 1000px; 
+            max-width: 1100px; 
             margin: 0 auto; 
             background: var(--parchment); 
             padding: 60px; 
-            box-shadow: 0 0 40px rgba(0,0,0,0.3); 
-            border: 1px solid #c9c9c9;
+            box-shadow: 0 0 50px rgba(0,0,0,0.5); 
+            border: 2px solid #c9c9c9;
             position: relative;
         }
         .seal { 
             position: absolute;
             top: 40px; right: 40px;
-            width: 90px; height: 90px; 
+            width: 100px; height: 100px; 
             background: var(--oni-red); 
             color: white; 
             border-radius: 50%; 
@@ -60,7 +61,7 @@
         }
         
         table { width: 100%; border-collapse: collapse; margin: 15px 0; background: rgba(255,255,255,0.4); }
-        th, td { padding: 12px; border: 1px solid #d1c7ac; text-align: left; font-size: 0.9em; }
+        th, td { padding: 10px; border: 1px solid #d1c7ac; text-align: left; font-size: 0.85em; }
         th { background: #e8e1cf; color: var(--oni-red); }
         
         .medieval-instruction {
@@ -70,6 +71,7 @@
             border: 1px inset #d1c7ac;
             margin: 20px 0;
             border-left: 5px solid var(--oni-gold);
+            font-size: 0.95em;
         }
         .medieval-instruction strong { color: var(--oni-red); }
 
@@ -80,20 +82,19 @@
             font-size: 0.85em; 
             color: #600; 
             margin-top: 10px;
-            line-height: 1.8;
+            line-height: 1.6;
         }
         
         .cost-total { 
             text-align: right; 
-            font-size: 1.3em; 
+            font-size: 1.5em; 
             font-weight: bold; 
-            color: var(--oni-red); 
+            color: var(--money-green); 
             padding: 20px;
-            border-top: 2px solid #eee;
+            border-top: 3px double var(--oni-red);
         }
 
         .footer { margin-top: 50px; font-size: 0.8em; text-align: center; color: #999; border-top: 1px solid #eee; padding-top: 20px; }
-        .highlight { font-weight: bold; color: #000; }
         
         @media print { body { background: #fff; padding: 0; } .container { box-shadow: none; border: none; width: 100%; } }
     </style>
@@ -101,53 +102,53 @@
 <body>
 
 <div class="container">
-    <div class="seal">MANDATO DE<br>SABADELL<br>13101310</div>
+    <div class="seal">SABADELL<br>SOBERANO<br>13101310</div>
     <header>
-        <h1>Códice de Forja: ONI-RONIN v.2026</h1>
-        <div class="ref">Referencia Proyecto: COS-SBD-INFANTRY-01 // Cliente: Director Ronin</div>
-        <p style="color: var(--oni-gold); font-style: italic;">"Que el silicio obedezca a la voluntad y la resina sea el escudo del espíritu."</p>
+        <h1>Códice de Forja v2.2: ONI-RONIN SHENZHEN-GRADE</h1>
+        <div class="ref">Ref: COS-SBD-LOWCOST-01 // Presupuesto Guerrilla de Materiales</div>
+        <p style="color: var(--oni-gold); font-style: italic;">"La fuerza no está en el oro, sino en la astucia de quien dobla el hierro."</p>
     </header>
 
     <div class="section">
-        <h2>I. De la Naturaleza del Encargo</h2>
-        <p>Se requiere la fabricación integral de un conjunto de armadura para <strong>Cosplay de Alto Rendimiento</strong>. El diseño debe priorizar la resistencia estructural absoluta para soportar largas jornadas de uso (8-12 horas) y albergar sistemas cinéticos internos que simulan movimiento autónomo en las placas estéticas.</p>
+        <h2>I. De la Alquimia de Ahorro (Composite Oni-Shell)</h2>
+        <p>Para reducir el diezmo de filamento, el Maestro utilizará la técnica de <strong>Cáscara Hueca</strong>. Las piezas estéticas se imprimirán con solo <strong>2 perímetros</strong>. El vacío interno se rellenará con una mezcla de <strong>arena de cuarzo y resina epoxi de construcción</strong>. Esto otorga una dureza pétrea por un coste insignificante, protegiendo los órganos mecánicos de impactos directos.</p>
     </div>
 
     <div class="section">
-        <h2>II. Componentes y Materiales Sagrados</h2>
+        <h2>II. Componentes y Materiales de Guerrilla</h2>
         <table>
             <thead>
                 <tr>
                     <th>Módulo / Pieza</th>
                     <th>Material de Forja</th>
-                    <th>Acabado Requerido</th>
+                    <th>Estrategia de Coste</th>
                     <th>Notas del Maestro</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>Visor "VAMDONA-FRAME"</strong></td>
-                    <td>PA12 (MJF) o Resina Industrial</td>
-                    <td>Negro Mate Granallado</td>
-                    <td>Debe alojar óptica graduada (-1.50 Dioptrías) y ruteado oculto.</td>
+                    <td><strong>Visor "VAMDONA-LITE"</strong></td>
+                    <td>PA12 (MJF) o PETG Negro</td>
+                    <td>Sourcing en lote compartido</td>
+                    <td>Debe alojar óptica graduada de bajo coste (-1.50).</td>
                 </tr>
                 <tr>
-                    <td><strong>Nervios del Exo (Rodillas/Cadera)</strong></td>
-                    <td>PA12 (MJF) Grado Estructural</td>
-                    <td>Natural / Sin Post-procesado</td>
-                    <td>Puntos de carga crítica. Tolerancia innegociable de 0.1mm.</td>
+                    <td><strong>Articulaciones de Par</strong></td>
+                    <td>PA12 (MJF) Estructural</td>
+                    <td>Reducción de volumen al 60%</td>
+                    <td>Tolerancia 0.1mm. Uso de rodamientos 608 (lote de Skate).</td>
                 </tr>
                 <tr>
-                    <td><strong>Placas Hannya y Coraza</strong></td>
-                    <td>PETG Alchemy-Doped (Reforzado)</td>
-                    <td>Listo para Pintura de Alta Fricción</td>
-                    <td>Diseño hueco para pasar el sistema circulatorio eléctrico.</td>
+                    <td><strong>Coraza e Infantería</strong></td>
+                    <td>PETG Reciclado / Modo Vaso</td>
+                    <td>Refuerzo con fibra de vidrio scrap</td>
+                    <td>Canales internos de 4mm para cables de potencia.</td>
                 </tr>
                 <tr>
-                    <td><strong>Empuñadura "Flame-Scrap"</strong></td>
-                    <td>Nylon (Grado Herramienta)</td>
-                    <td>Texturizado de Agarre Ronin</td>
-                    <td>Alojamiento estanco para batería 18650 y cableado térmico.</td>
+                    <td><strong>Katana Térmica</strong></td>
+                    <td>Acero de Construcción (Rebar)</td>
+                    <td>Resistencia de Nicrom reciclada</td>
+                    <td>Empuñadura en PVC con texturizado de goma de bici.</td>
                 </tr>
             </tbody>
         </table>
@@ -156,46 +157,43 @@
     <div class="section">
         <h2>III. Ordenanzas de la Forja (Reglas de Impresión)</h2>
         <div class="medieval-instruction">
-            "Escuchad, Maestro de la Resina: No permitiréis que la debilidad entre en vuestra obra. El <strong>Relleno (Infill)</strong> de las piezas de unión será del <strong>40% en patrón Giroide</strong>, pues el peso de los corazones de metal (motores) es implacable. <br><br>
-            Las <strong>Tolerancias</strong> se mantendrán en <strong>0.1mm</strong>; ni un suspiro más, ni una sombra menos, para que los perfiles de aluminio y los motores de la lejana Shenzhen se unan en un matrimonio perfecto de fricción y par."
+            "Escuchad, Maestro: No permitáis que el filamento se desperdicie en rellenos inútiles. Usaréis <strong>Patrón Giroide al 25%</strong> en las zonas de carga, pero compensaréis con <strong>Inserciones de Acero</strong> (tornillos largos) que atraviesen la pieza de lado a lado. <br><br>
+            Las <strong>Tolerancias</strong> son ley: 0.1mm para los ejes de los motores Worm Gear. Si la pieza baila, el par se pierde; si la pieza aprieta, el motor arderá. La precisión es el único lujo que nos permitimos."
         </div>
-        <ul>
-            <li><strong>Ruteado Interno:</strong> Canales internos de 3mm integrados en el diseño para cables de 14AWG.</li>
-            <li><strong>Inserciones:</strong> Preparar orificios para inserciones térmicas M3 y M4.</li>
-            <li><strong>Óptica:</strong> Montaje de lentes de policarbonato mediante clip de seguridad de alta presión.</li>
-        </ul>
     </div>
 
     <div class="section">
-        <h2>IV. Tributo de Materiales (BOM AliExpress)</h2>
+        <h2>IV. Tributo de Materiales (BOM AliExpress 2026 - Precios Lote)</h2>
         <table>
             <thead>
                 <tr>
                     <th>Componente</th>
-                    <th>Sourcing Recomendado</th>
+                    <th>Sourcing (AliExpress Selection)</th>
                     <th>Función Declarada</th>
-                    <th>Coste Estimado</th>
+                    <th>Coste Real</th>
                 </tr>
             </thead>
             <tbody>
-                <tr><td><strong>Motores Worm Gear (x4)</strong></td><td>AliExpress High Torque 24V</td><td>Efectos de movimiento en armadura</td><td>82,50 €</td></tr>
-                <tr><td><strong>Cerebro ESP32-S3</strong></td><td>Tienda Oficial WROOM</td><td>Sincronía de luces y sonidos</td><td>12,40 €</td></tr>
-                <tr><td><strong>Drivers BTS7960 (x4)</strong></td><td>Módulo 43A Robótica</td><td>Gestión de energía cinética</td><td>31,10 €</td></tr>
-                <tr><td><strong>Katana Térmica Scrap</strong></td><td>Resistencias + Eje Acero</td><td>Atrezzo de efecto calorífico</td><td>28,50 €</td></tr>
-                <tr><td><strong>Estructura Perfil 2020</strong></td><td>Aluminio Negro Anodizado</td><td>Esqueleto interno oculto</td><td>62,00 €</td></tr>
-                <tr><td><strong>Varios (Cables/BMS)</strong></td><td>Silicona y Celdas 18650</td><td>Alimentación vital</td><td>77,20 €</td></tr>
+                <tr><td><strong>Pack Motores (x4)</strong></td><td>Worm Gear Motor JGB37 12V-24V</td><td>Movimiento de placas de hombro</td><td>54,20 €</td></tr>
+                <tr><td><strong>Cerebro ESP32-S3 (x2)</strong></td><td>Lote de 2 unidades (1 de backup)</td><td>Control de luces y servomecanismos</td><td>9,15 €</td></tr>
+                <tr><td><strong>Drivers BTS7960 (x4)</strong></td><td>Lote "Robotics Pack" 43A</td><td>Distribución de fuerza a miembros</td><td>22,40 €</td></tr>
+                <tr><td><strong>Batería y BMS 6S</strong></td><td>Kit DIY BMS + Níquel (Sin Celdas)</td><td>Gestión de energía (Celdas recicladas)</td><td>11,80 €</td></tr>
+                <tr><td><strong>Óptica y Visión</strong></td><td>Lentes PC graduadas (Lote Genérico)</td><td>Protección ocular y HUD</td><td>12,50 €</td></tr>
+                <tr><td><strong>Estructura Perfil 2020</strong></td><td>Cortes de 1m (Chatarra o Saldo)</td><td>Esqueleto cinético</td><td>22,00 €</td></tr>
+                <tr><td><strong>Tornillería y Cables</strong></td><td>Kit M3/M4 + Silicona 14AWG</td><td>Uniones y flujo de esencia</td><td>15,60 €</td></tr>
+                <tr><td><strong>Katana (Resistencias)</strong></td><td>Hilo Nicrom + Cinta Kapton</td><td>Atrezzo de efecto térmico</td><td>8,40 €</td></tr>
             </tbody>
         </table>
-        <div class="cost-total">Ofrenda Total de Sourcing: 293,70 €</div>
+        <div class="cost-total">Ofrenda Total (Hardware de Guerrilla): 156,05 €</div>
     </div>
 
     <div class="tech-note">
-        <strong>RECOMENDACIÓN TÉCNICA FINAL:</strong> Este equipo es una obra de 'Atrezzo Técnico'. El Maestro Artesano es responsable únicamente de la integridad física de las piezas según los archivos STL/STEP suministrados. La activación del "espíritu de la máquina" (software) y el montaje del hardware de sacrificio son responsabilidad exclusiva del Director de Proyecto.
+        <strong>RECOMENDACIÓN DE AHORRO EXTREMO:</strong> Las celdas 18650 deben ser recuperadas de baterías de portátiles desechadas o patinetes eléctricos (coste 0€). El chasis de aluminio puede sustituirse por varilla roscada de ferretería con tubos de PVC si el Maestro domina la técnica de las uniones térmicas.
     </div>
 
     <div class="footer">
-        CONFIDENCIAL // SABADELL FORGE // ENERO 2026 // 13101310<br>
-        <em>"Recordad las mentiras, fabricad vuestra propia verdad."</em>
+        CONFIDENCIAL // SABADELL FORGE // 13101310 // 2026<br>
+        <em>"Fabricamos lo que ellos no pueden rastrear. Recordad las mentiras, cread el futuro."</em>
     </div>
 </div>
 
