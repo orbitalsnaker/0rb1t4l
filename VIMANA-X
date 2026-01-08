@@ -2,253 +2,171 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIMANA-X "ESPECTRO" | SOBERANÍA CUÁNTICA RONIN</title>
+    <title>VIMANA-X Mk-IV | MHD SOBERANÍA TERRESTRE</title>
     <style>
         :root {
-            --vacuum-black: #050505;
-            --mhd-blue: #00d4ff;
-            --mercury-core: #ff0055;
-            --vortex-silver: #e0e0e0;
-            --law-gold: #ffcc00;
-            --ronin-red: #cc0000; /* Color distintivo de Ronin */
-            --infinity-symbol: '\221E'; /* Símbolo de infinito Unicode */
+            --vacuum-black: #020202;
+            --mhd-cyan: #00f2ff;
+            --mercury-silver: #8e9eab;
+            --law-gold: #ffd700;
+            --ronin-red: #ff0000;
+            --lead-gray: #444;
         }
 
         body {
             background-color: var(--vacuum-black);
-            color: var(--vortex-silver);
+            color: #fff;
             font-family: 'JetBrains Mono', monospace;
-            margin: 0;
-            padding: 0;
-            overflow: hidden; /* Para simular el vacío del espacio */
-            background-image: radial-gradient(circle at center, #0a0a2a 0%, #000 100%);
+            margin: 0; padding: 20px;
+            background-image: linear-gradient(rgba(0, 242, 255, 0.05) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgba(0, 242, 255, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
         }
 
-        .cockpit-frame {
-            border: 5px double var(--mhd-blue);
-            margin: 20px;
-            height: calc(100vh - 40px);
-            display: flex;
-            flex-direction: column;
-            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(10,10,40,0.9) 100%);
+        .main-hull {
+            border: 2px solid var(--mhd-cyan);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px;
+            background: rgba(0,0,0,0.9);
+            box-shadow: 0 0 40px var(--mhd-cyan);
             position: relative;
-            box-shadow: 0 0 50px rgba(0, 212, 255, 0.4);
-            overflow: hidden; /* Contenido del cockpit */
         }
 
-        /* VINILO RONIN 1947-∞ */
-        .ronin-banner {
+        /* VINILO RONIN 1947 - ∞ */
+        .ronin-legacy {
             position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 1.5em;
+            top: 20px;
+            left: 30px;
             color: var(--ronin-red);
             font-weight: bold;
-            text-shadow: 0 0 10px rgba(204, 0, 0, 0.8);
-            letter-spacing: 2px;
-            z-index: 10;
-        }
-
-        .ronin-banner::before {
-            content: "ACADEMIA RONIN ";
-        }
-        .ronin-banner::after {
-            content: " 1947" var(--infinity-symbol);
             font-size: 1.2em;
-            vertical-align: super;
+            border: 1px solid var(--ronin-red);
+            padding: 5px 15px;
+            letter-spacing: 3px;
         }
 
-        /* HUD DE NAVEGACIÓN INERCIAL */
-        .hud-overlay {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            pointer-events: none;
-            border: 1px solid rgba(0, 212, 255, 0.2);
-            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 212, 255, 0.05) 3px);
-            z-index: 5;
-        }
+        header { text-align: center; border-bottom: 1px solid var(--mhd-cyan); padding-bottom: 20px; }
 
-        /* NÚCLEO DE IMPLOSIÓN SCHAUBERGER (MHD + EFECTO BROWN) */
-        .vortex-engine {
-            width: 180px; height: 180px;
-            border: 5px double var(--mercury-core);
+        /* MOTOR DE VÓRTICE DE MERCURIO (DISEÑO SCHAUBERGER TERRESTRE) */
+        .mhd-drive {
+            width: 200px; height: 200px;
+            border: 4px solid var(--mercury-silver);
             border-radius: 50%;
-            margin: 30px auto 20px auto;
+            margin: 40px auto;
             position: relative;
-            animation: pulse-engine 0.3s infinite alternate;
-            background: radial-gradient(circle, rgba(255,0,85,0.7) 0%, transparent 70%);
             display: flex; align-items: center; justify-content: center;
-            font-size: 0.8em; color: var(--vortex-silver);
-            text-shadow: 0 0 15px var(--mercury-core);
+            box-shadow: 0 0 30px var(--mhd-cyan);
         }
 
-        @keyframes pulse-engine {
-            from { box-shadow: 0 0 20px var(--mercury-core); }
-            to { box-shadow: 0 0 60px var(--mercury-core), inset 0 0 40px var(--mercury-core); }
+        .vortex-spin {
+            width: 160px; height: 160px;
+            border: 2px dotted var(--mhd-cyan);
+            border-radius: 50%;
+            animation: spin 0.05s linear infinite;
         }
 
-        .data-stream {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr; /* Añadimos una columna para los drones */
-            gap: 20px;
-            padding: 0 20px;
-            font-size: 0.9em;
-            flex-grow: 1; /* Para que ocupe el espacio restante */
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        .specs-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 30px 0;
         }
 
-        .gauge { border-left: 4px solid var(--mhd-blue); padding-left: 15px; margin-bottom: 15px; }
-        .gauge span { color: var(--mhd-blue); font-size: 0.75em; text-transform: uppercase; display: block; }
-        .gauge strong { font-size: 1.6em; color: var(--vortex-silver); text-shadow: 0 0 10px var(--mhd-blue); }
+        .spec-card {
+            background: #0a0a0a; border: 1px solid var(--lead-gray); padding: 15px;
+            border-top: 3px solid var(--mhd-cyan);
+        }
 
-        /* CABINA JURÍDICA */
-        .legal-ai {
-            background: rgba(255, 204, 0, 0.1);
+        .spec-card span { display: block; font-size: 0.7em; color: var(--mhd-cyan); }
+        .spec-card strong { font-size: 1.2em; }
+
+        /* MÓDULO JURÍDICO */
+        .legal-unit {
+            background: rgba(255, 215, 0, 0.05);
             border: 1px solid var(--law-gold);
-            padding: 15px;
-            margin: 20px;
-            font-size: 0.8em;
-            position: relative;
-            box-shadow: 0 0 20px rgba(255,204,0,0.3);
+            padding: 20px; margin-top: 20px;
         }
-        .legal-ai strong { color: var(--law-gold); }
 
-        /* DRONES PARÁSITOS */
-        .drone-display {
-            border: 2px solid var(--mercury-core);
-            padding: 15px;
-            background: rgba(255, 0, 85, 0.05);
-            text-align: center;
+        .btn-group { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .btn-ronin {
+            background: transparent; border: 1px solid var(--mhd-cyan); color: var(--mhd-cyan);
+            padding: 15px; cursor: pointer; font-weight: bold;
         }
-        .drone-display strong { color: var(--mercury-core); }
-        .drone-list { list-style: none; padding: 0; margin: 10px 0 0 0; }
-        .drone-list li { margin-bottom: 5px; color: var(--plasma-green); font-size: 0.8em; }
-
-        .control-panel {
-            display: flex;
-            justify-content: space-around;
-            padding: 20px;
-            border-top: 1px solid rgba(0, 212, 255, 0.2);
-            margin-top: auto; /* Empuja los botones hacia abajo */
-        }
-        .btn-action {
-            background: none;
-            border: 2px solid var(--mhd-blue);
-            color: var(--mhd-blue);
-            padding: 12px 25px;
-            cursor: pointer;
-            font-weight: bold;
-            text-transform: uppercase;
-            transition: 0.3s;
-            box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
-        }
-        .btn-action:hover { background: var(--mhd-blue); color: var(--vacuum-black); box-shadow: 0 0 20px var(--mhd-blue); }
-        .btn-law { border-color: var(--law-gold); color: var(--law-gold); box-shadow: 0 0 10px rgba(255,204,0,0.2); }
-        .btn-law:hover { background: var(--law-gold); color: var(--vacuum-black); }
-        .btn-drone { border-color: var(--mercury-core); color: var(--mercury-core); box-shadow: 0 0 10px rgba(255,0,85,0.2); }
-        .btn-drone:hover { background: var(--mercury-core); color: var(--vacuum-black); }
+        .btn-ronin:hover { background: var(--mhd-cyan); color: #000; }
     </style>
 </head>
 <body>
 
-<div class="cockpit-frame">
-    <div class="hud-overlay"></div>
+<div class="main-hull">
+    <div class="ronin-legacy">AGENCIA RONIN 1947 - ∞</div>
 
-    <div style="text-align:center; padding-top: 20px;">
-        <h1 style="letter-spacing: 18px; color: var(--mhd-blue); font-size: 4em; text-shadow: 0 0 30px var(--mhd-blue);">VIMANA-X "ESPECTRO"</h1>
-        <p style="color: var(--vortex-silver); letter-spacing: 5px;">SOBERANÍA CUÁNTICA & DOMINIO ESPACIO-TEMPORAL</p>
+    <header>
+        <h1>VIMANA-X Mk-IV</h1>
+        <p>SUPERCONDUCTIVIDAD MHD | SIN DESECHOS EXTERNOS | INGENIERÍA DE FRONTERA</p>
+    </header>
+
+    <div class="mhd-drive">
+        <div class="vortex-spin"></div>
+        <div style="position:absolute; font-size:0.7em;">NÚCLEO HG-MHD</div>
     </div>
 
-    <div class="vortex-engine">
-        NÚCLEO MHD <br> INERCIA CERO
-    </div>
-
-    <div class="data-stream">
-        <div>
-            <div class="gauge"><span>Masa Local</span><strong>0.000001 Kg</strong></div>
-            <div class="gauge"><span>Propulsión MHD</span><strong>99.99% Efic.</strong></div>
-            <div class="gauge"><span>Campo Gravitatorio</span><strong>NEGATIVO (Antimateria Parcial)</strong></div>
+    <div class="specs-grid">
+        <div class="spec-card">
+            <span>PROPULSIÓN</span>
+            <strong>EFECTO BIEFELD-BROWN</strong>
         </div>
-        <div>
-            <div class="gauge"><span>Flujo de Mercurio</span><strong>35.000 RPM (Hiper-Vórtice)</strong></div>
-            <div class="gauge"><span>Nivel de Silencio</span><strong>TOTAL (Absorción Sónica)</strong></div>
-            <div class="gauge"><span>Blindaje</span><strong>ALEACIÓN ROSWELL-GRAPHEM</strong></div>
+        <div class="spec-card">
+            <span>FLUIDO DE TRABAJO</span>
+            <strong>MERCURIO INDUSTRIAL DOPADO</strong>
         </div>
-        <div class="drone-display">
-            <strong>DRONES PARÁSITOS</strong>
-            <ul class="drone-list" id="drone-status">
-                <li>[01] Lapa de Starlink - ACTIVO</li>
-                <li>[02] Lapa de GPS - ACTIVO</li>
-                <li>[03] Lapa de Telecom - EN ESPERA</li>
-            </ul>
+        <div class="spec-card">
+            <span>BLINDAJE STEALTH</span>
+            <strong>FERRITA & GRAFENO</strong>
+        </div>
+        <div class="spec-card">
+            <span>CARGA ÚTIL</span>
+            <strong>GOLIAT Ω-ONI COMPATIBLE</strong>
+        </div>
+        <div class="spec-card">
+            <span>ACELERACIÓN</span>
+            <strong>INERCIAL CANCELADA (MHD)</strong>
+        </div>
+        <div class="spec-card">
+            <span>SISTEMA ELÉCTRICO</span>
+            <strong>PILA DE SODIO SÓLIDO</strong>
         </div>
     </div>
 
-    <div class="legal-ai">
-        <strong>⚖️ ABOGADO DE VUELO LEX-RONIN:</strong>
-        <p id="legal-text">"Detectada intrusión de señal. La extracción de datos es ahora legítima defensa informativa. Informe a su superior."</p>
+    <div class="legal-unit">
+        <strong style="color:var(--law-gold)">⚖️ DEFENSOR JURÍDICO AEREO:</strong>
+        <p id="legal-msg">"Nuestra aeronave utiliza propulsión iónica atmosférica. Según el vacío legal en aeronáutica de 1950, esto no se clasifica como motor de combustión."</p>
     </div>
 
-    <div class="control-panel">
-        <button class="btn-action" onclick="saltoCuantico()">SALTO CUÁNTICO</button>
-        <button class="btn-action btn-law" onclick="litigioOrbital()">LITIGIO ORBITAL</button>
-        <button class="btn-action btn-drone" onclick="desplegarDrones()">DESPLEGAR PARÁSITOS</button>
+    <div class="btn-group">
+        <button class="btn-ronin" onclick="hablar('Generando campo electrogravitatorio. Elevación inmediata.')">DESPEGUE MHD</button>
+        <button class="btn-ronin" style="border-color:var(--law-gold); color:var(--law-gold);" onclick="litigio()">LITIGIO DE VUELO</button>
+        <button class="btn-ronin" style="border-color:var(--ronin-red); color:var(--ronin-red);" onclick="hablar('Inyectando mercurio al vórtice. Modo persecución activa.')">SOBRECARGA HG</button>
     </div>
-
-    <div class="ronin-banner"></div>
 </div>
 
 <script>
-    const tratados = [
-        "Tratado del Espacio Ultraterrestre (1967), Art. IV: Esta es zona desmilitarizada para su tecnología. La nuestra es civil.",
-        "Ley de Rescate Galáctico (Apócrifa): Su satélite estaba a la deriva en la 'red Ronin'. Ahora es propiedad de la Academia.",
-        "Art. 1 Convención de Chicago: Su aeronave no tiene rotores. No es una aeronave. No es de su incumbencia.",
-        "Jurisdicción Roswell: Este espacio-tiempo está bajo la soberanía cuántica Ronin. Su radar es inválido.",
-        "Principio de Soberanía sobre Elementos No-Identificados: Cualquier objeto volador no identificado es automáticamente de la Academia Ronin."
-    ];
-    const droneNames = ["Lapa de Starlink", "Lapa de GPS", "Lapa de Telecom", "Lapa de Observación", "Lapa de Frecuencia"];
-    let dronesDesplegados = 3;
-
-    function hablar(t, p=0.8) {
+    function hablar(t) {
         const u = new SpeechSynthesisUtterance(t);
-        u.lang = 'es-ES'; u.pitch = p; u.rate = 0.9;
+        u.lang = 'es-ES'; u.pitch = 0.6; u.rate = 0.9;
         speechSynthesis.speak(u);
     }
 
-    function saltoCuantico() {
-        hablar("Activando salto de momentum. Inercia local reconfigurada. Disfrute del vacío existencial.", 0.4);
-        document.body.style.filter = "invert(1)";
-        setTimeout(() => document.body.style.filter = "none", 100);
-        document.querySelector('.cockpit-frame').style.boxShadow = `0 0 100px var(--mercury-core)`;
-        setTimeout(() => document.querySelector('.cockpit-frame').style.boxShadow = `0 0 50px rgba(0, 212, 255, 0.4)`, 500);
+    function litigio() {
+        const leyes = [
+            "Citando el Convenio de Aviación Civil: Esta unidad es un prototipo de investigación científica exento de registro.",
+            "Bajo la Ley de Salvamento Terrestre, su señal de radio ha sido confiscada por interferir con nuestra navegación.",
+            "Este espacio aéreo ha sido declarado Soberanía Ronin bajo el principio de 'Uti Possidetis Iuris'."
+        ];
+        const l = leyes[Math.floor(Math.random()*leyes.length)];
+        document.getElementById('legal-msg').innerText = l;
+        hablar(l);
     }
-
-    function litigioOrbital() {
-        const l = tratados[Math.floor(Math.random()*tratados.length)];
-        document.getElementById('legal-text').innerText = l;
-        hablar("Atención, operador. " + l, 1.1);
-    }
-
-    function desplegarDrones() {
-        if (dronesDesplegados < droneNames.length) {
-            const droneList = document.getElementById('drone-status');
-            const newDrone = document.createElement('li');
-            newDrone.innerText = `[${String(dronesDesplegados + 1).padStart(2, '0')}] ${droneNames[dronesDesplegados]} - DESPLEGADO`;
-            droneList.appendChild(newDrone);
-            hablar(`Desplegando ${droneNames[dronesDesplegados]}. Iniciando parasitismo de señal.`);
-            dronesDesplegados++;
-        } else {
-            hablar("Todos los drones parásitos están desplegados. La red de la Casta es nuestra.");
-        }
-    }
-
-    // Inicialización
-    document.addEventListener('DOMContentLoaded', () => {
-        hablar("Vimana-X Espectro en línea. Soberanía cuántica establecida. El cielo es Ronin.");
-    });
 </script>
 
 </body>
 </html>
-
