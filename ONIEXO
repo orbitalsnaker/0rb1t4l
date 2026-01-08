@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ESPECIFICACIONES TÉCNICAS // PROYECTO ONI-RONIN 2026</title>
+    <style>
+        :root { --main-red: #b30000; --dark-gray: #333; --light-bg: #f9f9f9; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--dark-gray); background: #eee; margin: 0; padding: 40px; }
+        .document { max-width: 1000px; margin: 0 auto; background: #fff; padding: 50px; border-top: 10px solid var(--main-red); box-shadow: 0 0 20px rgba(0,0,0,0.2); }
+        header { border-bottom: 2px solid #eee; margin-bottom: 30px; padding-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
+        h1 { margin: 0; font-size: 1.6em; color: var(--main-red); text-transform: uppercase; letter-spacing: 1px; }
+        .section-title { background: #f0f0f0; padding: 10px 15px; border-left: 5px solid var(--main-red); font-weight: bold; text-transform: uppercase; margin: 30px 0 15px 0; font-size: 1.1em; }
+        
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 0.9em; }
+        th, td { padding: 12px; border: 1px solid #e0e0e0; text-align: left; }
+        th { background: #fdfdfd; color: var(--main-red); }
+        
+        .bom-table tr:nth-child(even) { background: #fafafa; }
+        .cost-total { text-align: right; font-size: 1.2em; font-weight: bold; color: var(--main-red); padding: 15px; border-top: 2px solid #eee; }
+        
+        .disclaimer { font-size: 0.8em; color: #777; font-style: italic; border: 1px solid #ddd; padding: 15px; background: #fff; margin-top: 20px; }
+        .footer { margin-top: 40px; text-align: center; font-size: 0.75em; color: #aaa; }
+        
+        @media print { body { padding: 0; background: #fff; } .document { box-shadow: none; border: none; width: 100%; } }
+    </style>
+</head>
+<body>
+
+<div class="document">
+    <header>
+        <div>
+            <h1>Dossier de Fabricación: ONI-RONIN v2.0</h1>
+            <p style="font-size: 0.8em; color: #666;">Ref: COS-SBD-INFANTRY-2026 // Sabadell, España</p>
+        </div>
+        <div style="text-align: right; font-size: 0.8em; font-weight: bold;">PROTOTIPADO RÁPIDO<br>GRADO: COSPLAY TÉCNICO</div>
+    </header>
+
+    <div class="section-title">1. Objetivos del Encargo</div>
+    <p>Este documento detalla los componentes necesarios para la fabricación de un <strong>set de armadura de asistencia cinética</strong> para uso recreativo (Cosplay). Las piezas 3D suministradas deben ser compatibles con el hardware listado en el BOM (Bill of Materials) a continuación.</p>
+
+    <div class="section-title">2. Bill of Materials (BOM) - Adquisición de Hardware</div>
+    <table class="bom-table">
+        <thead>
+            <tr>
+                <th>Categoría</th>
+                <th>Componente (Sourcing: AliExpress/Shenzhen)</th>
+                <th>Uso en el Proyecto</th>
+                <th>Coste Estimado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Actuadores</strong></td>
+                <td>4x Motorreductor DC 12V-24V (Worm Gear) High Torque</td>
+                <td>Movimiento de articulaciones y placas</td>
+                <td>82,50 €</td>
+            </tr>
+            <tr>
+                <td><strong>Control</strong></td>
+                <td>1x Microcontrolador ESP32-S3 WROOM (Dual Core)</td>
+                <td>Gestión de secuencias y efectos</td>
+                <td>12,40 €</td>
+            </tr>
+            <tr>
+                <td><strong>Drivers</strong></td>
+                <td>4x Driver de potencia BTS7960 43A</td>
+                <td>Control de los motores de par alto</td>
+                <td>31,10 €</td>
+            </tr>
+            <tr>
+                <td><strong>Energía</strong></td>
+                <td>Módulo BMS 6S + Pack Celdas 18650 (Recuperadas)</td>
+                <td>Alimentación autónoma del traje</td>
+                <td>48,00 €</td>
+            </tr>
+            <tr>
+                <td><strong>Sensores</strong></td>
+                <td>10x Potenciómetros rotativos B10K + NTC 10K</td>
+                <td>Telemetría de posición de armadura</td>
+                <td>14,20 €</td>
+            </tr>
+            <tr>
+                <td><strong>Estructura</strong></td>
+                <td>Perfiles Aluminio 2020 + Tornillería M3/M4</td>
+                <td>Refuerzo interno oculto</td>
+                <td>62,00 €</td>
+            </tr>
+            <tr>
+                <td><strong>Cableado</strong></td>
+                <td>Cable Silicona 14AWG + Conectores XT60</td>
+                <td>Sistema circulatorio eléctrico</td>
+                <td>18,50 €</td>
+            </tr>
+            <tr>
+                <td><strong>Óptica</strong></td>
+                <td>Lentes Policarbonato -1.50 Dioptrías</td>
+                <td>Visor integrado en máscara</td>
+                <td>25,00 €</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="cost-total">Presupuesto Estimado Hardware: 293,70 €</div>
+
+    <div class="section-title">3. Especificaciones de Impresión 3D</div>
+    <p>Se requiere que la empresa de impresión ajuste los parámetros de relleno (infill) al <strong>40% (Giroide)</strong> en piezas de unión para soportar el peso de los motores. El material <strong>PA12</strong> es obligatorio para el visor y las rodillas para evitar el desgaste por fricción.</p>
+
+    <div class="disclaimer">
+        <strong>Aviso Legal y Técnico:</strong> Este proyecto es una pieza de arte y atrezzo. Los componentes mecánicos están diseñados para añadir "realismo visual" al disfraz. La empresa de impresión no se hace responsable del montaje final de los componentes electrónicos suministrados por el cliente.
+    </div>
+
+    <div class="footer">
+        BOA KINETICS // SABADELL FORGE // 13101310 // 2026<br>
+        "El código es libre, la carne es opcional."
+    </div>
+</div>
+
+</body>
+</html>
+
