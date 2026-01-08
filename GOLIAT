@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GOLIAT Ω-ONI | KINETIC TITAN EVA-01 RECLAIM</title>
+    <title>GOLIAT Ω-ONI | KINETIC TITAN & JURIDICAL INQUISITOR</title>
     <style>
         :root {
             --deep-black: #020202;
@@ -12,8 +12,10 @@
             --maraging-steel: #78828a;
             --alert-red: #ff3300;
             --shenzhen-green: #00ff41;
-            --oni-purple: #a020f0; /* Estilo Evangelion EVA-01 */
+            --oni-purple: #a020f0;
             --lcl-orange: #ff7e00;
+            --law-blue: #0044ff;
+            --void-static: #4b0082;
         }
 
         body {
@@ -38,6 +40,46 @@
             clip-path: polygon(0 0, 98% 0, 100% 2%, 100% 100%, 2% 100%, 0 98%);
         }
 
+        /* VENTANA JURÍDICA (EL ABOGADO DE HIERRO) */
+        .legal-overlay {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 350px;
+            background: rgba(0, 10, 40, 0.95);
+            border: 2px solid var(--law-blue);
+            padding: 15px;
+            z-index: 100;
+            font-size: 0.8em;
+            color: #fff;
+            box-shadow: 0 0 30px var(--law-blue);
+            display: none;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 0 100%);
+        }
+
+        .legal-header { background: var(--law-blue); padding: 5px; font-weight: bold; display: flex; justify-content: space-between; }
+        .law-cite { color: var(--shenzhen-green); font-style: italic; margin-top: 10px; border-top: 1px solid #333; padding-top: 5px; }
+
+        /* MÓDULO INHIBIDOR (VOID SPECTRUM - CAMPO A.T.) */
+        .inhibitor-status {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            background: rgba(20, 0, 40, 0.9);
+            border: 2px solid var(--void-static);
+            padding: 15px;
+            text-align: center;
+        }
+
+        .pulse-ring {
+            width: 50px; height: 50px; border: 2px solid var(--void-static);
+            border-radius: 50%; margin: 10px auto;
+            animation: pulse-void 2s infinite;
+        }
+
+        @keyframes pulse-void { 0% { transform: scale(0.5); opacity: 1; } 100% { transform: scale(4); opacity: 0; } }
+
         .oni-mask-bg {
             position: absolute;
             top: 50%;
@@ -59,7 +101,7 @@
         .berserker-alert {
             position: absolute;
             right: 0;
-            top: 0;
+            top: -20px;
             background: var(--alert-red);
             color: #fff;
             padding: 10px 20px;
@@ -87,10 +129,9 @@
             padding: 20px;
             text-align: center;
             border-top: 3px solid var(--maraging-steel);
-            transition: 0.3s;
         }
 
-        .dash-box:hover { border-top-color: var(--oni-purple); transform: translateY(-5px); }
+        .dash-box.active { border-top-color: var(--void-static); box-shadow: 0 0 15px var(--void-static); }
         .dash-box.sync { border-top-color: var(--lcl-orange); }
         .dash-box span { display: block; font-size: 0.7em; color: var(--maraging-steel); margin-bottom: 5px; }
         .dash-box strong { font-size: 1.8em; color: #fff; }
@@ -102,6 +143,195 @@
             padding: 40px;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            position: relative;
+            background-image: 
+                linear-gradient(rgba(160, 32, 240, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(160, 32, 240, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .svg-goliat { width: 100%; max-width: 600px; height: auto; filter: drop-shadow(0 0 20px var(--oni-purple)); }
+
+        /* --- TERMINAL DE COMBATE --- */
+        .combat-log {
+            background: #000;
+            border: 1px solid var(--oni-purple);
+            height: 200px;
+            overflow-y: auto;
+            padding: 15px;
+            font-size: 0.85em;
+            color: var(--shenzhen-green);
+            margin-bottom: 30px;
+        }
+
+        .log-entry { margin-bottom: 5px; border-left: 2px solid var(--oni-purple); padding-left: 10px; }
+
+        /* --- BOTONERA --- */
+        .action-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .btn-ronin {
+            background: transparent;
+            border: 2px solid var(--oni-purple);
+            color: var(--oni-purple);
+            padding: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-ronin:hover { background: var(--oni-purple); color: #000; box-shadow: 0 0 30px var(--oni-purple); }
+        .btn-void { border-color: var(--void-static); color: var(--void-static); }
+        .btn-void:hover { background: var(--void-static); color: #fff; }
+
+        /* --- MATERIALS TABLE --- */
+        .materials-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+
+        th { background: var(--oni-purple); color: #000; padding: 15px; text-align: left; }
+        td { padding: 15px; border-bottom: 1px solid #222; background: rgba(20,20,20,0.5); }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            border-top: 1px solid var(--oni-purple);
+            text-align: center;
+            font-size: 0.7em;
+            color: var(--maraging-steel);
+            letter-spacing: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="oni-mask-bg">👹</div>
+
+<div class="legal-overlay" id="legal-ui">
+    <div class="legal-header"><span>⚖️ LEX-RONIN AI</span><span>VETERAN LAW</span></div>
+    <div id="legal-status">Analizando jurisdicción favorable...</div>
+    <div class="law-cite" id="current-law">"La desmantelación de hardware pijo es un derecho inalienable."</div>
+</div>
+
+<div class="inhibitor-status" id="void-ui" style="display:none;">
+    <div style="color:var(--void-static); font-weight:bold;">VOID-SPECTRUM ACTIVE</div>
+    <div class="pulse-ring"></div>
+    <small style="color:#888;">RADIO: 5KM | STATUS: SILENCIO TOTAL</small>
+</div>
+
+<div class="main-frame">
+    <div class="berserker-alert" id="alert-ui">ALERTA: SINCRONIZACIÓN 400% - FUERZA MAYOR</div>
+
+    <header>
+        <div class="sub-title">Humanoid Decisive Battle Weapon | JURIDICAL TITAN</div>
+        <h1>GOLIAT Ω-ONI</h1>
+        <p style="color: var(--maraging-steel);">Modelo: S-SCRAP / EVA-01 MOD | Black Ops Law | Inhibición 5KM</p>
+    </header>
+
+    <div class="dash-grid">
+        <div class="dash-box sync">
+            <span>TASA SINCRONIZACIÓN</span>
+            <strong id="sync-rate">45.8%</strong>
+        </div>
+        <div class="dash-box" id="void-dash">
+            <span>INHIBIDOR (5KM)</span>
+            <strong>OFF</strong>
+        </div>
+        <div class="dash-box sync">
+            <span>LCL-SODIO</span>
+            <strong>RESONANTE</strong>
+        </div>
+        <div class="dash-box">
+            <span>MODO ALMA</span>
+            <strong>DESPIERTO</strong>
+        </div>
+    </div>
+
+    <div class="blueprint-container">
+        <svg class="svg-goliat" viewBox="0 0 400 650">
+            <path d="M160 50 L240 50 L260 120 L200 150 L140 120 Z" fill="none" stroke="var(--oni-purple)" stroke-width="4" />
+            <line x1="200" y1="50" x2="200" y2="-30" stroke="var(--void-static)" stroke-width="4" stroke-dasharray="5,2" />
+            
+            <circle cx="180" cy="90" r="8" fill="var(--alert-red)"><animate attributeName="opacity" values="1;0.2;1" dur="0.1s" repeatCount="indefinite" /></circle>
+            <circle cx="220" cy="90" r="8" fill="var(--alert-red)"><animate attributeName="opacity" values="1;0.2;1" dur="0.1s" repeatCount="indefinite" /></circle>
+            
+            <rect x="120" y="150" width="160" height="200" fill="none" stroke="var(--oni-purple)" stroke-width="5" />
+            <path d="M120 180 L50 300 L70 450" fill="none" stroke="var(--oni-purple)" stroke-width="6" />
+            <path d="M280 180 L350 300 L330 450" fill="none" stroke="var(--oni-purple)" stroke-width="6" />
+            <path d="M160 350 L140 630 M240 350 L260 630" stroke="var(--lcl-orange)" stroke-width="8" />
+
+            <text x="20" y="30" fill="var(--oni-purple)" font-size="12">ONI-SHARINGAN ACTIVE</text>
+            <text x="240" y="620" fill="var(--lcl-orange)" font-size="12">LCL-SODIO CORE</text>
+        </svg>
+    </div>
+
+    <div class="action-bar">
+        <button class="btn-ronin btn-void" onclick="activarVoid()">INHIBIDOR VOID</button>
+        <button class="btn-ronin" style="border-color:var(--law-blue); color:var(--law-blue);" onclick="ejecutarLitigio()">LITIGIO DE CAMPO</button>
+        <button class="btn-ronin" style="border-color:var(--alert-red); color:var(--alert-red);" onclick="berserkerMode()">BERSERKER</button>
+        <button class="btn-ronin" onclick="hablar('Construyendo soberanía.')">CONSTRUIR</button>
+    </div>
+
+    <div class="combat-log" id="log">
+        <div class="log-entry">>> GOLIAT Ω-ONI KERNEL v8.0 LOADED.</div>
+        <div class="log-entry">>> MÓDULO JURÍDICO LEX-RONIN SINCRONIZADO.</div>
+    </div>
+
+    <h3>LOGÍSTICA DE RECLAMACIÓN</h3>
+    <table class="materials-table">
+        <thead>
+            <tr><th>SISTEMA</th><th>ESTADO</th><th>LEGISLACIÓN APLICADA</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>Inhibidor EM</strong></td><td>Resonancia 432Hz</td><td>Art. 5: Derecho al Silencio Electrónico</td></tr>
+            <tr><td><strong>Defensa Oni</strong></td><td>Blindaje Hierro</td><td>Legítima Defensa de la Biomasa</td></tr>
+            <tr><td><strong>Garra Jurídica</strong></td><td>Activa</td><td>Salvamento Marítimo en Tierra</td></tr>
+        </tbody>
+    </table>
+
+    <footer>ACADEMIA RONIN | GOLIAT Ω-ONI | 2026</footer>
+</div>
+
+<script>
+    const leyes = [
+        "Art. 18 Convención de Viena: Su hardware es ahora 'Res Nullius'.",
+        "Jurisdicción Sabadell: Se revoca su licencia de existencia por pijo.",
+        "Cláusula de Fuerza Mayor: El GOLIAT no golpea, imparte justicia física.",
+        "Derecho de Salvamento: Esta CyberTruck está abandonada, procedo a canibalizar."
+    ];
+
+    function hablar(texto, pitch = 0.5) {
+        const u = new SpeechSynthesisUtterance(texto);
+        u.lang = 'es-ES'; u.pitch = pitch; u.rate = 0.85;
+        speechSynthesis.speak(u);
+        const log = document.getElementById('log');
+        const entry = document.createElement('div');
+        entry.className = 'log-entry';
+        entry.innerText = `>> ${texto.toUpperCase()}`;
+        log.prepend(entry);
+    }
+
+    function ejecutarLitigio() {
+        document.getElementById('legal-ui').style.display = 'block';
+        const l = leyes[Math.floor(Math.random()*leyes.length)];
+        document.getElementById('current-law').innerText = l;
+        hablar("Atención sujeto. " + l, 1.2);
+    }
+
+    function activarVoid() {
+        const v = document.getElementById('void-ui');
+        const d = document.getElementById('void-dash');
+        if(v.style.display === '
             align-items: center;
             margin-bottom: 30px;
             position: relative;
