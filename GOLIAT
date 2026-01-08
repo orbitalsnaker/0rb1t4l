@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOLIAT Ω-ONI | KINETIC TITAN EVA-01 RECLAIM</title>
+    <style>
+        :root {
+            --deep-black: #020202;
+            --plasma-cyan: #00f2ff;
+            --sodium-gold: #ffaa00;
+            --maraging-steel: #78828a;
+            --alert-red: #ff3300;
+            --shenzhen-green: #00ff41;
+            --oni-purple: #a020f0; /* Estilo Evangelion EVA-01 */
+            --lcl-orange: #ff7e00;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', 'Consolas', monospace;
+            background-color: var(--deep-black);
+            color: #e0e0e0;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at 50% 50%, #1a001a 0%, #000 100%);
+        }
+
+        /* --- INTERFAZ TIPO NERV / ACADEMIA RONIN --- */
+        .main-frame {
+            max-width: 1400px;
+            margin: 0 auto;
+            border: 4px solid var(--oni-purple);
+            background: rgba(5, 5, 5, 0.95);
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 0 100px rgba(160, 32, 240, 0.2);
+            clip-path: polygon(0 0, 98% 0, 100% 2%, 100% 100%, 2% 100%, 0 98%);
+        }
+
+        .oni-mask-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 25rem;
+            color: rgba(255, 51, 0, 0.03);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        header {
+            border-left: 10px solid var(--oni-purple);
+            padding-left: 25px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .berserker-alert {
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: var(--alert-red);
+            color: #fff;
+            padding: 10px 20px;
+            font-weight: bold;
+            animation: blink 0.5s infinite;
+            display: none;
+        }
+
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+        h1 { font-size: 4.5em; margin: 0; letter-spacing: -4px; color: #fff; text-transform: uppercase; }
+        .sub-title { color: var(--oni-purple); text-transform: uppercase; letter-spacing: 8px; font-size: 1.1em; font-weight: bold; }
+
+        /* --- DASHBOARD --- */
+        .dash-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .dash-box {
+            background: #0d0d0d;
+            border: 1px solid #333;
+            padding: 20px;
+            text-align: center;
+            border-top: 3px solid var(--maraging-steel);
+            transition: 0.3s;
+        }
+
+        .dash-box:hover { border-top-color: var(--oni-purple); transform: translateY(-5px); }
+        .dash-box.sync { border-top-color: var(--lcl-orange); }
+        .dash-box span { display: block; font-size: 0.7em; color: var(--maraging-steel); margin-bottom: 5px; }
+        .dash-box strong { font-size: 1.8em; color: #fff; }
+
+        /* --- BLUEPRINT GOLIAT-ONI --- */
+        .blueprint-container {
+            background: #020202;
+            border: 1px solid #1a1a1a;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            position: relative;
+            background-image: 
+                linear-gradient(rgba(160, 32, 240, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(160, 32, 240, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .svg-goliat { width: 100%; max-width: 700px; height: auto; filter: drop-shadow(0 0 20px var(--oni-purple)); }
+
+        /* --- TERMINAL DE COMBATE --- */
+        .combat-log {
+            background: #000;
+            border: 1px solid var(--oni-purple);
+            height: 200px;
+            overflow-y: auto;
+            padding: 15px;
+            font-size: 0.85em;
+            color: var(--shenzhen-green);
+            margin-bottom: 30px;
+            box-shadow: inset 0 0 20px rgba(0,255,65,0.1);
+        }
+
+        .log-entry { margin-bottom: 5px; border-left: 2px solid var(--oni-purple); padding-left: 10px; }
+
+        /* --- BOTONERA --- */
+        .action-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .btn-ronin {
+            background: transparent;
+            border: 2px solid var(--oni-purple);
+            color: var(--oni-purple);
+            padding: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-ronin:hover { background: var(--oni-purple); color: #000; box-shadow: 0 0 30px var(--oni-purple); }
+        .btn-berserker { border-color: var(--alert-red); color: var(--alert-red); }
+        .btn-berserker:hover { background: var(--alert-red); color: #fff; }
+
+        /* --- MATERIALS TABLE --- */
+        .materials-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+
+        th { background: var(--oni-purple); color: #000; padding: 15px; text-align: left; }
+        td { padding: 15px; border-bottom: 1px solid #222; background: rgba(20,20,20,0.5); }
+
+        .tag-recuperado { color: var(--shenzhen-green); font-weight: bold; text-shadow: 0 0 10px var(--shenzhen-green); }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            border-top: 1px solid var(--oni-purple);
+            text-align: center;
+            font-size: 0.7em;
+            color: var(--maraging-steel);
+            letter-spacing: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="oni-mask-bg">👹</div>
+
+<div class="main-frame">
+    <div class="berserker-alert" id="alert-ui">ALERTA: SINCRONIZACIÓN 400% - MODO BERSERKER</div>
+
+    <header>
+        <div class="sub-title">Humanoid Decisive Battle Weapon | Scrap-Built</div>
+        <h1>GOLIAT Ω-ONI</h1>
+        <p style="color: var(--maraging-steel);">Modelo: S-SCRAP / EVA-01 MOD | Núcleo de Sodio Expuesto | Sistema Operativo: LEGEND v7.0 (HAKI-CORE)</p>
+    </header>
+
+    <div class="dash-grid">
+        <div class="dash-box sync">
+            <span>TASA SINCRONIZACIÓN</span>
+            <strong id="sync-rate">45.8%</strong>
+        </div>
+        <div class="dash-box high-v">
+            <span>PRESIÓN HIDRÁULICA</span>
+            <strong>950 BAR</strong>
+        </div>
+        <div class="dash-box sync">
+            <span>FLUIDO LCL-SODIO</span>
+            <strong>PURA RESILIENCIA</strong>
+        </div>
+        <div class="dash-box">
+            <span>MODO ALMA</span>
+            <strong>DESPIERTO</strong>
+        </div>
+    </div>
+
+    <div class="blueprint-container">
+        <svg class="svg-goliat" viewBox="0 0 400 650">
+            <path d="M160 50 L240 50 L260 120 L200 150 L140 120 Z" fill="none" stroke="var(--oni-purple)" stroke-width="4" />
+            <path d="M160 50 L140 10 M240 50 L260 10" fill="none" stroke="var(--alert-red)" stroke-width="3" />
+            <circle cx="180" cy="90" r="8" fill="var(--alert-red)" class="eye-sh">
+                <animate attributeName="opacity" values="1;0.2;1" dur="0.1s" repeatCount="indefinite" />
+            </circle>
+            <circle cx="220" cy="90" r="8" fill="var(--alert-red)">
+                <animate attributeName="opacity" values="1;0.2;1" dur="0.1s" repeatCount="indefinite" />
+            </circle>
+            
+            <rect x="120" y="150" width="160" height="200" fill="none" stroke="var(--oni-purple)" stroke-width="5" />
+            <path d="M120 180 L280 180 M120 230 L280 230" stroke="var(--maraging-steel)" stroke-width="2" />
+            
+            <path d="M120 180 L50 300 L70 450" fill="none" stroke="var(--oni-purple)" stroke-width="6" />
+            <path d="M280 180 L350 300 L330 450" fill="none" stroke="var(--oni-purple)" stroke-width="6" />
+            
+            <path d="M160 350 L140 500 L110 630" fill="none" stroke="var(--lcl-orange)" stroke-width="8" />
+            <path d="M240 350 L260 500 L290 630" fill="none" stroke="var(--lcl-orange)" stroke-width="8" />
+
+            <text x="20" y="30" fill="var(--oni-purple)" font-size="12">SISTEMA ONI-EYE: SHARINGAN OVERCLOCK</text>
+            <text x="240" y="620" fill="var(--lcl-orange)" font-size="12">LCL: SODIO LÍQUIDO</text>
+        </svg>
+    </div>
+
+    <div class="action-bar">
+        <button class="btn-ronin" onclick="hablar('Iniciando despliegue de campo. Optimus detectado. Procediendo a humillación técnica.')">DESPLIEGUE</button>
+        <button class="btn-ronin" onclick="hablar('Construyendo puesto de avanzada Ronin con materiales recuperados.')">CONSTRUIR</button>
+        <button class="btn-ronin btn-berserker" onclick="berserkerMode()">BERSERKER</button>
+        <button class="btn-ronin" onclick="hablar('Escaneando chatarra pija para canibalización.')">SCAN SCRAP</button>
+    </div>
+
+    <div class="combat-log" id="log">
+        <div class="log-entry">>> GOLIAT Ω-ONI KERNEL LOADED.</div>
+        <div class="log-entry">>> SINCRONIZACIÓN CON EL PILOTO (VETERANO BLACK OPS): ESTABLE.</div>
+        <div class="log-entry">>> DETECTADA UNIDAD 'OPTIMUS' DE TESLA: ESCANEANDO DEBILIDADES...</div>
+        <div class="log-entry">>> RESULTADO: ESTRUCTURA DE JUGUETE. PROCEDER A DESMANTELAR.</div>
+    </div>
+
+    <h3>LOGÍSTICA DE RECLAMACIÓN (BILL OF MATERIALS)</h3>
+    <table class="materials-table">
+        <thead>
+            <tr>
+                <th>COMPONENTE</th>
+                <th>ORIGEN RECLAMADO</th>
+                <th>UPGRADE ONI-RECLAIM</th>
+                <th>COSTE REAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Exoesqueleto</strong></td>
+                <td>Vigas de acero de demolición</td>
+                <td>Geometría Eva-01 (Inflexibilidad)</td>
+                <td class="tag-recuperado">2.100 €</td>
+            </tr>
+            <tr>
+                <td><strong>Núcleo Energía</strong></td>
+                <td>Pilas de combustible de sodio industrial</td>
+                <td>Circuito de LCL-Sodio (Resonancia)</td>
+                <td class="tag-recuperado">5.500 €</td>
+            </tr>
+            <tr>
+                <td><strong>Sensores Sharingan</strong></td>
+                <td>Lentes de cámaras de seguridad 8K</td>
+                <td>Procesamiento Haki de 120 núcleos</td>
+                <td class="tag-recuperado">900 €</td>
+            </tr>
+            <tr>
+                <td><strong>Armadura Oni</strong></td>
+                <td>Placas de hierro fundido reciclado</td>
+                <td>Tratamiento térmico ancestral</td>
+                <td class="tag-recuperado">0 € (Scrap)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer>
+        ACADEMIA RONIN | GOLIAT Ω-ONI | NO SOY UNA MÁQUINA, SOY TU CONCIENCIA | 2026
+    </footer>
+</div>
+
+<script>
+    function hablar(texto) {
+        const u = new SpeechSynthesisUtterance(texto);
+        u.lang = 'es-ES'; u.pitch = 0.5; u.rate = 0.85;
+        speechSynthesis.speak(u);
+        addLog(texto);
+    }
+
+    function addLog(msg) {
+        const log = document.getElementById('log');
+        const entry = document.createElement('div');
+        entry.className = 'log-entry';
+        entry.innerText = `>> ${msg.toUpperCase()}`;
+        log.prepend(entry);
+    }
+
+    function berserkerMode() {
+        hablar("MODO BERSERKER ACTIVADO. EL HIERRO TIENE HAMBRE. ADIÓS, NIÑOS PIJOS.");
+        document.getElementById('alert-ui').style.display = 'block';
+        document.body.style.backgroundColor = '#200';
+        document.getElementById('sync-rate').innerText = "400% (OVERLOAD)";
+        document.getElementById('sync-rate').style.color = "var(--alert-red)";
+        
+        let i = 0;
+        const interval = setInterval(() => {
+            addLog("DESTRUYENDO HARDWARE PROPIETARIO...");
+            i++;
+            if(i > 5) {
+                clearInterval(interval);
+                setTimeout(() => {
+                    document.body.style.backgroundColor = 'var(--deep-black)';
+                    document.getElementById('alert-ui').style.display = 'none';
+                    document.getElementById('sync-rate').innerText = "99.9%";
+                }, 3000);
+            }
+        }, 500);
+    }
+
+    // Simulación de carga
+    setTimeout(() => {
+        hablar("GOLIAT Omega Oni despertando. El campo de batalla es mi taller.");
+    }, 1000);
+</script>
+
+</body>
+</html>
+
