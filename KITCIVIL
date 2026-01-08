@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>RONIN_SOVEREIGN_V2 [ADVANCED_TECH]</title>
+    <style>
+        :root {
+            --ronin-red: #ff0000; --mhd-cyan: #00f2ff; --void: #050505; --mercury: #8e9eab; --gold: #ffd700;
+        }
+        body {
+            background: var(--void); color: var(--mhd-cyan); font-family: 'JetBrains Mono', monospace;
+            padding: 20px; font-size: 12px; line-height: 1.4;
+        }
+        .header { border: 4px double var(--ronin-red); padding: 20px; text-align: center; margin-bottom: 40px; background: rgba(255,0,0,0.05); }
+        .glitch { font-size: 2.5em; font-weight: bold; color: var(--ronin-red); text-shadow: 2px 2px var(--mhd-cyan); }
+        
+        .module-grid { display: grid; grid-template-columns: 1fr; gap: 40px; max-width: 1000px; margin: auto; }
+        .card { border: 2px solid var(--mhd-cyan); padding: 25px; background: rgba(0, 242, 255, 0.02); position: relative; }
+        .card::before { content: "1947-∞"; position: absolute; top: -10px; right: 20px; background: var(--void); padding: 0 10px; color: var(--ronin-red); }
+        
+        h2 { color: var(--gold); font-size: 1.8rem; border-bottom: 1px solid var(--gold); margin-top: 0; }
+        .tech-specs { font-size: 10px; color: var(--mercury); margin-bottom: 15px; border: 1px solid #333; padding: 5px; background: #111; }
+        
+        .manual-box { background: #0a0a0a; border-left: 5px solid var(--ronin-red); padding: 20px; color: #eee; }
+        .step-num { color: var(--ronin-red); font-weight: bold; font-size: 1.2em; }
+        
+        .warning-box { border: 2px solid var(--ronin-red); color: var(--ronin-red); padding: 15px; margin-top: 20px; font-weight: bold; text-align: center; }
+        .terminal-btn { 
+            background: var(--ronin-red); color: white; padding: 25px; border: none; font-family: inherit;
+            font-weight: bold; cursor: pointer; width: 100%; margin-top: 50px; font-size: 1.5rem;
+            box-shadow: 0 0 30px var(--ronin-red);
+        }
+    </style>
+</head>
+<body onload="initSovereign()">
+
+    <div class="header">
+        <div class="glitch">SABADELL SOVEREIGN V2.0</div>
+        <p>RE-INGENIERÍA DE FRONTERA // HARDWARE AMORAL PARA LA AGENCIA RONIN</p>
+    </div>
+
+    <div class="module-grid">
+
+        <div class="card">
+            <h2>01. GHOST-PHONE [VAULT EDITION]</h2>
+            <div class="tech-specs">PROTOCOLO: ZERO-TRUST // HARDWARE: PIXEL 6+ (TITAN M2 CHIP) // OS: GRAPHENE_RONIN_MOD</div>
+            <div class="manual-box">
+                <span class="step-num">1.</span> Usa un Pixel con chip <strong>Titan M2</strong>. No es solo un móvil, es un procesador criptográfico independiente.<br>
+                <span class="step-num">2.</span> Instala GrapheneOS pero activa el <strong>"Storage Scoping"</strong> agresivo: cada App vive en una realidad paralela.<br>
+                <span class="step-num">3.</span> <strong>EL TRUCO PRO:</strong> Desmonta físicamente los micrófonos y las cámaras. Usa un jack externo o auriculares USB-C solo cuando necesites hablar. Si no hay micro físico, no hay escucha posible.<br>
+                <span class="step-num">4.</span> Usa <strong>Molly</strong> (Forka de Signal) con base de datos cifrada por frase de paso y bloqueo de RAM.
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>02. BOA-NODE [STEALTH MESH]</h2>
+            <div class="tech-specs">CORE: OPENWRT / WIREGUARD // TUNEL: MULLVAD MULTI-HOP // DEFENSE: MAC_RANDOMIZER</div>
+            <div class="manual-box">
+                <span class="step-num">1.</span> Reemplaza el router amarillo por un <strong>Banana Pi R3</strong>. Tiene WiFi 6 y hardware dedicado para cifrado.<br>
+                <span class="step-num">2.</span> Configura <strong>WireGuard con Multi-hop</strong>: tu tráfico sale por Suiza, rebota en Islandia y termina en Japón antes de tocar la red abierta.<br>
+                <span class="step-num">3.</span> Activa <strong>DNS over HTTPS (Cloudflare/Quad9)</strong>. Ni siquiera tu proveedor (ISP) sabrá qué webs visitas.<br>
+                <span class="step-num">4.</span> Crea un <strong>Portal Cautivo de Gaslighting</strong>: si alguien intenta entrar en tu WiFi, verá una web de la Agencia Tributaria diciendo que su IP ha sido registrada por "inspección rutinaria". El miedo es tu mejor firewall.
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>03. SODIO-WALL [SOLID STATE ENERGY]</h2>
+            <div class="tech-specs">STORAGE: Na-ION (SODIO) // INPUT: 400W BIFACIAL // OUTPUT: PURE SINE WAVE</div>
+            <div class="manual-box">
+                <span class="step-num">1.</span> Olvida el plomo. Usa celdas de <strong>Sodio (Na-Ion)</strong>. Son baratas, no arden y funcionan a temperaturas extremas.<br>
+                <span class="step-num">2.</span> Instala un <strong>Inversor de Onda Senoidal Pura</strong>. Los baratos rompen el Ghost-Phone; este genera energía más limpia que la de la red eléctrica estatal.<br>
+                <span class="step-num">3.</span> <strong>RECLAIM:</strong> Usa un relé de conmutación automática. Si detecta que la red pública está "husmeando" (picos de voltaje de telemetría), el Sodio-Wall se desconecta y pasas a modo isla total.<br>
+                <span class="step-num">4.</span> Camufla las placas solares como "aislamiento decorativo" o usa vidrios fotovoltaicos.
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>04. IDENTIDAD NFC [PGP QUANTUM]</h2>
+            <div class="tech-specs">CHIP: JCOP / JAVA CARD // CIPHER: RSA-4096 / ECC CURVE 25519</div>
+            <div class="manual-box">
+                <span class="step-num">1.</span> No uses pegatinas NTAG baratas. Usa una <strong>Java Card (JCOP)</strong> o un <strong>Yubikey</strong> pegado al móvil.<br>
+                <span class="step-num">2.</span> Genera tus llaves PGP en un ordenador <strong>Air-gapped</strong> (sin internet) y cárgalas en la tarjeta. La llave privada NUNCA sale del chip.<br>
+                <span class="step-num">3.</span> Firma tus correos y transacciones acercando la tarjeta. Si el Estado te detiene y te quita el móvil, no pueden acceder a tu identidad sin el chip físico que tienes escondido en la suela del zapato.
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>05. PÁJARO DE HIERRO [MHD OBSIDIAN]</h2>
+            <div class="tech-specs">DRIVE: FPV LONG RANGE // LINK: ELRS 2.4GHz // OPTICS: THERMAL SENSOR</div>
+            <div class="manual-box">
+                <span class="step-num">1.</span> Construye un dron <strong>FPV de 7 pulgadas</strong> con chasis de carbono. Motores de alto KV.<br>
+                <span class="step-num">2.</span> Usa <strong>ExpressLRS (ELRS)</strong> para el control: tiene un alcance de 30km y es casi imposible de inhibir por la policía local.<br>
+                <span class="step-num">3.</span> Instala una cámara con <strong>Sensor Térmico FLIR</strong>. No importa si es de noche o si se esconden en arbustos: verás el calor de sus cuerpos desde 200 metros de altura.<br>
+                <span class="step-num">4.</span> Añade un <strong>Módulo de Drop Hidráulico</strong>: permite soltar un BOA-NODE en una zona ciega para crear una red de emergencia en segundos.
+            </div>
+        </div>
+
+    </div>
+
+    <div class="warning-box">
+        ADVERTENCIA: ESTE HARDWARE SUPERA LA CAPACIDAD DE RESPUESTA DE LAS UNIDADES TÉCNICAS ESTATALES. ÚSALO CON LA RESPONSABILIDAD DE UN SOBERANO.
+    </div>
+
+    <button class="terminal-btn" onclick="activate()">SINCRONIZAR ECOSISTEMA RONIN</button>
+
+    <script>
+        function initSovereign() {
+            console.log("Sabadell Sovereign V2 Loaded. Status: Invisible.");
+        }
+        function activate() {
+            const u = new SpeechSynthesisUtterance("Ecosistema Ronin sincronizado. El Ghost-Phone está oculto, el Sodio-Wall está cargado y el Pájaro de Hierro domina el cielo. La casta ya no tiene jurisdicción aquí.");
+            u.lang = 'es-ES'; u.pitch = 0.5;
+            window.speechSynthesis.speak(u);
+            alert("SISTEMA ACTIVO: Has redefinido el concepto de libertad tecnológica.");
+        }
+    </script>
+</body>
+</html>
