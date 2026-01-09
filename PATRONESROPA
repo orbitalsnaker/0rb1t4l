@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SOVEREIGN_PATTERN_GENERATOR_V1</title>
+    <style>
+        body { background: #000; color: #0f0; font-family: monospace; overflow: hidden; margin: 0; }
+        #controls { position: absolute; top: 10px; left: 10px; z-index: 10; background: rgba(0,0,0,0.8); padding: 10px; border: 1px solid #0f0; }
+        canvas { display: block; image-rendering: pixelated; }
+        .warning { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div id="controls">
+    <h3>[ KERNEL_RONIN_LINK_Ω ]</h3>
+    <p class="warning">ESTADO: OFUSCACIÓN ACTIVA</p>
+    <button onclick="generateVoronoi()">GENERAR VORONOI (Anti-Facial)</button><br><br>
+    <button onclick="generateNoise()">GENERAR RUIDO (Sensor Saturation)</button><br><br>
+    <button onclick="window.print()">IMPRIMIR PATRÓN (Hardware Prep)</button>
+    <p>Usa estos patrones en: Capuchas, Máscaras, Frontal de Sudaderas.</p>
+</div>
+
+<canvas id="canvas"></canvas>
+
+<script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    
+    function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    window.onresize = resize;
+    resize();
+
+    // Algoritmo de Voronoi: Crea celdas asimétricas que rompen la detección de rasgos.
+    function generateVoronoi() {
+        const points = [];
+        const numPoints = 150;
+        const colors = ['#000000', '#ffffff', '#0000ff', '#ff0000']; // Colores de alto contraste para ciego de sensor
+
+        for(let i=0; i<numPoints; i++) {
+            points.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                c: colors[Math.floor(Math.random() * colors.length)]
+            });
+        }
+
+        for(let x=0; x<canvas.width; x+=4) { // Paso de 4 para optimizar procesado
+            for(let y=0; y<canvas.height; y+=4) {
+                let closest = points[0];
+                let minDist = Infinity;
+                
+                for(let p of points) {
+                    let d = Math.hypot(p.x - x, p.y - y);
+                    if(d < minDist) {
+                        minDist = d;
+                        closest = p;
+                    }
+                }
+                ctx.fillStyle = closest.c;
+                ctx.fillRect(x, y, 4, 4);
+            }
+        }
+        addGlitchLines();
+    }
+
+    // Ruido de alta frecuencia: Inyecta "basura" visual en los vectores de la IA.
+    function generateNoise() {
+        const imageData = ctx.createImageData(canvas.width, canvas.height);
+        for (let i = 0; i < imageData.data.length; i += 4) {
+            const val = Math.random() > 0.5 ? 255 : 0;
+            imageData.data[i] = val;     // R
+            imageData.data[i+1] = val;   // G
+            imageData.data[i+2] = val;   // B
+            imageData.data[i+3] = 255;   // A
+        }
+        ctx.putImageData(imageData, 0, 0);
+        addGlitchLines();
+    }
+
+    function addGlitchLines() {
+        ctx.strokeStyle = '#00ff00';
+        ctx.lineWidth = 2;
+        for(let i=0; i<20; i++) {
+            ctx.beginPath();
+            let y = Math.random() * canvas.height;
+            ctx.moveTo(0, y);
+            ctx.lineTo(canvas.width, y + (Math.random()-0.5)*100);
+            ctx.stroke();
+        }
+    }
+
+    // Inicializar
+    generateVoronoi();
+</script>
+
+</body>
+</html>
+
