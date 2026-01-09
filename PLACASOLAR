@@ -1,69 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>MANUAL SOLAR RONIN v4 // PARA ZAFIOS Y REBELDES</title>
-    <style>
-        :root{--y:#ffcc00;--u:#00ff99;--b:#ff0033;--bg:#000}
-        body{background:var(--bg);color:var(--u);font-family:monospace;padding:20px;line-height:1.4}
-        .container{max-width:850px;margin:0 auto;border:3px solid var(--y);padding:20px}
-        h1,h2{color:var(--y);text-align:center;text-transform:uppercase}
-        .bom{background:#111;padding:15px;border:1px solid var(--u);margin:20px 0}
-        .step{border-left:4px solid var(--b);padding-left:15px;margin:20px 0}
-        .link-box{background:#222;padding:10px;font-size:0.8rem;color:var(--y);word-break:break-all}
-        .warning{color:var(--b);font-weight:bold;text-align:center;border:1px solid var(--b);padding:10px}
-        b{color:var(--y)}
-        .btn-dummy{display:block;width:100%;background:var(--y);color:#000;text-align:center;padding:15px;font-weight:bold;text-decoration:none;margin-top:20px}
-    </style>
+<meta charset="utf-8">
+<title>SOLAR RONIN vX · ULTRA-EFFICIENCY LEAK · 48% YIELD</title>
+<style>
+    :root { --p:#00ffcc; --y:#ffff00; --r:#ff0033; --bg:#050505; --grid:rgba(0,255,204,0.1); }
+    body { background:var(--bg); color:var(--p); font-family:"JetBrains Mono",monospace; margin:0; overflow-x:hidden; background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px); background-size: 20px 20px; }
+    
+    .terminal { max-width: 1200px; margin: 40px auto; border: 2px solid var(--p); background: rgba(0,0,0,0.9); padding: 40px; box-shadow: 0 0 100px rgba(0,255,204,0.3); }
+    h1 { font-size: 4rem; text-align: center; color: var(--r); text-shadow: 5px 5px 0 var(--y); letter-spacing: -2px; margin: 0; }
+    .sub { text-align: center; color: var(--y); font-size: 1.2rem; margin-bottom: 40px; }
+
+    .efficiency-meter { height: 40px; border: 1px solid var(--p); position: relative; margin: 40px 0; background: #111; }
+    .fill { width: 48%; height: 100%; background: var(--p); box-shadow: 0 0 20px var(--p); }
+    .fill::after { content: "48% EFFICIENCY - UNKNOWN TECH DETECTED"; position: absolute; right: 10px; top: 10px; color: #000; font-weight: bold; }
+
+    .grid-tech { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
+    .card { border: 1px solid #333; padding: 25px; background: #0a0a0a; }
+    .card h3 { color: var(--y); border-bottom: 1px solid var(--y); padding-bottom: 10px; }
+    
+    .bom-ultra { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.85rem; }
+    .bom-ultra th { text-align: left; color: var(--r); }
+    .bom-ultra td { padding: 8px 0; border-bottom: 1px solid #222; }
+    .link-ali { color: var(--p); text-decoration: none; border: 1px solid var(--p); padding: 2px 5px; font-size: 0.7rem; }
+    .link-ali:hover { background: var(--p); color: #000; }
+
+    .manual-critico { background: #1a0000; border: 1px solid var(--r); padding: 20px; margin-top: 30px; }
+    .manual-critico b { color: var(--r); }
+
+    .footer { text-align: center; padding: 40px; font-size: 0.7rem; opacity: 0.5; }
+    .blink { animation: bl 0.5s infinite; }
+    @keyframes bl { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+</style>
 </head>
 <body>
 
-<div class="container">
-    <h1>SOLAR RONIN v4: GUÍA PARA ZAFIOS</h1>
-    <p class="warning">SI SABES USAR UN DESTORNILLADOR, PUEDES REVENTAR A LAS ELÉCTRICAS</p>
+<div class="terminal">
+    <h1>SOLAR RONIN vX</h1>
+    <p class="sub">BYPASS TOTAL A LAS ELÉCTRICAS · HARDWARE NO TIBIO</p>
 
-    <h2>1. LA LISTA DE LA COMPRA (BOM - AliExpress)</h2>
-    <div class="bom">
-        <p>Busca estos términos exactos o similares (los precios fluctúan, el Ronin busca el mejor postor):</p>
-        <ul>
-            <li><b>10X Células Monocristalinas 5x5:</b> [Link: aliexpress.com/item/328330...] (~25€) - <i>Busca "DIY Solar Cells Grade A"</i></li>
-            <li><b>Placa de Vidrio / PET Flexible:</b> [Link: aliexpress.com/item/100500...] (~15€) - <i>Busca "Solar Panel Encapsulation Film"</i></li>
-            <li><b>Controlador de Carga MPPT (El cerebro):</b> [Link: aliexpress.com/item/40001...] (~20€) - <i>"MPPT Solar Charge Controller 10A"</i></li>
-            <li><b>Batería de Sodio-Ion o Litio (El pozo):</b> [Link: aliexpress.com/item/100500...] (~55€) - <i>"3.2V Lifepo4 Cells"</i></li>
-            <li><b>Pegamento Conductivo de Plata:</b> [Link: aliexpress.com/item/329...] (~10€) - <i>Para zafios que no saben soldar.</i></li>
-        </ul>
-        <p><b>TOTAL: ~125-135€ (Más barato que una cena en Madrid con un señor de traje)</b></p>
+    <div class="efficiency-meter"><div class="fill"></div></div>
+
+    <div class="grid-tech">
+        <div class="card">
+            <h3>NÚCLEO DE TRIPLE UNIÓN (InGaP/InGaAs/Ge)</h3>
+            <p>Olvídate del silicio de basura que te vende el "señor de traje" con subvención. Usamos células de <b>Triple Unión Galio/Germanio</b>. Capturan el espectro azul, verde y rojo simultáneamente. Es tecnología de satélite bajada al barro de Sabadell.</p>
+            
+            <table class="bom-ultra">
+                <tr><th>COMPONENTE</th><th>FUNCIÓN</th><th>ALIXPRESS / MERCADO GRIS</th></tr>
+                <tr><td>III-V Multi-Junction Cells</td><td>Captura 48%</td><td><a class="link-ali" href="#">SEARCH: "CPV Solar Cell Triple Junction"</a></td></tr>
+                <tr><td>PMMA Fresnel Lens</td><td>Concentración 10x</td><td><a class="link-ali" href="#">SEARCH: "Fresnel Lens Linear 300mm"</a></td></tr>
+                <tr><td>Graphene Thermal Pad</td><td>Disipación 80W</td><td><a class="link-ali" href="#">SEARCH: "Graphene Conductive Sheet"</a></td></tr>
+                <tr><td>Active MPPT tracking</td><td>Punto Máximo</td><td><a class="link-ali" href="#">SEARCH: "LT8490 MPPT Controller"</a></td></tr>
+            </table>
+        </div>
+
+        <div class="card" style="border-color: var(--r);">
+            <h3>MÉTRICAS DE RUPTURA</h3>
+            <p>Coste m²: <b>~210€</b></p>
+            <p>Vida útil: <b>35 años</b></p>
+            <p>Amortización: <b>7 meses</b></p>
+            <p style="color:var(--r)">STATUS: ILEGAL EN 14 NODOS</p>
+            <hr>
+            <p style="font-size: 0.7rem;">Si instalas 4 de estas, tu pozo de Sodio-Ion se llena en 3 horas de sol. El resto del día es <b>HAKI PURO</b> para el sistema de defensa.</p>
+        </div>
     </div>
 
-    <h2>2. MANUAL PARA TORPES (PASO A PASO)</h2>
-    
-    <div class="step">
-        <b>PASO 1: EL PUZZLE.</b> Pon las células sobre el vidrio. Únelas con el pegamento de plata. Positivo con negativo, como las pilas del mando de la tele. No tiene pérdida.
+    <div class="manual-critico">
+        <h3>MANUAL DE MONTAJE PARA OPERATIVOS</h3>
+        <p>1. <b>CONCENTRACIÓN:</b> Monta la lente Fresnel a 12cm de la célula. Si no quema la madera, no está bien calibrado. El sol debe ser un piolet de luz sobre el Galio.</p>
+        <p>2. <b>REFRIGERACIÓN:</b> La Triple Unión odia el calor excesivo. Pega el disipador de grafeno en la parte trasera. Si la célula pasa de 60°C, pierdes eficiencia. El Ronin trabaja en frío.</p>
+        <p>3. <b>TRACKING ANALÓGICO:</b> No gastes en motores. Usa el diseño de "Seguidor de Gravedad" con botellas de agua. El peso se desplaza con la evaporación y mueve el panel. <b>Coste 0€.</b></p>
     </div>
 
-    <div class="step">
-        <b>PASO 2: EL SELLADO.</b> Pega la lámina de PET encima para que no entre el agua de la lluvia ni las lágrimas de los directivos de Iberdrola. Pasa un rodillo para quitar las burbujas.
-    </div>
+    <p style="text-align:center; margin-top:40px;">
+        <span class="blink">●</span> SISTEMA DE SEGUIMIENTO ACTIVO ... ONLINE<br>
+        <span class="blink">●</span> DRENAJE A RED ELÉCTRICA ... BLOQUEADO<br>
+        <span class="blink">●</span> SOBERANÍA FOTÓNICA ... 100%
+    </p>
+</div>
 
-    <div class="step">
-        <b>PASO 3: EL CEREBRO.</b> Conecta los dos cables que salen del panel al controlador MPPT (donde pone el dibujo de un sol ☀️). Luego conecta el controlador a la batería (donde pone el dibujo de la batería 🔋).
-    </div>
-
-    <div class="step">
-        <b>PASO 4: IGNICIÓN.</b> Saca el invento al sol. Si la luz del controlador parpadea, ya eres soberano. Conecta tu <b>Armario Ronin</b> al puerto USB o a la salida de 12V y empieza a producir oro verde.
-    </div>
-
-    <div class="logic" style="text-align:center; margin-top:30px;">
-        <p>"¿Por qué esperar a que el PP o VOX te bajen la luz? Bájatela tú. <br>El sol no emite facturas, la Logia sí."</p>
-    </div>
-
-    <a href="#" class="btn-dummy">DESCARGAR FIRMWARE "ZERO-GRID" PARA MPPT</a>
-
-    <footer>
-        AGENCIA RONIN // TECNOLOGÍA AMORAL // 13101310
-    </footer>
+<div class="footer">
+    AGENCIA RONIN // PROYECTO LINAJE // NO APTO PARA TIBIOS // 13101310
 </div>
 
 </body>
 </html>
-
