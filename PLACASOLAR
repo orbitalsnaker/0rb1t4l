@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MANUAL SOLAR RONIN v4 // PARA ZAFIOS Y REBELDES</title>
+    <style>
+        :root{--y:#ffcc00;--u:#00ff99;--b:#ff0033;--bg:#000}
+        body{background:var(--bg);color:var(--u);font-family:monospace;padding:20px;line-height:1.4}
+        .container{max-width:850px;margin:0 auto;border:3px solid var(--y);padding:20px}
+        h1,h2{color:var(--y);text-align:center;text-transform:uppercase}
+        .bom{background:#111;padding:15px;border:1px solid var(--u);margin:20px 0}
+        .step{border-left:4px solid var(--b);padding-left:15px;margin:20px 0}
+        .link-box{background:#222;padding:10px;font-size:0.8rem;color:var(--y);word-break:break-all}
+        .warning{color:var(--b);font-weight:bold;text-align:center;border:1px solid var(--b);padding:10px}
+        b{color:var(--y)}
+        .btn-dummy{display:block;width:100%;background:var(--y);color:#000;text-align:center;padding:15px;font-weight:bold;text-decoration:none;margin-top:20px}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>SOLAR RONIN v4: GUÍA PARA ZAFIOS</h1>
+    <p class="warning">SI SABES USAR UN DESTORNILLADOR, PUEDES REVENTAR A LAS ELÉCTRICAS</p>
+
+    <h2>1. LA LISTA DE LA COMPRA (BOM - AliExpress)</h2>
+    <div class="bom">
+        <p>Busca estos términos exactos o similares (los precios fluctúan, el Ronin busca el mejor postor):</p>
+        <ul>
+            <li><b>10X Células Monocristalinas 5x5:</b> [Link: aliexpress.com/item/328330...] (~25€) - <i>Busca "DIY Solar Cells Grade A"</i></li>
+            <li><b>Placa de Vidrio / PET Flexible:</b> [Link: aliexpress.com/item/100500...] (~15€) - <i>Busca "Solar Panel Encapsulation Film"</i></li>
+            <li><b>Controlador de Carga MPPT (El cerebro):</b> [Link: aliexpress.com/item/40001...] (~20€) - <i>"MPPT Solar Charge Controller 10A"</i></li>
+            <li><b>Batería de Sodio-Ion o Litio (El pozo):</b> [Link: aliexpress.com/item/100500...] (~55€) - <i>"3.2V Lifepo4 Cells"</i></li>
+            <li><b>Pegamento Conductivo de Plata:</b> [Link: aliexpress.com/item/329...] (~10€) - <i>Para zafios que no saben soldar.</i></li>
+        </ul>
+        <p><b>TOTAL: ~125-135€ (Más barato que una cena en Madrid con un señor de traje)</b></p>
+    </div>
+
+    <h2>2. MANUAL PARA TORPES (PASO A PASO)</h2>
+    
+    <div class="step">
+        <b>PASO 1: EL PUZZLE.</b> Pon las células sobre el vidrio. Únelas con el pegamento de plata. Positivo con negativo, como las pilas del mando de la tele. No tiene pérdida.
+    </div>
+
+    <div class="step">
+        <b>PASO 2: EL SELLADO.</b> Pega la lámina de PET encima para que no entre el agua de la lluvia ni las lágrimas de los directivos de Iberdrola. Pasa un rodillo para quitar las burbujas.
+    </div>
+
+    <div class="step">
+        <b>PASO 3: EL CEREBRO.</b> Conecta los dos cables que salen del panel al controlador MPPT (donde pone el dibujo de un sol ☀️). Luego conecta el controlador a la batería (donde pone el dibujo de la batería 🔋).
+    </div>
+
+    <div class="step">
+        <b>PASO 4: IGNICIÓN.</b> Saca el invento al sol. Si la luz del controlador parpadea, ya eres soberano. Conecta tu <b>Armario Ronin</b> al puerto USB o a la salida de 12V y empieza a producir oro verde.
+    </div>
+
+    <div class="logic" style="text-align:center; margin-top:30px;">
+        <p>"¿Por qué esperar a que el PP o VOX te bajen la luz? Bájatela tú. <br>El sol no emite facturas, la Logia sí."</p>
+    </div>
+
+    <a href="#" class="btn-dummy">DESCARGAR FIRMWARE "ZERO-GRID" PARA MPPT</a>
+
+    <footer>
+        AGENCIA RONIN // TECNOLOGÍA AMORAL // 13101310
+    </footer>
+</div>
+
+</body>
+</html>
+
