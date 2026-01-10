@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>VOID_ART_MANIFESTO_13101310</title>
+    <style>
+        :root {
+            --void-black: #000;
+            --glitch-pink: #ff00ff;
+            --glitch-cyan: #00ffff;
+            --white-noise: #f0f0f0;
+            --ps3-blue: #003087;
+        }
+        body { background: var(--void-black); color: var(--white-noise); font-family: 'Share Tech Mono', monospace; margin: 0; overflow: hidden; perspective: 1000px; }
+        .performance-stage { width: 90vw; height: 90vh; margin: 5vh auto; border: 2px solid var(--glitch-cyan); box-shadow: 0 0 20px var(--glitch-cyan); position: relative; overflow: hidden; transform-style: preserve-3d; }
+        
+        .projection { position: absolute; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        .projection h1 { font-size: 3em; color: var(--glitch-pink); text-shadow: 0 0 10px var(--glitch-pink), 0 0 20px var(--glitch-cyan); animation: textGlitch 2s infinite alternate; }
+        .projection p { font-size: 1.2em; color: var(--glitch-cyan); animation: fadeIn 3s ease-in-out; }
+
+        .data-stream { position: absolute; width: 100%; height: 100%; top: 0; left: 0; pointer-events: none; }
+        .data-line { position: absolute; background: rgba(0,255,255,0.1); width: 2px; height: 0; animation: dataFlow 10s linear infinite; }
+
+        .artifact { position: absolute; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.5); padding: 10px; font-size: 0.8em; transform-style: preserve-3d; }
+        #ps3-artifact { top: 10%; left: 10%; width: 200px; height: 150px; transform: rotateY(20deg) rotateX(10deg); }
+        #motors-artifact { bottom: 15%; right: 15%; width: 250px; height: 180px; transform: rotateY(-30deg) rotateX(-15deg); }
+        #chassis-artifact { top: 5%; right: 5%; width: 180px; height: 120px; transform: rotateY(40deg) rotateX(25deg); }
+
+        .artifact-content h3 { color: var(--glitch-pink); margin-top: 0; border-bottom: 1px dashed var(--glitch-cyan); padding-bottom: 5px; }
+        .artifact-content p { font-size: 0.7em; line-height: 1.4; color: var(--white-noise); }
+
+        /* Keyframes para los efectos visuales */
+        @keyframes textGlitch {
+            0% { text-shadow: 0 0 10px var(--glitch-pink); }
+            50% { text-shadow: 2px 2px 10px var(--glitch-cyan), -2px -2px 10px var(--glitch-pink); transform: skewX(5deg); }
+            100% { text-shadow: 0 0 10px var(--glitch-pink); }
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes dataFlow {
+            0% { top: 0; height: 0; opacity: 0; }
+            5% { opacity: 1; }
+            100% { top: 100%; height: 100px; opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="performance-stage">
+    <div class="projection">
+        <h1>VOID-ART: MANIFESTACIÓN 13101310</h1>
+        <p>Una Mercedes Sprinter. Un vehículo fantasma. Un objeto de arte incomprensible para el ojo de la Casta.</p>
+    </div>
+
+    <div class="data-stream" id="dataStream"></div>
+
+    <div class="artifact" id="ps3-artifact">
+        <div class="artifact-content">
+            <h3>ARTIFAC. 01: EL CEREBRO DESECHADO</h3>
+            <p><strong>PS3 CELL CPU (2006).</strong> Ellos la vieron como un juguete. Nosotros como el núcleo de una rebelión. Su arquitectura paralela procesa la invisibilidad.</p>
+        </div>
+    </div>
+
+    <div class="artifact" id="motors-artifact">
+        <div class="artifact-content">
+            <h3>ARTIFAC. 02: EL ENJAMBRE RECLAMADO</h3>
+            <p><strong>100 MICRO-MOTORES (Shenzhen, "B-Grade").</strong> Descartados por una mota de polvo, transformados en un sistema de propulsión de redundancia infinita. Cada uno es una célula de la voluntad soberana.</p>
+        </div>
+    </div>
+
+    <div class="artifact" id="chassis-artifact">
+        <div class="artifact-content">
+            <h3>ARTIFAC. 03: EL LIENZO BLANCO</h3>
+            <p><strong>SPRINTER W906 (2016).</strong> La furgoneta más común. Su chapa, el lienzo para el patrón Voronoi blanco sobre blanco. Un glitch óptico que la IA no puede computar. Es y no es. Es el no-lugar.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Generar líneas de datos aleatorias para el efecto de "data stream"
+    const dataStream = document.getElementById('dataStream');
+    function createDataLine() {
+        const line = document.createElement('div');
+        line.className = 'data-line';
+        line.style.left = Math.random() * 100 + '%';
+        line.style.animationDelay = Math.random() * -10 + 's'; // Desfase para que no empiecen a la vez
+        dataStream.appendChild(line);
+    }
+    for (let i = 0; i < 50; i++) {
+        createDataLine();
+    }
+
+    // Rotación sutil de los artefactos
+    const artifacts = document.querySelectorAll('.artifact');
+    artifacts.forEach(artifact => {
+        let rotY = parseFloat(artifact.style.transform.match(/rotateY\(([^)]+)\)/)[1]);
+        let rotX = parseFloat(artifact.style.transform.match(/rotateX\(([^)]+)\)/)[1]);
+        
+        function animateArtifact() {
+            rotY += Math.sin(Date.now() * 0.0001) * 0.05;
+            rotX += Math.cos(Date.now() * 0.0001) * 0.03;
+            artifact.style.transform = `rotateY(${rotY}deg) rotateX(${rotX}deg)`;
+            requestAnimationFrame(animateArtifact);
+        }
+        animateArtifact();
+    });
+
+</script>
+</body>
+</html>
+
