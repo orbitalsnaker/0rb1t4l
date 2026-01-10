@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>BOA-AVALON Ω | ORBITAL RECLAMATION MANUAL</title>
+    <title>BOA-AVALON Ω | WAR-RECLAMATION PROTOCOL</title>
     <style>
         :root {
             --deep-space: #010101;
@@ -11,10 +11,11 @@
             --maraging-gray: #78828a;
             --alert-status: #ff3300;
             --legend-cyan: #00e5ff;
+            --war-metal: #4a5d4e; /* Verde táctico oxidado */
         }
 
         body {
-            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            font-family: 'JetBrains Mono', monospace;
             background-color: var(--deep-space);
             color: #d1d5db;
             margin: 0;
@@ -24,178 +25,176 @@
         .terminal-container {
             max-width: 1400px;
             margin: 0 auto;
-            border: 2px solid #222;
-            background: linear-gradient(180deg, #050505 0%, #000 100%);
+            border: 2px solid #333;
+            background: radial-gradient(circle at top, #0a0a0a 0%, #000 100%);
             padding: 40px;
-            box-shadow: 0 0 50px rgba(0, 242, 255, 0.1);
+            box-shadow: 0 0 60px rgba(0, 242, 255, 0.08);
+        }
+
+        .humiliation-badge {
+            float: right;
+            border: 1px solid var(--alert-status);
+            color: var(--alert-status);
+            padding: 5px 15px;
+            font-size: 0.7em;
+            text-transform: uppercase;
         }
 
         header {
-            border-bottom: 2px solid var(--warp-core);
-            margin-bottom: 40px;
-            padding-bottom: 20px;
+            border-left: 10px solid var(--warp-core);
+            padding-left: 20px;
+            margin-bottom: 50px;
         }
 
-        h1 { font-size: 3.5em; margin: 0; color: #fff; letter-spacing: -2px; }
-        .sub-title { color: var(--warp-core); letter-spacing: 5px; text-transform: uppercase; font-size: 0.8em; }
+        h1 { font-size: 3.5em; margin: 0; letter-spacing: -2px; }
+        .sub-title { color: var(--warp-core); letter-spacing: 8px; text-transform: uppercase; font-size: 0.9em; }
 
         .module-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 25px;
             margin-bottom: 50px;
         }
 
         .module-card {
-            background: #0a0a0a;
-            border: 1px solid #1a1a1a;
+            background: #080808;
+            border: 1px solid #222;
             padding: 25px;
-            position: relative;
+            border-top: 4px solid var(--war-metal);
         }
 
-        .module-card h3 { color: var(--sodium-burn); margin-top: 0; border-left: 4px solid var(--sodium-burn); padding-left: 15px; }
+        .module-card h3 { color: var(--legend-cyan); margin-top: 0; text-transform: uppercase; }
 
-        /* --- SVG STYLING --- */
         .svg-container {
             background: #020202;
             padding: 20px;
-            margin: 20px 0;
-            border: 1px solid #111;
-            text-align: center;
+            margin: 15px 0;
+            border: 1px id #111;
         }
 
-        .svg-ship { width: 100%; max-width: 600px; filter: drop-shadow(0 0 5px var(--warp-core)); }
+        .svg-ship { width: 100%; height: auto; filter: drop-shadow(0 0 8px var(--warp-core)); }
 
-        /* --- BOM TABLE --- */
         .bom-table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 30px;
-            font-size: 0.85em;
+            font-size: 0.8em;
+            background: #050505;
         }
 
-        th { background: #111; color: var(--warp-core); padding: 15px; text-align: left; }
-        td { padding: 15px; border-bottom: 1px solid #1a1a1a; }
-        .reclaimed { color: #00ff88; font-weight: bold; }
+        th { background: #111; color: var(--sodium-burn); padding: 15px; text-align: left; border-bottom: 2px solid var(--war-metal); }
+        td { padding: 12px; border-bottom: 1px solid #1a1a1a; }
+        
+        .negative-cost { color: #00ff88; font-weight: bold; animation: blink 2s infinite; }
+        @keyframes blink { 50% { opacity: 0.6; } }
 
-        /* --- MANUAL STEPS --- */
         .manual-steps {
-            background: #080808;
+            background: #0a0a0a;
             padding: 30px;
-            border-left: 4px solid var(--alert-status);
+            border: 1px solid var(--war-metal);
+            margin-top: 40px;
         }
 
-        .step { margin-bottom: 20px; }
-        .step-num { color: var(--alert-status); font-weight: bold; margin-right: 10px; }
-
+        .step { margin-bottom: 15px; border-left: 2px solid var(--legend-cyan); padding-left: 20px; }
     </style>
 </head>
 <body>
 
 <div class="terminal-container">
+    <div class="humiliation-badge">Sourcing: Ukraine Conflict Scrap · Status: Sovereign</div>
+    
     <header>
-        <div class="sub-title">Sovereign Class Recovery Vessel</div>
-        <h1>BOA-AVALON Ω-STATION</h1>
-        <p>Protocolo 13101310: Ingeniería Asimétrica para la Frontera Final.</p>
+        <div class="sub-title">Heavy Escort / Orbital Node</div>
+        <h1>BOA-AVALON Ω [WAR-EDITION]</h1>
+        <p style="color: var(--maraging-gray);">Blindaje Ablativo de Fase 3 | Chasis de Metal de Conflicto | Coste: <span class="negative-cost">NEGATIVO</span></p>
     </header>
 
     <section class="module-grid">
         <div class="module-card">
-            <h3>NÚCLEO DE SODIO "TYCHON-6"</h3>
-            <p>Sustituye el dilitio por cavitación de sodio ionizado. Energía infinita mediante desguace industrial.</p>
+            <h3>HULL: "IRON CURTAIN" V2</h3>
+            <p>Blindaje compuesto re-fundido a partir de chasis de tanques Leopard y T-90. Inmune a sensores térmicos estándar.</p>
             <div class="svg-container">
-                <svg viewBox="0 0 400 200" class="svg-ship">
-                    <rect x="150" y="50" width="100" height="100" fill="none" stroke="var(--warp-core)" stroke-width="2" />
-                    <circle cx="200" cy="100" r="30" fill="none" stroke="var(--sodium-burn)" stroke-width="4" stroke-dasharray="5,5">
-                        <animateTransform attributeName="transform" type="rotate" from="0 200 100" to="360 200 100" dur="3s" repeatCount="indefinite" />
-                    </circle>
-                    <path d="M100 100 L150 100 M250 100 L300 100" stroke="var(--maraging-gray)" stroke-width="3" />
-                    <text x="140" y="170" fill="var(--warp-core)" font-size="10">PLASMA INJECTOR (MRI RECLAIMED)</text>
+                <svg viewBox="0 0 400 180" class="svg-ship">
+                    <path d="M50 90 L150 20 L250 20 L350 90 L250 160 L150 160 Z" fill="none" stroke="var(--war-metal)" stroke-width="3" />
+                    <path d="M150 20 L150 160 M250 20 L250 160" stroke="#333" stroke-width="1" stroke-dasharray="4" />
+                    <text x="160" y="95" fill="var(--legend-cyan)" font-size="10">RE-FORGED WAR STEEL</text>
                 </svg>
             </div>
             <ul>
-                <li><strong>Hardware:</strong> Motores de ascensores trifásicos (Generación).</li>
-                <li><strong>Fluido:</strong> Sodio recuperado de válvulas de escape de camiones.</li>
+                <li><strong>Origen:</strong> Excedentes de blindaje reactivo (ERA) ucraniano.</li>
+                <li><strong>Propiedad:</strong> Dispersión de radar por geometría de fractura.</li>
             </ul>
         </div>
 
         <div class="module-card">
-            <h3>DEFLECTOR DE RECLAMACIÓN</h3>
-            <p>Inspirado en la clase Sovereign, construido con ejes de aerogeneradores.</p>
+            <h3>PROPULSIÓN: "VULCAN-SHIFT"</h3>
+            <p>Aceleradores de plasma montados en nacelas de titanio recuperado de restos aeroespaciales MiG/Sukhoi.</p>
             <div class="svg-container">
-                <svg viewBox="0 0 400 200" class="svg-ship">
-                    <path d="M50 100 Q200 20 350 100 Q200 180 50 100" fill="none" stroke="var(--maraging-gray)" stroke-width="2" />
-                    <circle cx="300" cy="100" r="40" fill="none" stroke="var(--warp-core)" stroke-width="1" />
-                    <line x1="50" y1="100" x2="250" y2="100" stroke="var(--maraging-gray)" stroke-width="1" stroke-dasharray="2,2" />
-                    <text x="60" y="130" fill="white" font-size="10">EJE WIND-TURBINE (MARAGING STEEL)</text>
+                <svg viewBox="0 0 400 180" class="svg-ship">
+                    <rect x="50" y="60" width="80" height="60" rx="10" fill="none" stroke="var(--warp-core)" stroke-width="2" />
+                    <rect x="270" y="60" width="80" height="60" rx="10" fill="none" stroke="var(--warp-core)" stroke-width="2" />
+                    <circle cx="90" cy="90" r="15" fill="rgba(0,242,255,0.2)" />
+                    <circle cx="310" cy="90" r="15" fill="rgba(0,242,255,0.2)" />
+                    <text x="60" y="140" fill="var(--maraging-gray)" font-size="9">TITANIUM EXHAUST (MIG-29 SCRAP)</text>
                 </svg>
             </div>
             <ul>
-                <li><strong>Blindaje:</strong> Placas de Porcelanosa (Escudo Térmico).</li>
-                <li><strong>Estructura:</strong> Vigas I-Beam de grúas torre abandonadas.</li>
+                <li><strong>Combustible:</strong> Sodio líquido en circuito de alta presión.</li>
+                <li><strong>Empuje:</strong> 4.5 MN (MegaNewtons) en vacío.</li>
             </ul>
         </div>
     </section>
 
-    <h2>BOMN (BILL OF MATERIALS & NODES)</h2>
+    <h2>BOM (BILL OF MATERIALS) - ARBITRAJE INTERNACIONAL</h2>
     <table class="bom-table">
         <thead>
             <tr>
-                <th>SUBSISTEMA STAR TREK</th>
-                <th>EQUIVALENTE RONIN</th>
-                <th>Sourcing (ESPAÑA)</th>
-                <th>ESTADO</th>
+                <th>SUBSISTEMA</th>
+                <th>ORIGEN DEL SCRAP</th>
+                <th>VALOR DE MERCADO</th>
+                <th>COSTE AGENCIA RONIN</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><strong>Nacelas de Curvatura</strong></td>
-                <td>Tanques Presurizados Boeing</td>
-                <td>Aeropuerto de Teruel (Desguace)</td>
-                <td class="reclaimed">RECLAMADO</td>
+                <td><strong>Blindaje Exterior</strong></td>
+                <td>Chasis de Tanques (Ucrania)</td>
+                <td>12.500.000 €</td>
+                <td class="negative-cost">- 1.200 € (Cobro por limpieza)</td>
             </tr>
             <tr>
-                <td><strong>Sensores de Largo Alcance</strong></td>
-                <td>Antenas 5G + Radar Marítimo</td>
-                <td>Puertos de Vigo / Cádiz</td>
-                <td class="reclaimed">FUNCIONAL</td>
+                <td><strong>Nacelas de Vuelo</strong></td>
+                <td>Motores de Caza MiG (Restos)</td>
+                <td>8.900.000 €</td>
+                <td class="negative-cost">- 400 € (Desguace in situ)</td>
             </tr>
             <tr>
-                <td><strong>Soporte Vital (M-Class)</strong></td>
-                <td>Maquinaria de Diálisis Hospitalaria</td>
-                <td>Centros de Salud Cerrados</td>
-                <td class="reclaimed">SOBERANO</td>
+                <td><strong>Controlador de Vuelo</strong></td>
+                <td>Placas de Drones de Ataque</td>
+                <td>450.000 €</td>
+                <td class="negative-cost">0 € (Recuperación)</td>
             </tr>
             <tr>
-                <td><strong>Puente de Mando</strong></td>
-                <td>Control de Tráfico Ferroviario</td>
-                <td>Estaciones ADIF (Sistemas Legacy)</td>
-                <td class="reclaimed">ROOT ACCESSED</td>
+                <td><strong>Soporte Vital</strong></td>
+                <td>Contenedores NBC (OTAN Scrap)</td>
+                <td>1.200.000 €</td>
+                <td class="negative-cost">- 150 € (Gestión de residuos)</td>
             </tr>
         </tbody>
     </table>
 
     <div class="manual-steps">
-        <h3>MANUAL DE ENSAMBLAJE ORBITAL</h3>
-        <div class="step">
-            <span class="step-num">01.</span> <strong>EXTRACCIÓN SOBERANA:</strong> Utiliza el BOAMONTE X-I para remolcar las vigas de los parques eólicos hacia el punto de lanzamiento.
-        </div>
-        <div class="step">
-            <span class="step-num">02.</span> <strong>LANZAMIENTO MAGNÉTICO:</strong> Envía los módulos usando el acelerador de inducción hecho con imanes de MRI. Coste de combustible: 0.
-        </div>
-        <div class="step">
-            <span class="step-num">03.</span> <strong>ACOPLE MECÁNICO:</strong> El operador en traje QUETZAL EXO-S soldará las juntas en vacío usando un arco voltaico de alta frecuencia.
-        </div>
-        <div class="step">
-            <span class="step-num">04.</span> <strong>IGNICIÓN KERNEL:</strong> Carga el Kernel LEGEND v10.0. Cuando el núcleo de sodio brille en naranja, la estación es oficialmente territorio Ronin.
-        </div>
+        <h3>PROTOCOLO DE ENSAMBLAJE "GHOST"</h3>
+        <div class="step"><strong>01. LOGÍSTICA DE SOMBRA:</strong> Los convoyes de la Agencia Ronin entran en zonas de post-conflicto bajo cobertura de "Gestión de Residuos Peligrosos".</div>
+        <div class="step"><strong>02. SELECCIÓN MOLECULAR:</strong> Escaneo de restos para detectar Aleaciones Maraging y Titanio Grado 5. Ignoramos la chatarra de Fase 1.</div>
+        <div class="step"><strong>03. TRASLADO AL LANZADOR:</strong> El metal de guerra se procesa en lingotes de geometría aerodinámica para lanzamiento magnético directo a órbita.</div>
+        <div class="step"><strong>04. FORJA ESPACIAL:</strong> Soldadura por haz de electrones en vacío. El metal de Ucrania se convierte en la piel de la BOA-AVALON Ω.</div>
     </div>
 
-    <footer style="margin-top: 50px; text-align: center; font-size: 0.7em;">
-        BOA SPACE SYSTEMS | "LIVE LONG AND RECLAIM" | 2026 | 13101310
+    <footer style="margin-top: 40px; text-align: center; color: #555;">
+        BOA SPACE SYSTEMS | THE WAR SCRAP SOBERANÍA | 13101310 | 2026
     </footer>
 </div>
 
 </body>
 </html>
-
