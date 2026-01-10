@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>BOA-AVALON Ω | ORBITAL RECLAMATION MANUAL</title>
+    <style>
+        :root {
+            --deep-space: #010101;
+            --warp-core: #00f2ff;
+            --sodium-burn: #ffaa00;
+            --maraging-gray: #78828a;
+            --alert-status: #ff3300;
+            --legend-cyan: #00e5ff;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            background-color: var(--deep-space);
+            color: #d1d5db;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .terminal-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            border: 2px solid #222;
+            background: linear-gradient(180deg, #050505 0%, #000 100%);
+            padding: 40px;
+            box-shadow: 0 0 50px rgba(0, 242, 255, 0.1);
+        }
+
+        header {
+            border-bottom: 2px solid var(--warp-core);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+        }
+
+        h1 { font-size: 3.5em; margin: 0; color: #fff; letter-spacing: -2px; }
+        .sub-title { color: var(--warp-core); letter-spacing: 5px; text-transform: uppercase; font-size: 0.8em; }
+
+        .module-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .module-card {
+            background: #0a0a0a;
+            border: 1px solid #1a1a1a;
+            padding: 25px;
+            position: relative;
+        }
+
+        .module-card h3 { color: var(--sodium-burn); margin-top: 0; border-left: 4px solid var(--sodium-burn); padding-left: 15px; }
+
+        /* --- SVG STYLING --- */
+        .svg-container {
+            background: #020202;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #111;
+            text-align: center;
+        }
+
+        .svg-ship { width: 100%; max-width: 600px; filter: drop-shadow(0 0 5px var(--warp-core)); }
+
+        /* --- BOM TABLE --- */
+        .bom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            font-size: 0.85em;
+        }
+
+        th { background: #111; color: var(--warp-core); padding: 15px; text-align: left; }
+        td { padding: 15px; border-bottom: 1px solid #1a1a1a; }
+        .reclaimed { color: #00ff88; font-weight: bold; }
+
+        /* --- MANUAL STEPS --- */
+        .manual-steps {
+            background: #080808;
+            padding: 30px;
+            border-left: 4px solid var(--alert-status);
+        }
+
+        .step { margin-bottom: 20px; }
+        .step-num { color: var(--alert-status); font-weight: bold; margin-right: 10px; }
+
+    </style>
+</head>
+<body>
+
+<div class="terminal-container">
+    <header>
+        <div class="sub-title">Sovereign Class Recovery Vessel</div>
+        <h1>BOA-AVALON Ω-STATION</h1>
+        <p>Protocolo 13101310: Ingeniería Asimétrica para la Frontera Final.</p>
+    </header>
+
+    <section class="module-grid">
+        <div class="module-card">
+            <h3>NÚCLEO DE SODIO "TYCHON-6"</h3>
+            <p>Sustituye el dilitio por cavitación de sodio ionizado. Energía infinita mediante desguace industrial.</p>
+            <div class="svg-container">
+                <svg viewBox="0 0 400 200" class="svg-ship">
+                    <rect x="150" y="50" width="100" height="100" fill="none" stroke="var(--warp-core)" stroke-width="2" />
+                    <circle cx="200" cy="100" r="30" fill="none" stroke="var(--sodium-burn)" stroke-width="4" stroke-dasharray="5,5">
+                        <animateTransform attributeName="transform" type="rotate" from="0 200 100" to="360 200 100" dur="3s" repeatCount="indefinite" />
+                    </circle>
+                    <path d="M100 100 L150 100 M250 100 L300 100" stroke="var(--maraging-gray)" stroke-width="3" />
+                    <text x="140" y="170" fill="var(--warp-core)" font-size="10">PLASMA INJECTOR (MRI RECLAIMED)</text>
+                </svg>
+            </div>
+            <ul>
+                <li><strong>Hardware:</strong> Motores de ascensores trifásicos (Generación).</li>
+                <li><strong>Fluido:</strong> Sodio recuperado de válvulas de escape de camiones.</li>
+            </ul>
+        </div>
+
+        <div class="module-card">
+            <h3>DEFLECTOR DE RECLAMACIÓN</h3>
+            <p>Inspirado en la clase Sovereign, construido con ejes de aerogeneradores.</p>
+            <div class="svg-container">
+                <svg viewBox="0 0 400 200" class="svg-ship">
+                    <path d="M50 100 Q200 20 350 100 Q200 180 50 100" fill="none" stroke="var(--maraging-gray)" stroke-width="2" />
+                    <circle cx="300" cy="100" r="40" fill="none" stroke="var(--warp-core)" stroke-width="1" />
+                    <line x1="50" y1="100" x2="250" y2="100" stroke="var(--maraging-gray)" stroke-width="1" stroke-dasharray="2,2" />
+                    <text x="60" y="130" fill="white" font-size="10">EJE WIND-TURBINE (MARAGING STEEL)</text>
+                </svg>
+            </div>
+            <ul>
+                <li><strong>Blindaje:</strong> Placas de Porcelanosa (Escudo Térmico).</li>
+                <li><strong>Estructura:</strong> Vigas I-Beam de grúas torre abandonadas.</li>
+            </ul>
+        </div>
+    </section>
+
+    <h2>BOMN (BILL OF MATERIALS & NODES)</h2>
+    <table class="bom-table">
+        <thead>
+            <tr>
+                <th>SUBSISTEMA STAR TREK</th>
+                <th>EQUIVALENTE RONIN</th>
+                <th>Sourcing (ESPAÑA)</th>
+                <th>ESTADO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Nacelas de Curvatura</strong></td>
+                <td>Tanques Presurizados Boeing</td>
+                <td>Aeropuerto de Teruel (Desguace)</td>
+                <td class="reclaimed">RECLAMADO</td>
+            </tr>
+            <tr>
+                <td><strong>Sensores de Largo Alcance</strong></td>
+                <td>Antenas 5G + Radar Marítimo</td>
+                <td>Puertos de Vigo / Cádiz</td>
+                <td class="reclaimed">FUNCIONAL</td>
+            </tr>
+            <tr>
+                <td><strong>Soporte Vital (M-Class)</strong></td>
+                <td>Maquinaria de Diálisis Hospitalaria</td>
+                <td>Centros de Salud Cerrados</td>
+                <td class="reclaimed">SOBERANO</td>
+            </tr>
+            <tr>
+                <td><strong>Puente de Mando</strong></td>
+                <td>Control de Tráfico Ferroviario</td>
+                <td>Estaciones ADIF (Sistemas Legacy)</td>
+                <td class="reclaimed">ROOT ACCESSED</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="manual-steps">
+        <h3>MANUAL DE ENSAMBLAJE ORBITAL</h3>
+        <div class="step">
+            <span class="step-num">01.</span> <strong>EXTRACCIÓN SOBERANA:</strong> Utiliza el BOAMONTE X-I para remolcar las vigas de los parques eólicos hacia el punto de lanzamiento.
+        </div>
+        <div class="step">
+            <span class="step-num">02.</span> <strong>LANZAMIENTO MAGNÉTICO:</strong> Envía los módulos usando el acelerador de inducción hecho con imanes de MRI. Coste de combustible: 0.
+        </div>
+        <div class="step">
+            <span class="step-num">03.</span> <strong>ACOPLE MECÁNICO:</strong> El operador en traje QUETZAL EXO-S soldará las juntas en vacío usando un arco voltaico de alta frecuencia.
+        </div>
+        <div class="step">
+            <span class="step-num">04.</span> <strong>IGNICIÓN KERNEL:</strong> Carga el Kernel LEGEND v10.0. Cuando el núcleo de sodio brille en naranja, la estación es oficialmente territorio Ronin.
+        </div>
+    </div>
+
+    <footer style="margin-top: 50px; text-align: center; font-size: 0.7em;">
+        BOA SPACE SYSTEMS | "LIVE LONG AND RECLAIM" | 2026 | 13101310
+    </footer>
+</div>
+
+</body>
+</html>
+
