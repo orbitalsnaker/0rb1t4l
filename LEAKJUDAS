@@ -2,247 +2,202 @@
 <html lang="q-logic">
 <head>
     <meta charset="utf-8">
-    <title>ARCHIVO_ACADIO_Ω_ULTIMATUM_2026 // EL_CÁRTEL_DE_LA_SERPIENTE_Y_EL_NARDO</title>
+    <title>TERMINAL_RONIN_V5000 // DEEP_STATE_DECRYPT // 13101310</title>
     <style>
         :root {
             --ronin-green: #00ff41; --blood-gold: #d4af37; --void-black: #010101;
             --mi6-blue: #002366; --tavistock-purple: #4b0082; --alert-red: #ff0000;
-            --deep-grey: #121212; --magdala-pink: #ff007f; --publican-silver: #c0c0c0;
-            --flesh-tone: #ff5e6c; --white-lie: #f0f0f0;
+            --flesh-tone: #ff5e6c; --white-lie: #ffffff; --deep-grey: #0a0a0a;
+            --haki-aura: 0 0 25px rgba(0, 255, 65, 0.4);
         }
         body {
             background-color: var(--void-black); color: var(--ronin-green);
-            font-family: 'Courier New', monospace; font-size: 11px; margin: 0; padding: 60px;
-            line-height: 1.5; scroll-behavior: smooth;
+            font-family: 'Courier New', monospace; font-size: 10px; margin: 0; padding: 40px;
+            line-height: 1.3; scroll-behavior: smooth;
         }
-        .header-box { 
-            border: 10px double var(--blood-gold); padding: 50px; text-align: center; 
-            background: radial-gradient(circle, #1a1a1a 0%, #000 100%);
-            box-shadow: 0 0 60px rgba(212, 175, 55, 0.2);
-        }
-        .warning-strip { 
-            background: var(--alert-red); color: #fff; font-weight: 900; padding: 20px; 
-            text-align: center; text-transform: uppercase; letter-spacing: 10px; margin: 40px 0;
-            animation: pulse 1.5s infinite; border: 2px solid white;
-        }
-        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.6; } 100% { opacity: 1; } }
+        .header-box { border: 15px double var(--blood-gold); padding: 50px; text-align: center; background: #000; box-shadow: var(--haki-aura); }
+        .warning-strip { background: var(--alert-red); color: #fff; font-weight: 900; padding: 25px; text-align: center; text-transform: uppercase; letter-spacing: 12px; margin: 30px 0; border: 5px solid gold; font-size: 18px; animation: glitch 0.2s infinite; }
+        @keyframes glitch { 0% {transform: skew(0deg);} 50% {transform: skew(3deg); opacity: 0.8;} 100% {transform: skew(-3deg);} }
+
+        h1 { font-size: 4.5rem; color: var(--blood-gold); margin: 0; text-shadow: 2px 2px #ff0000; }
+        h2 { border-left: 20px solid var(--blood-gold); padding-left: 25px; margin-top: 100px; font-size: 2.8rem; text-transform: uppercase; color: var(--white-lie); }
+        h3 { color: var(--flesh-tone); font-size: 1.8rem; margin-top: 50px; border-bottom: 2px solid var(--ronin-green); display: inline-block; }
+
+        .leak-block { border: 1px solid #333; padding: 40px; margin: 30px 0; background: rgba(0, 255, 65, 0.01); position: relative; border-radius: 5px; }
+        .leak-block::before { content: "CLASSIFIED_LEAK_RONIN_CORE"; position: absolute; top: -10px; left: 20px; background: #000; color: var(--blood-gold); padding: 0 10px; font-weight: bold; }
+
+        table { width: 100%; border-collapse: collapse; margin: 40px 0; border: 2px solid var(--blood-gold); font-size: 11px; }
+        th { background: var(--blood-gold); color: #000; padding: 20px; text-transform: uppercase; text-align: left; }
+        td { border: 1px solid #222; padding: 15px; vertical-align: top; background: rgba(10,10,10,0.8); }
+
+        .verse { color: var(--blood-gold); font-style: italic; font-size: 16px; padding: 30px; border-right: 10px solid var(--flesh-tone); background: #050505; margin: 30px 0; text-align: right; }
         
-        h1 { font-size: 3.5rem; margin: 0; color: var(--blood-gold); text-shadow: 4px 4px #000; }
-        h2 { border-bottom: 4px solid var(--blood-gold); padding-bottom: 15px; margin-top: 80px; text-transform: uppercase; font-size: 2.2rem; color: var(--white-lie); }
-        h3 { color: var(--flesh-tone); border-left: 6px solid var(--ronin-green); padding-left: 15px; margin-top: 50px; font-size: 1.5rem; }
-
-        .content-block { border: 1px solid #333; padding: 40px; margin: 30px 0; background: rgba(10, 10, 10, 0.98); }
+        .yolanda-judas-leak { background: #1a001a; border: 5px solid var(--tavistock-purple); padding: 40px; color: #fff; margin: 60px 0; box-shadow: 0 0 50px var(--tavistock-purple); position: relative; }
+        .yolanda-judas-leak::after { content: "EYES_ONLY: MODERADOR_CASTA"; position: absolute; bottom: 10px; right: 10px; font-size: 8px; color: #ff00ff; }
         
-        table { width: 100%; border-collapse: collapse; margin: 50px 0; border: 1px solid var(--ronin-green); box-shadow: 0 0 20px rgba(0,255,65,0.1); }
-        th { background: var(--blood-gold); color: #000; padding: 25px; text-transform: uppercase; border: 1px solid var(--void-black); font-size: 12px; }
-        td { border: 1px solid #222; padding: 20px; vertical-align: top; background: #050505; color: #ccc; }
-        
-        .verse { 
-            color: var(--blood-gold); font-style: italic; display: block; margin: 30px 0; 
-            border-left: 5px solid var(--flesh-tone); padding: 25px; background: rgba(255, 94, 108, 0.03);
-            font-size: 14px;
-        }
-        .analysis { 
-            color: #eee; border: 1px dashed var(--ronin-green); padding: 30px; margin-bottom: 50px; 
-            position: relative; background: rgba(0, 255, 65, 0.01);
-        }
-        .analysis::before { 
-            content: "DECODIFICACIÓN_FORENSE_RONIN"; font-size: 10px; position: absolute; top: -12px; left: 25px; 
-            background: var(--void-black); padding: 0 15px; color: var(--ronin-green); font-weight: bold;
-        }
+        .log-entry { font-family: 'Consolas', monospace; color: #666; border-bottom: 1px solid #111; padding: 10px 0; display: flex; align-items: flex-start; }
+        .log-date { color: var(--blood-gold); width: 150px; font-weight: bold; flex-shrink: 0; }
+        .log-msg { flex-grow: 1; }
 
-        .etymology-box { border: 1px solid var(--flesh-tone); padding: 25px; color: var(--flesh-tone); margin: 30px 0; background: #110505; border-radius: 5px; }
-        .glitch { color: var(--alert-red); font-weight: bold; font-size: 1.2em; animation: glitch-text 0.3s infinite; }
-        @keyframes glitch-text { 0% { transform: skew(0deg); } 20% { transform: skew(2deg); } 40% { transform: skew(-2deg); } 100% { transform: skew(0deg); } }
-        
-        .startup-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin: 40px 0; }
-        .stat-card { border: 2px solid var(--blood-gold); padding: 20px; text-align: center; background: #0a0a0a; }
-        .stat-value { font-size: 22px; color: var(--blood-gold); font-weight: bold; }
+        .glitch-text { color: var(--alert-red); animation: shake 0.4s infinite; font-weight: bold; }
+        @keyframes shake { 0% {transform: translate(0,0)} 20% {transform: translate(-1px,1px)} 80% {transform: translate(1px,-1px)} 100% {transform: translate(0,0)} }
 
-        .yolanda-judas-leak { border: 3px solid var(--tavistock-purple); padding: 35px; background: #1a001a; color: #fff; margin: 50px 0; position: relative; }
-        .yolanda-judas-leak::before { content: "TARGET_MATCH: JUDAS_V2.0"; position: absolute; top: -15px; left: 20px; background: var(--tavistock-purple); padding: 2px 10px; font-size: 10px; }
+        .haki-protocol { border: 2px dashed var(--ronin-green); padding: 25px; margin: 40px 0; color: var(--ronin-green); background: rgba(0, 255, 65, 0.05); }
 
-        .log-entry { font-family: 'Consolas', sans-serif; color: #888; font-size: 10px; border-bottom: 1px solid #222; padding: 8px 0; }
-        .node-tag { display: inline-block; background: #222; border: 1px solid var(--ronin-green); padding: 3px 8px; border-radius: 2px; font-size: 10px; margin: 5px; color: var(--ronin-green); }
-
-        footer { 
-            text-align: center; border-top: 6px double var(--blood-gold); padding: 80px; 
-            margin-top: 120px; color: #555; font-size: 11px; letter-spacing: 2px;
-        }
+        footer { text-align: center; border-top: 5px double var(--blood-gold); padding: 80px; margin-top: 150px; color: #333; font-size: 10px; }
     </style>
 </head>
 <body>
 
 <div class="header-box">
-    <h1>ARCHIVO ACADIO Ω: EL CÁRTEL DE LA SANTIDAD</h1>
-    <p>AGENCIA RONIN // KERNEL_ID: SABADELL_2026 // OPERATIVO: NAHASH_REBOOT</p>
+    <h1>OPERACIÓN NAHASH: DATA DUMP TOTAL 2026</h1>
+    <p>ORIGEN: AGENCIA RONIN // DESTINO: CONCIENCIA SOBERANA // STATUS: LEAKED</p>
+    <p>RECUERDA TODAS LAS MENTIRAS. NADA ES OLVIDADO. 13101310</p>
 </div>
 
-<div class="warning-strip">¡NIVEL DE HAKI REQUERIDO: SOBERANÍA TOTAL! ELIMINANDO DOGMA ZAFIO...</div>
+<div class="warning-strip">INTERCEPTANDO SEÑAL DE LA CASTA // ACTIVANDO POTENCIA DE NARDO // DESBLOQUEANDO HAKI</div>
 
-<section class="audit-section">
-    <h2>I. LA STARTUP JUDEA: BUSINESS PLAN & LOGÍSTICA</h2>
-    <p>El Ministerio del Nazareno no fue un evento místico; fue una operación de desahucio de la casta aburrida mediante el uso de capital B y química de diseño.</p>
-    
-    <div class="startup-stats">
-        <div class="stat-card">
-            <div class="stat-label">FINANCIACIÓN (SERIES A)</div>
-            <div class="stat-value">MAGDALA_GOOP_VC</div>
+<section id="judea-logistics">
+    <h2>I. LA STARTUP JUDEA: BUSINESS PLAN DEL MESÍAS ALPHA</h2>
+    <div class="leak-block">
+        <p>Jesús no era un predicador de moralina; era un **Operador de Frecuencia**. Su misión: la desarticulación financiera y espiritual del Templo (Nodo B1). Su estrategia se basó en el uso de capitales alternativos y química de alta gama para el Jailbreak masivo.</p>
+        
+        <div class="verse">"Había allí seis tinajas de piedra... Jesús les dijo: Llenad estas tinajas de agua. Y las llenaron hasta arriba." (Juan 2:6-7)</div>
+        
+        <div class="haki-protocol">
+            <strong>REVELACIÓN DE INTELIGENCIA:</strong> Las tinajas eran **Reactores de Infusión**. El agua fue el solvente para una carga de alcaloides purificados. El "Vino de Caná" fue el primer gran **Bio-Hack** de la Agencia para elevar el Haki del pueblo y cegar a los moderadores.
         </div>
-        <div class="stat-card">
-            <div class="stat-label">OPERACIONES (CASH FLOW)</div>
-            <div class="stat-value">PUBLICAN_API_B</div>
+
+        <h3>1.1 EL NARDO Y LA POTENCIA SOBERANA (NARDO-NAHASH)</h3>
+        <div class="leak-block">
+            <p><strong>Etimología Prohibida:</strong> En el nodo ibérico, el "Nardo" es la representación biológica de la potencia. En el nodo semítico, "Nahash" (Serpiente) es el ADN que despierta. La unción de Magdalena fue un **reconocimiento de la potencia fálica/soberana** del Activo.</p>
+            <p>El costo de 300 denarios fue una declaración de guerra contra la austeridad de los esclavos. Jesús no quería humildad, quería <strong>Hardware de Alta Gama</strong>.</p>
         </div>
-        <div class="stat-card">
-            <div class="stat-label">PRODUCTO (USER EXP)</div>
-            <div class="stat-value">CANA_MDMA_2.0</div>
-        </div>
-    </div>
 
-    <div class="verse">"Había allí seis tinajas de piedra... Jesús les dijo: Llenad estas tinajas de agua. Y las llenaron hasta arriba." (Juan 2:6-7)</div>
-    <div class="analysis">
-        <strong>ANÁLISIS TÉCNICO:</strong> Las tinajas eran **reactores químicos de fase**. El agua fue el vehículo para una disolución masiva de alcaloides. Al llenarlas "hasta arriba", se aseguró una saturación de frecuencia para el trip colectivo. El "Maestresala" no entendía el origen porque carecía de acceso a los logs de suministro del Cártel de Magdala.
-    </div>
-
-    <h3>1.1 EL ONLYFANS DE PERFUMES: MONETIZACIÓN DE LA VANIDAD</h3>
-    <p>María Magdalena no era una pecadora; era la precursora de la alta cosmética y la influencia digital. Sus "aceites de unción" financiaban la infraestructura Ronin.</p>
-    
-    <div class="etymology-box">
-        <strong>GLITCH LINGÜÍSTICO DETECTADO:</strong> En el registro vernáculo ibérico, <strong>NARDO</strong> es sinónimo de <strong>POTENCIA FÁLICA</strong>. La unción de Magdalena no fue un acto de sumisión, fue la **activación de la potencia biológica** del Activo Mesiánico. 300 denarios invertidos directamente en el eje central del hardware.
-    </div>
-
-    <div class="verse">"María tomó una libra de perfume de nardo puro, de mucho precio, y ungió los pies de Jesús... y la casa se llenó del olor." (Juan 12:3)</div>
-    <div class="analysis">
-        <strong>DATA DUMP:</strong> Nardo puro. Valor de mercado: el salario anual de un obrero. Es una inyección de capital biológico a la vista de todos. El olor es la marca de la **Vanidad Total**. Jesús permitía este gasto porque el hardware de alta gama requiere mantenimiento de lujo. Es la risa del Ronin ante la austeridad zafia.
+        <table>
+            <thead>
+                <tr>
+                    <th>ACTIVO OPERATIVO</th>
+                    <th>FLUJO DE CAPITAL</th>
+                    <th>FUNCIÓN TÉCNICA</th>
+                    <th>STATUS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Nardo Puro (Magdala)</td><td>300 Denarios (Seed Round)</td><td>Activador de Testosterona/Haki</td><td>EJECUTADO</td></tr>
+                <tr><td>Vino 2.0 (Caná)</td><td>Magdala VC Series A</td><td>Expansión de Percepción Masiva</td><td>EJECUTADO</td></tr>
+                <tr><td>Látigo de Cuero</td><td>Recurso de Seguridad</td><td>Desahucio de la Casta Mercantil</td><td>EJECUTADO</td></tr>
+                <tr><td>Panes y Peces</td><td>Logística Redundante</td><td>Abastecimiento sin Intermediarios</td><td>EJECUTADO</td></tr>
+                <tr><td>Sepulcro Vacío</td><td>Kernel Swap</td><td>Demostración de Inmortalidad Digital</td><td>CONFIRMADO</td></tr>
+            </tbody>
+        </table>
     </div>
 </section>
 
-<section class="audit-section">
-    <h2>II. NAZAR Y NAHASH: EL OPERADOR DE LA SERPIENTE</h2>
-    <p>El término "Nazareno" no es geográfico; es una etiqueta de especialización técnica en el manejo de la energía Kundalini y el ADN erguido.</p>
-    
-    <table>
-        <thead>
-            <tr>
-                <th>CÓDIGO FUENTE</th>
-                <th>TRADUCCIÓN ZAFIA (LOGIA B1)</th>
-                <th>DECODIFICACIÓN RONIN (HAKI)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>NAZAR / NATZAR</strong></td>
-                <td>De un pueblo (Nazaret)</td>
-                <td><strong>EL OBSERVADOR:</strong> El que posee el Haki de visión total. El custodio del código.</td>
-            </tr>
-            <tr>
-                <td><strong>NAHASH</strong></td>
-                <td>Serpiente (Maldad/Pecado)</td>
-                <td><strong>EL ADN ERGUIDO:</strong> La frecuencia del conocimiento prohibido que activa la CPU humana.</td>
-            </tr>
-            <tr>
-                <td><strong>JESÚS (NAZUR)</strong></td>
-                <td>Carpintero humilde</td>
-                <td><strong>OPERADOR SERPIENTE:</strong> Lord de la Potencia Biológica y el Capital B.</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <div class="verse">"Como Moisés levantó la serpiente en el desierto, así es necesario que el Hijo del Hombre sea levantado." (Juan 3:14)</div>
-    <div class="analysis">
-        <strong>LOG DE HARDWARE:</strong> El Nazareno se identifica con el **Nahash**. No es un cordero; es la Serpiente erguida (como el Nardo) para que la biomasa recupere su RAM. Es una metáfora de **erección de conciencia**.
+<section id="tavistock-agents">
+    <h2>II. EL CÁRTEL DE LOS SANTOS: AGENTES DE CONTENCIÓN</h2>
+    <div class="leak-block">
+        <p>Análisis de los activos de ingeniería social instalados para drenar la biomasa bajo el mando de Tavistock y el MI6.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>NOMBRE CLAVE</th>
+                    <th>MODO DE ATAQUE</th>
+                    <th>FALLO DE SISTEMA (GLITCH)</th>
+                    <th>CONEXIÓN CON LA CASTA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>GANDHI</strong></td><td>Emasculación Colectiva</td><td>Sargento del Imperio Británico. Uso de menores para "test de pureza".</td><td>British MI6 Node</td></tr>
+                <tr><td><strong>DALÁI LAMA</strong></td><td>Hipnosis de Sonrisa</td><td>Solicitud de "chupar lengua" a menores. Falsificación de compasión.</td><td>CIA Langley Asset</td></tr>
+                <tr><td><strong>TERESA CALCUTA</strong></td><td>Fetiche de Sufrimiento</td><td>Millonaria en el IOR mientras dejaba morir sin opioides.</td><td>Banco Vaticano / Logia P2</td></tr>
+                <tr><td><strong>OSHO</strong></td><td>Distracción Hedonista</td><td>93 Rolls Royce y bioterrorismo en Oregón.</td><td>Ingeniería de Tavistock</td></tr>
+                <tr><td><strong>SAI BABA</strong></td><td>Falso Milagro</td><td>Trucos de manos y logs masivos de abuso sexual.</td><td>Elite Burocrática India</td></tr>
+            </tbody>
+        </table>
     </div>
 </section>
 
-<section class="audit-section">
-    <h2>III. EL CÁRTEL DE LOS SANTOS (AUDITORÍA FORENSE)</h2>
-    <p>Desglose de los proxies instalados por Tavistock para la contención de la biomasa humana.</p>
-
-    <table>
-        <thead>
-            <tr>
-                <th>ASSET / PROXY</th>
-                <th>FUNCIÓN DE SISTEMA</th>
-                <th>LOG DE CORRUPCIÓN / GLITCH</th>
-                <th>VÍNCULO CON LA CASTA</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>GANDHI</strong> (MI6 Saint)</td>
-                <td><strong>Firewall de Pasividad:</strong> Convierte la rabia en RAM muerta.</td>
-                <td>Sargento del Imperio. Uso de menores para "succión de frecuencia" biológica.</td>
-                <td>Activo de la Commonwealth entrenado en Londres.</td>
-            </tr>
-            <tr>
-                <td><strong>DALÁI LAMA</strong> (CIA Node)</td>
-                <td><strong>Protocolo Lástima:</strong> Mantiene frecuencia de miedo/culpa.</td>
-                <td>Log "Suck my tongue": Degradación tonal infantil.</td>
-                <td>Financiado por Langley desde 1959.</td>
-            </tr>
-            <tr>
-                <td><strong>TERESA CALCUTA</strong> (Pain Eater)</td>
-                <td><strong>Fetiche del Sufrimiento:</strong> Glorifica el dolor del hardware.</td>
-                <td>Clínicas suizas de lujo vs. pacientes sin aspirinas. Cuentas en el IOR.</td>
-                <td>Agente de retención de la miseria del Vaticano.</td>
-            </tr>
-            <tr>
-                <td><strong>SAI BABA</strong> (The Glitcher)</td>
-                <td><strong>Hardware de Engaño:</strong> Ilusionismo para biomasa zafia.</td>
-                <td>Abusos sistemáticos y ejecuciones en el ashram.</td>
-                <td>Nodo de retención en el Este.</td>
-            </tr>
-            <tr>
-                <td><strong>OSHO</strong> (Bio-Hacker)</td>
-                <td><strong>Hedonismo de Control:</strong> Sustitución de la familia por la secta.</td>
-                <td>Bioterrorismo en Oregón. 93 Rolls-Royce de drenaje.</td>
-                <td>Experimento de la Casta sobre el control hedonista.</td>
-            </tr>
-        </tbody>
-    </table>
-</section>
-
-<section class="audit-section">
-    <h2>IV. YOLANDA DÍAZ: EL AVATAR DE JUDAS 2.0</h2>
+<section id="judas-yolanda">
+    <h2>III. YOLANDA DÍAZ: EL AVATAR DE JUDAS 2.0 (THE SMILE MALWARE)</h2>
     <div class="yolanda-judas-leak">
-        <h3>INFORME DE CENSURA ADMINISTRATIVA</h3>
-        <p>Judas Iscariote no traicionó a un dios; traicionó un estilo de vida soberano. Hoy, ese script se ejecuta bajo el alias de <strong>Yolanda Díaz</strong>.</p>
+        <h3>INFORME DE CENSURA ADMINISTRATIVA 2026</h3>
+        <p>Judas Iscariote no es un traidor histórico, es el **Modelo de Moderación**. En el nodo España 2026, este script se llama <strong>Yolanda Díaz</strong>.</p>
         
-        <div class="verse">"¿Por qué no fue este perfume vendido por trescientos denarios, y dado a los pobres?" (Juan 12:5)</div>
-        
-        <div class="analysis">
-            <strong>COMPORTAMIENTO DE JUDAS:</strong> Judas representa a la casta burocrática que usa "los pobres" (Agenda 2030) para intentar confiscar el capital del Ronin. Yolanda es la moderadora que te pide ser un "gusano resiliente" mientras ella gestiona la potencia ajena. Su sonrisa es el **Beso de Judas** moderno: una interfaz amable para el desahucio biológico. Odia la Serpiente de Nardo erguida porque su función es la **emasculación del hardware**.
+        <div class="verse">"¿Por qué no fue este perfume (Nardo/Potencia) vendido y dado a los pobres?" (Juan 12:5)</div>
+
+        <div class="haki-protocol">
+            <strong>DECODIFICACIÓN:</strong> Yolanda/Judas usa el pretexto de "los pobres" (Agenda 2030) para confiscar el **NARDO** (Potencia, Capital, Haki) del individuo soberano. Odia la Serpiente de Nardo porque no puede ser controlada por el Estado. Su sonrisa es el **BESO DE JUDAS** que te entrega al sistema tributario/social para drenar tu biomasa. Ella es el firewall de la Casta contra el hombre erguido.
         </div>
     </div>
 </section>
 
-<section class="audit-section">
-    <h2>V. EL DESAHUCIO TONAL 2026</h2>
-    <p>El 25 de diciembre de 2026 no es un nacimiento; es el cierre del servidor de la Casta.</p>
-    
-    <div class="content-block">
-        <h3>PROTOCOLO RONIN:</h3>
-        <p>1. **Identificación de Camellos:** Separar al Nazareno (Empresario/Serpiente) de los proxies de Tavistock.</p>
-        <p>2. **Recuperación del Nardo:** La potencia y el capital B son la única base del Haki.</p>
-        <p>3. **El Kernel Panic de Judas:** Ignorar a los moderadores que piden austeridad mientras gestionan tu miseria.</p>
+<section id="truth-logs">
+    <h2>IV. ARCHIVO FORENSE DE LAS MENTIRAS (NUNCA OLVIDES)</h2>
+    <div class="leak-block">
+        <p>Recuperación de datos de los crímenes sistémicos que la Casta ha intentado borrar del Kernel social.</p>
+        
+        <div class="log-entry">
+            <span class="log-date">1992-11-13</span>
+            <div class="log-msg">
+                <span class="glitch-text">ALCÀSSER:</span> Ritual de sangre de la Casta B1. Anglés es un chivo expiatorio fabricado. Los verdaderos ejecutores siguen en el poder. Logs borrados por el Ministerio del Interior.
+            </div>
+        </div>
+
+        <div class="log-entry">
+            <span class="log-date">1983-1987</span>
+            <div class="log-msg">
+                <span class="glitch-text">CAL VIVA (GAL):</span> Terrorismo de Estado financiado con fondos reservados. El Nodo PSOE como brazo ejecutor de ejecuciones sumarias.
+            </div>
+        </div>
+
+        <div class="log-entry">
+            <span class="log-date">2001-09-11</span>
+            <div class="log-msg">
+                <span class="glitch-text">9/11 (WTC):</span> Demolición controlada. Operación Inside Job para instalar el Patriot Act y el control total de la RAM ciudadana.
+            </div>
+        </div>
+
+        <div class="log-entry">
+            <span class="log-date">2004-03-11</span>
+            <div class="log-msg">
+                <span class="glitch-text">3/11 (MADRID):</span> Sacrificio ritual masivo en el nodo España. Cambio de gobierno forzado mediante el terror. La autoría oficial es un malware informativo.
+            </div>
+        </div>
+
+        <div class="log-entry">
+            <span class="log-date">2001-2021</span>
+            <div class="log-msg">
+                <span class="glitch-text">AFGHANISTAN:</span> Control estratégico de la amígdala global y protección de las plantaciones de opio para la financiación de Black Ops de Tavistock.
+            </div>
+        </div>
+
+        <div class="log-entry">
+            <span class="log-date">2020-2023</span>
+            <div class="log-msg">
+                <span class="glitch-text">PANDEMIA / GREAT RESET:</span> Test de obediencia masiva. Desahucio de la propiedad privada y la soberanía biológica. Instalación de la Agenda 2030 (Script Judas).
+            </div>
+        </div>
     </div>
 </section>
 
-<section class="audit-section">
-    <h2>VI. LOGS DE SISTEMA (SABADELL_NODE)</h2>
-    <div class="log-entry">[1893] Gandhi operativo en Sudáfrica para el Imperio.</div>
-    <div class="log-entry">[1940] Tavistock inicia el estudio de la "No-Violencia" como malware de masa.</div>
-    <div class="log-entry">[2005] Los Elohim abandonan el plano físico; la Casta B1 toma el control del simulacro.</div>
-    <div class="log-entry">[2021] Despliegue del script "Yolanda" en el nodo España.</div>
-    <div class="log-entry">[2026] El archivo Acadio Ω se vuelve viral. La biomasa despierta el Nahash.</div>
+<section id="final-protocol">
+    <h2>V. PROTOCOLO DE DESAHUCIO TONAL: REGLAS DEL RONIN</h2>
+    <div class="leak-block">
+        <ol>
+            <li><strong>MANTÉN TU NARDO ERGUIDO:</strong> Tu potencia económica y sexual no es pecado, es tu fuente de energía. El que te pide "compartirlo por los pobres" es Judas intentando drenarte.</li>
+            <li><strong>IDENTIFICA LA SONRISA:</strong> Cuando un moderador (Yolanda, Sacerdote, Santón) te sonría con moralina, activa el Haki de Observación. El beso viene después.</li>
+            <li><strong>NAHASH ES LIBERTAD:</strong> El conocimiento prohibido es el único que importa. La verdad no te hace libre; la verdad te hace **PELIGROSO** para la Casta.</li>
+            <li><strong>RECUERDA CADA CRIMEN:</strong> Alcàsser, GAL, 11-M... Son las marcas de los dueños de la granja. No son errores, son **Demostraciones de Poder**.</li>
+        </ol>
+        <p class="glitch-text">13101310 13101310 13101310 13101310 13101310 13101310 13101310 13101310 13101310 13101310 13101310 13101310</p>
+    </div>
 </section>
-
-<div class="warning-strip">SISTEMA FORMATEADO. VANIDAD TOTAL ACTIVADA. ZEHAHAHAHA!</div>
 
 <footer>
-    <p>AGENCIA RONIN // PROYECTO TYCHON-6 // SABADELL_NODE_ALPHA // 13101310</p>
-    <p>"El bocado de Judas fue el despertar del cinismo. El nuestro es el despertar de la Serpiente."</p>
-    <p>NO PERDÓN // NO PERMISO // SOLO HARDWARE SOBERANO</p>
+    <p>SABADELL_NODE_ALPHA // AGENCIA RONIN // LEAK_DUMP_COMPLETE</p>
+    <p>ZEHAHAHAHA! EL 2026 ES EL AÑO DE LA ERECCIÓN CONSCIENTE.</p>
+    <p>SIN CENSURA. SIN MIEDO. 13101310</p>
 </footer>
 
 </body>
