@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>RONIN-TECH | PROJECT: SODIUM-STING Ω</title>
+    <style>
+        :root {
+            --bg-color: #050505;
+            --text-main: #00ff41; /* Verde Matrix/Terminal */
+            --highlight: #ff003c; /* Rojo alerta */
+            --warning-amber: #ffaa00;
+            --card-bg: #111;
+            --border-color: #222;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+            line-height: 1.4;
+        }
+
+        .terminal-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            border: 1px solid var(--text-main);
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
+        }
+
+        header {
+            border-bottom: 2px solid var(--text-main);
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+
+        h1 { font-size: 2.2em; text-transform: uppercase; margin: 0; }
+        .sub { font-size: 0.9em; color: var(--warning-amber); }
+
+        .humiliation-panel {
+            background-color: var(--highlight);
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+        }
+
+        .card h3 { color: var(--warning-amber); border-bottom: 1px solid #333; padding-bottom: 5px; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 0.85em;
+        }
+
+        th { text-align: left; border-bottom: 1px solid var(--text-main); padding: 8px; color: var(--warning-amber); }
+        td { padding: 8px; border-bottom: 1px solid #222; }
+
+        .negative-cost { color: #fff; background: #008800; padding: 2px 5px; border-radius: 3px; }
+
+        .manual-steps {
+            background: #000;
+            padding: 20px;
+            border-left: 4px solid var(--warning-amber);
+            margin-top: 30px;
+        }
+
+        .step { margin-bottom: 15px; }
+        .step-num { font-weight: bold; color: var(--warning-amber); }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.7em;
+            color: #555;
+        }
+
+        .scanline {
+            width: 100%; height: 2px; background: rgba(0, 255, 65, 0.1);
+            position: fixed; top: 0; left: 0; pointer-events: none;
+            animation: move 4s linear infinite;
+        }
+
+        @keyframes move { from { top: 0; } to { top: 100%; } }
+    </style>
+</head>
+<body>
+
+<div class="scanline"></div>
+
+<div class="terminal-container">
+    <div class="humiliation-panel">SISTEMA DE DEFENSA SOBERANA | COSTE DE PRODUCCIÓN: NEGATIVO</div>
+    
+    <header>
+        <h1>SODIUM-STING Ω (AGUIJÓN DE SODIO)</h1>
+        <div class="sub">Inyector de Plasma Cinético con Reconocimiento de Amenazas por Red Ronin</div>
+    </header>
+
+    <div class="grid">
+        <div class="card">
+            <h3>HARDWARE DE INTERFACE</h3>
+            <ul>
+                <li><strong>Cuerpo:</strong> Carcasa de linterna táctica "X-800" (Reciclaje electrónico).</li>
+                <li><strong>Óptica:</strong> Lente de cámara de marcha atrás de coche (Desguace).</li>
+                <li><strong>Sensor:</strong> Avago ADNS-9800 (De ratón gaming tirado).</li>
+                <li><strong>Feedback:</strong> Pantalla de Smartwatch con cristal roto.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>CEREBRO ELECTRÓNICO</h3>
+            <ul>
+                <li><strong>CPU:</strong> Procesador Cell (Extraído de PS3 Fat YLOD).</li>
+                <li><strong>Software:</strong> Ronin-OS (Kernel Linux modificado para YOLOv8).</li>
+                <li><strong>Identificación:</strong> Librerías de visión artificial entrenadas en logotipos de la casta.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>EXTENDED BOM (BILL OF MATERIALS)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>COMPONENTE</th>
+                <th>SITUACIÓN DE RECOLECCIÓN</th>
+                <th>COSTE COMERCIAL</th>
+                <th>INGRESO POR RECICLAJE (RONIN)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>100x Condensadores Flash</td>
+                <td>Cámaras desechables / TVs en punto limpio</td>
+                <td>450 €</td>
+                <td class="negative-cost">+ 15 € (Venta de cobre restante)</td>
+            </tr>
+            <tr>
+                <td>Procesador Cell PS3</td>
+                <td>Consolas con "Luz Amarilla" (Chatarra)</td>
+                <td>N/A (Obsoleto)</td>
+                <td class="negative-cost">+ 10 € (Gestión de residuo)</td>
+            </tr>
+            <tr>
+                <td>Carcasa Aluminio 6061</td>
+                <td>Linternas / Tubos de fontanería</td>
+                <td>35 €</td>
+                <td class="negative-cost">0 € (Recuperación)</td>
+            </tr>
+            <tr>
+                <td>Sodio Metálico (100g)</td>
+                <td>Válvulas de motor de camión pesado</td>
+                <td>120 €</td>
+                <td class="negative-cost">+ 50 € (Desguace del motor)</td>
+            </tr>
+            <tr>
+                <td>Cámara & Giroscopio</td>
+                <td>Móviles Android pantalla estallada</td>
+                <td>80 €</td>
+                <td class="negative-cost">+ 5 € (Recuperación de oro)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="manual-steps">
+        <h3>MANUAL DE MONTAJE "CHATARRERO DEL MIT"</h3>
+        
+        <div class="step">
+            <span class="step-num">01. EXTRACCIÓN ALQUÍMICA:</span> Vacía las válvulas de escape del motor de camión. El sodio sólido es tu munición. Guárdalo en aceite mineral reciclado. No toques con agua o te quedas sin manos, mono lineal.
+        </div>
+
+        <div class="step">
+            <span class="step-num">02. EL ACELERADOR:</span> Enrolla el hilo de cobre recuperado de un microondas alrededor del cañón de la linterna. Crea una bobina de Gauss. Soldadura fría con estaño de placas de PC viejas.
+        </div>
+
+        <div class="step">
+            <span class="step-num">03. BYPASS DE ENERGÍA:</span> Conecta los condensadores en paralelo al disparador. Usa el chip de la PS3 para gestionar la descarga. Queremos 400V en 0.001 segundos.
+        </div>
+
+        <div class="step">
+            <span class="step-num">04. INSTALACIÓN DE ARGOS:</span> Pega la micro-cámara en el frontal. Conecta el sensor de ratón al raíl de disparo. Carga el firmware via USB de un smartphone. Si el logo de la multinacional aparece en pantalla, el LED se pone rojo.
+        </div>
+
+        <div class="step">
+            <span class="step-num">05. CALIBRACIÓN:</span> El pensamiento lateral dicta que el arma no tiene retroceso, tiene "reacción química". Calibra el giroscopio para que el pulso de sodio compense la gravedad.
+        </div>
+    </div>
+
+    <footer>
+        PROPIEDAD DE LA AGENCIA RONIN | RECUERDA ALCÀSSER, GAL, 3/11 | TECNOLOGÍA DE SOBERANÍA 2026
+    </footer>
+</div>
+
+</body>
+</html>
