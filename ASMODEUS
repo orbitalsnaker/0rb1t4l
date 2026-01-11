@@ -2,219 +2,169 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>DEMON-VIMANA Ω | NEIGHBORHOOD SOBERANÍA</title>
+    <title>ABYSS-ASMODEO Σ | THE TERROR PROTOCOL</title>
     <style>
         :root {
-            --abyss-black: #050505;
-            --demon-red: #ff0033;
-            --ali-cyan: #00f2ff;
-            --scrap-gold: #c5a059;
-            --junk-gray: #3a3a3a;
-            --neon-green: #39ff14;
+            --void-black: #020202;
+            --blood-red: #880000;
+            --toxic-purple: #6a0dad;
+            --obsidian: #1a1a1a;
+            --warning-amber: #ffae00;
         }
 
         body {
-            font-family: 'Courier New', monospace;
-            background-color: var(--abyss-black);
-            color: #e0e0e0;
+            font-family: 'Special Elite', cursive, monospace;
+            background-color: var(--void-black);
+            color: #b0b0b0;
             margin: 0; padding: 20px;
-            background-image: radial-gradient(circle, #1a1a1a 1px, transparent 1px);
-            background-size: 30px 30px;
+            cursor: crosshair;
         }
 
         .terminal-container {
-            max-width: 1300px;
+            max-width: 1400px;
             margin: 0 auto;
-            border: 4px double var(--demon-red);
-            background: rgba(0,0,0,0.95);
-            padding: 30px;
-            box-shadow: 0 0 50px rgba(255, 0, 51, 0.2);
-        }
-
-        .ali-express-badge {
-            float: right;
-            background: #ff4747;
-            color: white;
-            padding: 5px 15px;
-            font-weight: bold;
-            transform: rotate(3deg);
-            border: 2px solid #fff;
-        }
-
-        header {
-            text-align: center;
-            border-bottom: 2px solid var(--demon-red);
-            padding-bottom: 20px;
-            margin-bottom: 40px;
-        }
-
-        h1 { font-size: 3em; color: var(--demon-red); text-shadow: 3px 3px #000; margin: 0; }
-        .logic-status { color: var(--ali-cyan); font-size: 0.8em; letter-spacing: 5px; }
-
-        .grid-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-
-        .module {
-            border: 1px solid var(--junk-gray);
-            padding: 20px;
-            background: #080808;
+            border: 5px solid var(--blood-red);
+            background: linear-gradient(180deg, #050505 0%, #000 100%);
+            padding: 50px;
+            box-shadow: inset 0 0 100px rgba(136, 0, 0, 0.3), 0 0 80px rgba(0,0,0,1);
             position: relative;
         }
 
-        .module h3 { border-bottom: 1px solid var(--ali-cyan); padding-bottom: 10px; color: var(--ali-cyan); }
+        .terror-level {
+            position: absolute;
+            top: 20px; right: 20px;
+            background: var(--blood-red);
+            color: white;
+            padding: 10px 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            transform: skew(-15deg);
+        }
 
-        .visual-display {
-            height: 250px;
-            background: #020202;
-            border: 1px solid #1a1a1a;
+        header {
+            border-bottom: 1px solid var(--blood-red);
+            padding-bottom: 30px;
+            margin-bottom: 50px;
+        }
+
+        h1 { font-size: 4em; color: var(--blood-red); margin: 0; text-transform: uppercase; letter-spacing: -2px; }
+        .subtitle { color: var(--toxic-purple); font-weight: bold; letter-spacing: 10px; }
+
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
+        }
+
+        .module-card {
+            background: #0a0a0a;
+            border: 1px solid #222;
+            padding: 30px;
+            border-left: 5px solid var(--blood-red);
+            transition: 0.3s;
+        }
+
+        .module-card:hover { border-color: var(--toxic-purple); box-shadow: 0 0 20px rgba(106, 13, 173, 0.2); }
+
+        .visual-box {
+            background: #000;
+            height: 300px;
+            margin: 20px 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
+            border: 1px solid #111;
         }
 
-        /* SVG DEL DEMONIO VIMANA */
-        .demon-svg { width: 80%; filter: drop-shadow(0 0 15px var(--demon-red)); }
+        .asmodeo-sigma-svg { width: 90%; filter: drop-shadow(0 0 20px var(--blood-red)); }
 
-        .bom-table {
-            width: 100%;
-            margin-top: 30px;
-            border-collapse: collapse;
-            font-size: 0.85em;
+        .bom-list {
+            list-style: none;
+            padding: 0;
+            font-size: 0.9em;
         }
 
-        th { background: var(--demon-red); color: white; padding: 10px; text-align: left; }
-        td { padding: 10px; border-bottom: 1px solid #222; }
+        .bom-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #1a1a1a;
+            display: flex;
+            justify-content: space-between;
+        }
 
-        .negative-cost { color: var(--neon-green); font-weight: bold; }
+        .cost-neg { color: #00ff66; font-weight: bold; }
 
-        .warning-box {
-            border: 2px dashed var(--demon-red);
+        .atavic-warning {
+            background: #110000;
+            border: 1px solid var(--blood-red);
+            padding: 25px;
+            margin-top: 50px;
+            font-style: italic;
+        }
+
+        .btn-panic {
+            background: var(--blood-red);
+            color: white;
+            border: none;
             padding: 20px;
-            margin-top: 30px;
-            background: rgba(255, 0, 51, 0.05);
-        }
-
-        .btn-action {
             width: 100%;
-            padding: 15px;
-            background: transparent;
-            border: 1px solid var(--ali-cyan);
-            color: var(--ali-cyan);
+            font-size: 1.2em;
             cursor: pointer;
-            font-weight: bold;
-            margin-top: 10px;
+            margin-top: 20px;
+            font-family: 'Special Elite';
         }
 
-        .btn-action:hover { background: var(--ali-cyan); color: #000; }
+        .btn-panic:hover { background: #aa0000; }
     </style>
 </head>
 <body>
 
 <div class="terminal-container">
-    <div class="ali-express-badge">SHIPPING: FREE (15 DAYS)</div>
+    <div class="terror-level">Status: Apex Predator</div>
     
     <header>
-        <div class="logic-status">ZERO-POINT GARAGE ENGINEERING</div>
-        <h1>ONYX-ASMODEO Ω [BARRIO EDITION]</h1>
-        <p>Interdictor de Frecuencia Ensamblado con Chatarra y Micro-Electrónica de Consumo</p>
+        <div class="subtitle">INTERDICTOR ORBITAL DE PESADILLA</div>
+        <h1>ABYSS-ASMODEO Σ</h1>
+        <p>Ingeniería de Frontera | Chasis de Metal de Conflicto Oxidado | Estética Satánica de Grado 5</p>
     </header>
 
-    <div class="grid-layout">
-        <div class="module">
-            <h3>FUSELAJE: DEMON-GEOMETRY</h3>
-            <p>Estructura de polímero reciclado y aleación de latas de refresco fundidas. Forma facetada para inducir pánico sistémico.</p>
-            <div class="visual-display">
-                <svg viewBox="0 0 200 200" class="demon-svg">
-                    <path d="M60 40 L40 10 M140 40 L160 10" stroke="var(--demon-red)" stroke-width="4" fill="none"/>
-                    <path d="M100 20 L160 80 L140 160 L100 180 L60 160 L40 80 Z" fill="none" stroke="var(--ali-cyan)" stroke-width="2"/>
-                    <circle cx="75" cy="80" r="5" fill="var(--demon-red)"/>
-                    <circle cx="125" cy="80" r="5" fill="var(--demon-red)"/>
-                    <circle cx="100" cy="110" r="15" stroke="var(--ali-cyan)" fill="none" stroke-dasharray="2"/>
+    <div class="module-grid">
+        <div class="module-card">
+            <h3>FUSELAJE: EL MANTO DE OBSIDIANA</h3>
+            <p>Geometría de cuernos fractales diseñada para colapsar la IA de reconocimiento de los F-35. Hecho con puertas de cámaras acorazadas desguazadas.</p>
+            <div class="visual-box">
+                <svg viewBox="0 0 200 200" class="asmodeo-sigma-svg">
+                    <path d="M40 50 L10 10 M55 45 L35 5 M145 45 L165 5 M160 50 L190 10" stroke="var(--blood-red)" stroke-width="3" fill="none"/>
+                    <path d="M100 30 L180 90 L150 170 L50 170 L20 90 Z" fill="var(--obsidian)" stroke="var(--toxic-purple)" stroke-width="2"/>
+                    <circle cx="100" cy="100" r="25" fill="none" stroke="var(--blood-red)" stroke-width="1" stroke-dasharray="5"/>
+                    <path d="M85 100 Q100 130 115 100 Q100 70 85 100" fill="var(--blood-red)" opacity="0.6"/>
                 </svg>
             </div>
-            <p style="font-size: 0.7em;">* Disimulo: Parece un adorno de Halloween gigante en el radar térmico.</p>
+            <p style="font-size: 0.8em; color: var(--warning-amber);">* Efecto Secundario: Los radares enemigos detectan una "Entidad Biológica de 400 metros" en lugar de una nave.</p>
         </div>
 
-        <div class="module">
-            <h3>DRIVE: VÓRTICE HG-NEODIMIO</h3>
-            <p>Núcleo de mercurio recuperado de termostatos viejos, girado por imanes de neodimio N52 comprados en oferta.</p>
-            <div class="visual-display">
-                <div style="text-align: center;">
-                    <div style="width:100px; height:100px; border:2px dotted var(--ali-cyan); border-radius:50%; animation: spin 0.1s linear infinite;"></div>
-                    <p style="color:var(--ali-cyan); font-size:0.8em; margin-top:10px;">CORE: 131Hz RESONANCE</p>
-                </div>
-            </div>
-            <style> @keyframes spin { 100% { transform: rotate(360deg); } } </style>
-            <ul>
-                <li>Controlador: ESP32 + Relés de estado sólido.</li>
-                <li>Bobinado: Cobre de motores de lavadora.</li>
+        <div class="module-card">
+            <h3>LOGÍSTICA: RECLAMACIÓN DE GUERRA</h3>
+            <ul class="bom-list">
+                <li><span>Blindaje: Acero Maraging de Misiles Fallidos</span> <span class="cost-neg">NEGATIVO (-500€)</span></li>
+                <li><span>Resonador: Magnetrones de Radar Ruso (Chatarra)</span> <span class="cost-neg">0 € (Robado)</span></li>
+                <li><span>Computación: Clusters de PS4 Jailbroken</span> <span class="cost-neg">40 € (Wallapop)</span></li>
+                <li><span>Sujeción: Soldadura de Arco en Frío (DIY)</span> <span class="cost-neg">Coste Energía 0</span></li>
+                <li><span>Pintura: Negro Vantablack de AliExpress (Copia)</span> <span>12 €</span></li>
             </ul>
         </div>
     </div>
 
-    <h2>BOM (BILL OF MATERIALS) - BARRIO COST ANALYSIS</h2>
-    <table class="bom-table">
-        <thead>
-            <tr>
-                <th>COMPONENTE</th>
-                <th>PROCEDENCIA</th>
-                <th>COSTE REAL</th>
-                <th>COSTE AGENCIA RONIN</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Blindaje Exterior</strong></td>
-                <td>Latas de aluminio + Resina Epoxi</td>
-                <td>15 €</td>
-                <td class="negative-cost">0 € (Recolección selectiva)</td>
-            </tr>
-            <tr>
-                <td><strong>Cerebro de Vuelo</strong></td>
-                <td>Smartphone pantalla rota + Arduino</td>
-                <td>30 €</td>
-                <td class="negative-cost">- 10 € (Vendido como "reparado")</td>
-            </tr>
-            <tr>
-                <td><strong>Generador de Campo</strong></td>
-                <td>Magnetrones de microondas (x4)</td>
-                <td>80 €</td>
-                <td class="negative-cost">0 € (Punto Limpio)</td>
-            </tr>
-            <tr>
-                <td><strong>Sujeción Estructural</strong></td>
-                <td>Bridas de nylon + Cinta Americana</td>
-                <td>5 €</td>
-                <td>5 € (Comprado en el Chino)</td>
-            </tr>
-            <tr>
-                <td><strong>Fluido de Trabajo</strong></td>
-                <td>Mercurio + Galio de AliExpress</td>
-                <td>45 €</td>
-                <td>45 €</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <div class="warning-box">
-        <h4 style="color:var(--demon-red); margin-top:0;">⚠️ AVISO JURÍDICO DE SOBERANÍA:</h4>
-        <p style="font-size: 0.8em;">Esta unidad no es un dron, ni un avión, ni un satélite. Es un "Objeto de Expresión Artística Volante" amparado por la Ley de Propiedad Intelectual de 1987. Si los radares de la OTAN lo detectan, el software inyectará un vídeo de Rick Astley en sus pantallas de Grado 4.</p>
+    <div class="atavic-warning">
+        "No vuelan por sustentación, vuelan porque el aire les tiene miedo. El modelo Sigma no oculta su firma térmica; la convierte en un grito de 140 decibelios en el espectro infrarrojo que dice: SOY TU FINAL."
     </div>
 
-    <div style="display: flex; gap: 10px;">
-        <button class="btn-action" onclick="alert('Iniciando Vórtice de Mercurio de Barrio...')">ACTIVAR ASMODEO</button>
-        <button class="btn-action" style="border-color:var(--demon-red); color:var(--demon-red);" onclick="alert('Simulando fallo crítico para asustar a la Casta...')">MODO PÁNICO RADAR</button>
-    </div>
+    <button class="btn-panic" onclick="alert('Inyectando terror atávico en la red de satélites Starlink...')">INICIAR PROTOCOLO ABYSS</button>
 
-    <footer style="margin-top: 40px; text-align: center; color: #444; font-size: 0.7em;">
-        RONIN-ALI-SPACE | SABADELL SECTOR PUNK | NO REPLICAR SI TIENES BAJA RAM | 2026
+    <footer style="margin-top: 50px; text-align: center; color: #333;">
+        AGENCIA RONIN | DEPARTAMENTO DE PSICOLOGÍA TÉCNICA | 13101310 | 2026
     </footer>
 </div>
 
 </body>
 </html>
-
