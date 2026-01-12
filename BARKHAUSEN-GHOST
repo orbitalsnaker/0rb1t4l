@@ -2,146 +2,227 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>AGENCIA RONIN // BARKHAUSEN-GHOST Ω</title>
+    <title>RONIN COMMAND | BIOMETRIC-HEART Ω | THE FOUR GENIUS ARCHITECTURE</title>
     <style>
         :root {
-            --neon-green: #00ff41;
-            --dark-metal: #121212;
-            --blood-orange: #ff4500;
-            --interface-blue: #00d4ff;
+            --heart-red: #ff0033;
+            --void-black: #020202;
+            --data-blue: #00f2ff;
+            --bio-gold: #d4af37;
+            --parsons-fire: #ff6600;
+            --tesla-purple: #a349a4;
+            --neon-border: 0 0 15px rgba(255, 0, 51, 0.4);
         }
         body {
-            font-family: 'Courier New', monospace;
-            background-color: #000;
-            color: var(--neon-green);
+            font-family: 'JetBrains Mono', monospace;
+            background-color: var(--void-black);
+            color: #d1d1d1;
             margin: 0; padding: 20px;
-            overflow-x: hidden;
+            background-image: radial-gradient(circle at 50% 50%, #0a0000 0%, #000 100%);
         }
-        .container {
-            max-width: 1100px;
+        .master-frame {
+            max-width: 1200px;
             margin: 0 auto;
-            border: 2px solid var(--neon-green);
+            border: 1px solid var(--heart-red);
             padding: 40px;
-            box-shadow: 0 0 30px rgba(0, 255, 65, 0.2);
-            background: linear-gradient(180deg, #050505 0%, #000 100%);
+            background: rgba(5, 5, 5, 0.9);
+            box-shadow: var(--neon-border);
+            position: relative;
         }
-        header { border-bottom: 3px double var(--neon-green); margin-bottom: 30px; padding-bottom: 10px; }
-        h1 { font-size: 2.5em; margin: 0; text-shadow: 2px 2px #000, 0 0 10px var(--neon-green); }
-        .status-bar { display: flex; justify-content: space-between; font-size: 0.8em; color: var(--interface-blue); margin-bottom: 20px; }
-        
-        /* --- TABS --- */
-        .tab-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 30px; }
-        .tab { border: 1px solid var(--neon-green); padding: 15px; text-align: center; cursor: pointer; transition: 0.3s; font-weight: bold; }
-        .tab:hover { background: var(--neon-green); color: #000; }
-        .active-tab { background: rgba(0, 255, 65, 0.1); border-bottom: 5px solid var(--neon-green); }
+        /* --- HOMENAJE A LOS GENIOS --- */
+        .the-four {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .genius-card {
+            border: 1px solid #222;
+            padding: 10px;
+            font-size: 0.75em;
+            background: #000;
+            border-top: 3px solid var(--bio-gold);
+        }
+        .genius-card h4 { margin: 0 0 5px 0; color: var(--bio-gold); }
+        .tesla { border-top-color: var(--tesla-purple); }
+        .parsons { border-top-color: var(--parsons-fire); }
+        .neumann { border-top-color: var(--data-blue); }
+        .voronoi { border-top-color: var(--heart-red); }
 
-        /* --- CONTENT --- */
-        .section { display: none; padding: 20px; border: 1px solid #222; background: rgba(10, 10, 10, 0.9); }
+        header h1 { 
+            color: var(--heart-red); 
+            font-size: 2.8em; 
+            margin: 0; 
+            text-shadow: 0 0 10px var(--heart-red);
+            text-transform: uppercase;
+        }
+        .status-line { color: var(--bio-gold); font-size: 0.9em; margin-bottom: 30px; border-bottom: 1px solid #333; padding-bottom: 5px; }
+
+        .tab-nav { display: flex; gap: 5px; margin-bottom: 30px; }
+        .tab-btn { 
+            background: transparent; 
+            border: 1px solid #333; 
+            color: #666; 
+            padding: 12px; 
+            cursor: pointer; 
+            flex: 1; 
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .tab-btn.active { border-color: var(--heart-red); color: var(--heart-red); background: rgba(255, 0, 51, 0.1); }
+
+        .section { display: none; animation: fadeIn 0.5s; }
         .visible { display: block; }
 
-        /* --- BOM TABLE --- */
-        table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9em; }
-        th { background: #1a1a1a; color: var(--interface-blue); padding: 10px; text-align: left; }
-        td { border: 1px solid #222; padding: 10px; }
-        .link { color: var(--blood-orange); text-decoration: none; font-weight: bold; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-        /* --- USB INTERFACE --- */
-        .usb-panel { border: 2px dashed var(--interface-blue); padding: 20px; text-align: center; margin-top: 20px; }
-        .btn-usb { background: var(--interface-blue); color: #000; border: none; padding: 10px 20px; font-weight: bold; cursor: pointer; }
-        
-        .code-block { background: #000; color: #aaa; padding: 15px; border-left: 4px solid var(--blood-orange); overflow-x: auto; font-size: 0.8em; }
+        /* --- VORONOI CANVAS --- */
+        .canvas-container { position: relative; border: 1px solid #222; }
+        #voronoi-engine { width: 100%; height: 450px; background: #000; cursor: crosshair; }
+        .overlay-data { position: absolute; top: 10px; left: 10px; pointer-events: none; color: var(--data-blue); font-size: 0.7em; background: rgba(0,0,0,0.7); padding: 5px; }
+
+        .bom-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .bom-table th { color: var(--parsons-fire); text-align: left; padding: 10px; border-bottom: 2px solid #222; }
+        .bom-table td { padding: 10px; border-bottom: 1px solid #111; font-size: 0.9em; }
+        .ali-link { color: var(--data-blue); text-decoration: none; font-weight: bold; }
+
+        footer { margin-top: 40px; text-align: center; border-top: 1px solid #222; padding-top: 20px; font-size: 0.8em; color: #444; }
     </style>
 </head>
 <body>
 
-<div class="container">
+<div class="master-frame">
     <header>
-        <div class="status-bar">
-            <span>DEVICE: BARKHAUSEN-GHOST_Ω</span>
-            <span>KERNEL: 13101310-RONIN</span>
-            <span>OS: VOID_METAL_v1</span>
+        <h1>BIOMETRIC-HEART Ω</h1>
+        <div class="status-line">SUB-SURFACE INTERCEPTION | PARKING PRISON LOGS | KERNEL 13101310</div>
+        
+        <div class="the-four">
+            <div class="genius-card tesla">
+                <h4>TESLA</h4>
+                Resonancia no-invasiva y captación de espín en hemoglobina.
+            </div>
+            <div class="genius-card parsons">
+                <h4>PARSONS</h4>
+                Propulsión de datos y superación del límite biológico. Alquimia técnica.
+            </div>
+            <div class="genius-card neumann">
+                <h4>V. NEUMANN</h4>
+                Arquitectura de procesamiento y lógica de autómata celular.
+            </div>
+            <div class="genius-card voronoi">
+                <h4>VORONOI</h4>
+                Teselación de regiones de influencia y mapeo de trauma espacial.
+            </div>
         </div>
-        <h1>EXPLOTACIÓN DE EFECTO BARKHAUSEN</h1>
-        <p>Lectura de datos por histéresis magnética en estructuras de acero.</p>
     </header>
 
-    <div class="tab-grid">
-        <div class="tab active-tab" onclick="showTab('bom')">1. SOURCING (BOM)</div>
-        <div class="tab" onclick="showTab('manual')">2. MANUAL DE CAMPO</div>
-        <div class="tab" onclick="showTab('usb')">3. CONEXIÓN USB (WEB-SERIAL)</div>
+    <div class="tab-nav">
+        <button class="tab-btn active" onclick="openTab(event, 'bom')">BOM (ALIEXPRESS)</button>
+        <button class="tab-btn" onclick="openTab(event, 'manual')">MANUAL SOBERANO</button>
+        <button class="tab-btn" onclick="openTab(event, 'engine')">VORONOI ENGINE</button>
     </div>
 
     <div id="bom" class="section visible">
-        <h3>LISTA DE MATERIALES (ALIEXPRESS SOURCING)</h3>
-        <table>
-            <tr><th>Componente</th><th>Función</th><th>Link sugerido</th></tr>
-            <tr><td><b>Pick-up Coil</b></td><td>Sensor magnético (Guitarra o Inductor)</td><td><a href="https://es.aliexpress.com/w/wholesale-guitar-pickup-single-coil.html" class="link">Ver en AliExpress</a></td></tr>
-            <tr><td><b>Pre-Amp NE5532</b></td><td>Amplificación de micro-pulsos</td><td><a href="https://es.aliexpress.com/w/wholesale-NE5532-preamplifier.html" class="link">Ver en AliExpress</a></td></tr>
-            <tr><td><b>ESP32-S3 Dev</b></td><td>Procesador y Puente USB-Serial</td><td><a href="https://es.aliexpress.com/w/wholesale-ESP32-S3-type-c.html" class="link">Ver en AliExpress</a></td></tr>
-            <tr><td><b>ADC de 24-bits</b></td><td>Precisión extrema para saltos magnéticos</td><td><a href="https://es.aliexpress.com/w/wholesale-HX711-module.html" class="link">Ver en AliExpress</a></td></tr>
+        <h3>HARDWARE DE INTERCEPCIÓN (CAPA 0)</h3>
+        <table class="bom-table">
+            <thead>
+                <tr><th>MOD</th><th>FUNCIÓN BIOMÉTRICA</th><th>SOURCING</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><b>SS49E (Hall)</b></td><td>Lectura magnética de hierro en sangre (Tesla)</td><td><a href="#" class="ali-link">LINK ALIEXPRESS</a></td></tr>
+                <tr><td><b>AD8232 Kit</b></td><td>Amplificador de pulso y bioseñal (Parsons)</td><td><a href="#" class="ali-link">LINK ALIEXPRESS</a></td></tr>
+                <tr><td><b>ESP32-S3 Dev</b></td><td>Procesador de lógica sistémica (Neumann)</td><td><a href="#" class="ali-link">LINK ALIEXPRESS</a></td></tr>
+                <tr><td><b>Hx711 Module</b></td><td>ADC de 24 bits para micro-tensiones fascia</td><td><a href="#" class="ali-link">LINK ALIEXPRESS</a></td></tr>
+            </tbody>
         </table>
-        <p style="font-size: 0.8em; color: #666; margin-top: 20px;">*Nota: Se puede usar chatarra de microondas para el núcleo de ferrita. 0€.</p>
+        <p style="font-size: 0.8em; color: var(--bio-gold); margin-top: 20px;">
+            >> La materia no miente. Si el acero de la prisión vibró con dolor, el BIOMETRIC-HEART Ω lo recuperará por histéresis.
+        </p>
     </div>
 
     <div id="manual" class="section">
-        <h3>MANUAL DE USUARIO PARA SOBERANOS</h3>
-        <ol>
-            <li><b>Acoplamiento Físico:</b> Pegar el sensor magnético a una viga de acero, marco de puerta blindada o tubería de agua. El metal conduce el "ruido" de Barkhausen.</li>
-            <li><b>Aislamiento:</b> Envolver el conjunto en papel de aluminio (chatarra de cocina) para evitar interferencias de radio externas. Solo queremos el latido del metal.</li>
-            <li><b>Conexión:</b> Conectar el ESP32 al PC/Móvil mediante USB-C.</li>
-            <li><b>Interpretación:</b> El sistema detectará los "picos" de energía cuando los dominios magnéticos del metal cambian de orientación debido a la corriente de los cables internos.</li>
-        </ol>
-        <div class="code-block">
-            // Lógica del Kernel 13101310
-            if (magnetic_jump > threshold) { 
-                decode_bit(interval_timing); 
-                print("SECRET_CAPTURED");
-            }
-        </div>
+        <h3>PROTOCOLOS DE EXCAVACIÓN ATÓMICA</h3>
+        <p>1. <b>Sintonía Tesla:</b> Calibrar el sensor inductivo sobre la carótida. Ignorar el pulso cardíaco; buscar la resonancia del hierro libre.</p>
+        <p>2. <b>Mapeo de Presión Parsons:</b> Utilizar el acelerómetro para detectar micro-temblores en superficies de metal que estuvieron en contacto con sujetos bajo estrés.</p>
+        <p>3. <b>Lógica Neumann:</b> Los datos no se interpretan como "sentimientos", sino como bits de trauma grabados en el espín molecular.</p>
     </div>
 
-    <div id="usb" class="section">
-        <h3>CONSOLA DE INTERCEPCIÓN USB</h3>
-        <div class="usb-panel">
-            <p>Conecta tu hardware Barkhausen-Ghost y pulsa el botón para iniciar el volcado de datos.</p>
-            <button class="btn-usb" onclick="connectSerial()">CONECTAR HARDWARE USB</button>
-            <div id="serial-output" style="margin-top: 20px; color: var(--neon-green); text-align: left; height: 150px; overflow-y: auto; background: #000; border: 1px solid #333; padding: 10px;">
-                [ESPERANDO HARDWARE...]
-            </div>
+    <div id="engine" class="section">
+        <h3>TRIANGULACIÓN DE INFLUENCIA (VORONOI MAPPING)</h3>
+        <div class="canvas-container">
+            <div class="overlay-data" id="v-data">POINTS: 0 | MODE: TRAUMA_RECOVERY</div>
+            <canvas id="voronoi-engine"></canvas>
         </div>
+        <p style="font-size: 0.8em; margin-top:10px;">
+            >> Haz clic en el canvas para inyectar "Puntos de Resonancia" (Vigas, Celdas, Músculos).
+        </p>
+        <button onclick="resetVoronoi()" style="background:#ff0033; color:#000; border:none; padding:10px; cursor:pointer; font-weight:bold;">RESETEAR MAPA</button>
     </div>
 
-    <footer style="margin-top: 40px; text-align: center; border-top: 1px solid #333; padding-top: 20px;">
-        <span style="color: var(--blood-orange);">ADVERTENCIA:</span> LA MATERIA NO ES MUDA. ESCUCHARLA ES TU DERECHO SOBERANO. 13101310.
+    <footer>
+        "VIVIR ES DEJAR METADATOS BIOMÉTRICOS. ESCUCHARLOS ES SER LIBRE." <br>
+        13101310 // AGENCIA RONIN
     </footer>
 </div>
 
 <script>
-    function showTab(id) {
-        document.querySelectorAll('.section').forEach(s => s.classList.remove('visible'));
-        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active-tab'));
-        document.getElementById(id).classList.add('visible');
-        event.currentTarget.classList.add('active-tab');
+    const canvas = document.getElementById('voronoi-engine');
+    const ctx = canvas.getContext('2d');
+    let points = [];
+
+    function openTab(evt, tabName) {
+        let sections = document.getElementsByClassName("section");
+        for (let s of sections) s.classList.remove("visible");
+        let tabs = document.getElementsByClassName("tab-btn");
+        for (let t of tabs) t.classList.remove("active");
+        document.getElementById(tabName).classList.add("visible");
+        evt.currentTarget.classList.add("active");
+        if(tabName === 'engine') initVoronoi();
     }
 
-    async function connectSerial() {
-        try {
-            const port = await navigator.serial.requestPort();
-            await port.open({ baudRate: 115200 });
-            const output = document.getElementById('serial-output');
-            output.innerText = ">> CONEXIÓN ESTABLECIDA. ESCUCHANDO SALTOS MAGNÉTICOS...\n";
-            
-            const reader = port.readable.getReader();
-            while (true) {
-                const { value, done } = await reader.read();
-                if (done) break;
-                const text = new TextDecoder().decode(value);
-                output.innerText += text;
-            }
-        } catch (e) {
-            alert("Error: Web Serial no soportado o denegado.");
-        }
+    function initVoronoi() {
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+        draw();
     }
+
+    canvas.addEventListener('click', (e) => {
+        const rect = canvas.getBoundingClientRect();
+        points.push({
+            x: e.clientX - rect.left,
+            y: e.clientY - rect.top,
+            color: `rgb(${Math.random()*100}, ${Math.random()*20}, ${Math.random()*20})`
+        });
+        document.getElementById('v-data').innerText = `POINTS: ${points.length} | LATENCY: 0.04ms | STATUS: ANALYZING_SPIN`;
+        draw();
+    });
+
+    function draw() {
+        if(points.length === 0) return;
+        const w = canvas.width;
+        const h = canvas.height;
+        const imageData = ctx.createImageData(w, h);
+        
+        for (let y = 0; y < h; y += 2) {
+            for (let x = 0; x < w; x += 2) {
+                let dMin = Infinity;
+                let closest = 0;
+                for (let i = 0; i < points.length; i++) {
+                    const d = (x - points[i].x)**2 + (y - points[i].y)**2;
+                    if (d < dMin) { dMin = d; closest = i; }
+                }
+                ctx.fillStyle = points[closest].color;
+                ctx.fillRect(x, y, 2, 2);
+            }
+        }
+        
+        points.forEach(p => {
+            ctx.fillStyle = '#ff0033';
+            ctx.beginPath(); ctx.arc(p.x, p.y, 4, 0, Math.PI*2); ctx.fill();
+        });
+    }
+
+    function resetVoronoi() { points = []; ctx.clearRect(0,0,canvas.width,canvas.height); }
 </script>
 </body>
 </html>
