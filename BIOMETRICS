@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>AGENCIA RONIN // BIOMETRIC-HEART Ω</title>
+    <style>
+        :root {
+            --heart-red: #ff0033;
+            --void-black: #020202;
+            --data-blue: #00f2ff;
+            --bio-gold: #d4af37;
+        }
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: var(--void-black);
+            color: #eee;
+            margin: 0; padding: 20px;
+        }
+        .master-frame {
+            max-width: 1100px;
+            margin: 0 auto;
+            border: 2px solid var(--heart-red);
+            padding: 30px;
+            background: rgba(10, 0, 0, 0.95);
+            box-shadow: 0 0 50px rgba(255, 0, 51, 0.1);
+        }
+        header { border-bottom: 2px solid var(--bio-gold); padding-bottom: 15px; margin-bottom: 30px; }
+        h1 { color: var(--heart-red); letter-spacing: 3px; margin: 0; font-size: 2.2em; }
+        .sub { color: var(--bio-gold); font-size: 0.8em; font-weight: bold; text-transform: uppercase; }
+
+        .tab-nav { display: flex; gap: 5px; margin-bottom: 20px; }
+        .tab-btn { background: #111; border: 1px solid var(--heart-red); color: #fff; padding: 10px 20px; cursor: pointer; flex-grow: 1; }
+        .tab-btn.active { background: var(--heart-red); color: #000; font-weight: bold; }
+
+        .content-area { display: none; padding: 20px; border: 1px solid #333; background: #000; }
+        .active-section { display: block; }
+
+        table { width: 100%; border-collapse: collapse; font-size: 0.85em; }
+        th { text-align: left; color: var(--data-blue); border-bottom: 1px solid var(--data-blue); padding: 10px; }
+        td { padding: 10px; border-bottom: 1px solid #1a1a1a; }
+        .ali-link { color: var(--bio-gold); text-decoration: none; }
+
+        .medical-manual { line-height: 1.6; font-size: 0.9em; }
+        .warning-box { border-left: 4px solid var(--heart-red); padding: 15px; background: rgba(255, 0, 0, 0.05); margin: 20px 0; }
+        
+        #ecg-canvas { width: 100%; height: 200px; border: 1px solid #222; margin-top: 20px; background: #050000; }
+    </style>
+</head>
+<body>
+
+<div class="master-frame">
+    <header>
+        <div class="sub">Logística de Salud Guerrillera // 13101310</div>
+        <h1>BIOMETRIC-HEART Ω [SIDE-CHANNEL MEDICINE]</h1>
+        <p>Interceptación de flujo ferroso y potenciales eléctricos sin contacto invasivo.</p>
+    </header>
+
+    <div class="tab-nav">
+        <button class="tab-btn active" onclick="switchTab(event, 'sourcing')">EQUIPAMIENTO</button>
+        <button class="tab-btn" onclick="switchTab(event, 'clinical')">MANUAL CLÍNICO</button>
+        <button class="tab-btn" onclick="switchTab(event, 'interface')">TERMINAL USB</button>
+    </div>
+
+    <div id="sourcing" class="content-area active-section">
+        <h3>BOM: SENSORÍSTICA HEMODINÁMICA</h3>
+        <table>
+            <thead>
+                <tr><th>MÓDULO</th><th>USO MÉDICO RONIN</th><th>ALIEXPRESS LINK</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><b>Sensor Hall Lineal (SS49E)</b></td><td>Detección de flujo de hemoglobina (Hierro)</td><td><a href="https://es.aliexpress.com/w/wholesale-SS49E-Hall-Sensor.html" class="ali-link">Ver Sourcing</a></td></tr>
+                <tr><td><b>Electrodos de Plata/Cloro</b></td><td>Captura de potencial de membrana</td><td><a href="https://es.aliexpress.com/w/wholesale-ECG-electrodes-silver.html" class="ali-link">Ver Sourcing</a></td></tr>
+                <tr><td><b>ESP32-S3 (High Speed ADC)</b></td><td>Digitalización de micro-pulsos nerviosos</td><td><a href="https://es.aliexpress.com/w/wholesale-ESP32-S3-Dev-Kit.html" class="ali-link">Ver Sourcing</a></td></tr>
+                <tr><td><b>Amplificador de Instrumentación</b></td><td>Elevar señal de biopotencial x1000</td><td><a href="https://es.aliexpress.com/w/wholesale-AD8232-ECG-module.html" class="ali-link">Ver Sourcing</a></td></tr>
+            </tbody>
+        </table>
+        <div class="warning-box">
+            <b>NOTA DE CAMPO:</b> El sensor Hall pegado a la arteria carótida permite leer el "timbre" magnético de la sangre. Un flujo turbulento indica mentira o estrés isquémico agudo.
+        </div>
+    </div>
+
+    <div id="clinical" class="content-area">
+        <div class="medical-manual">
+            <h3>PROTOCOLOS DE AUDITORÍA CORPORAL</h3>
+            <ol>
+                <li><b>Efecto Barkhausen Humano:</b> Colocar el sensor inductivo sobre el músculo masetero (mandíbula). El "crujido" magnético revela micro-tensiones imperceptibles que delatan el estado emocional real del sujeto.</li>
+                <li><b>Mapeo de Fascia:</b> Deslizar el sensor por la columna vertebral. Los puntos de dolor crónico emiten una firma de baja frecuencia detectable por el ADC de 24 bits.</li>
+                <li><b>Resonancia Sanguínea:</b> Interceptar el pulso en la muñeca. La hemoglobina es paramagnética. Cada latido es un pulso que transporta datos sobre la oxigenación y la presencia de metales pesados.</li>
+            </ol>
+            <div class="code-block" style="background: #111; padding: 10px; border: 1px solid #333; color: var(--bio-gold);">
+                if (blood_turbulence > threshold_stress) {
+                   system.alert("TRAUMA DETECTADO EN CAPA 0");
+                }
+            </div>
+        </div>
+    </div>
+
+    <div id="interface" class="content-area">
+        <h3>MONITOR DE RESONANCIA BIOMÉTRICA</h3>
+        <p>Conecta el hardware vía USB para visualizar el flujo de datos del paciente.</p>
+        <button onclick="connectBio()" style="padding: 15px; width: 100%; background: var(--heart-red); color: #000; font-weight: bold; border: none; cursor: pointer;">
+            INICIAR ESCANEO DE CAPA 0
+        </button>
+        <canvas id="ecg-canvas"></canvas>
+        <div id="bio-output" style="margin-top: 15px; font-size: 0.8em; color: var(--data-blue);">[ESPERANDO SEÑAL BIOLÓGICA...]</div>
+    </div>
+
+    <footer style="margin-top: 30px; text-align: center; color: var(--bio-gold); font-size: 0.7em;">
+        AGENCIA RONIN // DIVISIÓN MÉDICA // SOBERANÍA BIOLÓGICA TOTAL // 2026
+    </footer>
+</div>
+
+<script>
+    function switchTab(evt, tabName) {
+        let content = document.getElementsByClassName("content-area");
+        for (let i = 0; i < content.length; i++) { content[i].style.display = "none"; }
+        let tabs = document.getElementsByClassName("tab-btn");
+        for (let i = 0; i < tabs.length; i++) { tabs[i].className = tabs[i].className.replace(" active", ""); }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    async function connectBio() {
+        try {
+            const port = await navigator.serial.requestPort();
+            await port.open({ baudRate: 115200 });
+            document.getElementById('bio-output').innerText = ">> VÍNCULO BIOMÉTRICO ESTABLECIDO. LEYENDO HEMOGLOBINA...";
+            // Lógica de visualización de canvas aquí
+        } catch (e) {
+            alert("API Serial no disponible. Usa Chrome/Edge en entorno seguro.");
+        }
+    }
+</script>
+</body>
+</html>
