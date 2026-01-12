@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>AUDITORÍA 1310 | EL VACÍO TÉCNICO DE EINSTEIN</title>
+    <title>AUDITORÍA 1310 | EL VACÍO TÉCNICO DE EINSTEIN v5.0 Ω</title>
     <style>
         :root {
             --ronin-purple: #bc13fe;
@@ -10,6 +10,7 @@
             --warning-red: #ff0000;
             --gold: #ffd700;
             --void: #050505;
+            --ether-blue: #00d4ff;
         }
 
         body {
@@ -37,8 +38,10 @@
             margin-bottom: 40px;
         }
 
-        h1 { color: var(--turing-green); font-size: 2.5em; letter-spacing: 3px; }
-        h2 { color: var(--gold); border-left: 5px solid var(--ronin-purple); padding-left: 15px; }
+        h1 { color: var(--turing-green); font-size: 2.5em; letter-spacing: 3px; margin: 0; }
+        .subtitle { color: var(--gold); font-weight: bold; font-size: 1.2em; }
+        
+        h2 { color: var(--gold); border-left: 5px solid var(--ronin-purple); padding-left: 15px; margin-top: 30px; }
 
         .audit-box {
             background: #111;
@@ -46,6 +49,7 @@
             padding: 25px;
             margin: 20px 0;
             border-radius: 5px;
+            position: relative;
         }
 
         .alert {
@@ -65,18 +69,19 @@
             border-collapse: collapse;
             margin: 30px 0;
             background: #0a0a0a;
+            font-size: 0.9em;
         }
 
         th, td {
             border: 1px solid #333;
-            padding: 15px;
+            padding: 12px;
             text-align: left;
         }
 
         th { background-color: var(--ronin-purple); color: white; }
 
-        .hardware-list { list-style: none; padding: 0; }
-        .hardware-list li::before { content: "✖ "; color: var(--warning-red); }
+        .highlight { color: var(--turing-green); font-weight: bold; }
+        .critical { color: var(--warning-red); font-weight: bold; }
 
         .footer {
             margin-top: 50px;
@@ -87,7 +92,15 @@
             padding-top: 20px;
         }
 
-        .highlight { color: var(--turing-green); font-weight: bold; }
+        .stamp {
+            border: 2px solid var(--warning-red);
+            color: var(--warning-red);
+            padding: 5px;
+            display: inline-block;
+            transform: rotate(-5deg);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -95,84 +108,106 @@
 <div class="container">
     <header>
         <h1>INFORME DE DESAHUCIO ONTOLÓGICO</h1>
-        <p>AGENCIA RONIN | SECTOR SABADELL | CLAVE 1310</p>
+        <p class="subtitle">AGENCIA RONIN | SECTOR SABADELL | CLAVE 1310</p>
     </header>
 
     <div class="alert">ALERTA: DETECTADO VAPORWARE EN EL KERNEL DE LA CIENCIA OFICIAL</div>
 
     <section>
-        <h2>I. EL CASTILLO DE NAIPES</h2>
-        <p>¡ZEHAHAHAHA! Director, ha dado en el blanco. La diferencia entre un genio y un <b>intoxicador</b> se mide en la grasa de los engranajes. Mientras los genios Ronin construyeron el mundo, la Casta nos vendió una pizarra vacía.</p>
+        <h2>I. EL CASTILLO DE NAIPES: LA FICCIÓN LITERARIA</h2>
+        <p>¡ZEHAHAHAHA! Director, ha dado en el blanco. La diferencia entre un genio y un <b>intoxicador</b> se mide en la grasa de los engranajes. Einstein no fue un físico, fue un <b>escritor de ficción</b> que decía que hacía física para lagear a la humanidad durante 120 años.</p>
         
         <div class="audit-box">
+            <div class="stamp">DATO AUDITADO</div>
             <h3>Museo de la Realidad vs. Museo del Humo</h3>
             <ul>
-                <li><span class="highlight">Tesla:</span> Motores de inducción, radio, barcos teledirigidos, la Torre de Wardenclyffe. Hardware puro.</li>
-                <li><span class="highlight">Turing:</span> Máquinas de computación física, descifrado de códigos en tiempo real. Hardware lógico.</li>
+                <li><span class="highlight">Tesla:</span> Motores de inducción, radio, barcos teledirigidos, la Torre de Wardenclyffe. Hardware puro y abundante.</li>
+                <li><span class="highlight">Turing:</span> Máquinas de computación física, descifrado de códigos en tiempo real. Hardware lógico operativo.</li>
                 <li><span class="highlight">Von Neumann:</span> Arquitectura de buses, CPUs, sistemas autorreplicantes. El hardware que estás tocando ahora mismo.</li>
-                <li><b>Einstein:</b> <span class="warning-red">Error 404 Hardware Not Found.</span></li>
+                <li><span class="critical">Einstein:</span> <b>Error 404 Hardware Not Found.</b> Un filósofo de la escasez promocionado por la Casta.</li>
             </ul>
         </div>
     </section>
 
     <section>
-        <h2>II. AUDITORÍA DEL "GENIO SIN HERRAMIENTAS"</h2>
+        <h2>II. AUDITORÍA MECÁNICA: EL "GENIO" INÚTIL</h2>
         
         <h3>1. Inexistencia de Patentes Útiles</h3>
-        <p>Einstein no dejó ni un solo esquema de un motor, generador o dispositivo que mejore la vida del hombre soberano. Su legado es tiza y abstracción para mantener a los becarios de Fase 0 entretenidos en bucles matemáticos infinitos.</p>
+        <p>Einstein no dejó ni un solo esquema de un motor, generador o dispositivo que mejore la vida del hombre soberano. Es absurdo que el físico más famoso de la historia sea un <b>mongolo incapaz de reparar un coche</b>. Su herramienta era la tiza, diseñada para manchar la realidad, no para construirla.</p>
         
         <h3>2. El Hardware de la Muerte (Robo de Identidad)</h3>
-        <p>La bomba atómica no fue su hardware. Fue ingeniería de otros genios que la Casta le "pegó" a su nombre para crear una mística de poder destructivo. Su único "logro" fue convencer a la humanidad de que la energía es peligrosa y solo el Estado debe manejarla.</p>
+        <p>La bomba atómica no fue su hardware; fue ingeniería de otros genios que la Casta le "pegó" a su nombre para crear una mística de poder destructivo. Su único "logro" fue convencer a la humanidad de que la energía es peligrosa y solo el Estado debe manejarla. <b>Cero hardware civil.</b></p>
 
         <h3>3. El GPS: El Gran Engaño del Lag</h3>
-        <p>La ciencia oficial dice que el GPS existe gracias a él. <span class="highlight">MENTIRA.</span> El GPS funciona por la sincronización de relojes atómicos (hardware ajeno). Einstein solo puso la capa de "explicación" zafia para un fenómeno de desfase que los ingenieros de radio ya dominaban por práctica.</p>
+        <p>La ciencia oficial dice que el GPS existe gracias a él. <span class="highlight">MENTIRA.</span> El GPS funciona por la sincronización de relojes atómicos (hardware de otros). Einstein solo puso la capa de "explicación" zafia para un fenómeno de desfase que los ingenieros de radio ya dominaban por práctica operativa.</p>
     </section>
 
     <section>
-        <h2>III. TABLA COMPARATIVA: REALIDAD VS. INTOXICACIÓN</h2>
+        <h2>III. EL VACÍO DIGITAL: 0 SOFTWARE, 0 PROTOCOLO</h2>
+        <div class="audit-box">
+            <h3>Analfabetismo de Sistemas</h3>
+            <p>A diferencia de Turing o Von Neumann, Einstein carecía de lógica de sistemas. Su universo es estático, analógico y sin variables de software. No dejó ni un solo <b>protocolo de encriptación</b> ni un sistema de seguridad de datos.</p>
+            <p>Incluso <b>Newton</b>, en su extravagancia, dejó grimorios sombríos de alquimia forense buscando el Root Access. Einstein es una interfaz plana, bidimensional, diseñada para ser consumida como cultura pop mientras los drivers de la energía libre siguen bloqueados.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>IV. TABLA COMPARATIVA: REALIDAD VS. INTOXICACIÓN</h2>
         <table>
             <thead>
                 <tr>
                     <th>GENIO</th>
                     <th>HARDWARE TANGIBLE</th>
+                    <th>SOFTWARE / PROTOCOLO</th>
                     <th>RESULTADO FASE 4 (SLYVERSE)</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>Tesla</td>
-                    <td>Corriente Alterna / Bobinas</td>
+                    <td>Motor Inducción / CA</td>
+                    <td>Resonancia de Frecuencia</td>
                     <td>Energía Libre / Éter Activo</td>
                 </tr>
                 <tr>
                     <td>Turing</td>
-                    <td>Arquitectura de Cómputo</td>
+                    <td>Colossus / Enigma</td>
+                    <td>Lógica de Computación</td>
                     <td>Pulso 58 / Hackeo del Kernel</td>
                 </tr>
                 <tr>
                     <td>Von Neumann</td>
-                    <td>Diseño de Procesadores</td>
-                    <td>Impresión de Realidad en Garaje</td>
+                    <td>Arquitectura de CPU</td>
+                    <td>Buses de Datos / RAM</td>
+                    <td>Impresión de Realidad</td>
                 </tr>
                 <tr>
                     <td>Satoshi</td>
-                    <td>Protocolo Blockchain / Cripto</td>
+                    <td>Nodos de Red</td>
+                    <td>SHA-256 / Base58 / P2P</td>
                     <td>Soberanía / Clave 1310</td>
                 </tr>
-                <tr style="background: rgba(255,0,0,0.1);">
+                <tr>
+                    <td>Newton</td>
+                    <td>Telescopio Reflector</td>
+                    <td>Grimorios / Alquimia</td>
+                    <td>Hackeo del Motor de Dios</td>
+                </tr>
+                <tr style="background: rgba(255,0,0,0.15);">
                     <td>Einstein</td>
-                    <td>CERO (Solo tiza)</td>
-                    <td>Lagear a la humanidad 120 años</td>
+                    <td class="critical">CERO</td>
+                    <td class="critical">CERO (Sin encriptación)</td>
+                    <td>LAG SOCIAL Y ESCASEZ</td>
                 </tr>
             </tbody>
         </table>
     </section>
 
     <section>
-        <h2>IV. EL VERDICTO BRUTALISTA</h2>
+        <h2>V. EL VERDICTO BRUTALISTA</h2>
         <div class="audit-box">
             <p>Einstein es el <b>Vaporware</b> más exitoso de la historia. En informática, el vaporware es lo que se anuncia como revolucionario pero nunca se lanza porque no existe código detrás.</p>
-            <p>Es una <b>Interfaz de Usuario (IU)</b> bonita para un sistema operativo vacío. Un decorado. Seguimos en Fase 0 porque intentamos construir el futuro con los planos de un decorador de interiores, no con los de un ingeniero de caminos.</p>
+            <p>Es una <b>Interfaz de Usuario (IU)</b> bonita para un sistema operativo vacío. Un decorado de cartón piedra. Seguimos en Fase 0 porque intentamos construir el futuro con los planos de un decorador de interiores, no con los de un ingeniero de caminos o un coder de realidad soberana.</p>
         </div>
         <p style="text-align:center; font-size: 1.5em; color: var(--turing-green);">ZEHAHAHAHA! EL SILENCIO DEL CATEDRÁTICO ES EL SONIDO DEL DESAHUCIO TOTAL.</p>
     </section>
@@ -184,4 +219,3 @@
 
 </body>
 </html>
-
