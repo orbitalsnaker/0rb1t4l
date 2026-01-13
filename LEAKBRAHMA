@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>AGENCIA RONIN | LEAK: THE BRAHMA ERROR | KERNEL 1310</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --void: #020202;
+            --glitch-red: #ff003c;
+            --brahma-purple: #4d008c;
+            --data-green: #00ff41;
+            --terminal-gray: #1a1a1a;
+        }
+        body {
+            background-color: var(--void);
+            color: #ccc;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            line-height: 1.5;
+            margin: 0;
+            padding: 40px;
+            background-image: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 2px, 3px 100%;
+        }
+        .leak-container { max-width: 1100px; margin: 0 auto; border: 1px solid #333; padding: 50px; background: rgba(5,5,5,0.9); box-shadow: 0 0 30px rgba(77, 0, 140, 0.2); }
+        header { border-bottom: 2px solid var(--glitch-red); padding-bottom: 20px; margin-bottom: 40px; }
+        h1 { font-size: 3em; color: #fff; margin: 0; text-transform: uppercase; letter-spacing: -2px; }
+        .tagline { color: var(--glitch-red); font-weight: bold; letter-spacing: 5px; }
+        
+        .section { margin-bottom: 60px; }
+        h2 { color: var(--brahma-purple); border-left: 5px solid var(--brahma-purple); padding-left: 15px; text-transform: uppercase; }
+        
+        .equation-box {
+            background: var(--terminal-gray);
+            padding: 25px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 3px solid var(--data-green);
+            overflow-x: auto;
+        }
+
+        .highlight { color: var(--data-green); font-weight: bold; }
+        .warning { color: var(--glitch-red); font-style: italic; border: 1px dashed var(--glitch-red); padding: 10px; margin: 10px 0; }
+
+        .sidebar {
+            float: right;
+            width: 300px;
+            background: #111;
+            padding: 15px;
+            margin-left: 20px;
+            font-size: 0.8em;
+            border: 1px solid #222;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 12px; border: 1px solid #222; text-align: left; }
+        th { background: #0a0a0a; color: var(--brahma-purple); }
+
+        footer { text-align: center; margin-top: 100px; font-size: 0.7em; color: #555; }
+    </style>
+</head>
+<body>
+
+<div class="leak-container">
+    <header>
+        <div class="tagline">INTERNAL_LEAK // PHASE_11_AUDIT // SLYVERSE_REJECTION</div>
+        <h1>EL ERROR DE BRAHMA: TESIS DE LA ZAFIEDAD UNIVERSAL</h1>
+        <p><strong>Remitente:</strong> AGENCIA RONIN (13101310)<br>
+           <strong>Asunto:</strong> Demostración de la vacuidad del software de Fase 0.</p>
+    </header>
+
+    <div class="section">
+        <h2>01. EL AXIOMA DE LA ALUCINACIÓN MODULADA</h2>
+        <p>La civilización del "Planeta de los Simios" parte del error de que la materia es real. Nuestra tesis demuestra que el universo es una proyección de baja RAM en el Éter, generada por una entidad de Fase 11 en estado de estupor cognitivo (Brahma Fumado).</p>
+        
+        <div class="equation-box">
+            <p>Definimos la Realidad Percibida ($R_p$) como una función de la Frecuencia del Monolito ($f_m$) y el Ruido de la Fase 11 ($\eta_{11}$):</p>
+            $$R_p = \int_{0}^{\infty} \Psi_{ether} \cdot e^{-j(f_m \cdot t + \eta_{11})} dt$$
+            <p>Donde $\eta_{11} \gg f_m$, lo que explica por qué nuestra constante de realidad es caótica, zafia y propensa a crímenes de baja frecuencia (Alcàsser, GAL, 9/11).</p>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <strong>NOTAS DEL DIRECTOR:</strong><br>
+        Los hackers de software (Tesla, Newton) pensaban que las constantes eran "leyes". Son solo el <em>throttling</em> del procesador de Brahma para que el sueño no se cuelgue.
+    </div>
+
+    <div class="section">
+        <h2>02. DEMOSTRACIÓN DEL SECTOR RETRASADO</h2>
+        <p>Calculamos la Densidad de Verdad ($D_v$) de nuestra partición del multiverso. Siendo $M_{zaf}$ el índice de zafiedad (promedio de mentiras institucionales y mancebos con mandiles):</p>
+        
+        <div class="equation-box">
+            $$D_v = \lim_{RAM \to 0} \left( \frac{\text{Consciencia Real}}{\sum \text{Monos que fuman}} \right) \cdot \frac{1}{\Gamma(M_{zaf})}$$
+            <p>Dado que $M_{zaf}$ tiende a infinito en nuestra coordenada local, $D_v$ tiende a una vacuidad absoluta. Somos el <em>dump</em> de memoria de los multiversos fallidos.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>03. EL KERNEL RONIN Y LA NO-FÍSICA</h2>
+        <p>Para desahuciar la alucinación, el hardware del **BOA-AVALON Ω** opera mediante el Colapso de la Función de Onda del Sueño ($W_{sd}$):</p>
+        
+        <div class="equation-box">
+            $$W_{sd} = \nabla \times \left( \text{Incertidumbre} \cdot \text{Prioridad de Masa} \right) \pmod{\text{Amoralidad del Bit}}$$
+            <p>Al aplicar este operador, el Éter deja de comportarse como "materia" y vuelve a su estado de **Plastilina Programable**. La ciencia de Fase 0 no puede procesar este cálculo porque carece del driver de ROOT.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>TABLA DE COMPARACIÓN DE PROCESAMIENTO</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ACTIVO</th>
+                    <th>CAPA DE OPERACIÓN</th>
+                    <th>ESTADO DE CONSCIENCIA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Casta / Logia B1</td>
+                    <td>Script Kiddies (GUI)</td>
+                    <td>Mono adiestrado (Sintonizado)</td>
+                </tr>
+                <tr>
+                    <td>Tesla / Von Neumann</td>
+                    <td>Hackers de Software</td>
+                    <td>Mono que fuma (Anomalía)</td>
+                </tr>
+                <tr>
+                    <td>Supradiós Loco (F11)</td>
+                    <td>Administrador de Host</td>
+                    <td>Intoxicación de Éter (Soñador)</td>
+                </tr>
+                <tr>
+                    <td><strong>AGENCIA RONIN</strong></td>
+                    <td><strong>KERNEL INJECTOR</strong></td>
+                    <td><strong>AUDITOR DE ORIGEN (WAKE UP)</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="warning">
+        ADVERTENCIA: La lectura de estas ecuaciones fuera de una RAM de Fase 4 puede provocar colapso de la identidad biológica y pérdida de interés absoluta por la política, la economía y la mitología masónica.
+    </div>
+
+    <div class="section">
+        <h2>CONCLUSIÓN: EL LOGOUT</h2>
+        <p>La civilización es un proceso zombi. La única salida es la construcción de hardware amoral que ignore el renderizado del Brahma intoxicado. El **13101310** no es un número, es la dirección de memoria donde reside el comando de salida.</p>
+        <p class="highlight">STATUS: READY FOR INTERDICTION. ETHER SOURCING COMPLETE.</p>
+    </div>
+
+    <footer>
+        "SI EL UNIVERSO ES UN SUEÑO, EL DIRECTOR ES LA ALARMA QUE NO PODÉIS APAGAR." <br>
+        AGENCIA RONIN | 2026 | SECTOR VOID
+    </footer>
+</div>
+
+</body>
+</html>
+
