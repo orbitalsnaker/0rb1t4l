@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MANIFESTO_RONIN_KUBRICK_CORE_1310</title>
+    <style>
+        body { background-color: #050505; color: #00ff41; font-family: 'Consolas', 'Courier New', monospace; line-height: 1.6; padding: 40px; border: 5px double #00ff41; }
+        .warning-flash { animation: blinker 1s linear infinite; color: #ff0000; font-weight: bold; text-align: center; border: 2px solid #ff0000; padding: 10px; margin-bottom: 30px; }
+        @keyframes blinker { 50% { opacity: 0; } }
+        h1 { text-align: center; text-transform: uppercase; letter-spacing: 5px; color: #fff; background: #00ff41; color: #000; padding: 10px; }
+        h2 { border-left: 10px solid #ff0000; padding-left: 15px; margin-top: 40px; color: #ff0000; text-transform: uppercase; background: rgba(255,0,0,0.1); }
+        h3 { color: #fff; border-bottom: 1px solid #00ff41; display: inline-block; }
+        .log-entry { background: rgba(0, 255, 65, 0.05); border: 1px solid #00ff41; padding: 20px; margin-bottom: 10px; border-radius: 5px; }
+        .redacted-block { background-color: #00ff41; color: #000; font-weight: bold; padding: 2px 8px; border-radius: 3px; }
+        .intel-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .intel-table th, .intel-table td { border: 1px solid #00ff41; padding: 12px; text-align: left; }
+        .intel-table th { background: #00ff41; color: #000; }
+        .fidelio-marker { color: #f0f; font-weight: bold; font-style: italic; }
+        .footer { margin-top: 50px; text-align: center; font-size: 0.9em; border-top: 1px dashed #00ff41; padding-top: 20px; }
+        .node-highlight { color: #ffff00; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="warning-flash">SISTEMA DE DETECCIÓN DE ZAFIEDAD: ACTIVADO. ANALIZANDO HARDWARE KUBRICK. PROTOCOLO 13101310.</div>
+
+    <h1>AUDITORÍA FORENSE: EL CÓDIGO KUBRICK DESVELADO</h1>
+
+    <div class="log-entry">
+        <h2>01. EL NODO RAINBOW: LOGÍSTICA DE LA MANCEBÍA INFANTIL</h2>
+        <p>La tienda de disfraces <strong>"Rainbow"</strong> no es un elemento atmosférico; es el <span class="node-highlight">HUB de Suministro Biológico</span> de la Logia. Kubrick expone la sordidez de la "Estrella del Este" de forma clínica y repugnante, alejándose de la apología onírica de David Lynch.</p>
+        <ul>
+            <li><strong>El Activo Milich:</strong> No es un tendero, es un <span class="redacted-block">PROXENETA ADMINISTRATIVO</span>. Su pertenencia a la masonería local es el firewall que le permite operar. </li>
+            <li><strong>La Hija como Mercancía:</strong> La niña, maquillada y vestida para la mancebía, es sorprendida con dos japoneses (clientes de la red global). Milich no se horroriza por el abuso, se enfurece por la <span class="node-highlight">BRECHA DE SEGURIDAD</span>. El trato comercial se cierra frente a Bill (el Subnormal de Cruise) para demostrarle que en ese mundo, todo hardware pequeño tiene un precio de alquiler.</li>
+            <li><strong>Sordidez vs. Estética:</strong> Al iluminar la tienda con luz fluorescente barata y mostrar la fealdad del trato, Kubrick anula la "estética agradable" del vicio. Es la antítesis del cine de la Logia B1: aquí no hay glamour, solo <span class="node-highlight">CARNE Y DINERO</span>.</li>
+        </ul>
+    </div>
+
+    <div class="log-entry">
+        <h2>02. LA MASACRE DEL MONTAJE: EL HORROR DE SOMERTON</h2>
+        <p>El Director Ronin sabe que el montaje que llegó a los cines es un <span class="redacted-block">PATCH DE CENSURA</span> de la Warner Bros. La intención original de Kubrick era el Game Over definitivo para la élite.</p>
+        <h3>EL LEAK DE LOS MENORES:</h3>
+        <p>La coreografía del ritual en la mansión de Somerton estaba diseñada para <span class="node-highlight">ACTIVOS INFANTILES</span>. Tras la muerte/formateo de Kubrick, el sistema insertó modelos adultas para esquivar la calificación X y la persecución criminal, pero el rastro es imborrable:</p>
+        <ul>
+            <li><strong>Geometría del Abuso:</strong> Las mujeres aparecen arrodilladas en ángulos que solo tienen sentido físico si el receptor es de baja estatura. El espacio vacío sobre ellas delata el hardware original que fue eliminado digitalmente.</li>
+            <li><strong>CGI de Ocultación:</strong> El uso de figuras digitales para tapar actos sexuales no fue por pudor, fue para ocultar que los participantes originales no cumplían la edad legal del servidor. Kubrick dejó las <span class="fidelio-marker">posiciones de sumisión</span> intactas como una marca de agua para el futuro auditor.</li>
+        </ul>
+    </div>
+
+    <div class="log-entry">
+        <h2>03. CACHORROS DE BOHEMIAN GROVE: EL TEST DE YALE</h2>
+        <p>La agresión que sufre Bill en la calle por parte de los jóvenes universitarios es un <span class="node-highlight">TEST DE ESTRÉS DE CASTA</span>. Estos no son borrachos; son el linaje de la Logia.</p>
+        <p>Estos sujetos representan la conexión <strong>Yale - Skull & Bones - Bohemian Grove</strong>. Kubrick muestra que la biomasa profesional (médicos como Bill) es escoria para los cachorros de la élite. La agresión marca el territorio: Bill es un <span class="node-highlight">Mancebo de Servicio</span>, mientras que ellos son los futuros dueños del ritual. Si Bill no puede defenderse de los cachorros, ¿cómo espera sobrevivir a los lobos de Somerton?</p>
+    </div>
+
+    <div class="log-entry">
+        <h2>04. LA TRAICIÓN PRE-OPERATIVA: EL CONTRATO DE ALICE</h2>
+        <p>Aquí reside la mayor genialidad del Director. Alice Harford (Kidman) no es una esposa aburrida; es una <span class="redacted-block">ACTIVA PROCESADA</span> que ya ha vendido el hardware familiar antes de que empiece la película.</p>
+        <table class="intel-table">
+            <tr>
+                <th>LOG DE ACTIVIDAD</th>
+                <th>ANÁLISIS RONIN</th>
+            </tr>
+            <tr>
+                <td>El "Sueño" del Oficial Naval</td>
+                <td>No es una fantasía, es un <strong>DUMP DE DATOS</strong> de su pasado como activa de la Logia. El uniforme representa al Estado/Logia que ya la posee.</td>
+            </tr>
+            <tr>
+                <td>La Contraseña "FIDELIO"</td>
+                <td>La broma pesada de Kubrick. En la ópera, la mujer salva al marido. Aquí, <strong>Alice condena a Bill</strong> al darle el empujón psicológico necesario para que se infiltre y sea capturado.</td>
+            </tr>
+            <tr>
+                <td>La Hija (Helena)</td>
+                <td>Ya está en el <span class="fidelio-marker">Catálogo Rainbow</span>. La escena final en la juguetería muestra a Alice "entregando" a la niña visualmente a la estética del ritual.</td>
+            </tr>
+        </table>
+        <p>Alice ya era infiel al "contrato humano" porque su lealtad pertenece a la <span class="node-highlight">ESTRELLA DEL ESTE</span>. Bill es el último en enterarse de que vive en un burdel administrativo gestionado por su propia mujer.</p>
+    </div>
+
+    <div class="log-entry">
+        <h2>05. EL "SUBNORMAL" FUNCIONAL Y EL FINAL DEL JUEGO</h2>
+        <p>Elegir a <strong>Tom Cruise</strong> (líder de facto de la secta de Ron Hubbard/Scientology) fue el trolleo definitivo. Kubrick puso a un esclavo de una secta real a interpretar a un esclavo de una secta ficticia. Cruise no actúa; su <span class="node-highlight">HARDWARE DE VACÍO MENTAL</span> es perfecto para el papel de Bill Harford.</p>
+        <p>La palabra final, <strong>"FUCK"</strong>, es la firma del contrato. No es placer, es sumisión. Alice le dice a Bill que ya no hay escapatoria: han sido procesados, sus hijos están alquilados y solo queda servir al sistema.</p>
+    </div>
+
+    <div class="footer">
+        DOCUMENTO GENERADO EL 13 DE ENERO DE 2026 | AGENCIA RONIN | HARDWARE KUBRICK VS MANCEBÍA B1<br>
+        <strong>"EL MISTERIO ES EL CORTAFUEGOS DE LOS IDIOTAS. LA VERDAD ES SÓRDIDA Y OBVIA."</strong>
+    </div>
+
+</body>
+</html>
+
