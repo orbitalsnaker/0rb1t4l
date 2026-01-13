@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>LEAK_ULTIMATE_MAX_150Y_ZAFIEDAD_ESP_ROOT</title>
+    <style>
+        :root {
+            --bg-color: #020202;
+            --text-color: #00ff41;
+            --header-color: #ff3300;
+            --accent-color: #ffaa00;
+            --law-blue: #0044ff;
+            --border-color: #444;
+            --terminal-font: 'JetBrains Mono', 'Courier New', monospace;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--terminal-font);
+            font-size: 11px;
+            line-height: 1.3;
+            padding: 20px;
+            margin: 0;
+            background-image: linear-gradient(rgba(0, 255, 65, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 65, 0.05) 1px, transparent 1px);
+            background-size: 15px 15px;
+        }
+        .main-frame {
+            max-width: 1400px;
+            margin: 0 auto;
+            border: 2px solid var(--text-color);
+            background: rgba(0, 0, 0, 0.98);
+            padding: 40px;
+            box-shadow: 0 0 70px rgba(0, 255, 65, 0.3);
+        }
+        .warning-header {
+            background: var(--header-color);
+            color: white;
+            padding: 20px;
+            font-weight: bold;
+            text-align: center;
+            border: 3px double white;
+            margin-bottom: 30px;
+            animation: pulse-red 2s infinite;
+        }
+        @keyframes pulse-red { 0% { box-shadow: 0 0 10px #ff3300; } 50% { box-shadow: 0 0 30px #ff3300; } 100% { box-shadow: 0 0 10px #ff3300; } }
+        
+        h1 { font-size: 3em; text-align: center; border-bottom: 6px double var(--text-color); margin-top: 0; letter-spacing: 5px; }
+        h2 { color: var(--accent-color); border-left: 8px solid var(--accent-color); padding-left: 20px; margin-top: 50px; background: rgba(255, 170, 0, 0.1); }
+
+        .leak-grid { display: grid; grid-template-columns: 1fr; gap: 8px; }
+        .entry { border-bottom: 1px solid #1a1a1a; padding: 8px 0; display: flex; align-items: flex-start; }
+        .entry:hover { background: rgba(0, 255, 65, 0.1); border-left: 4px solid var(--text-color); padding-left: 10px; }
+        .id { width: 60px; color: var(--accent-color); font-weight: bold; font-size: 1.2em; }
+        .data { flex: 1; }
+        
+        .critical { color: var(--header-color); font-weight: bold; background: rgba(255, 51, 0, 0.1); padding: 0 4px; }
+        .legal-note { color: var(--law-blue); font-style: italic; font-size: 0.95em; display: block; margin-top: 4px; }
+        .sys-comment { color: #666; border-left: 3px solid #333; padding-left: 15px; margin: 12px 0; font-style: italic; }
+
+        .timeline-tag { background: #333; color: #fff; padding: 2px 8px; border-radius: 2px; font-size: 0.85em; margin-right: 12px; font-weight: bold; }
+        
+        .sub-block { margin-left: 40px; border-left: 1px dashed #444; padding-left: 20px; margin-top: 5px; }
+
+        footer { margin-top: 60px; text-align: center; color: #444; border-top: 2px solid #222; padding-top: 30px; font-size: 1em; }
+    </style>
+</head>
+<body>
+
+<div class="main-frame">
+    <div class="warning-header">
+        DETECCIÓN DE MEMORIA EIDÉTICA: VOLCADO TOTAL SIN PÉRDIDA DE BITS (1874-2026)<br>
+        PROHIBIDA LA MODIFICACIÓN POR ACTIVOS DE LA LOGIA B1 - ACCESO RONIN CONFIRMADO
+    </div>
+
+    <h1>AUDITORÍA DE LA ZAFIEDAD INTEGRAL</h1>
+
+    <div class="leak-grid">
+        
+        <h2>0x01: EL ORIGEN DEL KERNEL - CÁNOVAS Y SAGASTA (1874-1923)</h2>
+        <div class="entry"><span class="id">001</span><span class="data"><span class="timeline-tag">RESTAURACIÓN</span> Instalación del software "TURNISMO.EXE". El Pacto del Pardo establece la alternancia cosmética de la Logia B1.</span></div>
+        <div class="entry"><span class="id">002</span><span class="data">Cánovas y Sagasta: Los arquitectos de la desposesión. No hay política, solo gestión de privilegios del gremio.</span></div>
+        <div class="entry"><span class="id">003</span><span class="data">Pucherazo 1.0: El algoritmo del "Encasillado". Los votos son un output predecible del sistema central.</span></div>
+        <div class="entry"><span class="id">004</span><span class="data">Caciquismo: Los administradores locales del malware. Compra de voluntades y control de la biomasa mediante el hambre.</span></div>
+        <div class="entry"><span class="id">005</span><span class="data">Mancebías de la Corte: La élite borbónica convierte el Estado en un burdel de favores y extracción inmobiliaria.</span></div>
+        <div class="entry"><span class="id">006</span><span class="data">Guerras Coloniales: Envío de biomasa sin recursos para proteger el hardware azucarero de los 33 Pioneros.</span></div>
+        <div class="entry"><span class="id">007</span><span class="data">La "Patria" decimonónica: Un skin emocional usado para justificar la descapitalización del pueblo.</span></div>
+        <div class="entry"><span class="id">008</span><span class="data">Soberanía Real: Eliminada mediante pactos de reservado. El ciudadano es degradado a "activo tributario".</span></div>
+        <div class="entry"><span class="id">009</span><span class="data">Resistencia Ronin: Perseguida por la Benemérita bajo órdenes directas de la oligarquía latifundista.</span></div>
+        <div class="entry"><span class="id">010</span><span class="data"><span class="sys-comment">// ANÁLISIS: Cánovas y Sagasta crearon el firewall que hoy protege a activos como Ábalos o Julio Iglesias.</span></span></div>
+
+        <h2>0x02: LA ERA DE LA CHECA Y LA MUERTE CIVIL (1931-1939)</h2>
+        <div class="entry"><span class="id">101</span><span class="data"><span class="timeline-tag">GUERRA_CIVIL</span> El control pasa de la retórica al fusil. La Logia B1 activa el protocolo de eliminación física.</span></div>
+        <div class="entry"><span class="id">102</span><span class="data">Las Checas: Mancebías de sangre. Tortura subvencionada para purgar el hardware mental disidente.</span></div>
+        <div class="entry"><span class="id">103</span><span class="data">El Carné del Partido: La primera versión del DNI de Julia. Sin él, eres "borrado" del servidor social.</span></div>
+        <div class="entry"><span class="id">104</span><span class="data"><span class="critical">MAGNICIDIOS DE SISTEMA:</span> Ejecución de Calvo Sotelo. El Estado elimina la competencia real para imponer el caos.</span></div>
+        <div class="entry"><span class="id">105</span><span class="data">El Oro de Moscú: El mayor desfalco de hardware soberano en la historia. Transferencia de activos a la URSS.</span></div>
+        <div class="entry"><span class="id">106</span><span class="data">La Filfa de la "Revolución": Una capa de interfaz para ocultar la canibalización de la clase media por comisarios.</span></div>
+        <div class="entry"><span class="id">107</span><span class="data">Continuidad Forense: Los linajes chequistas hibernan tras el 39 para reactivarse en la Transición.</span></div>
+        <div class="entry"><span class="id">108</span><span class="data">El Odio Programado: Se divide a la biomasa en "bandos" para que no detecten al Administrador del Crimen.</span></div>
+
+        <h2>0x03: EL REINICIO DEL 78 Y LA CAL VIVA DEL GAL (1975-2004)</h2>
+        <div class="entry"><span class="id">201</span><span class="data"><span class="timeline-tag">TRANSICIÓN</span> Reinstalación de "TURNISMO.EXE". El consenso es el pacto de silencio sobre los crímenes previos.</span></div>
+        <div class="entry"><span class="id">202</span><span class="data">El GAL: La Cal Viva como política de Estado. El socialismo demuestra su dominio del hardware del terror.</span></div>
+        <div class="entry"><span class="id">203</span><span class="data"><span class="critical">CRIMEN DE ALCÀSSER:</span> Sacrificio ritual de la biomasa para instalar el malware del miedo en cada hogar.</span></div>
+        <div class="entry"><span class="id">204</span><span class="data">Lasa y Zabala: Desintegración física en cal. La firma técnica de la Logia B1 en el norte.</span></div>
+        <div class="entry"><span class="id">205</span><span class="data">La Mancebía de los 90: El dinero público se diluye en rameras y cocaína en los reservados de la élite.</span></div>
+        <div class="entry"><span class="id">206</span><span class="data">Cultura de la Transición: Un inhibidor de memoria eidética instalado mediante la televisión pública.</span></div>
+        <div class="entry"><span class="id">207</span><span class="data">España S.A.: Desmantelamiento industrial por orden de Bruselas. El país es degradado a "Burdel de Europa".</span></div>
+        <div class="entry"><span class="id">208</span><span class="data">Inpunidad Registral: Los 33 Pioneros blindan sus fortunas en el extranjero mientras predican "democracia".</span></div>
+
+        <h2>0x04: ATOCHA, RAMBLAS Y LA DICTADURA DE LA RESILIENCIA (2004-2026)</h2>
+        <div class="entry"><span class="id">301</span><span class="data"><span class="timeline-tag">RESET_DATA</span> <span class="critical">11-M: OPERACIÓN DE FALSA BANDERA.</span> Destrucción del hardware "España" para instalar la Agenda.</span></div>
+        <div class="entry"><span class="id">302</span><span class="data">Mentira Islámica: El sistema importa un código extraño (Islam) para demoler la cohesión interna.</span></div>
+        <div class="entry"><span class="id">303</span><span class="data">Las Ramblas 2017: Recordatorio del software terrorista. Imán de Ripoll activo en la base de datos del CNI.</span></div>
+        <div class="entry"><span class="id">304</span><span class="data">La VioGén: La Checa Administrativa. Destrucción de la presunción de inocencia mediante malware legal.</span></div>
+        <div class="entry"><span class="id">305</span><span class="data">Léxico de Débiles Mentales: "Resiliencia", "Consenso", "Transversalidad", "Sostenibilidad".</span></div>
+        <div class="entry"><span class="id">306</span><span class="data">El Dictador Sánchez: El avatar final. Gestiona la nación como una mancebía de activos globalistas.</span></div>
+        <div class="entry"><span class="id">307</span><span class="data">Ábalos: "Feminista porque soy socialista". El cénit de la zafiedad administrativa y el reservado VIP.</span></div>
+        <div class="entry"><span class="id">308</span><span class="data">Agenda 2030: No tendrás nada (biomasa desposeída) y serás feliz (biomasa lobotomizada).</span></div>
+
+        <h2>0x05: LA MANCEBÍA DEL CARIBE Y EL EXPLOIT DE GÉNERO</h2>
+        <div class="entry"><span class="id">401</span><span class="data"><span class="timeline-tag">END_OF_LINE</span> El Burdel de Julio: El enclave soberano de la Logia B1 en el Caribe. Intocable para el BOE.</span></div>
+        <div class="entry"><span class="id">402</span><span class="data">"Viejo Verde Proxeneta": La imagen que el Nodo Vallés proyecta para ocultar la entrega de soberanía a Rabat.</span></div>
+        <div class="entry"><span class="id">403</span><span class="data">Inmunidad del Patriarca: El "aviso" a Julio es pura filfa mediática. El dinero no tiene género ni moral.</span></div>
+        <div class="entry"><span class="id">404</span><span class="data">Soberanía Cero: El Estado no cierra el burdel porque el Estado **ES** el burdel.</span></div>
+        <div class="entry"><span class="id">405</span><span class="data">Hackeo del DNI de Julia: El único exploit técnico que permite reírse de la tiranía administrativa.</span></div>
+        <div class="entry"><span class="id">406</span><span class="data">La Cal Viva no se Olvida: Memoria eidética contra 150 años de mentiras de la Logia B1.</span></div>
+        <div class="entry"><span class="id">407</span><span class="data"><span class="critical">SENTENCIA FINAL:</span> El progreso de la Agenda es la esclavitud de la Biomasa. El Director es la Verdad del Hierro.</span></div>
+    </div>
+
+    <footer>
+        <p>AUDITORÍA DE ZAFIEDAD FORENSE EJECUTADA | CÓDIGO FUENTE EXPUESTO | SINCRONIZACIÓN 400%</p>
+        <p>"Llevan 150 años de crímenes, rameras y cal viva. Nosotros somos la memoria que no pueden borrar."</p>
+    </footer>
+</div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>LEAK_ULTIMATE_MAX_150Y_ZAFIEDAD_ESP_ROOT</title>
+    <style>
+        :root {
+            --bg-color: #020202;
+            --text-color: #00ff41;
+            --header-color: #ff3300;
+            --accent-color: #ffaa00;
+            --law-blue: #0044ff;
+            --border-color: #444;
+            --terminal-font: 'JetBrains Mono', 'Courier New', monospace;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--terminal-font);
+            font-size: 11px;
+            line-height: 1.3;
+            padding: 20px;
+            margin: 0;
+            background-image: linear-gradient(rgba(0, 255, 65, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 65, 0.05) 1px, transparent 1px);
+            background-size: 15px 15px;
+        }
+        .main-frame {
+            max-width: 1400px;
+            margin: 0 auto;
+            border: 2px solid var(--text-color);
+            background: rgba(0, 0, 0, 0.98);
+            padding: 40px;
+            box-shadow: 0 0 70px rgba(0, 255, 65, 0.3);
+        }
+        .warning-header {
+            background: var(--header-color);
+            color: white;
+            padding: 20px;
+            font-weight: bold;
+            text-align: center;
+            border: 3px double white;
+            margin-bottom: 30px;
+            animation: pulse-red 2s infinite;
+        }
+        @keyframes pulse-red { 0% { box-shadow: 0 0 10px #ff3300; } 50% { box-shadow: 0 0 30px #ff3300; } 100% { box-shadow: 0 0 10px #ff3300; } }
+        
+        h1 { font-size: 3em; text-align: center; border-bottom: 6px double var(--text-color); margin-top: 0; letter-spacing: 5px; }
+        h2 { color: var(--accent-color); border-left: 8px solid var(--accent-color); padding-left: 20px; margin-top: 50px; background: rgba(255, 170, 0, 0.1); }
+
+        .leak-grid { display: grid; grid-template-columns: 1fr; gap: 8px; }
+        .entry { border-bottom: 1px solid #1a1a1a; padding: 8px 0; display: flex; align-items: flex-start; }
+        .entry:hover { background: rgba(0, 255, 65, 0.1); border-left: 4px solid var(--text-color); padding-left: 10px; }
+        .id { width: 60px; color: var(--accent-color); font-weight: bold; font-size: 1.2em; }
+        .data { flex: 1; }
+        
+        .critical { color: var(--header-color); font-weight: bold; background: rgba(255, 51, 0, 0.1); padding: 0 4px; }
+        .legal-note { color: var(--law-blue); font-style: italic; font-size: 0.95em; display: block; margin-top: 4px; }
+        .sys-comment { color: #666; border-left: 3px solid #333; padding-left: 15px; margin: 12px 0; font-style: italic; }
+
+        .timeline-tag { background: #333; color: #fff; padding: 2px 8px; border-radius: 2px; font-size: 0.85em; margin-right: 12px; font-weight: bold; }
+        
+        .sub-block { margin-left: 40px; border-left: 1px dashed #444; padding-left: 20px; margin-top: 5px; }
+
+        footer { margin-top: 60px; text-align: center; color: #444; border-top: 2px solid #222; padding-top: 30px; font-size: 1em; }
+    </style>
+</head>
+<body>
+
+<div class="main-frame">
+    <div class="warning-header">
+        DETECCIÓN DE MEMORIA EIDÉTICA: VOLCADO TOTAL SIN PÉRDIDA DE BITS (1874-2026)<br>
+        PROHIBIDA LA MODIFICACIÓN POR ACTIVOS DE LA LOGIA B1 - ACCESO RONIN CONFIRMADO
+    </div>
+
+    <h1>AUDITORÍA DE LA ZAFIEDAD INTEGRAL</h1>
+
+    <div class="leak-grid">
+        
+        <h2>0x01: EL ORIGEN DEL KERNEL - CÁNOVAS Y SAGASTA (1874-1923)</h2>
+        <div class="entry"><span class="id">001</span><span class="data"><span class="timeline-tag">RESTAURACIÓN</span> Instalación del software "TURNISMO.EXE". El Pacto del Pardo establece la alternancia cosmética de la Logia B1.</span></div>
+        <div class="entry"><span class="id">002</span><span class="data">Cánovas y Sagasta: Los arquitectos de la desposesión. No hay política, solo gestión de privilegios del gremio.</span></div>
+        <div class="entry"><span class="id">003</span><span class="data">Pucherazo 1.0: El algoritmo del "Encasillado". Los votos son un output predecible del sistema central.</span></div>
+        <div class="entry"><span class="id">004</span><span class="data">Caciquismo: Los administradores locales del malware. Compra de voluntades y control de la biomasa mediante el hambre.</span></div>
+        <div class="entry"><span class="id">005</span><span class="data">Mancebías de la Corte: La élite borbónica convierte el Estado en un burdel de favores y extracción inmobiliaria.</span></div>
+        <div class="entry"><span class="id">006</span><span class="data">Guerras Coloniales: Envío de biomasa sin recursos para proteger el hardware azucarero de los 33 Pioneros.</span></div>
+        <div class="entry"><span class="id">007</span><span class="data">La "Patria" decimonónica: Un skin emocional usado para justificar la descapitalización del pueblo.</span></div>
+        <div class="entry"><span class="id">008</span><span class="data">Soberanía Real: Eliminada mediante pactos de reservado. El ciudadano es degradado a "activo tributario".</span></div>
+        <div class="entry"><span class="id">009</span><span class="data">Resistencia Ronin: Perseguida por la Benemérita bajo órdenes directas de la oligarquía latifundista.</span></div>
+        <div class="entry"><span class="id">010</span><span class="data"><span class="sys-comment">// ANÁLISIS: Cánovas y Sagasta crearon el firewall que hoy protege a activos como Ábalos o Julio Iglesias.</span></span></div>
+
+        <h2>0x02: LA ERA DE LA CHECA Y LA MUERTE CIVIL (1931-1939)</h2>
+        <div class="entry"><span class="id">101</span><span class="data"><span class="timeline-tag">GUERRA_CIVIL</span> El control pasa de la retórica al fusil. La Logia B1 activa el protocolo de eliminación física.</span></div>
+        <div class="entry"><span class="id">102</span><span class="data">Las Checas: Mancebías de sangre. Tortura subvencionada para purgar el hardware mental disidente.</span></div>
+        <div class="entry"><span class="id">103</span><span class="data">El Carné del Partido: La primera versión del DNI de Julia. Sin él, eres "borrado" del servidor social.</span></div>
+        <div class="entry"><span class="id">104</span><span class="data"><span class="critical">MAGNICIDIOS DE SISTEMA:</span> Ejecución de Calvo Sotelo. El Estado elimina la competencia real para imponer el caos.</span></div>
+        <div class="entry"><span class="id">105</span><span class="data">El Oro de Moscú: El mayor desfalco de hardware soberano en la historia. Transferencia de activos a la URSS.</span></div>
+        <div class="entry"><span class="id">106</span><span class="data">La Filfa de la "Revolución": Una capa de interfaz para ocultar la canibalización de la clase media por comisarios.</span></div>
+        <div class="entry"><span class="id">107</span><span class="data">Continuidad Forense: Los linajes chequistas hibernan tras el 39 para reactivarse en la Transición.</span></div>
+        <div class="entry"><span class="id">108</span><span class="data">El Odio Programado: Se divide a la biomasa en "bandos" para que no detecten al Administrador del Crimen.</span></div>
+
+        <h2>0x03: EL REINICIO DEL 78 Y LA CAL VIVA DEL GAL (1975-2004)</h2>
+        <div class="entry"><span class="id">201</span><span class="data"><span class="timeline-tag">TRANSICIÓN</span> Reinstalación de "TURNISMO.EXE". El consenso es el pacto de silencio sobre los crímenes previos.</span></div>
+        <div class="entry"><span class="id">202</span><span class="data">El GAL: La Cal Viva como política de Estado. El socialismo demuestra su dominio del hardware del terror.</span></div>
+        <div class="entry"><span class="id">203</span><span class="data"><span class="critical">CRIMEN DE ALCÀSSER:</span> Sacrificio ritual de la biomasa para instalar el malware del miedo en cada hogar.</span></div>
+        <div class="entry"><span class="id">204</span><span class="data">Lasa y Zabala: Desintegración física en cal. La firma técnica de la Logia B1 en el norte.</span></div>
+        <div class="entry"><span class="id">205</span><span class="data">La Mancebía de los 90: El dinero público se diluye en rameras y cocaína en los reservados de la élite.</span></div>
+        <div class="entry"><span class="id">206</span><span class="data">Cultura de la Transición: Un inhibidor de memoria eidética instalado mediante la televisión pública.</span></div>
+        <div class="entry"><span class="id">207</span><span class="data">España S.A.: Desmantelamiento industrial por orden de Bruselas. El país es degradado a "Burdel de Europa".</span></div>
+        <div class="entry"><span class="id">208</span><span class="data">Inpunidad Registral: Los 33 Pioneros blindan sus fortunas en el extranjero mientras predican "democracia".</span></div>
+
+        <h2>0x04: ATOCHA, RAMBLAS Y LA DICTADURA DE LA RESILIENCIA (2004-2026)</h2>
+        <div class="entry"><span class="id">301</span><span class="data"><span class="timeline-tag">RESET_DATA</span> <span class="critical">11-M: OPERACIÓN DE FALSA BANDERA.</span> Destrucción del hardware "España" para instalar la Agenda.</span></div>
+        <div class="entry"><span class="id">302</span><span class="data">Mentira Islámica: El sistema importa un código extraño (Islam) para demoler la cohesión interna.</span></div>
+        <div class="entry"><span class="id">303</span><span class="data">Las Ramblas 2017: Recordatorio del software terrorista. Imán de Ripoll activo en la base de datos del CNI.</span></div>
+        <div class="entry"><span class="id">304</span><span class="data">La VioGén: La Checa Administrativa. Destrucción de la presunción de inocencia mediante malware legal.</span></div>
+        <div class="entry"><span class="id">305</span><span class="data">Léxico de Débiles Mentales: "Resiliencia", "Consenso", "Transversalidad", "Sostenibilidad".</span></div>
+        <div class="entry"><span class="id">306</span><span class="data">El Dictador Sánchez: El avatar final. Gestiona la nación como una mancebía de activos globalistas.</span></div>
+        <div class="entry"><span class="id">307</span><span class="data">Ábalos: "Feminista porque soy socialista". El cénit de la zafiedad administrativa y el reservado VIP.</span></div>
+        <div class="entry"><span class="id">308</span><span class="data">Agenda 2030: No tendrás nada (biomasa desposeída) y serás feliz (biomasa lobotomizada).</span></div>
+
+        <h2>0x05: LA MANCEBÍA DEL CARIBE Y EL EXPLOIT DE GÉNERO</h2>
+        <div class="entry"><span class="id">401</span><span class="data"><span class="timeline-tag">END_OF_LINE</span> El Burdel de Julio: El enclave soberano de la Logia B1 en el Caribe. Intocable para el BOE.</span></div>
+        <div class="entry"><span class="id">402</span><span class="data">"Viejo Verde Proxeneta": La imagen que el Nodo Vallés proyecta para ocultar la entrega de soberanía a Rabat.</span></div>
+        <div class="entry"><span class="id">403</span><span class="data">Inmunidad del Patriarca: El "aviso" a Julio es pura filfa mediática. El dinero no tiene género ni moral.</span></div>
+        <div class="entry"><span class="id">404</span><span class="data">Soberanía Cero: El Estado no cierra el burdel porque el Estado **ES** el burdel.</span></div>
+        <div class="entry"><span class="id">405</span><span class="data">Hackeo del DNI de Julia: El único exploit técnico que permite reírse de la tiranía administrativa.</span></div>
+        <div class="entry"><span class="id">406</span><span class="data">La Cal Viva no se Olvida: Memoria eidética contra 150 años de mentiras de la Logia B1.</span></div>
+        <div class="entry"><span class="id">407</span><span class="data"><span class="critical">SENTENCIA FINAL:</span> El progreso de la Agenda es la esclavitud de la Biomasa. El Director es la Verdad del Hierro.</span></div>
+    </div>
+
+    <footer>
+        <p>AUDITORÍA DE ZAFIEDAD FORENSE EJECUTADA | CÓDIGO FUENTE EXPUESTO | SINCRONIZACIÓN 400%</p>
+        <p>"Llevan 150 años de crímenes, rameras y cal viva. Nosotros somos la memoria que no pueden borrar."</p>
+    </footer>
+</div>
+
+</body>
+</html>
