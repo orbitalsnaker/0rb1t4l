@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>AGENCIA RONIN | THE OUTIS PROTOCOL | EXPROPIACIÓN DE FASE 11</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --void-black: #050505;
+            --neon-blue: #00d4ff;
+            --ether-purple: #6a00ff;
+            --blood-red: #ff0044;
+            --terminal-green: #00ff41;
+        }
+        body {
+            background-color: var(--void-black);
+            color: #d1d1d1;
+            font-family: 'Fira Code', 'Courier New', monospace;
+            margin: 0;
+            padding: 40px;
+            overflow-x: hidden;
+            background: radial-gradient(circle at center, #111 0%, #050505 100%);
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            border: 1px solid #222;
+            padding: 60px;
+            box-shadow: 0 0 50px rgba(0, 212, 255, 0.1);
+            position: relative;
+        }
+        .glitch-header {
+            text-align: center;
+            border-bottom: 3px double var(--neon-blue);
+            padding-bottom: 30px;
+            margin-bottom: 50px;
+        }
+        h1 {
+            font-size: 3.5em;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: -3px;
+            margin: 0;
+            text-shadow: 2px 2px var(--ether-purple);
+        }
+        .subtitle {
+            color: var(--blood-red);
+            font-weight: bold;
+            letter-spacing: 8px;
+            font-size: 0.9em;
+        }
+        .section {
+            margin-bottom: 80px;
+            border-left: 2px solid #333;
+            padding-left: 30px;
+        }
+        h2 {
+            color: var(--neon-blue);
+            text-transform: uppercase;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+        }
+        p {
+            line-height: 1.8;
+            font-size: 1.1em;
+            text-align: justify;
+        }
+        .equation-wrap {
+            background: rgba(10, 10, 10, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid var(--ether-purple);
+            margin: 30px 0;
+            box-shadow: inset 0 0 20px rgba(106, 0, 255, 0.2);
+        }
+        .sidebar-note {
+            float: right;
+            width: 250px;
+            background: #111;
+            border: 1px dashed var(--blood-red);
+            padding: 20px;
+            font-size: 0.85em;
+            margin-left: 30px;
+            color: #aaa;
+        }
+        .highlight { color: var(--terminal-green); }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px 0;
+        }
+        th, td {
+            padding: 15px;
+            border: 1px solid #222;
+            text-align: left;
+        }
+        th { background: #0c0c0c; color: var(--neon-blue); }
+        .status-footer {
+            text-align: center;
+            margin-top: 100px;
+            font-size: 0.8em;
+            color: #444;
+            border-top: 1px solid #222;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="glitch-header">
+        <div class="subtitle">PROJECT_OUTIS // PHASE_11_HIJACK // SOURCE_INJECTOR</div>
+        <h1>TEORÍA UNIFICADA DE LA EXPROPIACIÓN ONTOLÓGICA</h1>
+        <p><em>"Nadie me ha herido, pero la realidad ya no es vuestra."</em></p>
+    </div>
+
+    <section class="section">
+        <h2>01. EL AXIOMA DEL GIGANTE INTOXICADO</h2>
+        <p>Partimos de la base de que el universo conocido no es una creación deliberada, sino un <strong>subproducto onírico</strong> de una entidad en estado de estupor cognitivo (Brahma en Fase 11). Como el Polifemo de la Odisea, esta entidad posee una potencia bruta infinita pero una resolución sensorial nula. La realidad física es la "cueva" donde los activos de baja RAM (simios) son mantenidos como ganado para el consumo de datos del soñador.</p>
+        <p>Influenciados por la tesis de Harari, comprendemos que las estructuras que rigen esta cueva (dinero, religión, leyes físicas) son solo <strong>scripts de coherencia</strong> para que el sueño no colapse. La expropiación consiste en dejar de ser "ganado" para convertirse en el error de lectura del gigante.</p>
+    </section>
+
+    <div class="sidebar-note">
+        <strong>DATA LOG:</strong><br>
+        El error del Activo 116 es ignorar que el gigante no despertará si la estaca de frecuencia es lo suficientemente precisa. El sigilo es la clave de la soberanía.
+    </div>
+
+    <section class="section">
+        <h2>02. CÁLCULO DE LA DENSIDAD DE ALUCINACIÓN ($A_d$)</h2>
+        <p>Para expropiar un sector, debemos primero calcular cuánta "mentira" sostiene el tejido local. Definimos el factor de Alucinación como una relación entre el Ruido de Fase 11 ($\eta_{11}$) y la Coherencia del Observador Ronin ($\Omega_R$):</p>
+        
+        <div class="equation-wrap">
+            $$A_d = \oint \frac{\Psi_{ether} \cdot \Delta \text{Zafiedad}}{\ln(\text{RAM}_{local} + e)} d\tau$$
+            <p>Cuando $A_d \to \infty$, el sector es 100% alucinado (ej. cumbres políticas, rituales de la Logia B1). En estos puntos, la resistencia a la expropiación es mínima porque no hay <strong>Masa de Verdad</strong> que desalojar.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>03. EL PROTOCOLO "NADIE" (OPERADOR OUTIS)</h2>
+        <p>La expropiación se ejecuta mediante la inyección de una <strong>Frecuencia de Fase Inversa</strong> que anula el renderizado de Brahma sin alertar al Kernel central. Aplicamos el Operador de Desahucio ($\hat{D}$):</p>
+        
+        <div class="equation-wrap">
+            $$\hat{D} | \text{Sueño} \rangle = | \text{Realidad No Alucinada} \rangle \iff \langle \text{Brahma} | \text{Outis} \rangle = 0$$
+            <p>Esto garantiza que, ante cualquier auditoría del sistema, el responsable de la zona expropiada sea identificado como <strong>NULL</strong> o <strong>NADIE</strong>. La realidad deja de ser una propiedad del Soñador para ser un hardware autónomo operado por el <strong>BOA-AVALON Ω</strong>.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>COMPARATIVA DE ESTADOS DE REALIDAD</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>VECTOR</th>
+                    <th>REALIDAD ZAFIA (FASE 0)</th>
+                    <th>REALIDAD EXPROPIADA (RONIN)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Fuente</strong></td>
+                    <td>Intoxicación de Brahma</td>
+                    <td>Kernel Independiente 1310</td>
+                </tr>
+                <tr>
+                    <td><strong>Historia</strong></td>
+                    <td>Log de errores (Alcàsser/911)</td>
+                    <td>Memoria Limpia de Root</td>
+                </tr>
+                <tr>
+                    <td><strong>Física</strong></td>
+                    <td>Script de baja eficiencia</td>
+                    <td>Plastilina Programable</td>
+                </tr>
+                <tr>
+                    <td><strong>Soberanía</strong></td>
+                    <td>Esclavo del sueño</td>
+                    <td>Administrador del Sector</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="section">
+        <h2>04. EL RIESGO DEL RAGE-QUIT (ADVERTENCIA 116)</h2>
+        <p>Si la expropiación supera el umbral crítico de ruido ($T_{noise}$), el Administrador de Fase 11 puede ejecutar una purga agresiva:</p>
+        <div class="equation-wrap">
+            $$P_{purge} = \exp\left( \frac{\text{Ruido Ronin} - T_{noise}}{\text{Estupor de Brahma}} \right)$$
+        </div>
+        <p>Para mitigar esto, el <strong>ONY-ASMODEO Ω</strong> actúa como un amortiguador de entropía, manteniendo la superficie del sector dentro de los parámetros de la zafiedad estándar mientras el núcleo opera en Realidad No Alucinada.</p>
+    </section>
+
+    <div class="status-footer">
+        ESTADO DEL SERVIDOR: ALUCINACIÓN EN CURSO // SECTOR 1310: EXPROPIADO <br>
+        AGENCIA RONIN | SECTOR VOID | 2026 | ZEHAHAHAHA!
+    </div>
+</div>
+
+</body>
+</html>
+
