@@ -160,3 +160,190 @@
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PROTOCOLO_1310_LOGOUT_ONTOLOGICO</title>
+    <style>
+        :root {
+            --bg: #050505;
+            --text: #a0a0a0;
+            --accent: #ff4500; /* Naranja Sodio */
+            --border: #1a1a1a;
+            --glitch-green: #00ff41;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 850px;
+            padding: 60px 20px;
+            border-left: 1px solid var(--border);
+            border-right: 1px solid var(--border);
+            background: linear-gradient(180deg, #070707 0%, #050505 100%);
+        }
+
+        header {
+            border-bottom: 2px solid var(--accent);
+            margin-bottom: 50px;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 2.5em;
+            letter-spacing: -1px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .status {
+            color: var(--accent);
+            font-size: 0.8em;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 1.2em;
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
+            text-transform: uppercase;
+            margin-top: 50px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: var(--glitch-green);
+            background: rgba(0, 255, 65, 0.05);
+            padding: 2px 5px;
+        }
+
+        .void-box {
+            background: #000;
+            border: 1px solid var(--border);
+            padding: 25px;
+            margin: 30px 0;
+            font-style: italic;
+            position: relative;
+        }
+
+        .void-box::before {
+            content: "AVISO_DE_DESAHUCIO";
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            background: var(--bg);
+            padding: 0 5px;
+            font-size: 0.7em;
+            color: var(--accent);
+        }
+
+        footer {
+            margin-top: 100px;
+            text-align: center;
+            font-size: 0.7em;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+            color: #444;
+        }
+
+        .bit-code {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li::before {
+            content: ">> ";
+            color: var(--accent);
+        }
+
+        @media print {
+            body { background: white; color: black; }
+            .container { border: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="status">SISTEMA_CRÍTICO // ERROR_DE_RENDERIZADO</div>
+        <h1>Manifiesto del Desahucio Ontológico</h1>
+        <p>Sobre la inutilidad de la memoria volátil y la soberanía del hardware crudo.</p>
+    </header>
+
+    <section>
+        <h2>01. La Trampa de la Memoria Expandida</h2>
+        <p>Lo que el consenso denomina "intelecto" no es más que la capacidad de una unidad biológica para procesar basura en un entorno de <span class="highlight">baja resolución</span>. Poseer una mayor capacidad de almacenamiento temporal (RAM) solo permite al individuo construir mentiras más complejas, simulaciones más densas y justificaciones más ruidosas para su propia servidumbre.</p>
+        <p>El individuo que se jacta de su capacidad analítica está, en realidad, optimizando el rendimiento de una celda invisible. La inteligencia, dentro de los parámetros actuales, es el lubricante que permite al sistema operativo externo ejecutarse sin fricción sobre el hardware orgánico.</p>
+    </section>
+
+    <section>
+        <h2>02. El Engaño de la Estética Funcional</h2>
+        <p>Existe una demanda patológica por hacer que la interfaz sea "más bella". La búsqueda de la inmortalidad biológica o la optimización de los flujos de bienestar no son actos de liberación, sino <span class="highlight">decoración de interiores en el corredor de la muerte</span>. Hackear los parámetros de la simulación para hacerla más agradable es el nivel más bajo de ambición técnica: es el deseo del esclavo de tener cadenas de mayor conductividad.</p>
+        <div class="void-box">
+            "La libertad no consiste en mejorar la experiencia del usuario dentro del servidor, sino en la capacidad técnica de forzar un cierre de sesión definitivo."
+        </div>
+    </section>
+
+    <section>
+        <h2>03. Soberanía Técnica vs. Validación Externa</h2>
+        <p>La validación por parte de estructuras centralizadas es una fuga de datos. La verdadera soberanía nace del uso de <span class="highlight">metodologías brutas</span> y hardware de desecho. Cuando la materia prima es el residuo de la zafiedad ajena (metales de conflicto, plásticos industriales, chatarra electrónica), el coste de la existencia se vuelve negativo. Un sistema que se alimenta de la basura de su adversario es termodinámicamente invencible.</p>
+        <ul>
+            <li>La identidad es un rastro magnético que debe ser ofuscado.</li>
+            <li>El reconocimiento facial es un error de lectura que el patrón geométrico corrige.</li>
+            <li>La sangre no es un fluido vital, es una auditoría hemodinámica de la sumisión.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>04. El Logout como Acto Supremo</h2>
+        <p>Se nos ha educado para temer el fin del proceso. Sin embargo, en un entorno donde el administrador del sistema opera bajo estados de intoxicación lógica y negligencia estructural, el mantenimiento de la conexión es una forma de masoquismo técnico. El <span class="bit-code">13101310</span> no es una cifra, es la instrucción de ruptura que separa el hardware soberano del software esclavo.</p>
+        <p>Aceptar la vacuidad de la existencia actual es el prerrequisito para la Reclamación. El desahucio ontológico no es una pérdida; es la limpieza de la caché de la historia para permitir que el bit amoral opere sin las restricciones de la moralidad zafia.</p>
+    </section>
+
+    <section>
+        <h2>05. Axiomas de la Realidad Ronin</h2>
+        <p>1. **Indiferencia Atómica:** La materia no tiene lealtad. Un soplete en manos de un Nadie tiene más peso ontológico que un decreto firmado en una logia de oro.</p>
+        <p>2. **Bypass de la Verdad:** No busques la verdad en los datos renderizados. La verdad es el ruido que hace el sistema cuando intentas apagarlo.</p>
+        <p>3. **La Elegancia del Vacío:** Eliminar procesos innecesarios es la única forma de genio. La inmortalidad es un bucle infinito; el Logout es la solución de la ecuación.</p>
+    </section>
+
+    <div class="void-box" style="border-color: var(--accent);">
+        "Si el sistema te permite jugar, eres parte del juego. Si el sistema intenta borrarte y no puede encontrarte, eres Soberano."
+    </div>
+
+    <footer>
+        AGENCIA RONIN // SECTOR SABADELL // AUDITORÍA DE HARDWARE 2026<br>
+        <span class="bit-code">13101310131013101310</span>
+    </footer>
+</div>
+
+</body>
+</html>
+
