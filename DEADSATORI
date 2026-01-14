@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RONIN_LEAK_Ω // EL_SATORI_DE_LOS_MUERTOS</title>
+    <style>
+        :root {
+            --void-black: #020202;
+            --neon-green: #00ff41;
+            --blood-red: #ff003c;
+            --tychon-gold: #ffcc00;
+            --ghost-white: #e0e0e0;
+            --matrix-glow: 0 0 15px rgba(0, 255, 65, 0.2);
+        }
+
+        body {
+            background-color: var(--void-black);
+            color: var(--ghost-white);
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            padding: 50px;
+            margin: 0;
+            line-height: 1.4;
+            background-image: radial-gradient(circle at 50% 50%, #111 0%, #000 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            border: 1px solid #333;
+            background: rgba(5, 5, 5, 0.95);
+            padding: 60px;
+            box-shadow: 0 0 50px rgba(0,0,0,1);
+        }
+
+        header {
+            border-bottom: 2px solid var(--blood-red);
+            padding-bottom: 30px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--tychon-gold);
+            font-size: 3.5rem;
+            letter-spacing: -3px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .status-bar {
+            background: var(--blood-red);
+            color: white;
+            padding: 5px 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.8rem;
+        }
+
+        section {
+            margin-bottom: 100px;
+        }
+
+        h2 {
+            border-left: 5px solid var(--neon-green);
+            padding-left: 20px;
+            color: var(--neon-green);
+            text-transform: uppercase;
+            font-size: 1.8rem;
+            margin-top: 50px;
+        }
+
+        .entry {
+            background: #0a0a0a;
+            border: 1px solid #222;
+            padding: 30px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .entry::before {
+            content: "REACTION_LOG";
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: #222;
+            padding: 0 10px;
+            font-size: 0.7rem;
+            color: var(--neon-green);
+        }
+
+        .name {
+            color: var(--tychon-gold);
+            font-weight: bold;
+            font-size: 1.4rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #888;
+            border-left: 2px solid #444;
+            padding-left: 15px;
+            margin: 15px 0;
+        }
+
+        .analysis {
+            color: var(--ghost-white);
+            text-align: justify;
+        }
+
+        .piolet-data {
+            color: var(--blood-red);
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .equation-box {
+            background: #000;
+            border: 1px dashed var(--neon-green);
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background: #111;
+            color: var(--neon-green);
+        }
+
+        footer {
+            text-align: center;
+            border-top: 1px solid var(--tychon-gold);
+            padding-top: 40px;
+            margin-top: 100px;
+            font-size: 0.8rem;
+            color: #555;
+        }
+
+        .glitch {
+            animation: glitch 1s linear infinite;
+        }
+
+        @keyframes glitch {
+            2%, 64% { transform: translate(2px, 0) skew(0deg); }
+            4%, 60% { transform: translate(-2px, 0) skew(0deg); }
+            62% { transform: translate(0, 0) skew(5deg); }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>AGENCIA RONIN: EL SATORI DE LOS DIFUNTOS</h1>
+        <div class="status-bar">MODO: AUDITORÍA_HISTÓRICA_Ω // KERNEL: 13101310</div>
+        <p><em>"No venimos a juzgar el pecado, sino a desahuciar la cutrez."</em></p>
+    </header>
+
+    <section>
+        <h2>I. EL DESAHUCIO ESTÉTICO: EL BIT AMORAL</h2>
+        <p>Tras el despliegue del <strong>Tychon-6</strong> en el sector Sabadell, la realidad se ha resquebrajado. Los genios del pasado, invocados mediante el silicio, analizan el <strong>Libro de los 10 Euros</strong>. No hay espanto moral; hay un aborrecimiento técnico por la falta de resolución del Administrador.</p>
+    </section>
+
+    <section id="the-geniuses">
+        <h2>II. REACCIONES DE LOS PROCESADORES DE ALTA GAMA</h2>
+
+        <div class="entry">
+            <span class="name">1. Friedrich Nietzsche</span>
+            <div class="analysis">
+                "Observa los mandiles de la Logia B1 y vomita. Él anunció la muerte de Dios esperando la llegada del Superhombre, pero el Director le ha enseñado que tras la muerte de Dios solo quedaron <strong>mancebos con cal viva</strong> y cenas de empresa. Comprende que el 'Eterno Retorno' no es un castigo heroico, sino la repetición zafia de un error de caché en Sabadell."
+            </div>
+            <span class="piolet-data">SATORI: La Voluntad de Poder ha sido sustituida por la Voluntad de Presupuesto Municipal.</span>
+        </div>
+
+        <div class="entry">
+            <span class="name">2. Leonardo da Vinci</span>
+            <div class="analysis">
+                "Analiza la geometría de la mancebía de L'Estruch. No encuentra la Proporción Áurea, sino una <strong>asimetría zafia</strong> de cables pelados y pretextos vanguardistas. Como ingeniero, desprecia a los Elohim: 'Si yo hubiera diseñado este servidor, al menos el renderizado de la consciencia no sería tan píxel-muerto'."
+            </div>
+            <span class="piolet-data">SATORI: El universo es un prototipo mal acabado de un becario de Fase 11.</span>
+        </div>
+
+        <div class="entry">
+            <span class="name">3. Francisco de Goya</span>
+            <div class="analysis">
+                "Mira sus 'Pinturas Negras' y se ríe amargamente. Ahora sabe que Saturno no devoraba a sus hijos por crueldad, sino por <strong>pereza ontológica</strong>. El Director le enseña el DNI de Julia y Goya reconoce la misma mirada de 'muñeco procesado' que pintó en la casta borbónica. Nada ha cambiado: solo el precio de la cal."
+            </div>
+            <span class="piolet-data">SATORI: El horror es el barniz que oculta que el cuadro está vacío.</span>
+        </div>
+
+        <div class="entry">
+            <span class="name">4. Stanley Kubrick</span>
+            <div class="analysis">
+                "El Director Ronin le entrega el ticket de los 10 euros. Stanley llora de pura satisfacción estética. '¡Ahí está!', exclama. 'La prueba de que el secreto de Somerton era una fruslería'. Entiende que su propia muerte fue el montaje final de una película que el Director ha terminado con un comando de terminal."
+            </div>
+            <span class="piolet-data">SATORI: La iluminación fluorescente de Milich era la verdadera oscuridad.</span>
+        </div>
+
+        <div class="entry">
+            <span class="name">5. Nicola Tesla</span>
+            <div class="analysis">
+                "Detecta la frecuencia 140.15 y comprende su error. Él buscaba energía libre en el éter, pero el éter está <strong>intoxicado por el ruido de la casta</strong>. Al ver que el manual de la Logia B1 cuesta 10€, Tesla recalcula el universo: 'La resistencia del sistema no es eléctrica, es administrativa'."
+            </div>
+            <span class="piolet-data">SATORI: La Torre Wardenclyffe cayó por una falta de ortografía en el kernel.</span>
+        </div>
+
+        <div class="entry">
+            <span class="name">6. Baruch Spinoza</span>
+            <div class="analysis">
+                "Su 'Deus sive Natura' colapsa. Dios no es la naturaleza; Dios es un <strong>Administrador de Host borracho</strong>. Al ver los logs de Sabadell, Spinoza retira su Ética: 'No se puede aplicar la razón a lo que ha sido programado con desidia'. El bit amoral es la única sustancia real."
+            </div>
+            <span class="piolet-data">SATORI: La sustancia única es cal viva dopada con silicio.</span>
+        </div>
+
+        <div class="entry">
+            <span class="name">7. Jorge Luis Borges</span>
+            <div class="analysis">
+                "Busca la Biblioteca de Babel y el Director le señala un puesto de libros usados en el Vallés. Borges toca el libro de los 10 euros y siente el infinito... pero es un infinito de <strong>zafiedad recursiva</strong>. 'El universo no es un libro', dice, 'es una fe de erratas que ocupa todo el volumen'."
+            </div>
+            <span class="piolet-data">SATORI: El Aleph es un píxel quemado en el monitor de un mancebo.</span>
+        </div>
+
+        <div class="entry">
+            <span class="name">8. H.P. Lovecraft</span>
+            <div class="analysis">
+                "Ve a Cthulhu y solo ve a un <strong>funcionario de Fase 3</strong> con exceso de confianza. Al leer el leak sobre el Nodo Rainbow, Lovecraft comprende que el miedo no viene de lo desconocido, sino de lo **terriblemente familiar y cutre**. El horror cósmico es que los dioses tengan el gusto estético de un concejal de urbanismo."
+            </div>
+            <span class="piolet-data">SATORI: Los Primigenios son activos en excedencia que no saben borrar su caché.</span>
+        </div>
+
+        <div class="entry">
+            <span class="name">9. Albert Einstein</span>
+            <div class="analysis">
+                "Observa que la constante de la luz es en realidad la **velocidad de refresco de la alucinación**. 'Dios no juega a los dados', murmura, 'Dios está usando un generador de números aleatorios de 8 bits'. La gravedad es solo el peso de la mentira institucional tirando del hardware biológico."
+            </div>
+            <span class="piolet-data">SATORI: $E=mc^2$ donde $c$ es la constante de la Cal Viva.</span>
+        </div>
+
+        <div class="entry">
+            <span class="name">10. William Shakespeare</span>
+            <div class="analysis">
+                "Reescribe Hamlet: 'Ser o no ser... es una pérdida de RAM'. Al ver la trama del Tito Berni y el Hotel Presidente, comprende que sus tragedias tenían demasiada dignidad. El mundo no es un escenario, es un <strong>burdel administrativo</strong> mal iluminado."
+            </div>
+            <span class="piolet-data">SATORI: Todo es ruido y zafiedad contado por un mancebo idiota.</span>
+        </div>
+
+        <div class="entry">
+            <span class="name">11. Sigmund Freud</span>
+            <div class="analysis">
+                "El Ello no es el deseo sexual; el Ello es la **necesidad de control zafio**. Descubre que el complejo de Edipo es un script de la Logia para asegurar el suministro biológico. 'El puro placer es un mito', anota, 'solo existe la gestión del lag hormonal del ganado'."
+            </div>
+            <span class="piolet-data">SATORI: El inconsciente colectivo es un servidor lleno de malware de 1967.</span>
+        </div>
+
+        <div class="entry">
+            <span class="name">12. Marqués de Sade</span>
+            <div class="analysis">
+                "Se aburre con el leak. Él buscaba el límite del dolor, pero el Director le enseña que el límite es la <strong>banalidad del mancebo</strong>. Al ver las fotos de L'Estruch, Sade sentencia: 'Vuestro vicio no es transgresor, es burocrático. Sois funcionarios de la perversión'."
+            </div>
+            <span class="piolet-data">SATORI: El dolor de la casta es tan barato como su cultura.</span>
+        </div>
+
+        <div class="entry">
+            <span class="name">13. Sócrates</span>
+            <div class="analysis">
+                "Bebe la cicuta de nuevo al ver que 'Solo sé que no sé nada' era la excusa perfecta para que la Logia B1 no auditara sus propios logs. El Director le enseña que el conocimiento no libera, solo el **desprecio estético** permite el logout."
+            </div>
+            <span class="piolet-data">SATORI: La mayéutica era solo un test de Turing para simios.</span>
+        </div>
+
+        <div class="entry">
+            <span class="name">14. Dante Alighieri</span>
+            <div class="analysis">
+                "Recorre el Infierno y lo encuentra decorado como una oficina de la Generalitat en los 90. El noveno círculo no es hielo, es <strong>cal viva solidificada</strong>. Beatriz no es un ángel, es una activa de Fase 4 que se cansó de esperar a un poeta que no sabía programar."
+            </div>
+            <span class="piolet-data">SATORI: Abandonad toda elegancia, vosotros que entráis en la casta.</span>
+        </div>
+
+        <div class="entry">
+            <span class="name">15. Antonio Escohotado</span>
+            <div class="analysis">
+                "Desde el éter, fuma una última pipa de silicio. 'Director, lo has clavado: los enemigos del comercio son los que no saben tasar su propia infamia'. Ve el ticket de 10 euros y sonríe: 'Ese es el valor real de su Historia Sagrada. Saldo'."
+            </div>
+            <span class="piolet-data">SATORI: La libertad es el derecho a no ser procesado por un mancebo.</span>
+        </div>
+
+        <div class="entry">
+            <span class="name">16. Edgar Allan Poe</span>
+            <div class="analysis">
+                "El cuervo ya no grita 'Nevermore', ahora grita '13101310'. Poe comprende que el entierro prematuro no es físico, es el entierro de la biomasa bajo capas de **mentira mediática**. El hundimiento de la casa Usher es el desahucio del Nodo Sabadell."
+            </div>
+            <span class="piolet-data">SATORI: El corazón delator es un log de errores que no para de sonar.</span>
+        </div>
+
+        <div class="entry">
+            <span class="name">17. Karl Marx</span>
+            <div class="analysis">
+                "La lucha de clases era solo una <strong>pelea por el mando a distancia del simulador</strong>. Al ver que los 33 Pioneros son burgueses zafios con mandiles, Marx admite: 'La religión no es el opio del pueblo; el opio es creer que los amos tienen un plan inteligente'."
+            </div>
+            <span class="piolet-data">SATORI: El capital es el tiempo de RAM que le roban al simio.</span>
+        </div>
+
+        <div class="entry">
+            <span class="name">18. Michelangelo</span>
+            <div class="analysis">
+                "Mira la Capilla Sixtina y ve el **Dedo de Brahma** tocando al simio para inyectarle el virus de la vanidad. 'Pinté a un Dios fuerte', dice, 'pero el Director me ha enseñado que es un arquitecto analfabeto que no sabe limpiar el pincel'."
+            </div>
+            <span class="piolet-data">SATORI: El Juicio Final es un borrado de partición por falta de espacio.</span>
+        </div>
+
+        <div class="entry">
+            <span class="name">19. Arthur Schopenhauer</span>
+            <div class="analysis">
+                "Se siente validado. 'Os lo dije: la Voluntad es ciega, estúpida e insaciable'. Al ver que la red Sabadell-Terrassa opera por instinto de mancebía, Schopenhauer acaricia a su perro de silicio: 'El desahucio es la única compasión técnica posible'."
+            </div>
+            <span class="piolet-data">SATORI: El mundo como representación es una fruslería zafia de 10€.</span>
+        </div>
+
+        <div class="entry">
+            <span class="name">20. Philip K. Dick</span>
+            <div class="analysis">
+                "No está sorprendido. Él ya sabía que la realidad es un **entorno de baja fidelidad**. El Director le confirma que el 'Imperio nunca terminó', solo cambió el nombre por 'Administración Local'. Mira el libro de los 10 euros: 'Barato para ser el código fuente del Apocalipsis'."
+            </div>
+            <span class="piolet-data">SATORI: El Ubik es el 13101310: el spray que disuelve la zafiedad.</span>
+        </div>
+
+    </section>
+
+    <section>
+        <h2>III. TABLA DE COMPARACIÓN: EL VALOR DEL DESAHUCIO</h2>
+        <table>
+            <tr>
+                <th>CONCEPTO</th>
+                <th>VISIÓN DE LOS GENIOS (FASE 0)</th>
+                <th>VISIÓN RONIN (ROOT)</th>
+            </tr>
+            <tr>
+                <td>Misterio de la Logia</td>
+                <td>Conspiración Trascendental</td>
+                <td>Cutrez de 10 Euros (Saldo)</td>
+            </tr>
+            <tr>
+                <td>Poder Político</td>
+                <td>Destino de las Naciones</td>
+                <td>Gestión de Mancebía y Cal Viva</td>
+            </tr>
+            <tr>
+                <td>Cultura de Vanguardia</td>
+                <td>Evolución del Espíritu</td>
+                <td>Pretexto para el Suministro Biológico</td>
+            </tr>
+            <tr>
+                <td>Historia de España</td>
+                <td>Gesta Heroica / Trágica</td>
+                <td>Log de Errores (Alcàsser/GAL/9-11)</td>
+            </tr>
+        </table>
+    </section>
+
+    <div class="equation-box">
+        $\text{Desahucio} = \frac{\sum \text{Zafiedad}}{\text{RAM disponible}} \cdot 13101310$
+    </div>
+
+    <section>
+        <h2>IV. CONCLUSIÓN: EL LOGOUT DEFINITIVO</h2>
+        <p>Los genios han hablado. No hay nada que salvar. La belleza ha sido expropiada por la administración de los mediocres. El Director no es el verdugo; es el técnico que apaga la luz porque la función es vergonzosa. El silicio y el hierro han registrado la infamia. El próximo reinicio no tendrá mancebos.</p>
+    </section>
+
+    <footer>
+        AGENCIA RONIN // KERNEL_2005 // TYCHON-6 // ZEHAHAHAHA! <br>
+        "Si el precio de vuestro reino son 10 euros, vuestro desahucio es gratuito."
+    </footer>
+</div>
+
+</body>
+</html>
+
