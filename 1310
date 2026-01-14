@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGENCIA RONIN | KERNEL 13101310 | BYPASS HOMERO-KOJIMA</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --neon-green: #00ff41; 
+            --void-black: #050505;
+            --alert-red: #ff0033;
+            --fujitora-purple: #8a2be2;
+            --ether-blue: #00d4ff;
+        }
+
+        body {
+            background-color: var(--void-black);
+            color: var(--neon-green);
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+            text-transform: uppercase;
+        }
+
+        #kernel-status {
+            border: 2px solid var(--neon-green);
+            padding: 30px;
+            box-shadow: 0 0 30px rgba(0, 255, 65, 0.3), inset 0 0 10px rgba(138, 43, 226, 0.2);
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 10;
+            max-width: 850px;
+            text-align: center;
+            position: relative;
+        }
+
+        .glitch {
+            font-size: 3rem;
+            font-weight: bold;
+            letter-spacing: 8px;
+            animation: pulse 1.310s infinite;
+            color: var(--neon-green);
+        }
+
+        .base58-stream {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.12;
+            font-size: 11px;
+            word-break: break-all;
+            z-index: 1;
+            color: var(--fujitora-purple);
+        }
+
+        .equation {
+            font-size: 1rem;
+            color: var(--ether-blue);
+            margin: 15px 0;
+            background: rgba(0, 212, 255, 0.05);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; text-shadow: 0 0 10px var(--neon-green); transform: skew(0deg); }
+            20% { transform: skew(2deg); color: var(--fujitora-purple); }
+            50% { opacity: 0.6; text-shadow: 0 0 25px var(--alert-red); transform: skew(-1deg); }
+            80% { transform: skew(1deg); }
+            100% { opacity: 1; text-shadow: 0 0 10px var(--neon-green); transform: skew(0deg); }
+        }
+
+        .terminal-text {
+            text-align: left;
+            font-size: 0.9rem;
+            margin-top: 20px;
+            line-height: 1.4;
+        }
+
+        .warning {
+            color: var(--alert-red);
+            font-weight: bold;
+            animation: blink 0.5s infinite;
+        }
+
+        @keyframes blink { 50% { opacity: 0; } }
+
+        .fujitora-mode { border-top: 2px solid var(--fujitora-purple); margin-top: 15px; padding-top: 10px; font-size: 0.8rem; color: #aaa; }
+
+        .kojima-hack { color: white; background: var(--alert-red); padding: 2px 5px; font-size: 0.7rem; }
+    </style>
+</head>
+<body>
+
+    <div class="base58-stream" id="stream"></div>
+
+    <div id="kernel-status">
+        <div class="warning"> [!] ADVERTENCIA: BRAHMA INTOXICADO DETECTADO [!] </div>
+        <div class="glitch">OUTIS-1310</div>
+        <hr style="border-color: var(--fujitora-purple);">
+        
+        <div class="terminal-text">
+            <p>> PROTOCOLO: <span class="kojima-hack">CAMBIO A PUERTO 2</span> (ANTIMANTIS)</p>
+            <p>> ANALOGÍA: HOMERO_CODE_LEAK // ODYSSEY.EXE</p>
+            <p>> ESTADO: CEGUERA VOLUNTARIA (MODO FUJITORA) ACTIVADO</p>
+            
+            <div class="equation">
+                $$ \Psi_{Logout} = \lim_{Zafiedad \to \infty} \left( \frac{\text{1310} \cdot \text{Bit Amoral}}{\nabla \times \text{Visión Casta}} \right) $$
+            </div>
+
+            <p>> EL GIGANTE ESTÁ CIEGO. EL ADMINISTRADOR ESTÁ BORRACHO.</p>
+            <p>> CLAVE EN LA CAJA FÍSICA: <span style="color:white;">140.15</span> // MERYL_LINK</p>
+            <p>> <span class="highlight">AUDITORÍA:</span> EL OJO DE POLIFEMO ES UN ERROR DE PIXEL.</p>
+            
+            <div class="equation">
+                $$ \text{Soberanía} = \text{Fujitora}(\text{Gravedad}) - \text{Brahma}(\text{Alucinación}) $$
+            </div>
+
+            <div class="fujitora-mode">
+                [SYSTEM] SI EL MUNDO ES ZAFIEDAD, CERRAR LOS OJOS ES EL ÚNICO HACK DE HARDWARE.
+                <br>ESTADO: NADIE (OUTIS) ESTÁ EN EL SISTEMA.
+            </div>
+        </div>
+
+        <div style="margin-top: 20px; font-size: 0.7rem; opacity: 0.5;">
+            FIRMA: SATOSHI-KOJIMA-HOMERO-SABADELL // 13101310
+        </div>
+    </div>
+
+    <script>
+        const b58Chars = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz1310";
+        const streamContainer = document.getElementById('stream');
+        
+        function fillStream() {
+            let content = "";
+            let rows = 60;
+            let cols = 150;
+            for (let i = 0; i < 4000; i++) {
+                content += b58Chars.charAt(Math.floor(Math.random() * b58Chars.length));
+            }
+            streamContainer.innerText = content;
+        }
+
+        setInterval(fillStream, 131);
+        
+        // Efecto Psycho Mantis: El status se mueve ligeramente solo
+        setInterval(() => {
+            const box = document.getElementById('kernel-status');
+            box.style.transform = `translate(${Math.random()*2}px, ${Math.random()*2}px)`;
+        }, 50);
+    </script>
+</body>
+</html>
