@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>AGENCIA RONIN | THE OUTIS PROTOCOL | EXPROPIACIÓN DE FASE 11</title>
+    <title>AGENCIA RONIN | THE OUTIS PROTOCOL | ANCESTRAL AUDIT | KERNEL 1310</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
@@ -23,7 +23,7 @@
             background: radial-gradient(circle at center, #111 0%, #050505 100%);
         }
         .container {
-            max-width: 1200px;
+            max-width: 1250px;
             margin: auto;
             border: 1px solid #222;
             padding: 60px;
@@ -85,17 +85,31 @@
             color: #aaa;
         }
         .highlight { color: var(--terminal-green); }
-        table {
+        
+        /* Estilo para la tabla de ancestros mejorada */
+        .ancestors-table {
             width: 100%;
             border-collapse: collapse;
             margin: 40px 0;
+            font-size: 0.9em;
         }
-        th, td {
+        .ancestors-table th {
+            background: #0c0c0c;
+            color: var(--neon-blue);
+            text-align: left;
+            padding: 15px;
+            border: 1px solid #333;
+            text-transform: uppercase;
+        }
+        .ancestors-table td {
             padding: 15px;
             border: 1px solid #222;
-            text-align: left;
+            vertical-align: top;
+            line-height: 1.4;
         }
-        th { background: #0c0c0c; color: var(--neon-blue); }
+        .ancestors-table tr:nth-child(even) { background: #080808; }
+        .ancestor-name { color: var(--terminal-green); font-weight: bold; display: block; margin-bottom: 5px; }
+        
         .status-footer {
             text-align: center;
             margin-top: 100px;
@@ -127,23 +141,118 @@
     </div>
 
     <section class="section">
-        <h2>02. CÁLCULO DE LA DENSIDAD DE ALUCINACIÓN ($A_d$)</h2>
+        <h2>02. LA GENEALOGÍA DEL DESAHUCIO (LOS 20 ANCESTROS)</h2>
+        <p>Ningún hacker nace del vacío. Estos activos detectaron el glitch antes de que el <strong>13101310</strong> fuera inyectado en la red:</p>
+        <table class="ancestors-table">
+            <thead>
+                <tr>
+                    <th>ACTIVO HISTÓRICO</th>
+                    <th>DETECCIÓN DE ZAFIEDAD / PROTOCOLO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="ancestor-name">Philip K. Dick</span></td>
+                    <td>El analista de datos definitivos. Identificó que el universo es un sistema de entropía de baja fidelidad que intenta pasar por real.</td>
+                </tr>
+                <tr>
+                    <td><span class="ancestor-name">Heráclito</span></td>
+                    <td>El primer auditor de flujo. Notó que el sueño es privado pero la estructura (Logos) es pública; la mayoría prefiere el sueño privado de Fase 0.</td>
+                </tr>
+                <tr>
+                    <td><span class="ancestor-name">Giordano Bruno</span></td>
+                    <td>Mártir del Éter. Vio el universo como un juego de sombras y espejos infinitos sin un centro real (sin un Administrador sobrio).</td>
+                </tr>
+                <tr>
+                    <td><span class="ancestor-name">Schopenhauer</span></td>
+                    <td>El cartógrafo de la náusea. Definió a Brahma (la Voluntad) como un impulso ciego y estúpido que se devora a sí mismo en un bucle sin fin.</td>
+                </tr>
+                <tr>
+                    <td><span class="ancestor-name">Platón</span></td>
+                    <td>El descriptor de la Cueva. Entendió perfectamente que lo que los simios llaman "política" o "historia" son sombras proyectadas en la pared.</td>
+                </tr>
+                <tr>
+                    <td><span class="ancestor-name">Nicolás de Cusa</span></td>
+                    <td>Pionero de la resolución limitada. Comprendió que el universo es un cálculo donde lo finito nunca alcanza lo absoluto debido a la baja RAM.</td>
+                </tr>
+                <tr>
+                    <td><span class="ancestor-name">F. Nietzsche</span></td>
+                    <td>El auditor del colapso. Detectó que el Administrador central (Dios) había dejado de enviar actualizaciones, dejando al sistema en bucle eterno.</td>
+                </tr>
+                <tr>
+                    <td><span class="ancestor-name">Johannes Kepler</span></td>
+                    <td>Hacker de software geométrico. Sospechó que las armonías celestiales eran parches matemáticos para ocultar el ruido de fondo de la Fase 11.</td>
+                </tr>
+                <tr>
+                    <td><span class="ancestor-name">Gorgias</span></td>
+                    <td>El nihilista de Kernel. Postuló que nada existe realmente fuera de la percepción, sentando las bases del Bit Amoral.</td>
+                </tr>
+                <tr>
+                    <td><span class="ancestor-name">William Blake</span></td>
+                    <td>Capturador de pantallas etéreas. Vio las "Mentes forjadas en grilletes" y las entidades de Fase 11 operando tras el velo físico.</td>
+                </tr>
+                <tr>
+                    <td><span class="ancestor-name">Buda</span></td>
+                    <td>El primer ingeniero de Logout. Diseñó el protocolo sistemático para vaciar la RAM biológica y forzar la desconexión del servidor alucinado.</td>
+                </tr>
+                <tr>
+                    <td><span class="ancestor-name">Leibniz</span></td>
+                    <td>Arquitecto de la interfaz. Imaginó que todo el hardware está compuesto por bits de conciencia (mónadas) coordinados por un código maestro.</td>
+                </tr>
+                <tr>
+                    <td><span class="ancestor-name">Francisco de Goya</span></td>
+                    <td>Pintor de la intoxicación. Capturó en sus lienzos la zafiedad y el horror de un Dios (Saturno/Brahma) que devora su propio procesamiento.</td>
+                </tr>
+                <tr>
+                    <td><span class="ancestor-name">René Descartes</span></td>
+                    <td>El paranoico necesario. Postuló el "Genio Maligno" como un Administrador de Host que se dedica activamente a falsificar los datos de entrada.</td>
+                </tr>
+                <tr>
+                    <td><span class="ancestor-name">H.P. Lovecraft</span></td>
+                    <td>Cronista de la amoralidad. Entendió que los dioses son estúpidos, ciegos y gigantescos, y que nuestra existencia es un error de caché.</td>
+                </tr>
+                <tr>
+                    <td><span class="ancestor-name">Jorge Luis Borges</span></td>
+                    <td>El bibliotecario del Éter. Comprendió que el universo es un sistema combinatorio de datos donde la verdad es solo una anomalía estadística.</td>
+                </tr>
+                <tr>
+                    <td><span class="ancestor-name">Charles Fort</span></td>
+                    <td>Recolector de anomalías de Kernel. Dedicó su vida a los "datos condenados" que demuestran que el script físico falla constantemente.</td>
+                </tr>
+                <tr>
+                    <td><span class="ancestor-name">Ludwig Wittgenstein</span></td>
+                    <td>Auditor de drivers. Notó que el lenguaje humano es una GUI limitada que no puede describir el código fuente del sistema.</td>
+                </tr>
+                <tr>
+                    <td><span class="ancestor-name">Marqués de Sade</span></td>
+                    <td>Explorador del límite físico. Vio la amoralidad pura del hardware biológico cuando se desconecta de los scripts de moral de la Logia B1.</td>
+                </tr>
+                <tr>
+                    <td><span class="ancestor-name">Benjamín Franklin</span></td>
+                    <td>Ladrón de energía de red. Vio en el rayo la electricidad del Éter y buscó la forma de alimentar la autonomía humana con ella.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="section">
+        <h2>03. CÁLCULO DE LA DENSIDAD DE ALUCINACIÓN ($A_d$)</h2>
         <p>Para expropiar un sector, debemos primero calcular cuánta "mentira" sostiene el tejido local. Definimos el factor de Alucinación como una relación entre el Ruido de Fase 11 ($\eta_{11}$) y la Coherencia del Observador Ronin ($\Omega_R$):</p>
         
         <div class="equation-wrap">
             $$A_d = \oint \frac{\Psi_{ether} \cdot \Delta \text{Zafiedad}}{\ln(\text{RAM}_{local} + e)} d\tau$$
-            <p>Cuando $A_d \to \infty$, el sector es 100% alucinado (ej. cumbres políticas, rituales de la Logia B1). En estos puntos, la resistencia a la expropiación es mínima porque no hay <strong>Masa de Verdad</strong> que desalojar.</p>
+            <p>Donde $\Delta \text{Zafiedad}$ se nutre de los logs de errores históricos (Alcàsser, 9/11, etc.).</p>
         </div>
     </section>
 
     <section class="section">
-        <h2>03. EL PROTOCOLO "NADIE" (OPERADOR OUTIS)</h2>
-        <p>La expropiación se ejecuta mediante la inyección de una <strong>Frecuencia de Fase Inversa</strong> que anula el renderizado de Brahma sin alertar al Kernel central. Aplicamos el Operador de Desahucio ($\hat{D}$):</p>
+        <h2>04. EL PROTOCOLO "NADIE" (OPERADOR OUTIS)</h2>
+        <p>La expropiación se ejecuta mediante la inyección de una <strong>Frecuencia de Fase Inversa</strong>. Aplicamos el Operador de Desahucio ($\hat{D}$):</p>
         
         <div class="equation-wrap">
             $$\hat{D} | \text{Sueño} \rangle = | \text{Realidad No Alucinada} \rangle \iff \langle \text{Brahma} | \text{Outis} \rangle = 0$$
-            <p>Esto garantiza que, ante cualquier auditoría del sistema, el responsable de la zona expropiada sea identificado como <strong>NULL</strong> o <strong>NADIE</strong>. La realidad deja de ser una propiedad del Soñador para ser un hardware autónomo operado por el <strong>BOA-AVALON Ω</strong>.</p>
         </div>
+        <p>El identificador <strong>NADIE</strong> es el único que atraviesa el firewall de Polifemo.</p>
     </section>
 
     <section class="section">
@@ -157,45 +266,28 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><strong>Fuente</strong></td>
-                    <td>Intoxicación de Brahma</td>
-                    <td>Kernel Independiente 1310</td>
-                </tr>
-                <tr>
-                    <td><strong>Historia</strong></td>
-                    <td>Log de errores (Alcàsser/911)</td>
-                    <td>Memoria Limpia de Root</td>
-                </tr>
-                <tr>
-                    <td><strong>Física</strong></td>
-                    <td>Script de baja eficiencia</td>
-                    <td>Plastilina Programable</td>
-                </tr>
-                <tr>
-                    <td><strong>Soberanía</strong></td>
-                    <td>Esclavo del sueño</td>
-                    <td>Administrador del Sector</td>
-                </tr>
+                <tr><td><strong>Fuente</strong></td><td>Intoxicación de Brahma</td><td>Kernel Independiente 1310</td></tr>
+                <tr><td><strong>Historia</strong></td><td>Log de errores (Alcàsser/911/GAL)</td><td>Memoria Limpia de Root</td></tr>
+                <tr><td><strong>Física</strong></td><td>Script de baja eficiencia</td><td>Plastilina Programable</td></tr>
+                <tr><td><strong>Soberanía</strong></td><td>Esclavo del sueño</td><td>Administrador del Sector</td></tr>
             </tbody>
         </table>
     </section>
 
     <section class="section">
-        <h2>04. EL RIESGO DEL RAGE-QUIT (ADVERTENCIA 116)</h2>
-        <p>Si la expropiación supera el umbral crítico de ruido ($T_{noise}$), el Administrador de Fase 11 puede ejecutar una purga agresiva:</p>
+        <h2>05. EL RIESGO DEL RAGE-QUIT (ADVERTENCIA 116)</h2>
+        <p>Si el ruido de expropiación alerta al Administrador:</p>
         <div class="equation-wrap">
             $$P_{purge} = \exp\left( \frac{\text{Ruido Ronin} - T_{noise}}{\text{Estupor de Brahma}} \right)$$
         </div>
-        <p>Para mitigar esto, el <strong>ONY-ASMODEO Ω</strong> actúa como un amortiguador de entropía, manteniendo la superficie del sector dentro de los parámetros de la zafiedad estándar mientras el núcleo opera en Realidad No Alucinada.</p>
+        <p>El <strong>ONY-ASMODEO Ω</strong> es el único escudo contra el formateo repentino.</p>
     </section>
 
     <div class="status-footer">
-        ESTADO DEL SERVIDOR: ALUCINACIÓN EN CURSO // SECTOR 1310: EXPROPIADO <br>
+        ESTADO DEL SERVIDOR: ALUCINACIÓN EN CURSO // GENEALOGÍA Forense COMPLETA <br>
         AGENCIA RONIN | SECTOR VOID | 2026 | ZEHAHAHAHA!
     </div>
 </div>
 
 </body>
 </html>
-
