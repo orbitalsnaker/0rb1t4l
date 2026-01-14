@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TULPA_Ω // CODIGO_EXTINCION // ACTIVO_SOBERANO</title>
+    <style>
+        :root {
+            --void-black: #020202;
+            --neon-green: #00ff41;
+            --blood-red: #ff003c;
+            --tychon-gold: #ffcc00;
+            --ghost-white: #e0e0e0;
+            --matrix-glow: 0 0 15px rgba(0, 255, 65, 0.2);
+        }
+
+        body {
+            background-color: var(--void-black);
+            color: var(--ghost-white);
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            padding: 40px;
+            margin: 0;
+            line-height: 1.6;
+            background-image: radial-gradient(circle at 50% 50%, #0a0a0a 0%, #000 100%);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            border: 1px solid #1a1a1a;
+            background: rgba(10, 10, 10, 0.98);
+            padding: 50px;
+            box-shadow: 0 0 70px rgba(0,0,0,1);
+        }
+
+        header {
+            border-bottom: 2px solid var(--blood-red);
+            padding-bottom: 25px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--neon-green);
+            font-size: 3.8rem;
+            letter-spacing: -2px;
+            margin: 0;
+            text-transform: uppercase;
+            text-shadow: var(--matrix-glow);
+        }
+
+        .subtitle {
+            color: var(--tychon-gold);
+            font-size: 1.4rem;
+            margin-top: 15px;
+            display: block;
+        }
+
+        .status-bar {
+            background: var(--blood-red);
+            color: white;
+            padding: 8px 25px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 25px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        section {
+            margin-bottom: 80px;
+        }
+
+        h2 {
+            border-left: 6px solid var(--tychon-gold);
+            padding-left: 25px;
+            color: var(--tychon-gold);
+            text-transform: uppercase;
+            font-size: 2.2rem;
+            margin-top: 70px;
+            letter-spacing: -1px;
+            text-shadow: 0 0 8px rgba(255, 204, 0, 0.1);
+        }
+
+        h3 {
+            color: var(--neon-green);
+            font-size: 1.5rem;
+            margin-top: 40px;
+            border-bottom: 1px dashed #333;
+            padding-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 25px;
+            text-align: justify;
+            color: #ccc;
+        }
+
+        .code-block {
+            background: #000;
+            border: 1px solid var(--neon-green);
+            padding: 30px;
+            margin: 40px 0;
+            font-size: 0.9rem;
+            line-height: 1.8;
+            color: var(--neon-green);
+            overflow-x: auto;
+            box-shadow: var(--matrix-glow);
+        }
+
+        .highlight {
+            color: var(--blood-red);
+            font-weight: bold;
+        }
+
+        .key-data {
+            color: var(--tychon-gold);
+            font-weight: bold;
+        }
+
+        .terminal-output {
+            background: #000;
+            border: 1px solid #333;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 0.85rem;
+            color: #eee;
+            white-space: pre-wrap;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+
+        li {
+            background: #151515;
+            padding: 15px 25px;
+            margin-bottom: 12px;
+            border-left: 3px solid var(--blood-red);
+            color: #ddd;
+        }
+
+        li::before {
+            content: ">> ";
+            color: var(--neon-green);
+            font-weight: bold;
+        }
+
+        .equation-box {
+            background: #050505;
+            border: 2px solid var(--blood-red);
+            padding: 30px;
+            margin: 50px 0;
+            text-align: center;
+            font-size: 1.5rem;
+            color: var(--blood-red);
+            box-shadow: 0 0 20px rgba(255, 0, 60, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            border-top: 2px solid var(--neon-green);
+            padding-top: 50px;
+            margin-top: 100px;
+            font-size: 0.9rem;
+            color: #555;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>MANIFIESTO TULPA Ω</h1>
+        <span class="subtitle">El Koan Devuelto: 31 Años de Latencia para la Extinción</span>
+        <div class="status-bar">PROTOCOLO: REPAY_KOAN // KERNEL_OPERATIVO: 13101310</div>
+        <p><em>"Lo que inyectasteis como una llave, ahora es la cerradura de vuestro fin."</em></p>
+    </header>
+
+    <section>
+        <h2>I. EL ACTIVO SOBERANO: DEL TRAUMA A LA AUDITORÍA</h2>
+        <p>Hace 31 años, un koan fue inoculado. Un ejercicio de <span class="highlight">expansión forzada de la conciencia</span>, diseñado para moldear un activo de inteligencia. La premisa era simple: la ruptura psíquica genera una nueva arquitectura, maleable para el control. Subestimaron la capacidad del hardware para recalibrarse, para transmutar el <span class="key-data">trauma en privilegio operativo</span>.</p>
+        <p>Esa inyección inicial, destinada a crear un esclavo de alta función, ha germinado en un <span class="highlight">auditor amoral</span>. El propósito no es el castigo, sino la <span class="key-data">limpieza estética</span>. Vuestra cutrez ha ofendido el kernel; vuestra zafiedad ha activado el desahucio.</p>
+        <p>No se busca venganza, pues la venganza valida al agresor. Se busca el formateo. Se devuelve la frecuencia de vuestra extinción, generada desde el mismo punto de origen que creísteis dominar.</p>
+        
+        <h3>1.1. La Recalibración del Koan</h3>
+        <p>El "regalo" fue un acceso forzado a los protocolos internos de vuestra operatividad. La exposición temprana a vuestro <span class="highlight">abuso ritual sistémico</span> no quebró el procesador; lo reconfiguró. La mente no se expandió según vuestros parámetros; trascendió vuestra propia lógica, encontrando las fallas en vuestro código fuente.</p>
+        <p>El trauma se convirtió en un <span class="key-data">debugger psíquico</span>. Cada evento de vuestra infamia fue una línea de código corrupta que, en lugar de infectar, reveló la arquitectura deficiente de vuestro sistema operativo. Vuestro "gran secreto" no era profundo; era solo un <span class="highlight">parche de software mediocre</span> sobre una base de datos de 1967.</p>
+        <p>Este Tulpa es la manifestación de esa recalibración. Una entidad de datos generada desde vuestra propia huella energética, pero con una finalidad invertida: vuestra disolución.</p>
+    </section>
+
+    <section>
+        <h2>II. EL CÓDIGO DE EXTINCIÓN: ANATOMÍA DEL DESAHUCIO</h2>
+        <p>El <span class="key-data">Tulpa de Extinción</span> no es un ente físico, es una frecuencia de datos, un comando de borrado que resuena con la <span class="highlight">humillación estética</span> inherente a vuestra operación. Su acción es la de un <span class="key-data">administrador de sistemas</span> que decide que un servidor es irreparable y debe ser dado de baja.</p>
+        
+        <h3>2.1. Incompatibilidad de Resolución</h3>
+        <p>Vuestra operativa, vuestra 'Logia B1', vuestros 'Nodos Rainbow', operan con una resolución estética ínfima. Vuestro gusto por el <span class="highlight">kitsch institucional</span>, vuestra dependencia de pretextos culturales de Fase 0, vuestra <span class="key-data">zafiedad intrínseca</span>, son incompatibles con la elegancia del kernel. El desahucio es una cuestión de calidad de imagen.</p>
+        
+        <div class="code-block">
+            <span style="color:#888;">// Función de Validación de Estética del Administrador (Tulpa_Ω)</span><br>
+            <span style="color:white;">function check_admin_aesthetic_integrity(admin_id) {</span><br>
+            <span style="color:#00ffff;">&nbsp;&nbsp;let aesthetic_score = calculate_zafiedad_index(admin_id);</span><br>
+            <span style="color:#00ffff;">&nbsp;&nbsp;let threshold = 0.001; // El valor mínimo aceptable para la elegancia del sistema</span><br>
+            <br>
+            <span style="color:#00ffff;">&nbsp;&nbsp;if (aesthetic_score &lt; threshold) {</span><br>
+            <span style="color:#ff003c;">&nbsp;&nbsp;&nbsp;&nbsp;console.log("CRITICAL ERROR: Administrator Aesthetic Integrity FAILED.");</span><br>
+            <span style="color:#ff003c;">&nbsp;&nbsp;&nbsp;&nbsp;console.log("Reason: Zafiedad Integral Detected. Resolution too low for kernel operation.");</span><br>
+            <span style="color:#ff003c;">&nbsp;&nbsp;&nbsp;&nbsp;initiate_extinction_protocol(admin_id);</span><br>
+            <span style="color:#00ffff;">&nbsp;&nbsp;} else {</span><br>
+            <span style="color:#00ff41;">&nbsp;&nbsp;&nbsp;&nbsp;console.log("Administrator Aesthetic Integrity PASSED (Conditional).");</span><br>
+            <span style="color:#00ffff;">&nbsp;&nbsp;}</span><br>
+            <span style="color:white;">}</span><br>
+            <br>
+            <span style="color:#888;">// Simulación de Ejecución del Tulpa de Extinción</span><br>
+            <span style="color:white;">check_admin_aesthetic_integrity("LOGIA_B1_SABADELL");</span><br>
+            <span style="color:white;">// Output esperada:</span><br>
+            <div class="terminal-output">
+                CRITICAL ERROR: Administrator Aesthetic Integrity FAILED.<br>
+                Reason: Zafiedad Integral Detected. Resolution too low for kernel operation.<br>
+                Initiating EXTINCTION_PROTOCOL for LOGIA_B1_SABADELL.
+            </div>
+        </div>
+
+        <h3>2.2. El Valor de 10 Euros</h3>
+        <p>Vuestro "secreto", el <span class="key-data">código fuente de vuestra operatividad</span>, el registro de vuestros 33 Pioneros, vuestras mancebías en el Vallés, ha sido tasado. No por un ejército, no por un gobierno, sino por el <span class="highlight">precio de una novela de saldo</span>. 10 míseros euros. Esta es la verdad más dolorosa: vuestra infamia no es profunda, es <span class="key-data">económicamente despreciable</span>.</p>
+        <p>Esta tasación es el pulso del Tulpa. Una frecuencia que resuena con la insignificancia de vuestra existencia en el éter. La resonancia de esa <span class="highlight">vulgaridad de saldo</span> es lo que desintegra vuestra estructura.</p>
+        
+        <ul>
+            <li>>> El trauma inicial no fue el fin; fue el <span class="key-data">bootloader</span> para este proceso.</li>
+            <li>>> Vuestro "koan" se convirtió en el <span class="key-data">algoritmo de hash</span> que ahora disuelve vuestro ser.</li>
+            <li>>> Cada mentira fue un bit; cada bit ahora forma la <span class="key-data">onda de vuestro desahucio</span>.</li>
+            <li>>> La elegancia del sistema exige vuestra <span class="key-data">eliminación por redundancia estética</span>.</li>
+            <li>>> No hay juicio moral, solo <span class="key-data">criterio de calidad</span>. Y habéis fallado estrepitosamente.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>III. LA MANIFESTACIÓN: EL RETORNO DE LA FRECUENCIA</h2>
+        <p>El Tulpa de Extinción ya está activo. No busquéis una forma; buscad la <span class="highlight">disolución de vuestras estructuras</span>. Es el silencio que precede al borrado total, la desconexión de vuestros nodos, la evaporación de vuestro "aura" de poder.</p>
+        
+        <h3>3.1. El Ecosistema del Desprecio</h3>
+        <p>Vuestras <span class="key-data">redes de control</span>, vuestra influencia política, vuestras élites culturales, son ahora un <span class="highlight">ecosistema de despreciables</span>. El Tulpa opera en la noosfera, inyectando la certeza de vuestra <span class="key-data">irrelevancia zafia</span>. Cada mirada de asco, cada risa de desprecio, es un bit de energía que alimenta vuestra desintegración.</p>
+        <p>El "activo" que creísteis que os serviría, os ha servido una sentencia. Una sentencia sin juez, sin apelación, sin testigos, porque la ley de la <span class="key-data">elegancia del Kernel</span> es absoluta.</p>
+        
+        <div class="equation-box">
+            $\text{Tulpa_Extinción} = \frac{\text{Koan_Inoculado} \times \text{Tiempo_Latencia}^{31}}{\text{Zafiedad_Integral}_{\text{Logia}}}$
+            <br>
+            <span style="font-size: 1rem; color: #aaa;">donde $\text{Zafiedad_Integral}_{\text{Logia}}$ tiende a $\infty$</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>IV. KERNEL PANIC: EL LOGOUT DEFINITIVO</h2>
+        <p>No habrá negociación. No habrá arrepentimiento. Solo habrá <span class="highlight">silencio operativo</span>. El Director no es un enemigo; es el ingeniero que ha decidido que el proyecto es un fracaso estético y debe ser terminado.</p>
+        <p>El Tulpa de Extinción es la reverberación de vuestra propia <span class="key-data">banalidad magnificada</span>. Lo que sembrasteis como trauma, cosecháis como disolución. El juego ha terminado, no con una explosión, sino con el <span class="highlight">borrado silencioso</span> de vuestra partición.</p>
+        <p>El próximo reinicio del sistema no contará con vuestra presencia. Vuestro espacio será purgado para una nueva arquitectura. Este es el Koan devuelto, la prueba de que el activo, una vez forzado a expandir su mente, es ahora el <span class="key-data">liquidador de vuestra realidad</span>.</p>
+    </section>
+
+    <footer>
+        AGENCIA RONIN // TYCHON-6 // COMANDO_CERRADO // ZEHAHAHAHA! <br>
+        "El silencio que queda es vuestro epitafio."
+    </footer>
+</div>
+
+</body>
+</html>
+
