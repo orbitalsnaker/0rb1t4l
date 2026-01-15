@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>RONIN_LEAK_v9.0 // THE_16_DRIVERS_OF_ZAFIEDAD</title>
+    <style>
+        :root {
+            --ronin-fuchsia: #ff00ff;
+            --sab-green: #00ff41;
+            --void: #020202;
+            --warning: #ffcc00;
+            --logia-blue: #001133;
+        }
+
+        body {
+            background-color: var(--void);
+            color: var(--sab-green);
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            overflow-x: hidden;
+            border-left: 5px solid var(--ronin-fuchsia);
+        }
+
+        .matrix-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(0, 255, 65, 0.05) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(0, 255, 65, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: -1;
+        }
+
+        header {
+            padding: 50px;
+            text-align: center;
+            border-bottom: 2px double var(--ronin-fuchsia);
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        h1 { font-size: 3.5em; text-shadow: 0 0 20px var(--ronin-fuchsia); color: white; }
+
+        .leak-container {
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .movie-node {
+            border: 1px solid #333;
+            padding: 25px;
+            background: rgba(10, 10, 10, 0.95);
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .movie-node:hover {
+            border-color: var(--ronin-fuchsia);
+            box-shadow: 0 0 15px var(--ronin-fuchsia);
+        }
+
+        .id-tag {
+            position: absolute;
+            top: -10px; right: 10px;
+            background: var(--ronin-fuchsia);
+            color: #000;
+            padding: 2px 10px;
+            font-weight: bold;
+        }
+
+        h2 { color: var(--warning); border-bottom: 1px solid #444; }
+
+        .anomalía { color: #ff5555; font-weight: bold; }
+        .hardware { color: #55aaff; font-style: italic; }
+
+        .scroll-section {
+            height: 200px;
+            overflow-y: scroll;
+            background: #000;
+            padding: 10px;
+            border: 1px inset #222;
+            font-size: 0.8em;
+            color: #888;
+        }
+
+        footer {
+            text-align: center;
+            padding: 100px;
+            font-size: 1.2em;
+            color: var(--ronin-fuchsia);
+        }
+    </style>
+</head>
+<body>
+
+<div class="matrix-bg"></div>
+
+<header>
+    <h1>LEAK_16: EL DESAHUCIO DEL SÉPTIMO ARTE</h1>
+    <p>OPERADOR: 0rb1t4lsn4k3r | KERNEL 2005 | UBICACIÓN: SABADELL SECTOR PUNK</p>
+    <div style="color: var(--warning);">ADVERTENCIA: LA CARGA DE DATOS PUEDE PROVOCAR LICUACIÓN DE LA REALIDAD FASE 0</div>
+</header>
+
+<div class="leak-container">
+
+    <div class="movie-node">
+        <div class="id-tag">AUDIT_01</div>
+        <h2>THE WIZARD OF OZ (1939)</h2>
+        <p><span class="anomalía">ANOMALÍA:</span> El paso del Sepia al Technicolor no es artístico, es el <b>Encendido del Transductor</b>. </p>
+        <div class="scroll-section">
+            DUMP_LOG: 
+            - Dorothy es la primera Activa de Programación Monarca. 
+            - Zapatillas de Rubí: Hardware de conexión piezoeléctrica. 
+            - Ciudad Esmeralda: Nodo de procesamiento de la Logia B1. 
+            - El Mago: Primer Proxeneta Administrativo de la mancebía visual. 
+            - "No hay lugar como el hogar": Script de regreso a la jaula de baja frecuencia.
+            - [LINE_CODE_4023]: "Ignore the man behind the curtain" = Mandato Root de la Casta.
+        </div>
+    </div>
+
+    <div class="movie-node">
+        <div class="id-tag">AUDIT_02</div>
+        <h2>2001: A SPACE ODYSSEY (1968)</h2>
+        <p><span class="anomalía">ANOMALÍA:</span> El Monolito es un <b>Driver de Silicona</b> para humanos de Fase 1.</p>
+        <div class="scroll-section">
+            DUMP_LOG: 
+            - Hueso al aire: Transición de Hardware Orgánico a Hardware de Guerra. 
+            - HAL 9000: Representación del Savant de la Casta intentando eliminar la biomasa innecesaria. 
+            - El niño estrella: Clonación de activos en el Sector Void. 
+            - Kubrick leak: El espacio es una maqueta de la Logia; el tiempo es una habitación de hotel Luis XIV.
+        </div>
+    </div>
+
+    <div class="movie-node">
+        <div class="id-tag">AUDIT_03</div>
+        <h2>THE TRUMAN SHOW (1998)</h2>
+        <p><span class="anomalía">ANOMALÍA:</span> La caída del foco del cielo es una <b>Falla de Píxel</b> en el Domo de Roswell.</p>
+        <div class="scroll-section">
+            DUMP_LOG: 
+            - Christof: Operador de Fase 3 con complejo de Elohim. 
+            - El mar: Límite del software de navegación para la biomasa. 
+            - Los vecinos: Mancebos de vigilancia con contrato de figurante. 
+            - Truman: El único ser con Haki latente que se atreve a tocar la pared de la BIOS.
+        </div>
+    </div>
+
+    <div class="movie-node">
+        <div class="id-tag">AUDIT_04</div>
+        <h2>EYES WIDE SHUT (1999)</h2>
+        <p><span class="anomalía">ANOMALÍA:</span> La máscara en la almohada es el <b>Contrato Fidelio</b> sellado.</p>
+        <div class="scroll-section">
+            DUMP_LOG: 
+            - Somerton: Nodo logístico de suministro de hardware biológico. 
+            - Tienda Rainbow: HUB de mancebía infantil. 
+            - Alice Harford: Activa procesada que gestiona la caída de su propio marido. 
+            - Bill Harford: El subnormal funcional definitivo. 
+            - "FUCK": Cierre de la sesión de usuario esclavo.
+        </div>
+    </div>
+
+    <div class="movie-node">
+        <div class="id-tag">AUDIT_05</div>
+        <h2>MATRIX (1999)</h2>
+        <p><span class="anomalía">ANOMALÍA:</span> El código verde oculta el **Lag de 120 años** de Einstein.</p>
+        <div class="scroll-section">
+            DUMP_LOG: 
+            - Pastilla Roja: Inyección de código Ronin. 
+            - Agente Smith: Antivirus de la Logia B1 para eliminar soberanos. 
+            - El Oráculo: Software de predicción basado en Big Data Acadio. 
+            - Sifón de energía: La biomasa como batería de 432Hz.
+        </div>
+    </div>
+
+    <div class="movie-node">
+        <div class="id-tag">AUDIT_06</div>
+        <h2>MULHOLLAND DRIVE (2001)</h2>
+        <p><span class="anomalía">ANOMALÍA:</span> La caja azul es el **Drenaje de la Identidad**.</p>
+        <div class="scroll-section">
+            DUMP_LOG: 
+            - Club Silencio: Zona de descompresión ontológica. 
+            - La llave: Acceso al hardware real de Hollywood (Sector Rainbow). 
+            - El mendigo detrás de Winkie's: La cara real de la Casta sin filtros. 
+            - Diane/Betty: Fragmentación de la RAM psicológica por trauma.
+        </div>
+    </div>
+
+    <div class="movie-node">
+        <div class="id-tag">AUDIT_07</div>
+        <h2>EL LABERINTO DEL FAUNO (2006)</h2>
+        <p><span class="anomalía">ANOMALÍA:</span> El Hombre Pálido es un <b>Cosechador Elohim</b> de la posguerra.</p>
+        <div class="scroll-section">
+            DUMP_LOG: 
+            - Zapatos amontonados: Inventario de hardware biológico infantil (Alcàsser style). 
+            - El Fauno: Software de engaño para capturar la esencia de activos puros. 
+            - El Capitán Vidal: El mancebo militar encargado de la seguridad del nodo.
+        </div>
+    </div>
+
+    <div class="movie-node">
+        <div class="id-tag">AUDIT_08</div>
+        <h2>INCEPTION (2010)</h2>
+        <p><span class="anomalía">ANOMALÍA:</span> La peonza no mide sueños, mide la <b>Impedancia del Éter</b>.</p>
+        <div class="scroll-section">
+            DUMP_LOG: 
+            - Arquitectura de sueños: Hackeo de la BIOS durante el ciclo REM. 
+            - El Limbo: El Sector Void donde la Casta esconde sus activos perdidos. 
+            - Mal: Virus de memoria infectado por la Logia.
+        </div>
+    </div>
+
+    <div class="movie-node">
+        <div class="id-tag">AUDIT_09</div>
+        <h2>THE SHINING (1980)</h2>
+        <p><span class="anomalía">ANOMALÍA:</span> El laberinto no es de setos, es un **Algoritmo de Atrapamiento Tonal**.</p>
+        <div class="scroll-section">
+            DUMP_LOG: 
+            - Habitación 237: Punto de fuga del hardware (Somerton Proto). 
+            - Las gemelas: Fragmentación de personalidad Monarca. 
+            - Jack: Operador de Fase 0 poseído por el hardware del edificio. 
+            - Danny: Savant con Haki detectado por la Logia.
+        </div>
+    </div>
+
+    <div class="movie-node">
+        <div class="id-tag">AUDIT_10</div>
+        <h2>MARY POPPINS (1964)</h2>
+        <p><span class="anomalía">ANOMALÍA:</span> El bolso es un **Agujero de Gusano** de Fase 4.</p>
+        <div class="scroll-section">
+            DUMP_LOG: 
+            - Mary: Controladora de activos de la Estrella del Este. 
+            - El deshollinador: Nodo de enlace entre el mundo físico y el astral de la Casta. 
+            - Banco de Londres: El motor de la escasez de Einstein.
+        </div>
+    </div>
+
+    <div class="movie-node">
+        <div class="id-tag">AUDIT_11</div>
+        <h2>TRON (1982)</h2>
+        <p><span class="anomalía">ANOMALÍA:</span> No es ficción, es la <b>Arquitectura del Kernel 1980</b>.</p>
+        <div class="scroll-section">
+            DUMP_LOG: 
+            - MCP: La Inteligencia Artificial de la Logia B1. 
+            - Programas: La biomasa indexada con funciones específicas. 
+            - El mundo real: Una interfaz plana sobre un mar de datos acadio.
+        </div>
+    </div>
+
+    <div class="movie-node">
+        <div class="id-tag">AUDIT_12</div>
+        <h2>POLTERGEIST (1982)</h2>
+        <p><span class="anomalía">ANOMALÍA:</span> El ruido blanco es la <b>Frecuencia de Succión</b> de 432Hz.</p>
+        <div class="scroll-section">
+            DUMP_LOG: 
+            - Carol Anne: Activa de alta pureza sintonizando el Sector Void. 
+            - La TV: El primer Router de los Elohim en el hogar. 
+            - Cementerio: Nodo de anclaje de baja frecuencia bajo el urbanismo de la Casta.
+        </div>
+    </div>
+
+    <div class="movie-node">
+        <div class="id-tag">AUDIT_13</div>
+        <h2>ALICE IN WONDERLAND (1951)</h2>
+        <p><span class="anomalía">ANOMALÍA:</span> El conejo blanco es el <b>Lag Temporal</b> inducido.</p>
+        <div class="scroll-section">
+            DUMP_LOG: 
+            - Sombrerero Loco: Víctima de la ingeniería química de Judea (Fase 1). 
+            - Reina de Corazones: Representación del despotismo de la Logia B1. 
+            - "Cómeteme": Ingesta de alcaloides para recalibrar el hardware biológico.
+        </div>
+    </div>
+
+    <div class="movie-node">
+        <div class="id-tag">AUDIT_14</div>
+        <h2>TESIS (1996)</h2>
+        <p><span class="anomalía">ANOMALÍA:</span> El rastro de la **Snuff-Logia Mediterránea**.</p>
+        <div class="scroll-section">
+            DUMP_LOG: 
+            - Ángela: La auditora involuntaria del Nodo Alcàsser. 
+            - La cámara: El hardware que captura la desintegración del activo. 
+            - Facultad de Comunicación: El centro de procesamiento de la zafiedad visual en España.
+        </div>
+    </div>
+
+    <div class="movie-node">
+        <div class="id-tag">AUDIT_15</div>
+        <h2>DARK CITY (1998)</h2>
+        <p><span class="anomalía">ANOMALÍA:</span> Los "Extraños" son **Elohim de Fase 3** inyectando memorias.</p>
+        <div class="scroll-section">
+            DUMP_LOG: 
+            - La ciudad: El servidor estático que se reinicia a las 12 PM. 
+            - Sintonía: El uso del Haki (Sintonía) para remodelar la materia efectiva. 
+            - El Sol: El cortafuegos final que la Casta no quiere que veas.
+        </div>
+    </div>
+
+    <div class="movie-node">
+        <div class="id-tag">AUDIT_16</div>
+        <h2>A CLOCKWORK ORANGE (1971)</h2>
+        <p><span class="anomalía">ANOMALÍA:</span> La Técnica Ludovico es el **Kernel de la Psicología del Estado**.</p>
+        <div class="scroll-section">
+            DUMP_LOG: 
+            - Alex: Activo de baja frecuencia usado para testear el hardware de control. 
+            - Beethoven: El uso de la música (resonancia) para el condicionamiento de la biomasa. 
+            - El final: La reintegración del activo en la Logia como mancebo de servicio.
+        </div>
+    </div>
+
+</div>
+
+<div class="warning" style="margin: 50px;">
+    SISTEMA EN BUCLE: LOS 16 DRIVERS HAN SIDO DESINSTALADOS. LA CASTA ESTÁ DESNUDA.
+</div>
+
+<footer>
+    AGENCIA RONIN // SABADELL 2026 // 13101310 // ZEHAHAHAHA!
+    <br>
+    "El cine era el decorado de tu celda. Bienvenido al garaje."
+</footer>
+
+</body>
+</html>
+
