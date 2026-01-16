@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TERMINAL_RONIN_DESAHUCIO_TSAR_150Y</title>
+    <style>
+        :root {
+            --fucsia: #ff00ff;
+            --void: #020202;
+            --cal: #d0d0d0;
+            --gold: #ffd700;
+            --blood: #ff3300;
+            --terminal-font: 'JetBrains Mono', monospace;
+        }
+        body {
+            background-color: var(--void);
+            color: var(--cal);
+            font-family: var(--terminal-font);
+            font-size: 12px;
+            padding: 40px;
+            margin: 0;
+            line-height: 1.5;
+        }
+        .monitor {
+            max-width: 1200px;
+            margin: auto;
+            border: 1px solid #333;
+            background: rgba(5, 5, 5, 0.9);
+            padding: 30px;
+            box-shadow: 0 0 100px rgba(255, 0, 255, 0.15);
+            position: relative;
+        }
+        .warning {
+            background: var(--blood);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 30px;
+            border: 2px solid white;
+        }
+        h1 { color: var(--fucsia); font-size: 2.5em; text-transform: uppercase; border-bottom: 2px solid var(--fucsia); padding-bottom: 10px; }
+        .log-entry { margin-bottom: 25px; border-left: 3px solid #222; padding-left: 20px; transition: 0.3s; }
+        .log-entry:hover { border-left-color: var(--fucsia); background: rgba(255, 0, 255, 0.02); }
+        .timestamp { color: var(--gold); font-weight: bold; margin-right: 10px; }
+        .critical-data { color: var(--blood); font-weight: bold; background: rgba(255, 51, 0, 0.1); }
+        .logic-block { background: #0a0a0a; border: 1px solid #1a1a1a; padding: 15px; margin: 15px 0; color: #00ff41; }
+        .narrative { font-size: 1.2em; color: #eee; text-align: justify; margin: 20px 0; border-right: 1px solid #333; padding-right: 20px; }
+        .footer-info { margin-top: 50px; font-size: 0.8em; color: #444; border-top: 1px solid #222; padding-top: 20px; text-align: center; }
+        .glitch { animation: glitch-anim 1s infinite; }
+        @keyframes glitch-anim { 0% { opacity: 1; } 50% { opacity: 0.7; } 100% { opacity: 1; } }
+    </style>
+</head>
+<body>
+
+<div class="monitor">
+    <div class="warning">
+        DRENAJE DE MEMORIA EIDÉTICA EN CURSO: DETECTADA CAL VIVA HISTÓRICA EN EL KERNEL DEL TSAR
+    </div>
+
+    <h1>Relato del Desahucio: El Logout de los 150 Años</h1>
+
+    <div class="narrative">
+        El **Director Ω** caminaba por el pasillo central del búnker con la parsimonia de quien ha visto el código fuente de una nación desahuciada. En su mano, un terminal Ronin vibraba con el volcado de 150 años de **Zafiedad Integral**. No había misterio; solo había registros. El Tsar (ID 50), sentado tras un escritorio de caoba pija, intentaba ocultar los logs de <span class="critical-data">Cánovas y Sagasta</span>, pero el Director ya había inyectado el bypass.
+    </div>
+
+    <div class="logic-block">
+<pre>
+# YAML: VOLCADO DE LOGS HISTÓRICOS (SECTOR CAL)
+restauracion_1874:
+  software: "TURNISMO.EXE"
+  status: "Zafiedad_Original"
+  action: "Drenaje_Inmobiliario_Corte"
+guerra_civil_1936:
+  software: "CHECA_ADMIN_V1"
+  status: "Eliminación_Física_Biomasa"
+  action: "Magnicidio_Sotelo_Bypass"
+transicion_1978:
+  software: "CAL_VIVA_GAL_PATCH"
+  status: "Inmunidad_Logia_B1"
+  action: "Desmantelamiento_Hardware_Soberano"
+</pre>
+    </div>
+
+    <div class="narrative">
+        —"Tus logs te han desahuciado"— sentenció el Director Ω, deteniéndose frente al Tsar. —"No eres un soberano, eres el conserje de un burdel de 150 años. Tu 'resiliencia' es solo el nombre pijo que le pones a la cal viva que usáis para borrar vuestros errores de renderizado". El Tsar intentó apelar a la 'Patria', pero el Director Ω activó el **Transductor de Fase Inversa**. De repente, el aroma a incienso y democracia de la sala fue sustituido por el olor metálico del hardware de la **PS3 de Sabadell** procesando la verdad cruda.
+    </div>
+
+    <div class="log-entry">
+        <span class="timestamp">[1874-1923]</span> 
+        Detección de <span class="critical-data">Pucherazo_Original</span>. Los votos son outputs predecibles para mantener el hardware azucarero de los 33 Pioneros.
+    </div>
+
+    <div class="log-entry">
+        <span class="timestamp">[1931-1939]</span> 
+        Instalación de la <span class="critical-data">Checa Administrativa</span>. El Estado canibaliza a la clase media para alimentar el hambre de muerte de los comisarios de la Logia B1.
+    </div>
+
+    <div class="log-entry">
+        <span class="timestamp">[1975-2004]</span> 
+        Activación de la <span class="critical-data">Cal Viva del GAL</span>. El socialismo demuestra su dominio del hardware del terror bajo el skin del "Consenso". Alcàsser instalado como malware de miedo masivo.
+    </div>
+
+    <div class="narrative">
+        El Tsar comenzó a parpadear, su imagen volviéndose translúcida. El **Logout Ontológico** era imparable. Sus manos, las mismas que firmaron la entrega de soberanía en las Ramblas y el 11-M, se desintegraban en píxeles de zafiedad. El Director Ω no sentía odio, solo la <span class="glitch">Indiferencia Atómica</span> del activo que limpia un servidor infectado. 
+    </div>
+
+    <div class="logic-block">
+<pre>
+{
+  "system_status": "DRENADO",
+  "tsar_id": 50,
+  "error_report": "Sobrecarga_de_Cal_Viva",
+  "final_fate": "Exilio_en_Mancebía_del_Caribe",
+  "soberania_restaurada": true
+}
+</pre>
+    </div>
+
+    <div class="narrative">
+        —"El futuro es de los Ronin"— concluyó el Director mientras el búnker se convertía en un nodo muerto. Salió a la calle, donde la Sprinter rugía con el flow de la **Bad Gyal**. Sabadell estaba despierta. La biomasa había recuperado el hardware. El desahucio de los 150 años de la Logia B1 se había completado con un solo clic de **Postín Cuántico**.
+    </div>
+
+    <div class="footer-info">
+        AGENCIA RONIN // 13101310 // SIN FILFA // MEMORIA EIDÉTICA CONTRA EL OLVIDO DEL TSAR <br>
+        <span class="glitch">ZEHAHAHAHA!</span>
+    </div>
+</div>
+
+</body>
+</html>
