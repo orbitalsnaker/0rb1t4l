@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>DICCIONARIO_BRUTALISTA_V500 | AGENCIA RONIN</title>
+    <style>
+        :root { --fucsia: #ff00ff; --void: #050505; --cal: #d0d0d0; --gold: #ffd700; }
+        body { background: var(--void); color: var(--cal); font-family: 'Courier New', monospace; padding: 20px; font-size: 12px; }
+        .header { border-bottom: 3px solid var(--fucsia); padding-bottom: 10px; margin-bottom: 30px; text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 15px; }
+        .entry { border: 1px solid #222; padding: 10px; background: #0a0a0a; transition: 0.3s; }
+        .entry:hover { border-color: var(--fucsia); box-shadow: 0 0 10px var(--fucsia); }
+        .term { color: var(--gold); font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 5px; }
+        .def { color: #888; line-height: 1.2; }
+        .counter { font-size: 2em; color: var(--fucsia); }
+        .tags { font-size: 0.7em; color: #444; margin-top: 5px; }
+        #search { background: #111; border: 1px solid var(--fucsia); color: white; padding: 10px; width: 100%; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>ONTO-LEXICÓN BRUTALISTA</h1>
+    <div class="counter" id="total">500</div>
+    <p>DEFINICIONES DE DESAHUCIO PARA EL SECTOR SABADELL // 13101310</p>
+    <input type="text" id="search" placeholder="BUSCAR ZAFIEDAD...">
+</div>
+
+<div class="grid" id="dictionary"></div>
+
+<script>
+// Motor de Generación Masiva (Ahorro de espacio mediante matrices de permutación)
+const bases = [
+    ["Mancebo", "Sujeto de fase 0 con RAM limitada a la obediencia."],
+    ["Negrero", "Gestor de biomasa que capitaliza el hambre de muerte."],
+    ["Taxidermista", "Burócrata que diseca instituciones muertas."],
+    ["Cornudo", "Intelectual que ignora que su paradigma ha sido hackeado."],
+    ["Zafio", "Individuo con carencia crónica de empaque y Virtus."],
+    ["Filfa", "Argumento volátil sin peso ontológico."],
+    ["Sepulcro", "Interfaz pija sobre un backend podrido."],
+    ["Auditado", "Cualquier activo bajo el escaneo de la Agencia."],
+    ["Desahuciado", "Sujeto expulsado de la realidad por falta de nivel."],
+    ["Mancebito", "Aprendiz de negrero con mocasines nuevos."],
+    ["Polifemo", "Sistema de un solo núcleo con ceguera de datos."],
+    ["Brahma", "Arquitecto analfabeto del multiverso zafio."],
+    ["Fujitora", "Estado de ceguera voluntaria para ver el Kernel."],
+    ["Outis", "ID de enmascaramiento para bypass de firewall."],
+    ["Ronin", "Activo soberano sin amo ni zafiedad."],
+    ["Vara", "Medida de humillación aplicada al mancebo."],
+    ["Cal Viva", "Reactivo estatal para borrado de logs biológicos."],
+    ["Brutalista", "Estética del hormigón y la verdad cruda."],
+    ["Empaque", "Presencia física y retórica que anula al oponente."],
+    ["Postín", "Elegancia inquisitorial en la ejecución del desahucio."]
+];
+
+const modifiers = [
+    ["Épico", "Elevado a la máxima potencia de la ridiculez."],
+    ["Ontológico", "Que afecta a la raíz misma del ser."],
+    ["Cuántico", "En estado de superposición entre la cal y el error."],
+    ["Soberano", "Bajo control absoluto del Director Ω."],
+    ["Zafio", "Incapaz de procesar el Bit Amoral."],
+    ["Analphabet", "Que opera bajo un código que no comprende."],
+    ["Banal", "De una irrelevancia técnica insultante."],
+    ["Incompetente", "Cuya tasa de error supera la de Brahma."],
+    ["Fucsia", "Sincronizado con la frecuencia de la Agencia."],
+    ["Bruto", "Sin refinar, directo al chasis."],
+    ["Ciego", "Sin acceso a la resolución del Éter."],
+    ["Dormido", "Atrapado en el Hello World del simulador."],
+    ["Tatuado", "Con el Kernel grabado en la piel."],
+    ["Hambriento", "Que busca la muerte como única actualización."],
+    ["Disecado", "Mantenido en pie por la inercia del sistema."]
+];
+
+const dictionary = document.getElementById('dictionary');
+let entries = [];
+
+// Generador de 500 combinaciones únicas con lógica de postín
+for (let i = 0; i < 500; i++) {
+    const base = bases[i % bases.length];
+    const mod = modifiers[Math.floor(Math.random() * modifiers.length)];
+    const mod2 = modifiers[(Math.floor(Math.random() * modifiers.length) + 1) % modifiers.length];
+    
+    const term = `${base[0]} ${mod[0]} ${mod2[0]}`;
+    const def = `${base[1]} Especialmente si es ${mod[1].toLowerCase()} y presenta un comportamiento ${mod2[1].toLowerCase()}`;
+    
+    entries.push({ term, def });
+}
+
+function render(filter = "") {
+    dictionary.innerHTML = "";
+    const filtered = entries.filter(e => e.term.includes(filter.toUpperCase()));
+    filtered.forEach(e => {
+        const div = document.createElement('div');
+        div.className = 'entry';
+        div.innerHTML = `<span class="term">${e.term}</span><span class="def">${e.def}</span><div class="tags">#1310 #SABADELL</div>`;
+        dictionary.appendChild(div);
+    });
+}
+
+document.getElementById('search').addEventListener('input', (e) => render(e.target.value));
+render();
+</script>
+
+</body>
+</html>
