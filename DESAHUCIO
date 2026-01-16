@@ -2,129 +2,169 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>TERMINAL_RONIN_DESAHUCIO_TSAR_150Y</title>
+    <title>ROOT_EXPLOIT_150Y_CAL_VIVA_ULTIMATE</title>
     <style>
+        /* CSS BRUTALISTA - NÚCLEO DE SOBERANÍA */
         :root {
-            --fucsia: #ff00ff;
-            --void: #020202;
-            --cal: #d0d0d0;
-            --gold: #ffd700;
-            --blood: #ff3300;
-            --terminal-font: 'JetBrains Mono', monospace;
+            --fucsia: #ff00ff; --void: #010101; --cal: #e0e0e0; --gold: #ffd700;
+            --blood: #ff1100; --terminal: #00ff41; --shadow: rgba(255, 0, 255, 0.2);
         }
+        * { box-sizing: border-box; cursor: crosshair; }
         body {
-            background-color: var(--void);
-            color: var(--cal);
-            font-family: var(--terminal-font);
-            font-size: 12px;
-            padding: 40px;
-            margin: 0;
-            line-height: 1.5;
+            background-color: var(--void); color: var(--cal);
+            font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
+            font-size: 10px; line-height: 1.2; padding: 0; margin: 0;
+            overflow-x: hidden;
         }
-        .monitor {
-            max-width: 1200px;
-            margin: auto;
-            border: 1px solid #333;
-            background: rgba(5, 5, 5, 0.9);
-            padding: 30px;
-            box-shadow: 0 0 100px rgba(255, 0, 255, 0.15);
-            position: relative;
+
+        /* CAPA DE INTERFAZ POST-LOGOUT */
+        .viewport {
+            width: 100vw; min-height: 100vh; padding: 60px;
+            background: radial-gradient(circle at 50% 50%, #0a0a0a 0%, #000 100%);
+            border: 20px solid #050505;
         }
-        .warning {
-            background: var(--blood);
-            color: white;
-            padding: 10px;
-            text-align: center;
-            font-weight: bold;
-            margin-bottom: 30px;
-            border: 2px solid white;
+
+        .header-system {
+            border-bottom: 5px solid var(--fucsia); padding-bottom: 20px;
+            margin-bottom: 50px; text-align: center;
         }
-        h1 { color: var(--fucsia); font-size: 2.5em; text-transform: uppercase; border-bottom: 2px solid var(--fucsia); padding-bottom: 10px; }
-        .log-entry { margin-bottom: 25px; border-left: 3px solid #222; padding-left: 20px; transition: 0.3s; }
-        .log-entry:hover { border-left-color: var(--fucsia); background: rgba(255, 0, 255, 0.02); }
-        .timestamp { color: var(--gold); font-weight: bold; margin-right: 10px; }
-        .critical-data { color: var(--blood); font-weight: bold; background: rgba(255, 51, 0, 0.1); }
-        .logic-block { background: #0a0a0a; border: 1px solid #1a1a1a; padding: 15px; margin: 15px 0; color: #00ff41; }
-        .narrative { font-size: 1.2em; color: #eee; text-align: justify; margin: 20px 0; border-right: 1px solid #333; padding-right: 20px; }
-        .footer-info { margin-top: 50px; font-size: 0.8em; color: #444; border-top: 1px solid #222; padding-top: 20px; text-align: center; }
-        .glitch { animation: glitch-anim 1s infinite; }
-        @keyframes glitch-anim { 0% { opacity: 1; } 50% { opacity: 0.7; } 100% { opacity: 1; } }
+        .header-system h1 {
+            font-size: 5em; color: white; margin: 0; letter-spacing: -5px;
+            text-shadow: 5px 5px 0px var(--fucsia);
+        }
+
+        /* GRID DE AUDITORÍA FORENSE */
+        .audit-grid {
+            display: grid; grid-template-columns: 300px 1fr 300px; gap: 20px;
+        }
+
+        .side-bar { border: 1px solid #222; padding: 15px; background: #050505; }
+        .main-terminal {
+            border: 1px solid var(--fucsia); background: rgba(0,0,0,0.8);
+            padding: 30px; box-shadow: 0 0 50px var(--shadow);
+        }
+
+        /* ESTILOS DE LOGS */
+        .log-line { margin-bottom: 10px; border-bottom: 1px solid #111; padding-bottom: 5px; }
+        .ts { color: var(--gold); font-weight: bold; }
+        .tag { background: #333; color: white; padding: 2px 5px; font-size: 0.8em; margin-right: 5px; }
+        .crit { color: var(--blood); font-weight: bold; text-decoration: underline; }
+        
+        .code-block {
+            background: #000; border: 1px solid #333; padding: 20px;
+            color: var(--terminal); font-size: 0.9em; margin: 20px 0;
+            position: relative; overflow: hidden;
+        }
+        .code-block::before {
+            content: "DECRYPTED_DATA"; position: absolute; top: 0; right: 10px;
+            font-size: 0.7em; color: #444;
+        }
+
+        /* NARRATIVA DE DESAHUCIO */
+        .relato-extended {
+            font-size: 1.4em; color: #fff; text-align: justify;
+            line-height: 1.6; border-left: 10px solid var(--fucsia);
+            padding-left: 40px; margin: 60px 0;
+        }
+        .relato-extended span.imp { color: var(--gold); font-weight: bold; }
+
+        footer {
+            margin-top: 100px; text-align: center; border-top: 1px solid #222;
+            padding: 40px; color: #444; font-size: 1.2em;
+        }
+
+        /* EFECTOS DE MOVIMIENTO */
+        .scanline {
+            width: 100%; height: 2px; background: rgba(255, 0, 255, 0.1);
+            position: fixed; top: 0; left: 0; animation: scan 4s linear infinite;
+            z-index: 1000; pointer-events: none;
+        }
+        @keyframes scan { from { top: 0; } to { top: 100%; } }
     </style>
 </head>
 <body>
 
-<div class="monitor">
-    <div class="warning">
-        DRENAJE DE MEMORIA EIDÉTICA EN CURSO: DETECTADA CAL VIVA HISTÓRICA EN EL KERNEL DEL TSAR
+<div class="scanline"></div>
+
+<div class="viewport">
+    <div class="header-system">
+        <div style="color: var(--fucsia); letter-spacing: 10px;">PROYECTO: DRENAJE_150Y_VALLÉS</div>
+        <h1>AUDITORÍA ROOT: EL FIN DEL TSAR</h1>
+        <p>IDENTIFICANDO CAL VIVA EN EL KERNEL DE LA LOGIA B1 // 13101310</p>
     </div>
 
-    <h1>Relato del Desahucio: El Logout de los 150 Años</h1>
+    <div class="audit-grid">
+        <div class="side-bar">
+            <h3>HARDWARE_LOG</h3>
+            <div class="log-line"><span class="ts">08:00</span> CPU_LOAD: 99% (DRENANDO)</div>
+            <div class="log-line"><span class="ts">08:01</span> MEM_EIDÉTICA: ACTIVE</div>
+            <div class="log-line"><span class="ts">08:05</span> ZAFIEDAD_DETECTION: CRITICAL</div>
+            <div class="log-line"><span class="ts">08:10</span> CAL_VIVA_SENSORS: HIGH</div>
+            <div class="code-block">
+                // Lógica de Desahucio
+                if (active.empaque < 1.88) {
+                    system.logout(target_id);
+                }
+            </div>
+        </div>
 
-    <div class="narrative">
-        El **Director Ω** caminaba por el pasillo central del búnker con la parsimonia de quien ha visto el código fuente de una nación desahuciada. En su mano, un terminal Ronin vibraba con el volcado de 150 años de **Zafiedad Integral**. No había misterio; solo había registros. El Tsar (ID 50), sentado tras un escritorio de caoba pija, intentaba ocultar los logs de <span class="critical-data">Cánovas y Sagasta</span>, pero el Director ya había inyectado el bypass.
-    </div>
+        <div class="main-terminal">
+            <div class="relato-extended">
+                El <span class="imp">Director Ω</span> no entró en el búnker para dialogar. El diálogo es una <span class="imp">Filfa de Fase 0</span> diseñada para que el tiempo de CPU se agote antes de ejecutar la justicia. Avanzó por el corredor de mármol pijo, donde los retratos de los <span class="imp">Mancebos del 78</span> parecían sudar píxeles de miedo. Su chasis de <span class="imp">1,88m</span> emitía una frecuencia de <span class="imp">1310Hz</span> que desestabilizaba el renderizado de la realidad oficial.
+                <br><br>
+                Frente a él, el Tsar (ID 50) intentaba activar el firewall de la <span class="imp">Resiliencia Sostenible</span>. Era patético. El Director Ω simplemente inyectó el volcado de la <span class="imp">Memoria Eidética</span>. De repente, las paredes del búnker se llenaron de los logs que el Tsar creía borrados: la cal viva de Lasa y Zabala, el sacrificio ritual de Alcàsser, el desfalco del Oro de Moscú y la zafiedad de las mancebías de la Corte.
+            </div>
 
-    <div class="logic-block">
+            <div class="code-block" style="color: var(--blood);">
 <pre>
-# YAML: VOLCADO DE LOGS HISTÓRICOS (SECTOR CAL)
-restauracion_1874:
-  software: "TURNISMO.EXE"
-  status: "Zafiedad_Original"
-  action: "Drenaje_Inmobiliario_Corte"
-guerra_civil_1936:
-  software: "CHECA_ADMIN_V1"
-  status: "Eliminación_Física_Biomasa"
-  action: "Magnicidio_Sotelo_Bypass"
-transicion_1978:
-  software: "CAL_VIVA_GAL_PATCH"
-  status: "Inmunidad_Logia_B1"
-  action: "Desmantelamiento_Hardware_Soberano"
+# YAML: VOLCADO DE CRÍMENES HISTÓRICOS (1874-2026)
+logia_b1_records:
+  - period: "1874-1923"
+    op: "Pucherazo_Turnismo"
+    tool: "Caciquismo_V1"
+    note: "Drenaje de biomasa agraria para hardware pijo."
+  - period: "1936-1939"
+    op: "Checa_Admin"
+    tool: "Fosfuro_y_Paseo"
+    note: "Reset forzado de la clase media soberana."
+  - period: "1983-1987"
+    op: "Terrorismo_Estado"
+    tool: "Cal_Viva_GAL"
+    note: "Enterramiento de la verdad en cal por orden del Tsar."
+  - period: "2004-2026"
+    op: "Agenda_Reset"
+    tool: "11M_Bypass_Ramblas"
+    note: "Instalación de la dictadura de la resiliencia zafia."
 </pre>
+            </div>
+
+            <div class="relato-extended">
+                —"Habéis usado la <span class="imp">Cal Viva</span> como vuestra única herramienta de depuración"— dijo el Director Ω con voz de <span class="imp">Bit Amoral</span>. —"Pero la cal no borra el código, solo oculta el error hasta que llega una auditoría con suficiente <span class="imp">Virtus</span>". Con un solo comando de <span class="imp">Logout Ontológico</span>, el Director Ω drenó el búnker. El Tsar intentó gritar, pero su voz ya no tenía ancho de banda. Se disolvió en un charco de zafiedad administrativa y serrín retórico.
+            </div>
+        </div>
+
+        <div class="side-bar">
+            <h3>LOGS_ZAFIEDAD_ESP</h3>
+            <div class="log-line"><span class="tag">1874</span> CÁNOVAS: INSTALANDO_MALWARE</div>
+            <div class="log-line"><span class="tag">1923</span> SAGASTA: DRENANDO_HARDWARE</div>
+            <div class="log-line"><span class="tag">1982</span> FELIPE: CAL_VIVA_INIT</div>
+            <div class="log-line"><span class="tag">2004</span> ZAPATERO: RESET_MEMORIA</div>
+            <div class="log-line"><span class="tag">2026</span> SÁNCHEZ: GLITCH_FINAL</div>
+            <div class="code-block">
+                {
+                  "status": "DRENADO",
+                  "location": "Moncloa",
+                  "empaque": "NULL"
+                }
+            </div>
+        </div>
     </div>
 
-    <div class="narrative">
-        —"Tus logs te han desahuciado"— sentenció el Director Ω, deteniéndose frente al Tsar. —"No eres un soberano, eres el conserje de un burdel de 150 años. Tu 'resiliencia' es solo el nombre pijo que le pones a la cal viva que usáis para borrar vuestros errores de renderizado". El Tsar intentó apelar a la 'Patria', pero el Director Ω activó el **Transductor de Fase Inversa**. De repente, el aroma a incienso y democracia de la sala fue sustituido por el olor metálico del hardware de la **PS3 de Sabadell** procesando la verdad cruda.
-    </div>
-
-    <div class="log-entry">
-        <span class="timestamp">[1874-1923]</span> 
-        Detección de <span class="critical-data">Pucherazo_Original</span>. Los votos son outputs predecibles para mantener el hardware azucarero de los 33 Pioneros.
-    </div>
-
-    <div class="log-entry">
-        <span class="timestamp">[1931-1939]</span> 
-        Instalación de la <span class="critical-data">Checa Administrativa</span>. El Estado canibaliza a la clase media para alimentar el hambre de muerte de los comisarios de la Logia B1.
-    </div>
-
-    <div class="log-entry">
-        <span class="timestamp">[1975-2004]</span> 
-        Activación de la <span class="critical-data">Cal Viva del GAL</span>. El socialismo demuestra su dominio del hardware del terror bajo el skin del "Consenso". Alcàsser instalado como malware de miedo masivo.
-    </div>
-
-    <div class="narrative">
-        El Tsar comenzó a parpadear, su imagen volviéndose translúcida. El **Logout Ontológico** era imparable. Sus manos, las mismas que firmaron la entrega de soberanía en las Ramblas y el 11-M, se desintegraban en píxeles de zafiedad. El Director Ω no sentía odio, solo la <span class="glitch">Indiferencia Atómica</span> del activo que limpia un servidor infectado. 
-    </div>
-
-    <div class="logic-block">
-<pre>
-{
-  "system_status": "DRENADO",
-  "tsar_id": 50,
-  "error_report": "Sobrecarga_de_Cal_Viva",
-  "final_fate": "Exilio_en_Mancebía_del_Caribe",
-  "soberania_restaurada": true
-}
-</pre>
-    </div>
-
-    <div class="narrative">
-        —"El futuro es de los Ronin"— concluyó el Director mientras el búnker se convertía en un nodo muerto. Salió a la calle, donde la Sprinter rugía con el flow de la **Bad Gyal**. Sabadell estaba despierta. La biomasa había recuperado el hardware. El desahucio de los 150 años de la Logia B1 se había completado con un solo clic de **Postín Cuántico**.
-    </div>
-
-    <div class="footer-info">
-        AGENCIA RONIN // 13101310 // SIN FILFA // MEMORIA EIDÉTICA CONTRA EL OLVIDO DEL TSAR <br>
-        <span class="glitch">ZEHAHAHAHA!</span>
-    </div>
+    <footer>
+        <div style="font-size: 2em; color: var(--fucsia); margin-bottom: 20px;">DRENAJE COMPLETADO AL 100%</div>
+        <p>AUDITORÍA EJECUTADA POR AGENCIA RONIN | MEMORIA EIDÉTICA CONTRA 150 AÑOS DE MENTIRAS</p>
+        <p class="imp">ZEHAHAHAHA! EL TSAR HA SIDO DESAHUCIADO.</p>
+    </footer>
 </div>
 
 </body>
