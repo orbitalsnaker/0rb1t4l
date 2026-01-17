@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SISTEMA_TYCHON_7 // OPERACION_VALENTIN_LEVIATAN // 1310</title>
+    <style>
+        :root {
+            --fucsia: #ff00ff;
+            --void: #020202;
+            --gold: #ffd700;
+            --blood: #880000;
+            --matrix: #00ff41;
+        }
+
+        body {
+            background: var(--void);
+            color: #ccc;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            padding: 20px;
+            font-size: 11px;
+            overflow-x: hidden;
+        }
+
+        .container { border: 1px solid var(--fucsia); padding: 40px; position: relative; }
+
+        header {
+            text-align: center;
+            border-bottom: 3px double var(--fucsia);
+            margin-bottom: 50px;
+            padding-bottom: 20px;
+        }
+
+        h1 { color: var(--fucsia); font-size: 3em; margin: 0; text-transform: uppercase; letter-spacing: 5px; }
+        .anagram-box {
+            font-size: 5em;
+            color: var(--gold);
+            margin: 20px 0;
+            text-shadow: 0 0 20px var(--gold);
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .yaml-block {
+            background: #050505;
+            border-left: 5px solid var(--matrix);
+            padding: 20px;
+            margin: 20px 0;
+            white-space: pre-wrap;
+            color: var(--matrix);
+            font-size: 0.9em;
+        }
+
+        .perspective-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            border: 1px solid #333;
+            padding: 15px;
+            background: #0a0a0a;
+            transition: 0.3s;
+        }
+
+        .card:hover { border-color: var(--fucsia); box-shadow: 0 0 15px var(--fucsia); }
+
+        .tag { background: var(--blood); color: white; padding: 2px 5px; font-size: 0.8em; margin-right: 5px; }
+
+        .equation {
+            text-align: center;
+            font-size: 1.5em;
+            color: var(--fucsia);
+            margin: 50px 0;
+            padding: 20px;
+            border: 1px dashed var(--fucsia);
+        }
+
+        .footer {
+            margin-top: 100px;
+            text-align: center;
+            font-size: 0.7em;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="status-bar">PROTOCOLO: ANAGRAMA_REVELADO // SECTOR: SABADELL-GLOBAL</div>
+        <h1>VALENTIN = LEVIATAN</h1>
+        <p>EL DESAHUCIO SENTIMENTAL DE LA BIOMASA // 14-02-2026</p>
+    </header>
+
+    <div class="anagram-box">
+        <span>V-A-L-E-N-T-I-N</span>
+        <span>⇌</span>
+        <span>L-E-V-I-A-T-A-N</span>
+    </div>
+
+    <section>
+        <h2>II. VOLCADO DE PERSPECTIVAS (YAML_LOAD)</h2>
+        <div class="yaml-block">
+perspectivas_eruditas:
+  - id: 001
+    perfil: Catedrático en Semiótica Brutalista
+    analisis: "El intercambio de la 'V' por la 'L' no es azaroso. La 'V' de Valentín es el vértice del embudo donde cae la biomasa; la 'L' de Leviatán es la línea del horizonte del Estado que te engulle. San Valentín es el 'honey trap' del Kernel para identificar activos con baja RAM emocional."
+  - id: 002
+    perfil: Ex-Agente de la Logia B1 (Desahuciado)
+    analisis: "Usábamos el 14 de febrero para el 'Log-In' masivo. Es el día donde todos los sujetos de Fase 0 revelan sus conexiones más íntimas. El Leviatán no busca amor, busca el grafo de relaciones para el próximo desahucio administrativo."
+  - id: 003
+    perfil: Raul Cimas (Modo Soberano)
+    analisis: "Es que es muy fuerte. San Valentín es ese señor que te vende rosas que en realidad son antenas de 10 euros. Tú crees que estás cenando con tu novia, pero estás alimentando a una bestia marina que vive en las alcantarillas de Sabadell. Es una cena de empresa del Leviatán."
+  - id: 004
+    perfil: El Savant (IA Auditando)
+    analisis: "Detecto una anomalía térmica el 14/02. La biomasa emite calor por excitación zafia. El Leviatán utiliza este calor para refrigerar los servidores donde guarda el glitch de Bin Laden y la cara de Llamazares."
+  - id: 005
+    perfil: Auditor del CNI (Pánico)
+    analisis: "¡Han descubierto el anagrama! ¡Cerrad el Nodo Rainbow! Si la gente sabe que Valentín es el Leviatán, dejarán de comprar bombones y el sistema de control basado en el azúcar y el kitsch colapsará en 24 horas."
+        </div>
+    </section>
+
+    <div class="equation">
+        $\text{San Valentín} = \sum (\text{Zafiedad Kitsch}) \times \text{Leviatán}^{31}$
+        <br>
+        <small style="font-size: 0.5em; color: #666;">Donde el resultado siempre es un extracto bancario de -10€</small>
+    </div>
+
+    <section class="perspective-grid">
+        <div class="card">
+            <span class="tag">ESTÉTICA</span>
+            <strong>La Flor de Cal Viva</strong>
+            <p>El Leviatán prefiere las rosas rojas porque camuflan mejor el reactivo estatal de borrado biológico. Regalar una flor el 14/02 es entregar un sensor de proximidad del Gigante.</p>
+        </div>
+        <div class="card">
+            <span class="tag">HARDWARE</span>
+            <strong>RAM Compartida</strong>
+            <p>El concepto de 'media naranja' es un glitch. No es que te falte una mitad; es que el Arquitecto Analfabeto ha dividido un solo procesador entre dos personas para ahorrar costes de renderizado.</p>
+        </div>
+        <div class="card">
+            <span class="tag">HISTORIA</span>
+            <strong>El Martirio de la CIA</strong>
+            <p>San Valentín fue ejecutado por intentar casar soldados. El Leviatán moderno te casa para que compartas la hipoteca de 10 euros y seas más fácil de auditar por el banco de la Logia.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>III. EL CÓDIGO DEL DESAMOR (SCRIPT_EXIT)</h2>
+        <div class="yaml-block" style="border-left-color: var(--fucsia);">
+diagnostico_final:
+  estado: Kernel Panic Emocional
+  mensaje: "Has sido hackeado por un anagrama pueril."
+  instrucciones:
+    - Activar Modo Fujitora frente al escaparate de El Corte Inglés.
+    - Reconocer que tu pareja es un asset reciclado (probablemente con la frente de Llamazares).
+    - Pagar la cena con un billete de 10 euros y gritar '¡13101310!' al camarero (mancebo de fase 0).
+    - Hacer Logout de la mancebía sentimental.
+        </div>
+    </section>
+
+    <div class="footer">
+        GENERADO POR SISTEMA TYCHON-7 // DIRECTOR Ω // ZEHAHAHAHA! <br>
+        "EL LEVIATÁN TE QUIERE... PARA EL PRÓXIMO FORMATEO."
+    </div>
+</div>
+
+</body>
+</html>
