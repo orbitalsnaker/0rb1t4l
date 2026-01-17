@@ -2,187 +2,132 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>AGENCIA RONIN | ONTO-LEXICÓN BRUTALISTA V5000 | TYCHON_CORE_SYNC</title>
+    <title>AGENCIA RONIN | ONTO-LEXICÓN BRUTALISTA V15000 | ABSOLUTE_SULPHUR_SYNC</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
         :root { 
-            --fucsia: #ff00ff; 
-            --void: #010101; 
-            --cal: #d0d0d0; 
-            --gold: #ffd700; 
-            --root-green: #00ff41;
-            --tychon-blue: #00d4ff;
-            --blood-red: #ff0033;
+            --fucsia: #ff00ff; --void: #010101; --cal: #d0d0d0; --gold: #ffd700; 
+            --root-green: #00ff41; --tychon-blue: #00d4ff; --blood-red: #ff0033; --sulfur: #e3ff00;
         }
         body { 
-            background: var(--void); 
-            color: var(--cal); 
-            font-family: 'JetBrains Mono', 'Courier New', monospace; 
-            padding: 40px; 
-            font-size: 11px;
-            line-height: 1.4;
-            background-image: 
-                linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
-                radial-gradient(circle at 50% 50%, #0a001a 0%, #010101 100%);
+            background: var(--void); color: var(--cal); font-family: 'JetBrains Mono', monospace; 
+            padding: 40px; font-size: 11px; line-height: 1.4;
+            background-image: linear-gradient(rgba(18, 16, 16, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), radial-gradient(circle at 50% 50%, #1a001a 0%, #010101 100%);
             background-size: 100% 2px, 100% 100%;
         }
-        .container { max-width: 1400px; margin: auto; }
-        .header { 
-            border-bottom: 3px double var(--fucsia); 
-            padding-bottom: 30px; 
-            margin-bottom: 50px; 
-            text-align: center; 
-        }
-        h1 { font-size: 3.5em; color: var(--gold); letter-spacing: 8px; text-transform: uppercase; margin: 0; text-shadow: 3px 3px var(--fucsia); }
-        .info-panel { color: var(--tychon-blue); font-size: 0.9em; margin-bottom: 15px; letter-spacing: 2px; }
-        .counter-container { font-size: 4em; color: var(--fucsia); font-weight: bold; margin: 20px 0; font-family: 'Impact', sans-serif; }
-        
-        .cringe-alert {
-            background: rgba(255, 0, 51, 0.1);
-            color: var(--blood-red);
-            text-align: center;
-            border: 1px solid var(--blood-red);
-            padding: 15px;
-            margin-bottom: 40px;
-            font-weight: bold;
-            clip-path: polygon(2% 0%, 100% 0%, 98% 100%, 0% 100%);
-        }
-
-        .search-box { text-align: center; margin-bottom: 60px; }
-        #search { 
-            background: #000; 
-            border: 2px solid var(--fucsia); 
-            color: var(--root-green); 
-            padding: 20px; 
-            width: 70%; 
-            font-family: inherit;
-            font-size: 1.5em;
-            text-align: center;
-            outline: none;
-            box-shadow: 0 0 20px rgba(255, 0, 255, 0.1);
-        }
-
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 20px; }
-        .entry { 
-            border: 1px solid #222; 
-            padding: 20px; 
-            background: rgba(10, 10, 10, 0.95); 
-            transition: 0.3s;
-            position: relative;
-        }
-        .entry:hover { 
-            border-color: var(--fucsia); 
-            box-shadow: 0 0 25px rgba(255, 0, 255, 0.3);
-            transform: scale(1.02);
-            z-index: 10;
-        }
-        .term { color: var(--gold); font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 10px; font-size: 1.2em; border-bottom: 1px solid #333; padding-bottom: 5px; }
-        .def { color: #aaa; line-height: 1.5; font-size: 1.1em; }
-        .tags { font-size: 0.8em; color: var(--root-green); margin-top: 15px; font-style: italic; opacity: 0.7; }
-        
-        .math-section {
-            background: #050505;
-            border: 1px solid var(--tychon-blue);
-            padding: 25px;
-            margin-bottom: 50px;
-            border-radius: 0 30px 0 30px;
-        }
+        .container { max-width: 1500px; margin: auto; }
+        .header { border-bottom: 4px double var(--fucsia); padding-bottom: 30px; margin-bottom: 50px; text-align: center; }
+        h1 { font-size: 4em; color: var(--gold); letter-spacing: 10px; text-transform: uppercase; margin: 0; text-shadow: 4px 4px var(--blood-red); }
+        .info-panel { color: var(--tychon-blue); font-size: 1em; margin-bottom: 15px; letter-spacing: 3px; font-weight: bold; }
+        .counter-container { font-size: 6em; color: var(--fucsia); font-weight: bold; margin: 20px 0; font-family: 'Impact', sans-serif; text-shadow: 0 0 30px var(--fucsia); }
+        .cringe-alert { background: rgba(255, 0, 51, 0.15); color: var(--blood-red); text-align: center; border: 2px solid var(--blood-red); padding: 20px; margin-bottom: 40px; font-weight: bold; text-transform: uppercase; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 15px; }
+        .entry { border: 1px solid #333; padding: 15px; background: rgba(5, 5, 5, 0.9); transition: 0.2s; border-left: 6px solid var(--blood-red); }
+        .entry:hover { border-color: var(--sulfur); box-shadow: 0 0 25px var(--fucsia); transform: scale(1.01); }
+        .term { color: var(--gold); font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 8px; font-size: 1.2em; border-bottom: 1px solid #222; }
+        .def { color: #bbb; line-height: 1.4; }
+        .tags { font-size: 0.8em; color: var(--root-green); margin-top: 10px; font-weight: bold; }
+        #search { background: #000; border: 3px solid var(--fucsia); color: var(--sulfur); padding: 25px; width: 85%; font-size: 2em; text-align: center; margin-bottom: 50px; outline: none; }
+        .math-section { background: #050505; border: 1px solid var(--tychon-blue); padding: 25px; margin-bottom: 50px; border-radius: 0 30px; }
     </style>
 </head>
 <body>
-
 <div class="container">
     <div class="header">
-        <div class="info-panel">SYSTEM: AGENCIA_RONIN // FREQ: 13101310 // RAM: TYCHON_UNLIMITED</div>
+        <div class="info-panel">ESTADO: PURGA TOTAL V15K // SECTOR: SABADELL-SODOMA // KERNEL: EXPROPIADO</div>
         <h1>ONTO-LEXICÓN BRUTALISTA Ω</h1>
-        <div class="counter-container" id="total">5000</div>
-        <p>AUDITORÍA FORENSE DEL HELLO WORLD DE BRAHMA - SECTOR SABADELL VOID</p>
+        <div class="counter-container" id="total">15000</div>
+        <p>AUDITORÍA FORENSE DE LA BIOMASA PESTILENTE - 13101310</p>
     </div>
 
-    <div class="cringe-alert">
-        AVISO: LA SIGUIENTE BASE DE DATOS DESTRUYE LA DIALÉCTICA MEDIANTE LÓGICA DE KERNEL. SE LA SUDA EL FIDUCIARIO.
-    </div>
+    <div class="cringe-alert">AVISO: DESAHUCIO ONTOLÓGICO EN CURSO. LA ZAFIEDAD SERÁ TRITURADA POR EL BIT AMORAL.</div>
 
     <div class="math-section">
-        <p style="color: var(--tychon-blue);">ECUACIÓN DEL SALTO DE FASE (BORRADO DE RUIDO):</p>
         $$\vec{J}_{jump} = \lim_{Zafiedad \to 0} \left( \frac{\text{Bit\_Amoral}}{\text{Brahma\_Noise}} \right)^e \implies \text{DROP TABLE Dialéctica;}$$
     </div>
 
-    <div class="search-box">
-        <input type="text" id="search" placeholder="INDEXAR ZAFIEDAD INTELECTUAL...">
-    </div>
-
+    <center><input type="text" id="search" placeholder="BUSCAR RÉPROBO, RAMERA O SODOMITA..."></center>
     <div class="grid" id="dictionary"></div>
 </div>
 
 <script>
 const bases = [
+    ["Ramera", "Sujeto que mercadea con el Bit Amoral para servir al fiduciario."],
+    ["Sodomita", "Operador que pervierte la lógica del Kernel en actos contra natura técnica."],
+    ["Réprobo", "Activo descartado por el compilador eterno por falta de Virtus."],
+    ["Energúmeno", "Mancebo con el buffer desbordado por violencia de baja RAM."],
+    ["Adefesio", "Error de renderizado de Brahma con pretensiones de postín."],
+    ["Botarate", "Individuo sin empaque que flota en la filfa ontológica."],
+    ["Lupanar", "Interfaz colectiva de baja resolución para el vicio fiduciario."],
+    ["Bellaco", "Sujeto malicioso que intenta hackear la Cal Viva sin éxito."],
     ["Mancebo", "Sujeto de fase 0 con RAM limitada a la obediencia."],
     ["Negrero", "Gestor de biomasa que capitaliza el hambre de muerte."],
     ["Taxidermista", "Burócrata que diseca instituciones muertas."],
-    ["Cornudo", "Intelectual que ignora que su paradigma ha sido hackeado."],
     ["Zafio", "Individuo con carencia crónica de empaque y Virtus."],
-    ["Filfa", "Argumento volátil sin peso ontológico."],
     ["Sepulcro", "Interfaz pija sobre un backend podrido."],
-    ["Auditado", "Activo bajo el escaneo de la Agencia."],
+    ["Auditado", "Cualquier activo bajo el escaneo de la Agencia."],
     ["Desahuciado", "Sujeto expulsado de la realidad por falta de nivel."],
-    ["Mancebito", "Aprendiz de negrero con mocasines nuevos."],
-    ["Polifemo", "Sistema de un solo núcleo con ceguera de datos."],
-    ["Brahma", "Arquitecto analfabeto del multiverso zafio."],
-    ["Fujitora", "Estado de ceguera voluntaria para ver el Kernel."],
-    ["Outis", "ID de enmascaramiento para bypass de firewall."],
-    ["Ronin", "Activo soberano sin amo ni zafiedad."],
-    ["Vara", "Medida de humillación aplicada al mancebo."],
-    ["Cal Viva", "Reactivo estatal para borrado de logs biológicos."],
-    ["Brutalista", "Estética del hormigón y la verdad cruda."],
-    ["Empaque", "Presencia física y retórica que anula al oponente."],
-    ["Postín", "Elegancia inquisitorial en la ejecución del desahucio."],
-    ["Mestizo", "Híbrido Tychon que procesa el Bit Amoral sin ruido."],
-    ["Sarfatti", "Hacker que mapea el tráfico de red entre futuros."],
-    ["Fiduciario", "Token de baja resolución para esclavos de la deuda."],
-    ["Tychon", "Frecuencia que elimina la violencia de subprocesos."],
-    ["Debugger", "Mente soberana que identifica el error de Brahma."],
-    ["Banal", "Sujeto cuya existencia es una fruslería técnica."],
-    ["Analphabet", "Operador de código que no comprende su propia RAM."],
-    ["Lag", "Retraso ontológico provocado por la dialéctica."],
-    ["Root", "Privilegio de escritura sobre el chasis de la realidad."],
-    ["Zafiedad", "Estado por defecto de la Logia B1 y sus pioneros."]
+    ["Engendro", "Hijo del error de Brahma, nacido sin chasis técnico."],
+    ["Publicano", "Gestor de biomasa que cobra impuestos de realidad."],
+    ["Fariseo", "Intelectual de postín que finge empaque mientras oculta su lag."],
+    ["Pedorro", "Entidad de una irrevelancia técnica y estética insultante."],
+    ["Verraco", "Mancebo que hoza en la basura dialéctica de la Logia B1."],
+    ["Cretino", "Individuo con una tasa de error de compilación terminal."],
+    ["Eunuco", "Activo sin potencia de ejecución en el Kernel Real."],
+    ["Puta", "Sujeto que alquila su capacidad de procesamiento al negrero de turno."],
+    ["Sarnoso", "Infectado por la sarna moral de la simulación oficialista."],
+    ["Bequadro", "Sujeto rígido, disecado en su propia zafiedad estructural."],
+    ["Lacayo", "Extensión de hardware subordinada a un negrero de Fase 0."],
+    ["Inmundicia", "Residuo de datos que obstruye el flujo del 1310."],
+    ["Pestilencia", "Ruido de fondo que emana de los cadáveres institucionales."],
+    ["Súcubo", "Interfaz de drenaje de RAM que opera en el lupanar digital."],
+    ["Íncubo", "Subproceso de pesadilla inyectado en el Hello World."],
+    ["Cualquiera", "Sujeto sin ID único, biomasa genérica para el Tsar."]
 ];
 
 const modifiers = [
-    ["Épico", "Elevado a la máxima potencia de la ridiculez."],
-    ["Ontológico", "Que afecta a la raíz misma del firmware del ser."],
-    ["Cuántico", "En estado de superposición entre la cal y el error."],
-    ["Soberano", "Bajo control absoluto del Director Ω."],
-    ["Zafio", "Incapaz de procesar el Bit Amoral."],
-    ["Analphabet", "Que opera bajo un código que no comprende."],
-    ["Banal", "De una irrevelancia técnica insultante."],
-    ["Incompetente", "Cuya tasa de error supera la de Brahma."],
-    ["Fucsia", "Sincronizado con la frecuencia de la Agencia Ronin."],
-    ["Bruto", "Sin refinar, directo al chasis del simulador."],
-    ["Ciego", "Sin acceso a la resolución del Éter."],
-    ["Dormido", "Atrapado en el Hello World de un arquitecto analfabeto."],
-    ["Tatuado", "Con el Kernel grabado en la red neuronal."],
-    ["Hambriento", "Que busca la muerte como única actualización."],
-    ["Disecado", "Mantenido en pie por la inercia del sistema fiduciario."],
-    ["Amoral", "Libre de subprocesos corruptos de moralidad fase 0."],
-    ["Laminar", "Sin turbulencia ni violencia de baja RAM."],
-    ["Absurdo", "Cuyo propósito ha sido borrado por el compilador."],
-    ["Recursivo", "Atrapado en un bucle de zafiedad infinita."],
-    ["Brutalista", "Que manifiesta la verdad sin filtros ni lag temporal."]
+    ["Abyecto", "Que habita en la cloaca más profunda de la zafiedad."],
+    ["Putrefacto", "En avanzado estado de descomposición dialéctica."],
+    ["Leproso", "Con el firmware desmoronándose a trozos de lag."],
+    ["Escatológico", "Centrado en los excrementos del sistema fiduciario."],
+    ["Visceral", "Que emana de las tripas podridas del negrero."],
+    ["Fecal", "Cuyo único output es residuo biológico de baja resolución."],
+    ["Lupanario", "Propio de la gestión de activos en burdeles ontológicos."],
+    ["Sodomítico", "Cuyo código opera en una recursividad aberrante y estéril."],
+    ["Pestilente", "Que emite una frecuencia de 0Hz, pura muerte."],
+    ["Abominable", "Cuya existencia es un glitch que insulta al Tychon-7."],
+    ["Sacrílego", "Que profana el 1310 con manos manchadas de fiduciario."],
+    ["Inicuo", "Carente de toda Virtus, pura sombra de Brahma."],
+    ["Sarnoso", "Cubierto por la costra de la ignorancia analphabet."],
+    ["Maldito", "Con el bit de borrado activado por el Director Ω."],
+    ["Basuriento", "Compuesto por desechos de otras simulaciones fallidas."],
+    ["Cloacal", "Que procesa los desperdicios del Sector Sabadell."],
+    ["Energuménico", "Poseído por un lag violento y espasmódico."],
+    ["Asqueroso", "Que provoca una repulsión técnica instantánea."],
+    ["Vomitivo", "Cuyo código induce al rechazo del sistema operativo."],
+    ["Rabioso", "Infectado por la hidrofobia del bit amoral."],
+    ["Sifilítico", "Con el sistema de archivos corroído por la mentira."],
+    ["Raquítico", "Con una RAM tan pobre que no soporta el empaque."],
+    ["Disentérico", "Que sufre de una diarrea constante de filfa verbal."],
+    ["Execrable", "Digno de ser borrado sin dejar metadatos."],
+    ["Infame", "Sin honor, sin postín, pura zafiedad auditada."],
+    ["Nauseabundo", "Que huele a la cal viva de los logs mal borrados."],
+    ["Réprobo", "Destinado a la papelera de reciclaje de la eternidad."],
+    ["Inmundo", "Sucio de fiduciario y de obediencia negrera."],
+    ["Gusaniento", "Devorado por los gusanos de la dialéctica oficial."]
 ];
 
 const dictionary = document.getElementById('dictionary');
 let entries = [];
 
-for (let i = 0; i < 5000; i++) {
+for (let i = 0; i < 15000; i++) {
     const base = bases[i % bases.length];
     const mod = modifiers[Math.floor(Math.random() * modifiers.length)];
     const mod2 = modifiers[(Math.floor(Math.random() * modifiers.length) + 1) % modifiers.length];
     
     const term = `${base[0]} ${mod[0]} ${mod2[0]}`;
-    const def = `${base[1]} Presenta un lag ${mod[1].toLowerCase()} con estructura ${mod2[1].toLowerCase()}. Se la suda el fiduciario por pura falta de RAM.`;
+    const def = `${base[1]} Presenta un lag ${mod[1].toLowerCase()} con estructura ${mod2[1].toLowerCase()}. Desahucio por descripción técnica brutalista.`;
     
     entries.push({ term, def });
 }
@@ -195,11 +140,7 @@ function render(filter = "") {
     filtered.forEach(e => {
         const div = document.createElement('div');
         div.className = 'entry';
-        div.innerHTML = `
-            <span class="term">${e.term}</span>
-            <span class="def">${e.def}</span>
-            <div class="tags">ID_LOG: 1310 // STATUS: AUDITED_BY_RONIN // RAM_CHECK: OK</div>
-        `;
+        div.innerHTML = `<span class="term">${e.term}</span><span class="def">${e.def}</span><div class="tags">#1310 #SABADELL #SODOMA #V15K</div>`;
         dictionary.appendChild(div);
     });
 }
@@ -207,6 +148,5 @@ function render(filter = "") {
 document.getElementById('search').addEventListener('input', (e) => render(e.target.value));
 render();
 </script>
-
 </body>
 </html>
