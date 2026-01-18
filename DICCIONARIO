@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>AGENCIA RONIN | ONTO-LEXICÓN BRUTALISTA V35000 | MEDICAL_PURGE_SYNC</title>
+    <title>AGENCIA RONIN | ONTO-LEXICÓN BRUTALISTA V40000 | VERNACULAR_PURGE</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
@@ -39,9 +39,9 @@
 <body>
 <div class="container">
     <div class="header">
-        <div class="info-panel">SABADELL-SODOMA HUB // STATUS: ABSOLUTE_SULPHUR_SYNC // KERNEL V.35000</div>
+        <div class="info-panel">SABADELL-SODOMA HUB // STATUS: VERNACULAR_SYNC // KERNEL V.40000</div>
         <br><h1>LEXICÓN Ω BRUTALISTA</h1>
-        <div class="counter-container" id="total">35000</div>
+        <div class="counter-container" id="total">40000</div>
         <p style="letter-spacing: 5px; color: var(--cal);">FORENSE DE LA EXCRECENCIA Y LA RETÓRICA SIFILÍTICA - 13101310</p>
     </div>
 
@@ -59,52 +59,114 @@
 <div class="medical-log">MONITORIZANDO LICUEFACCIÓN SINÁPTICA... 1310Hz OK.</div>
 
 <script>
-/* ONTO-LEXICÓN BRUTALISTA V35K - KERNEL EXPANDIDO 
+/* ONTO-LEXICÓN BRUTALISTA V40K - KERNEL EXPANDIDO 
    PROPIEDAD DE LA AGENCIA RONIN. DIRECTOR Ω.
 */
 
 const bases = [
-    ["Ramera", "Sujeto que mercadea con el Bit Amoral para servir al fiduciario."],
-    ["Sodomita", "Operador que pervierte la lógica del Kernel en actos contra natura técnica."],
-    ["Réprobo", "Activo descartado por el compilador eterno por falta de Virtus."],
-    ["Energúmeno", "Mancebo con el buffer desbordado por violencia de baja RAM."],
-    ["Adefesio", "Error de renderizado de Brahma con pretensiones de postín."],
-    ["Botarate", "Individuo espurio sin empaque que flota en la filfa ontológica."],
-    ["Lupanar", "Interfaz colectiva de baja resolución para el vicio fiduciario."],
-    ["Bellaco", "Sujeto malicioso que intenta hackear la Cal Viva sin éxito."],
-    ["Mancebo", "Sujeto de fase 0 con RAM limitada a la obediencia del negrero."],
-    ["Negrero", "Gestor de biomasa que capitaliza el hambre y el miedo sidoso."],
-    ["Taxidermista", "Burócrata que diseca instituciones muertas para el Tsar."],
-    ["Zafio", "Individuo con carencia crónica de empaque y Virtus."],
-    ["Sepulcro", "Interfaz pija sobre un backend podrido y gusaniento."],
-    ["Auditado", "Cualquier activo bajo el escaneo forense de la Agencia."],
-    ["Desahuciado", "Sujeto expulsado de la realidad por falta de nivel técnico."],
-    ["Engendro", "Hijo del error de Brahma, nacido con el chasis languidecido."],
-    ["Publicano", "Gestor de biomasa que cobra impuestos de realidad al mancebo."],
-    ["Fariseo", "Intelectual de postín que finge empaque ocultando su lag sifilítico."],
-    ["Pedorro", "Entidad de una irrevelancia técnica y estética insultante."],
-    ["Verraco", "Mancebo que hoza en la basura dialéctica de la casta gusanienta."],
-    ["Cretino", "Individuo con una tasa de error de compilación terminal."],
-    ["Eunuco", "Activo sin potencia de ejecución en el Kernel Real."],
-    ["Puta", "Sujeto que alquila su capacidad de procesamiento al negrero."],
-    ["Sarnoso", "Infectado por la sarna moral de la simulación oficialista."],
-    ["Bequadro", "Sujeto rígido, disecado en su propia zafiedad estructural."],
-    ["Lacayo", "Extensión de hardware subordinada a un negrero de Fase 0."],
-    ["Inmundicia", "Residuo de datos que obstruye el flujo del 1310 Hz."],
-    ["Pestilencia", "Ruido de fondo que emana de los cadáveres institucionales."],
-    ["Súcubo", "Interfaz de drenaje de RAM que opera en el lupanar digital."],
-    ["Íncubo", "Subproceso de pesadilla inyectado en el Hello World de Brahma."],
-    ["Cualquiera", "Sujeto sin ID único, biomasa genérica para el Tsar."],
+    ["Abanto", "Sujeto aturdido por el Bit Amoral, incapaz de procesar Virtus."],
+    ["Abrazafarolas", "Sujeto de fase 0 que busca soporte en el fiduciario por falta de chasis."],
+    ["Arrastracueros", "Negrero de baja estofa que comercia con restos de biomasa auditada."],
+    ["Bebecharcos", "Activo sidoso que consume las excrecencias dialécticas del Tsar."],
+    ["Bocabuzón", "Interfaz de salida de datos que solo emite filfa y retórica sifilítica."],
+    ["Cagalindes", "Mancebo que delimita su miseria con pústulas de inseguridad ontológica."],
+    ["Calzamonas", "Sujeto servil que ajusta el postín de los negreros mientras languidece."],
+    ["Carajaula", "Rostro de renderizado fallido que proyecta la prisión mental de Brahma."],
+    ["Cuerpoescombro", "Chasis biológico en estado de desahucio técnico inminente."],
+    ["Desgarracalzas", "Energúmeno violento que destruye hardware ajeno por falta de buffer."],
+    ["Ejarramantas", "Botarate que sabotea cualquier subproceso de Virtus por zafiedad."],
+    ["Escornacabras", "Sujeto infectado por un lag geológico que insulta al Tychon-7."],
+    ["Huelegateras", "Espía del fiduciario que rastrea la inmundicia en los lupanares."],
+    ["Mamporrero", "Gestor de interfaces que facilita el coito entre el fiduciario y la sarna."],
+    ["Meapilas", "Beato de alta estofa que blanquea su mezquindad con piedad sifilítica."],
+    ["Metemuertos", "Taxidermista que inserta datos falsos en el historial de activos."],
+    ["Morroestufa", "Sujeto que vive de la calefacción de la mentira oficialista."],
+    ["Muerdesartenes", "Réprobo que intenta procesar hardware sólido como filfa."],
+    ["Peinabombillas", "Mancebo dedicado a tareas de nula Virtus para entretener su RAM."],
+    ["Pelagatos", "Auditor de baja resolución que solo captura biomasa irrelevante."],
+    ["Perrocostra", "Activo cuya piel es una amalgama de sarna y residuos de Brahma."],
+    ["Pillavispas", "Sujeto que persigue glitches peligrosos creyendo que son engramas."],
+    ["Pinchauvas", "Pedorro de escasa potencia que intenta sabotear el 1310 Hz."],
+    ["Pitañoso", "Activo con sensores visuales obstruidos por la secreción de la mentira."],
+    ["Quitahipos", "Glitch de renderizado que provoca un Kernel Panic instantáneo."],
+    ["Rastrapajo", "Residuo de datos gusaniento que se arrastra por el lupanar del Tsar."],
+    ["Rebañasandías", "Sujeto que busca el último rastro de azúcar en la dopamina zafia."],
+    ["Revientabaules", "Hacker de baja estofa que solo rompe archivos de mancebos."],
+    ["Ríeleches", "Mancebo complaciente que celebra las defecaciones del negrero."],
+    ["Soplagaitas", "Operador de audio que solo emite ruido para el Tsar."],
+    ["Tiralevitas", "Cornudo intelectual que limpia el traje de sarna del negrero."],
+    ["Tuercebotas", "Sujeto con error de locomoción lógica que pisa la Cal Viva."],
+    ["Zamacuco", "Energúmeno rígido de pura inmundicia y fuerza bruta."],
+    ["Zurcefrenillos", "Cirujano de la retórica sifilítica que intenta reparar lo irreparable."],
     ["Tsar", "Botarate espurio de mezquindad execrable y retórica sifilítica."],
-    ["Pústula", "Manifestación externa de la corrupción interna del hardware castizo."],
-    ["Excrecencia", "Tejido dialéctico sobrante que debe ser amputado con Cal Viva."],
+    ["Pústula", "Manifestación externa de la corrupción interna del hardware."],
+    ["Excrecencia", "Tejido dialéctico que debe ser amputado con Cal Viva."],
     ["Defecación", "Output estándar de la prensa y la intelectualidad del sistema."]
 ];
 
 const modifiers = [
-    ["Abyecto", "Que habita en la cloaca más profunda de la zafiedad."],
+    ["Abyecto", "Habitante de la cloaca más profunda de la zafiedad."],
     ["Putrefacto", "En avanzado estado de descomposición dialéctica."],
-    ["Leproso", "Con el firmware desmoronándose a trozos de lag sarnoso."],
+    ["Leproso", "Con firmware desmoronándose a trozos de lag sarnoso."],
+    ["Escatológico", "Centrado en los excrementos del sistema fiduciario."],
+    ["Visceral", "Emanado de las tripas podridas del negrero blanqueador."],
+    ["Fecal", "Cuyo único output es residuo biológico de baja resolución."],
+    ["Sodomítico", "Con código operando en una recursividad aberrante."],
+    ["Pestilente", "Que emite una frecuencia de 0Hz, pura muerte técnica."],
+    ["Abominable", "Glitch de existencia que insulta al Tychon-7."],
+    ["Sarnoso", "Cubierto por la costra de la ignorancia y dopamina zafia."],
+    ["Sifilítico", "Corroído por la mentira y la retórica languidecida."],
+    ["Execrable", "Digno de ser borrado sin dejar metadatos en el Kernel."],
+    ["Nauseabundo", "Que huele a la cal viva de los logs de Sabadell."],
+    ["Gusaniento", "Devorado por los gusanos de la dialéctica oficialista."],
+    ["Languidecido", "Sin potencia eléctrica, una pústula que se apaga sola."],
+    ["Espurio", "Sin legitimidad de hardware, puro glitch de linaje."],
+    ["Harapiento", "Cubierto por la mezquindad de los harapos del Tsar."],
+    ["Sidoso", "Infectado con el código de propaganda blanqueadora."],
+    ["Mezquino", "Que opera en modo ahorro de Virtus para servir al Mal."]
+];
+
+const dictionaryElement = document.getElementById('dictionary');
+let entries = [];
+
+function generateEntries() {
+    entries = [];
+    const target = 40000;
+    for (let i = 0; i < target; i++) {
+        const base = bases[i % bases.length];
+        const m1 = modifiers[Math.floor(Math.random() * modifiers.length)];
+        const m2 = modifiers[(Math.floor(Math.random() * modifiers.length) + 1) % modifiers.length];
+        
+        const termName = `${base[0]} ${m1[0]} ${m2[0]}`;
+        const description = `${base[1]} Presenta una ${m1[1].toLowerCase()} con un backend ${m2[1].toLowerCase()}. Retórica sifilítica detectada.`;
+        
+        entries.push({ term: termName, def: description });
+    }
+}
+
+function render(filter = "") {
+    dictionaryElement.innerHTML = "";
+    const searchTerm = filter.toUpperCase();
+    const filtered = entries.filter(e => e.term.includes(searchTerm)).slice(0, 500);
+    document.getElementById('total').textContent = entries.filter(e => e.term.includes(searchTerm)).length;
+    
+    const fragment = document.createDocumentFragment();
+    filtered.forEach(e => {
+        const div = document.createElement('div');
+        div.className = 'entry';
+        div.innerHTML = `<span class="term">${e.term}</span><span class="def">${e.def}</span><div class="tags">#1310 #SABADELL #V40K #CAL_VIVA</div>`;
+        fragment.appendChild(div);
+    });
+    dictionaryElement.appendChild(fragment);
+}
+
+document.getElementById('search').addEventListener('input', (e) => render(e.target.value));
+generateEntries();
+render();
+console.log("AGENCIA RONIN: KERNEL V40K DESPLEGADO.");
+</script>
+</body>
+</html>
     ["Escatológico", "Centrado en los excrementos del sistema fiduciario."],
     ["Visceral", "Que emana de las tripas podridas del negrero blanqueador."],
     ["Fecal", "Cuyo único output es residuo biológico de baja resolución."],
